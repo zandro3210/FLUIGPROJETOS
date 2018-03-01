@@ -1,0 +1,638 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/portal/resources/style-guide/css/fluig-style-guide.min.css" />
+		<link type="text/css" rel="stylesheet" href="custom.css" />
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+		<script type="text/javascript" src="validate.js"></script>
+		<script type="text/javascript" src="jquery-maskmoney.js"></script>
+		<script type="text/javascript" src="input-mask.js"></script>
+		<script type="text/javascript" src="accounting.js"></script>
+		<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="activity.js" charset="utf-8"></script>
+		<script type="text/javascript" src="customApiClient.js" charset="utf-8"></script>
+		<script type="text/javascript" src="personPlugin.js" charset="utf-8"></script>
+		<script type="text/javascript" src="requiredField.js" charset="utf-8"></script>
+		<script src="jquery-csv.js"></script>
+		
+		<script type="text/javascript" src="../vcXMLRPC.js"></script>
+		<script type="text/javascript" src="custom.js" charset="utf-8"></script>			
+	</head>
+	<body>	
+		<div class="fluig-style-guide">
+			<form name="form" role="form">
+				<input name="dsMotivoReprovacao" id="dsMotivoReprovacao" type="hidden" />
+				<input name="dsUrlServidor" id="dsUrlServidor" type="hidden" />
+				<input name="cdSolicitante" id="cdSolicitante" type="hidden" />
+				<input name="nrSolicitacao" id="nrSolicitacao" type="hidden" />
+				<input name="cnpjOk" id="cnpjOk" type="hidden" />
+				<input name="vinculoTotvsOk" id="vinculoTotvsOk" type="hidden" />
+				<input name="capilaridadeOk" id="capilaridadeOk" type="hidden" />
+				<input name="pvfMasterCat" id="pvfMasterCat" type="hidden" />
+				<input name="nrAnexo" id="nrAnexo" type="hidden" />
+				<input name="token" id="token" type="hidden" />													
+				<input name="territorio" id="territorio" type="hidden" />			
+				
+				<input name="codPlanilha" id="codPlanilha" type="hidden" />												
+				<input name="codItem" id="codItem" type="hidden" />												
+				<input name="codTerritorio" id="codTerritorio" type="hidden" />																					
+				<input name="codMunicipio" id="codMunicipio" type="hidden" />										
+				
+				<input name="cdDocumentoModelo" id="cdDocumentoModelo" type="hidden" />
+										
+				<div class="panel panel-info" id="FluxoOnboard">
+					<div class="panel-body">
+						<h1>
+							<b>Fluxo Onboard</b>
+						</h1>
+					</div>
+				</div>
+
+				<div class="panel panel-info hidden panel-default" id="panelAprovacaoFinanceira">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<b>Solicitação Financeira</b>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+							<div class="col-md-12">
+								<label class="radio-inline">
+								    <input type="radio" name="_aprovadoFinanceiro" id="_aprovadoFinanceiro" value="true"  checked="checked" >Aprovado</label>
+								<label class="radio-inline">
+								    <input type="radio" name="_aprovadoFinanceiro" id="_aprovadoFinanceiro" value="master"  >Reprovado</label>	
+							</div>
+    <div class="col-md-4">
+								<label for="_motivoReprovadoFinanceiro">Motivo:</label>
+								<textarea type="text" class="form-control" name="_motivoReprovadoFinanceiro" id="_motivoReprovadoFinanceiro"></textarea></div>
+						</div>	
+						
+						
+						
+					</div>
+				</div>
+
+				<div class="panel panel-info panel-default" id="panelDadosdoContrato">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<b>Dados do Contrato</b>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+							<div class="col-md-4">
+								<label class="radio-inline">
+								    <input type="radio" name="tipoSolic" id="tipoSolicFranquia" value="franquia" onchange="changeView()" checked> Franquias e CC
+								</label>
+								<label class="radio-inline">
+								    <input type="radio" name="tipoSolic" id="tipoSolicMaster" value="master" onchange="changeView()"> Master PVF e PVF
+								</label>	
+							</div>
+						</div>	
+						<div class="form-group row">
+							<div class="col-md-3">
+								<label for="dtInclusao">Data de Inclus&atilde;o da Solicita&ccedil;&atilde;o</label>
+								<input type="text" class="form-control" name="dtInclusao" id="dtInclusao" readonly="readonly">
+							</div>
+							<div class="col-md-5">
+								<label for="nmSolicitante">Nome do Solicitante</label>
+								<input type="text" class="form-control" name="nmSolicitante" id="nmSolicitante" readonly="readonly">
+							</div>
+							<div class="col-md-4">
+								<label for="dsEmailSolicitante">E-mail do Solicitante</label>
+								<input type="text" class="form-control" name="dsEmailSolicitante" id="dsEmailSolicitante" readonly="readonly">
+							</div>
+						</div>
+						<div class="form-group row row-default">
+							<div class="col-md-3 masterpvf">
+								<label>V&iacute;nculo com Master?</label>
+								<select class="form-control" name="slVinculoMaster" id="slVinculoMaster">
+									<option value="">Selecione</option>
+									<option value="sim">Sim</option>
+									<option value="nao">N&atilde;o</option> 									
+								</select>
+							</div>
+							<div class="col-md-3" id="divDadosUnidade">
+								<label for="cdUnidadeResponsavel">C&oacute;digo da Unidade Respons&aacute;vel</label>
+								<input type="text" class="form-control upper" name="cdUnidadeResponsavel" id="cdUnidadeResponsavel" maxlength="6">								
+								<input type="hidden" id="unidadeEndereco" name="unidadeEndereco" />
+								<input type="hidden" id="unidadeMunicipio" name="unidadeMunicipio" />
+								<input type="hidden" id="unidadeEstado" name="unidadeEstado" />
+								<input type="hidden" id="unidadeCep" name="unidadeCep" />
+								<input type="hidden" id="unidadeCnpj" name="unidadeCnpj" />
+								<input type="hidden" id="unidadeInscricao" name="unidadeInscricao" />
+							</div>
+							<div class="col-md-3">
+								<label for="dsUnidadeResponsavel">Unidade Responsável</label>
+								<input type="text" class="form-control" name="dsUnidadeResponsavel" id="dsUnidadeResponsavel" readonly="readonly">								
+							</div>
+							<div class="col-md-3 cc">
+								<label>Unidade Solicitante Pr&oacute;pria ou Terceira?</label>
+								<div class="radio">
+									<label class="radio-inline">
+										<input name="tpUnidade" id="tpUnidadePropria" value="propria" type="radio">
+										<span class="span-default">Pr&oacute;pria (filial)</span>
+									</label>
+									<label class="radio-inline">
+										<input name="tpUnidade" id="tpUnidadePropriaTerceira" value="terceira" type="radio">
+										<span class="span-default">Terceira (franquia)</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-3 input-default">
+								<label for="tpContrato">Tipo de Contrato</label>
+								<select class="form-control" name="tpContrato" id="tpContrato">
+									<option value="">Selecione</option>
+									<option value="CNT">CNT</option>
+									<option value="AVT">AVT</option> 
+									<option value="ANT" disabled title="Em breve...">ANT</option>
+									<option value="CAT">CAT</option>
+									<option value="CNT FLUIG" disabled title="Em breve...">CNT FLUIG</option>
+									<option value="CNT CHEF" disabled title="Em breve...">CNT CHEF</option>
+									<option value="MASTER PVF">MASTER PVF COM A TOTVS</option>
+									<option value="PVF">PVF COM A TOTVS</option>
+									<option value="PVF COM MASTER">PVF COM MASTER PVF E TOTVS</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-12" id="divSegmentoAtuacao">
+								<label for="segmentoAtuacao">Segmento de Atua&ccedil;&atilde;o</label>
+								<div>
+									<label class="checkbox-inline cc">
+									    <input type="checkbox" id="cbSegAgroindustria" name="cbSegAgroindustria" value="Agroindústria"> Agroindústria
+									</label>
+									<label class="checkbox-inline cc">
+									    <input type="checkbox" id="cbSegConstrucao" name="cbSegConstrucao" value="Constru&ccedil;&atilde;o e Projetos"> Constru&ccedil;&atilde;o e Projetos
+									</label>
+									<label class="checkbox-inline">
+									    <input type="checkbox" id="cbSegDistribuicao" name="cbSegDistribuicao" value="Distribui&ccedil;&atilde;o"> Distribui&ccedil;&atilde;o
+									</label>
+									<label class="checkbox-inline cc">
+									    <input type="checkbox" id="cbSegEducacional" name="cbSegEducacional" value="Educacional"> Educacional
+									</label>
+									<label class="checkbox-inline cc">
+									    <input type="checkbox" id="cbSegFinancial" name="cbSegFinancial" value="Financial Services"> Financial Services
+									</label>
+									<label class="checkbox-inline cc">
+									    <input type="checkbox" id="cbSegJuridico" name="cbSegJuridico" value="Jur&iacute;dico"> Jur&iacute;dico
+									</label>
+									<label class="checkbox-inline cc">
+									    <input type="checkbox" id="cbSegLogistica" name="cbSegLogistica" value="Log&iacute;stica"> Log&iacute;stica
+									</label>
+									<label class="checkbox-inline">
+									    <input type="checkbox" id="cbSegManufatura" name="cbSegManufatura" value="Manufatura"> Manufatura
+									</label>
+									<label class="checkbox-inline">
+									    <input type="checkbox" id="cbSegSaude" name="cbSegSaude" value="Saúde"> Saúde
+									</label>
+									<label class="checkbox-inline">
+									    <input type="checkbox" id="cbSegServicos" name="cbSegServicos" value="Servi&ccedil;os"> Servi&ccedil;os
+									</label>
+									<label class="checkbox-inline">
+									    <input type="checkbox" id="cbSegVarejo" name="cbSegVarejo" value="Varejo"> Varejo
+									</label>
+									<label class="checkbox-inline masterpvf">
+									    <input type="checkbox" id="cbSegVestuario" name="cbSegVestuario" value="Vestu&aacute;rio"> Vestu&aacute;rio
+									</label>
+									<label class="checkbox-inline masterpvf">
+									    <input type="checkbox" id="cbSegBeleza" name="cbSegBeleza" value="Beleza e Est&eacute;tica"> Beleza e Est&eacute;tica
+									</label>
+									<label class="checkbox-inline masterpvf">
+									    <input type="checkbox" id="cbSegAppGestao" name="cbSegAppGestao" value="APP de Gest&atilde;o"> APP de Gest&atilde;o
+									</label>
+									<label class="checkbox-inline masterpvf">
+									    <input type="checkbox" id="cbSegBarRestaurante" name="cbSegBarRestaurante" value="Bar e Restaurante/Comercio/Food Truck"> Bar e Restaurante/Comercio/Food Truck
+									</label>
+									<label class="checkbox-inline masterpvf">
+									    <input type="checkbox" id="cbSegOdonto" name="cbSegOdonto" value="Odonto"> Odonto
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-info panel-default" id="panelCheckList">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<b>Check List de Documentos Obrigat&oacute;rios <i>(necess&aacute;rio anexar os documentos no processo)</i></b>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="form-group row row-default">
+							<div class="col-md-12 input-default" id="divChecklistDocumentos">
+								<div class="checkbox masterpvf">
+									<label>	
+										<input name="fgCopiaRg" value="sim" type="checkbox" id="fgCopiaRg">
+										<span class="">C&oacute;pia do RG ou CNH dos s&oacute;cios (anexar) obrigat&oacute;rio somente quando a resposta for sim para "Empresa MEI".</span>	
+									</label>
+								</div>
+								<div class="checkbox masterpvf">
+									<label>	
+										<input name="fgRelatorioFaturamento" value="sim" type="checkbox" id="fgRelatorioFaturamento">
+										<span class="">Relat&oacute;rio de Faturamento dos &uacute;ltimos 12 meses (anexar)</span>	
+									</label>
+								</div>
+								<div class="checkbox cc">
+									<label>	
+										<input name="fgEireli" value="sim" type="checkbox" id="fgEireli">
+										<span class="">Empresa composta por dois ou mais s&oacute;cios, ou EIRELI (ver contrato social)</span>	
+									</label>
+								</div>
+								<div class="checkbox cc">
+									<label>	
+										<input name="objetoCanalTotvs" value="sim" type="checkbox" id="objetoCanalTotvs">
+										<span class="">Objeto social compat&iacute;vel com a atividade como canal TOTVS - n&atilde;o &eacute; necessário para canal apenas de indica&ccedil;&atilde;o (ver contrato social)</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input name="cartaoCnpj" value="sim" type="checkbox" id="cartaoCnpj">
+										<span class="">Cart&atilde;o CNPJ (anexar)</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input name="contratoSocial" value="sim" type="checkbox" id="contratoSocial">
+										<span class="">Contrato Social (anexar)</span>
+									</label>
+								</div>
+								<div class="checkbox cc">
+									<label>
+										<input name="certidaoNegativa" value="sim" type="checkbox" id="certidaoNegativa">
+										<span class="">Certid&atilde;o Negativa de D&eacute;bitos (anexar)</span>
+									</label>
+								</div>
+								<div class="checkbox cc">
+									<label>
+										<input name="carteiraClientes" value="sim" type="checkbox" id="carteiraClientes">
+										<span class="">Carteira de Clientes  apenas para contrato tipo CAT (anexar <a href="#" id="linkTemplate">modelo</a> preenchido)</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-info" id="panelDadosdaEmpresa">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<b>Dados da Empresa</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="form-group row">
+							<div class="col-md-2">
+								<label for="nrCnpj">CNPJ</label>
+								<input type="text" class="form-control cnpj" name="nrCnpj" id="nrCnpj" mask="00.000.000/0000-00">
+							</div>
+							<div class="col-md-4">
+								<label for="razaoSocial">Raz&atilde;o Social</label>
+								<input type="text" class="form-control" name="razaoSocial" id="razaoSocial">
+							</div>
+							<div class="col-md-4">
+								<label for="nmFantasia">Nome Fantasia</label>
+								<input type="text" class="form-control" name="nmFantasia" id="nmFantasia">
+							</div>
+							<div class="col-md-2 masterpvf">
+								<label for="nrEscricaoEstadual">Inscri&ccedil;&atilde;o Estadual</label>
+								<input type="text" class="form-control" name="nrEscricaoEstadual" id="nrEscricaoEstadual">
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-8">
+								<label for="endereco">Endere&ccedil;o Completo</label>
+								<input type="text" class="form-control" name="endereco" id="endereco">
+							</div>
+							<div class="col-md-2">
+								<label for="cep">CEP</label>
+								<input type="text" class="form-control" name="cep" id="cep" mask="00000-000">
+							</div>
+							<div class="col-md-2">
+								<label for="uf">UF</label>
+								<select class="form-control" name="uf" id="uf" onchange="removeFilterValue('filter_nmMunicipio')">
+									<option value="">Selecione</option>
+									<option value="AC">AC</option>
+									<option value="AL">AL</option>
+									<option value="AM">AM</option>
+									<option value="AP">AP</option>
+									<option value="BA">BA</option>
+									<option value="CE">CE</option>
+									<option value="DF">DF</option>
+									<option value="ES">ES</option>
+									<option value="GO">GO</option>
+									<option value="MA">MA</option>
+									<option value="MG">MG</option>
+									<option value="MS">MS</option>
+									<option value="MT">MT</option>
+									<option value="PA">PA</option>
+									<option value="PB">PB</option>
+									<option value="PE">PE</option>
+									<option value="PI">PI</option>
+									<option value="PR">PR</option>
+									<option value="RJ">RJ</option>
+									<option value="RN">RN</option>
+									<option value="RO">RO</option>
+									<option value="RR">RR</option>
+									<option value="RS">RS</option>
+									<option value="SC">SC</option>
+									<option value="SE">SE</option>
+									<option value="SP">SP</option>
+									<option value="TO">TO</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4">
+								<label for="nmMunicipio">Munic&iacute;pio</label>
+								<input type="zoom" class="form-control" name="nmMunicipio" id="nmMunicipio" data-zoom="{'displayKey':'ZD8_CIDADE','datasetId':'cadastroMunicipios','filterValues':'ZD8_EST,abc','fields':[{'field':'ZD8_CIDADE','label':'Nome'}]}">
+							</div>
+							<div class="col-md-4">
+								<label for="nrTelefone">Telefone</label>
+								<input type="text" class="form-control" name="nrTelefone" id="nrTelefone" mask="(00) 00000-0000">
+							</div>
+							<div class="col-md-4">
+								<label for="website">Website</label>
+								<input type="text" class="form-control" name="website" id="website">
+							</div>
+						</div>
+						<div class="form-group row masterpvf">
+							<div class="col-md-4">
+								<label for="nmCnae">Cnae</label>
+								<input type="zoom" class="form-control" name="nmCnae" id="nmCnae">
+							</div>
+							<div class="col-md-4">
+								<label for="slOptanteSimples">Optante pelo simples</label>
+								<select class="form-control" name="slOptanteSimples" id="slOptanteSimples" >
+									<option value="sim">Sim</option>
+									<option value="nao">N&atilde;o</option>
+								</select>
+							</div>
+							<div class="col-md-4">
+								<label for="slEmpresaMei">Empresa MEI</label>
+								<select class="form-control" name="slEmpresaMei" id="slEmpresaMei" >
+									<option value="sim">Sim</option>
+									<option value="nao">N&atilde;o</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-info" id="panelDadosdoContrato2">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<b>Dados do Contato</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="form-group row row-default">
+							<div class="col-md-4">
+								<label for="nome">Nome</label>
+								<input type="text" class="form-control" name="nome" id="nome">
+							</div>
+							<div class="col-md-4">
+								<label for="email">E-mail</label>
+								<input type="text" class="form-control" name="email" id="email">
+							</div>
+							<div class="col-md-4">
+								<label for="telefone">Telefone</label>
+								<input type="text" class="form-control" name="telefone" id="telefone" mask="(00) 00000-0000">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-info" id="panelQuadroSocietario">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<b>Quadro Societário</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="form-group row">
+							<div class="col-md-12">
+								<div class="table-responsive input-default">
+									<table border="0" class="table table-striped table-bordered" tablename="tableQuadroSocietario" id="tableQuadroSocietario" nodeletebutton="false" addbuttonclass="btn btn-primary">
+										<thead>
+											<tr>
+												<td>
+													<b>S&oacute;cio</b>
+												</td>
+												<td>
+													<b>CPF S&oacute;cio</b>
+												</td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<input type="text" class="form-control" name="nmSocio" id="nmSocio">
+												</td>
+												<td>
+													<input type="text" class="form-control cpf" name="cpfSocio" id="cpfSocio" mask="000.000.000-00" onblur>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>					
+				</div>
+				<div class="panel panel-info" id="panelDadosBancarios">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<b>Dados Bancários</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="form-group row">
+							<div class="col-md-4">
+								<label for="banco">Banco</label>
+								<input type="text" class="form-control" name="banco" id="banco">
+							</div>
+							<div class="col-md-4">
+								<label for="agencia">Agência</label>
+								<input type="text" class="form-control" name="agencia" id="agencia">
+							</div>
+							<div class="col-md-4">
+								<label for="conta">Conta</label>
+								<input type="text" class="form-control" name="conta" id="conta">
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-8">
+								<label for="emailRecebimentoRelatrio">E-mail para Recebimento de Relat&oacute;rio de Comiss&otilde;es</label>
+								<input type="text" class="form-control" name="emailRecebimentoRelatrio" id="emailRecebimentoRelatrio">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-info" id="panelCriaoUnidadeCrm">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<b>Cria&ccedil;&atilde;o de C&oacute;digo de Unidade no CRM</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="form-group row row-default">
+							<div class="col-md-4">
+								<label for="cdChamado">C&oacute;digo do Chamado</label>
+								<input type="text" class="form-control" name="cdChamado" id="cdChamado">
+							</div>
+							<div class="col-md-4">
+								<label for="dtSolucaoChamado">Data de Solu&ccedil;&atilde;o do Chamado</label>
+								<div class="input-group enable-calendar">
+									<input type="text" class="form-control" name="dtSolucaoChamado" id="dtSolucaoChamado" mask="00/00/0000">
+									<span class="input-group-addon fs-cursor-pointer">
+										<span class="fluigicon fluigicon-calendar"></span>
+									</span>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<label for="cdCanal">C&oacute;digo do Canal</label>
+								<input type="text" class="form-control" name="cdCanal" id="cdCanal">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="panel panel-info" id="panelInfoCondi" style="display:none">
+				
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<b>Informa&ccedil;&otilde;es e Condi&ccedil;&otilde;es Espec&iacute;ficas</b>
+						</h3>
+					</div>
+					
+					<div id="divContratoCAT" style="display:none">
+						<div class="panel-body">
+							<div class="form-group row">
+								<div class="col-md-4">
+									<label for="banco">Importar planilha de Clientes</label>
+									<input type="file"  id="planilhaClientes" src="upload.png" name="files" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="panel-body">
+							<div class="form-group row">
+					    		<div class="col-md-12">
+					    			<div class="table-responsive input-default">
+					    				<table border="0" id="tblClientes" tablename="tblClientes" class="table table-striped table-bordered" nodeletebutton="true" noaddbutton="true">
+					    					<thead>
+					    						<tr style="text-align:center">
+					    							<td class="col-md-2">
+					    								<b>C&oacute;digo do Cliente</b>
+					    							</td>
+					    							<td class="col-md-4">
+					    								<b>Nome</b>
+					    							</td>
+					    							<td class="col-md-3">
+					    								<b>CNPJ</b>
+					    							</td>
+					    							<td class="col-md-2">
+					    								<b>Receita Anual Recorrente</b>
+					    							</td>
+					    							<td class="col-md-1">
+					    								<b>NPS</b>
+					    							</td>
+					    						</tr>
+					    					</thead>
+					    					<tbody>
+					    						<tr>
+					    							<td>
+					    								<input type="text" class="form-control" name="tblCodCliente" id="tblCodCliente" readonly="readonly">
+					    							</td>
+													<td>
+														<input type="text" class="form-control" name="tblNomeCliente" id="tblNomeCliente" readonly="readonly">
+													</td>
+													<td>
+														<input type="text" class="form-control" name="tblCnpjCliente" id="tblCnpjCliente" readonly="readonly">
+													</td>
+													<td>
+														<input type="text" class="form-control number" name="tblReceitaAnualCliente" id="tblReceitaAnualCliente" readonly="readonly">
+													</td>
+													<td>
+														<input type="text" class="form-control number" name="tblNpsCliente" id="tblNpsCliente" readonly="readonly">
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="panel-body" id="divTotaisClientes" style="display:none" >
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="">Total Receita Anual Clientes</label>
+									<input type="text" class="form-control" name="vlTotalReceitaAnual" id="vlTotalReceitaAnual" readonly>
+								</div>
+								<div class="col-md-3">
+									<label for="">M&eacute;dia NPS</label>
+									<input type="text" class="form-control" name="pctMediaNps" id="pctMediaNps" readonly>
+								</div>
+								<div class="col-md-3">
+									<label for="">Meta de Crescimento L&iacute;quido (ano)</label>
+									<input type="text" class="form-control number" name="pctMetaCrescimento" id="pctMetaCrescimento" maxlength='5' onfocus="removeMask(event, this, 'currency' );" onblur="validate_currency(this,2);" onkeypress="applyMask(event,this);" >
+								</div>
+								<div class="col-md-3">
+									<label for="">Meta do NPS M&eacute;dio (ano)</label>
+									<input type="text" class="form-control number" name="pctMetaNps" id="pctMetaNps" mask="000" >
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+				    		<div class="col-md-12">
+								<button type="button" class="btn btn-primary" id="addConditions">Incluir as condi&ccedil;&otilde;es espec&iacute;ficas</button>
+							</div>
+						</div>
+						<div class="form-group row">
+				    		<div class="col-md-12">
+				    			<div class="table-responsive input-default">
+				    				<table border="0" id="tblConditions" tablename="tblConditions" class="table table-striped table-bordered" noaddbutton="true">
+				    					<thead>
+				    						<tr style="text-align:center">
+				    							<td class="col-md-11">
+				    								<b>Condi&ccedil;&otilde;es</b>
+				    							</td>
+				    						</tr>
+				    					</thead>
+				    					<tbody>
+				    						<tr>
+				    							<td>
+				    								<textarea class="form-control" name="txtCondicao" id="txtCondicao" rows="2" ></textarea>
+				    							</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="panel panel-info" id="panelObservacoes">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<b>Observa&ccedil;&otilde;es</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="form-group row">
+							<div class="col-md-12">
+								<textarea class="form-control" name="observacoes" id="observacoes"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
