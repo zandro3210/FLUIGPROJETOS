@@ -1,0 +1,1 @@
+function createDataset(fields, constraints, sortFields) {	var cm1 = DatasetFactory.createConstraint("publisherId", "49497773", "49497773", ConstraintType.MUST);      var dataset = DatasetFactory.getDataset("DOC_APROV", null, new Array(cm1), null);     r}

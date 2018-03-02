@@ -78,8 +78,17 @@ function validateForm(form){
 		ValidateFormUtils.validate("conta", "Conta", "tpContrato", valuesArray);
 		ValidateFormUtils.validate("emailRecebimentoRelatrio", "E-mail para Recebimento de Relatórios de Comissões", "tpContrato", valuesArray);
 	}
-	else if(CURRENT_STATE == Activity.ANALISAR_SOLICITACAO_FINANCEIRO && form.getValue("_aprovadoFinanceiro") == "false"){
-		ValidateFormUtils.validate("_motivoReprovadoFinanceiro", "Motivo da Reprovação");
+	else if(CURRENT_STATE == Activity.ANALISAR_SOLICITACAO_FINANCEIRO && form.getValue("_aprovadoFinanceiro") == "false" ){
+		ValidateFormUtils.validate("_motivoReprovadoFinanceiro", "Motivo da Reprovação");		
+	}
+	else if(CURRENT_STATE == Activity.ANALISAR_REPROVACAO_FRANQUIA && form.getValue("_aprovadoFranquia") == "false" ){
+		ValidateFormUtils.validate("_motivoReprovadoFranquia", "Motivo da Reprovação");		
+	}
+	else if(CURRENT_STATE == Activity.ANALISAR_SOLICITACAO_CANAIS && form.getValue("_aprovadoSCanais") == "false" ){
+		ValidateFormUtils.validate("_motivoSCanais", "Motivo da Reprovação");		
+	}	
+	else if(CURRENT_STATE == Activity.ANALISAR_REPROVACAO_CANAIS && form.getValue("_aprovadoCanais") == "false" ){
+		ValidateFormUtils.validate("_motivoReprovadoCanais", "Motivo da Reprovação");
 	}
 	else if(CURRENT_STATE == Activity.INFORMAR_CODIGO_UNIDADE){
 		ValidateFormUtils.validate("cdChamado", "Código do Chamado");

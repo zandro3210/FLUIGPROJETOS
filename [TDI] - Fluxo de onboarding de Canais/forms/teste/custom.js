@@ -6,7 +6,37 @@ $(document).ready(function(){
 	CustomForm.setTpContrato();
 	
 	$('#planilhaClientes').bind('change', handleFileSelect);
-	  
+	
+
+	$('input[type=radio][name=_aprovadoSCanais]').on('change', function(){
+		if ($("#_aprovadoSCanais").prop("checked"))
+		   $("#_divSCanais").addClass("hidden");
+		else
+		   $("#_divSCanais").removeClass("hidden");
+	});
+
+	$('input[type=radio][name=_aprovadoFranquia]').on('change', function(){
+		if ($("#_aprovadoFranquia").prop("checked"))
+		   $("#_divFranquiaReprovacao").addClass("hidden");
+		else
+		   $("#_divFranquiaReprovacao").removeClass("hidden");
+	});
+
+
+	$('input[type=radio][name=_aprovadoFinanceiro]').on('change', function(){
+		if ($("#_aprovadoFinanceiro").prop("checked"))
+		   $("#_divTextoReprovacao").addClass("hidden");
+		else
+		   $("#_divTextoReprovacao").removeClass("hidden");
+	});
+
+	$('input[type=radio][name=_aprovadoCanais]').on('change', function(){
+		if ($("#_aprovadoCanais").prop("checked"))
+		   $("#_divCanaisReprovacao").addClass("hidden");
+		else
+		   $("#_divCanaisReprovacao").removeClass("hidden");
+	});
+
 	$("#addConditions").on("click", function(){
 		var index = wdkAddChild("tblConditions");		
 	});
@@ -19,6 +49,10 @@ $(document).ready(function(){
 	if( CURRENT_STATE == Activity.ANALISAR_SOLICITACAO_FINANCEIRO )
 	{
 		$("#panelAprovacaoFinanceira").removeClass("hidden");
+	}
+	if( CURRENT_STATE == Activity.ANALISAR_REPROVACAO_CANAIS )
+	{
+		$("#panelAprovacaoCanais").removeClass("hidden");
 	}
 
 	if(CURRENT_STATE == Activity.INCLUIR_CLAUSULAS){
