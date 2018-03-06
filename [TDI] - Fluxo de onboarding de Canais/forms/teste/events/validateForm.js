@@ -81,7 +81,7 @@ function validateForm(form){
 	else if(CURRENT_STATE == Activity.ANALISAR_SOLICITACAO_FINANCEIRO && form.getValue("_aprovadoFinanceiro") == "false" ){
 		ValidateFormUtils.validate("_motivoReprovadoFinanceiro", "Motivo da Reprovação");		
 	}
-	else if(CURRENT_STATE == Activity.ANALISAR_REPROVACAO_FRANQUIA && form.getValue("_aprovadoFranquia") == "false" ){
+	else if(CURRENT_STATE == Activity.ANALISAR_REPROVACAO_FRANQUIA && form.getValue("_reprovadoFranquia") == "false" ){
 		ValidateFormUtils.validate("_motivoReprovadoFranquia", "Motivo da Reprovação");		
 	}
 	else if(CURRENT_STATE == Activity.ANALISAR_SOLICITACAO_CANAIS && form.getValue("_aprovadoSCanais") == "false" ){

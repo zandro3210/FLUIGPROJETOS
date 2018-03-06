@@ -50,10 +50,46 @@ $(document).ready(function(){
 	{
 		$("#panelAprovacaoFinanceira").removeClass("hidden");
 	}
+	if( CURRENT_STATE >= Activity.ANALISAR_SOLICITACAO_FINANCEIRO )
+	{
+		$("#li_decisoes").removeClass("hidden");
+	}
+	
+	if (CURRENT_STATE > Activity.ANALISAR_SOLICITACAO_FINANCEIRO){
+		$("#panelAprovacaoFinanceira").removeClass("hidden");
+		$("#panelAprovacaoFinanceira :input").attr("disabled", true);
+		$("#_divTextoReprovacao").removeClass("hidden");
+	}
+
+	if (CURRENT_STATE > Activity.ANALISAR_REPROVACAO_CANAIS){
+		$("#panelReprovacaoCanais").removeClass("hidden");
+		$("#panelReprovacaoCanais :input").attr("disabled", true);
+		$("#_divCanaisReprovacao").removeClass("hidden");
+	}
+
+	if (CURRENT_STATE > Activity.ANALISAR_SOLICITACAO_CANAIS){
+		$("#panelSCanais").removeClass("hidden");
+		$("#panelSCanais :input").attr("disabled", true);
+		$("#_divSCanais").removeClass("hidden");
+	}
+
+
+	if (CURRENT_STATE > Activity.ANALISAR_REPROVACAO_FRANQUIA){
+		$("#panelReprovadoFranquia").removeClass("hidden");
+		$("#panelReprovadoFranquia :input").attr("disabled", true);
+		$("#_divFranquiaReprovacao").removeClass("hidden");
+	}
+
 	if( CURRENT_STATE == Activity.ANALISAR_REPROVACAO_CANAIS )
 	{
-		$("#panelAprovacaoCanais").removeClass("hidden");
+		$("#panelReprovacaoCanais").removeClass("hidden");		
 	}
+	if( CURRENT_STATE == Activity.ANALISAR_REPROVACAO_FRANQUIA )
+	{
+		$("#panelReprovadoFranquia").removeClass("hidden");
+	}
+
+	
 
 	if(CURRENT_STATE == Activity.INCLUIR_CLAUSULAS){
 		$('#panelInfoCondi').show();
@@ -85,13 +121,8 @@ $(document).ready(function(){
 			$("#endereco").val(data.logradouro);
 			$("#cep").val(data.cep.replace(".","").replace("-",""));
 			$("#uf").val(data.uf);
-			$('#nmMunicipio').find('option').remove().end()
 			reloadZoomFilterValues('nmMunicipio', data.uf);
-				$('#nmMunicipio').append($('<option>', {
-					value: data.municipio,
-					text: data.municipio
-				})).val(data.municipio).change();
-
+			window.nmMunicipio.setValue(titleize(data.municipio));
 			$("#nrTelefone").val(data.telefone);			
 		};
 		param.dataType = 'jsonp';
@@ -99,6 +130,14 @@ $(document).ready(function(){
 	});
 
 });
+function titleize(text) {
+    var words = text.toLowerCase().split(" ");
+    for (var a = 0; a < words.length; a++) {
+        var w = words[a];
+        words[a] = w[0].toUpperCase() + w.slice(1);
+    }
+    return words.join(" ");
+}
 function serviceRest(param){
  
     $.ajax({
