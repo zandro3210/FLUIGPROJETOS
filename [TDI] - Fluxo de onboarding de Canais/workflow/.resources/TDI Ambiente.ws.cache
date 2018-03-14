@@ -2,6 +2,34 @@
 <java version="1.8.0_121" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
+   <string>volume</string>
+   <array class="java.lang.String" length="1">
+    <void index="0">
+     <string>Default</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>expediente</string>
+   <array class="java.lang.String" length="5">
+    <void index="0">
+     <string>24/7 - testes e implantacoes janela</string>
+    </void>
+    <void index="1">
+     <string>Comercial</string>
+    </void>
+    <void index="2">
+     <string>Default</string>
+    </void>
+    <void index="3">
+     <string>horacorrida</string>
+    </void>
+    <void index="4">
+     <string>Zendesk</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
    <string>mecanismoPapel</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -174,6 +202,206 @@
      </object>
     </void>
    </object>
+  </void>
+  <void method="put">
+   <string>camposFormulario, documentoId = 4507996</string>
+   <array class="java.lang.String" length="30">
+    <void index="0">
+     <string>cicloaprovacao</string>
+    </void>
+    <void index="1">
+     <string>cicloaprovacaofluig</string>
+    </void>
+    <void index="2">
+     <string>cicloatual</string>
+    </void>
+    <void index="3">
+     <string>codcon</string>
+    </void>
+    <void index="4">
+     <string>codorg</string>
+    </void>
+    <void index="5">
+     <string>codprod</string>
+    </void>
+    <void index="6">
+     <string>comentarios</string>
+    </void>
+    <void index="7">
+     <string>descricao</string>
+    </void>
+    <void index="8">
+     <string>dtabert</string>
+    </void>
+    <void index="9">
+     <string>ecmvalidate</string>
+    </void>
+    <void index="10">
+     <string>emailAprovador</string>
+    </void>
+    <void index="11">
+     <string>emailUsuar_movimenta_tar</string>
+    </void>
+    <void index="12">
+     <string>hieraraprovadores</string>
+    </void>
+    <void index="13">
+     <string>hieraraprovadoresoriginal</string>
+    </void>
+    <void index="14">
+     <string>idAprovador</string>
+    </void>
+    <void index="15">
+     <string>justificativa</string>
+    </void>
+    <void index="16">
+     <string>managerMode</string>
+    </void>
+    <void index="17">
+     <string>nmcont</string>
+    </void>
+    <void index="18">
+     <string>nmorg</string>
+    </void>
+    <void index="19">
+     <string>nmprod</string>
+    </void>
+    <void index="20">
+     <string>probrelac</string>
+    </void>
+    <void index="21">
+     <string>requesterId</string>
+    </void>
+    <void index="22">
+     <string>status</string>
+    </void>
+    <void index="23">
+     <string>status_aprovacao</string>
+    </void>
+    <void index="24">
+     <string>ticket</string>
+    </void>
+    <void index="25">
+     <string>ticket_reclamado</string>
+    </void>
+    <void index="26">
+     <string>tiporg</string>
+    </void>
+    <void index="27">
+     <string>tipo_solicitacao</string>
+    </void>
+    <void index="28">
+     <string>urlticket</string>
+    </void>
+    <void index="29">
+     <string>urlticket_reclamado</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>mecanismo</string>
+   <array class="[Ljava.lang.Object;" length="10">
+    <void index="0">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Associação</string>
+      </void>
+      <void index="1">
+       <string>Associado</string>
+      </void>
+     </array>
+    </void>
+    <void index="1">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Campo de Formulário</string>
+      </void>
+      <void index="1">
+       <string>Campo Formulário</string>
+      </void>
+     </array>
+    </void>
+    <void index="2">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Executor de Atividade</string>
+      </void>
+      <void index="1">
+       <string>Executor Atividade</string>
+      </void>
+     </array>
+    </void>
+    <void index="3">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>FEC_loopInstrutor</string>
+      </void>
+      <void index="1">
+       <string>FEC_loopInstrutor</string>
+      </void>
+     </array>
+    </void>
+    <void index="4">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Grupo</string>
+      </void>
+      <void index="1">
+       <string>Grupo</string>
+      </void>
+     </array>
+    </void>
+    <void index="5">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Grupos do Colaborador</string>
+      </void>
+      <void index="1">
+       <string>Grupos Colaborador</string>
+      </void>
+     </array>
+    </void>
+    <void index="6">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Papel</string>
+      </void>
+      <void index="1">
+       <string>Papel</string>
+      </void>
+     </array>
+    </void>
+    <void index="7">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição para um Grupo</string>
+      </void>
+      <void index="1">
+       <string>Pool Grupo</string>
+      </void>
+     </array>
+    </void>
+    <void index="8">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição para um Papel</string>
+      </void>
+      <void index="1">
+       <string>Pool Papel</string>
+      </void>
+     </array>
+    </void>
+    <void index="9">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Usuário</string>
+      </void>
+      <void index="1">
+       <string>Usuário</string>
+      </void>
+     </array>
+    </void>
+   </array>
   </void>
  </object>
 </java>

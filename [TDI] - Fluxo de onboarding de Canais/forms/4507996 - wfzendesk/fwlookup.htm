@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <style type="text/css">html, body {padding: 0;font-size: 80%;}</style>
+	
+<link type="text/css" href="jquery-ui.custom.css" rel="stylesheet" />
+	
+<link type="text/css" href="jquery-ui.grid.css" rel="stylesheet" />
+	
+<link type="text/css" href="ui.jqgrid.css" rel="stylesheet" />
+	
+<link type="text/css" href="fw.mvc.xsl.css" rel="stylesheet" />
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	
+<script src="jquery.metadata.js"></script>
+	
+<script src="autonumeric.js"></script>
+	
+<script src="fw.maskedinput.js"></script>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	
+<script src="jqgrid.locale.js"></script>
+	
+<script src="jqgrid.js"></script>
+	
+<script src="json2.js"></script>
+	
+<script src="fw.mvc.xsl.js"></script>
+	
+<script src="fw.mvc.text.js"></script>
+	
+    <script>
+        $(document).ready(function () {
+            $('#fw-lookup-btnseek').val($.fwText.search);
+            $("#fw-lookup").fwLookUp({
+                url: getURLParameter('url'), key: getURLParameter('key'),
+                keyLogin: getURLParameter('keylogin'), field: getURLParameter('field'),
+                form: getURLParameter('fw-form'),
+                memVar: getURLParameter('memVar'),
+                module: getURLParameter('module')
+            }).fwLookUp('open');
+        })
+        function getURLParameter(name) {
+            return decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1]);
+        }
+    </script>
+    <title>TOTVS Microsiga Protheus</title>
+</head>
+<body class="fw-lookup">
+    <div id="fw-lookup" style="display: none">
+        <div class="fw-input"><select id="fw-lookup-index" style="width: 180px"></select></div>
+        <div class="fw-input"><input type="text" id="fw-lookup-seek" class="fw-input-char" style="width: 250px" /></div>
+        <div class="fw-input"><input type="button" id="fw-lookup-btnseek" style="margin-top: 10px" /></div>
+        <table id="fw-lookup-grid"></table>
+        <div id="fw-lookup-nav"></div>
+    </div>
+    <div class="ui-jqgrid ui-widget" style="visibility: hidden; white-space: nowrap;">
+        <span class="ui-jqgrid-view" id="fw-lookup-width" />
+    </div>
+</body>
+</html>

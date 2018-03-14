@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+		<script src="/portal/resources/js/jquery/jquery.js"></script>
+		<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+		<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+		<script src="mustache.min.js"></script>
+   
+		<title>TOTVS S&eacute;rie T Manufatura - Aprova&ccedil;&atilde;o do Atendimento</title>
+		
+		<script>
+			function init() {
+				
+				// desabilita botão salvar
+	 			//window.parent.$('#btnSave').hide();
+				window.parent.$('#wcm_widget').find("[data-save]").css('display', 'none');
+				
+				var stringJSON = $('#comentarios').val();
+				console.log(stringJSON);
+				
+				var data = JSON.parse(stringJSON);
+	
+				var bodyTable = document.getElementById('bodyTable');
+				if(data != null && data != "" ) {
+					$('.comentario').css('display', '');
+					for (i=0; i<data.length; i++) {
+						var newRow = bodyTable.insertRow();
+						console.log("Dentro do For - newRow: " + newRow);
+						newRow.insertCell().innerHTML = "<input type='button' class='btn btn-info btn-xs' value='Visualizar' onclick=abrirObs(" + i + ")>";
+						newRow.insertCell().innerHTML = data[i].cdagente;
+						newRow.insertCell().innerHTML = data[i].nmagente;
+					}
+				}
+			}
+			
+			function abrirObs(index){
+				//var data = eval($('#VIEW_ADF_DATA').val());
+			
+				var stringJSON = $('#comentarios').val();			
+				console.log('abrirOBS ' + stringJSON);
+				
+				var data = JSON.parse(stringJSON);
+				
+				var str = "";
+				try{
+				    var str = decodeURI(data[index].comentario);
+				}catch (e) {
+					// todo: handle exception
+					var str = data[index].comentario;
+				}
+				
+				console.log(str);
+				
+				var contText = "<div style=\"overflow: auto\">";
+				contText += str;
+				contText += "<div>";
+				
+				FLUIGC.modal({
+				    title: 'Observa\u00e7\u00f5es',
+				    content: contText,
+				    id: 'fluig-modal',
+				    size: 'large',
+				    actions: [{
+				        'label': 'Ok',
+				        'bind': 'data-open-modal',
+				        'autoClose': true
+				    }]
+				});
+			}
+		</script>
+	</head>
+   
+	<body onload="init()">
+	<div class="fluig-style-guide">
+		<h1>Aprova&ccedil;&atilde;o do Atendimento</h1>
+		
+		<form method="post" role="form">
+			<input type="hidden" name="ecmvalidate" id="ecmvalidate" value=""/>
+         	<input type="hidden" name="tiporg" id="tiporg"/>
+         	<input type='hidden' name='hieraraprovadores' id='hieraraprovadores'/>
+         	<input type='hidden' name='hieraraprovadoresoriginal' id='hieraraprovadoresoriginal'/>
+         	<input type='hidden' name='cicloaprovacao' id='cicloaprovacao'/>
+         	<input type='hidden' name='cicloaprovacaofluig' id='cicloaprovacaofluig'/>
+         	<input type='hidden' name='cicloatual' id='cicloatual'/>
+         	<input type='hidden' name='managerMode' id='managerMode'/>
+         	<input type='hidden' name='status' id='status'/>
+         	<input type='hidden' name='idAprovador' id='idAprovador'/>
+         	<input type='hidden' name='emailAprovador' id='emailAprovador'/>
+         	<input type='hidden' name='comentarios' id='comentarios' />
+         	<input type='hidden' name='requesterId' id='requesterId' />
+         	<input type='hidden' name='urlticket' id='urlticket' />
+         	
+         	
+         	
+         	<div class="row">
+		      	<div class="form-group col-sm-2">
+			        <label for="ticket">Ticket</label>
+			        <input type="text" class="form-control" name="ticket" id="ticket" readonly/>
+			    </div>
+			    <div class="form-group col-sm-2">
+			    	<label></label>
+			        <input type="button" class="form-control" value="Consultar na Zendesk"
+			        onclick="window.open(document.getElementById('urlticket').value, '_blank')" />
+			    </div>
+			</div>
+			<div class="row">
+<!-- 			    <div class="form-group col-sm-2"> -->
+<!-- 			        <label for="codcon">Contato</label> -->
+<!-- 			        <input type="text" class="form-control" name="codcon" id="codcon" readonly> -->
+						<input type="hidden" name="codcon" id="codcon" />
+<!-- 			    </div> -->
+			    <div class="form-group col-sm-4">
+			        <label for="nmcont">Nome contato</label>
+			        <input type="text" class="form-control" name="nmcont" id="nmcont" readonly>
+			    </div>
+<!-- 				<div class="form-group col-sm-2"> -->
+<!-- 			        <label for="codorg">C&oacute;digo Organiza&ccedil;&atilde;o</label> -->
+<!-- 			        <input type="text" class="form-control" name="codorg" id="codorg" readonly> -->
+			        <input type="hidden" name="codorg" id="codorg" />
+<!-- 			    </div> -->
+			    <div class="form-group col-sm-4">
+			        <label for="nmorg">Nome Organiza&ccedil;&atilde;o</label>
+			        <input type="text" class="form-control" name="nmorg" id="nmorg" readonly>
+			    </div>
+			</div>
+			<div class="row">
+<!-- 			    <div class="form-group col-sm-2"> -->
+<!-- 			        <label for="codprod">Produto</label> -->
+<!-- 			        <input type="text" class="form-control" name="codprod" id="codprod" readonly> -->
+						<input type="hidden" name="codprod" id="codprod" />
+<!-- 			    </div> -->
+			    <div class="form-group col-sm-4">
+			        <label for="nmprod">Nome Produto</label>
+			        <input type="text" class="form-control" name="nmprod" id="nmprod" readonly>
+			    </div>
+				<div class="form-group col-sm-3">
+					<label for="priorid">Prioridade</label>
+					<select class="form-control" name="priorid" id="priorid" readonly>
+						<option value="low" disabled>Baixa</option>
+						<option value="normal" disabled>Normal</option>
+						<option value="high" disabled>Alta</option>
+						<option value="urgent" disabled>Urgente</option>
+						<!--option value="1" disabled>1=Planejada</option-->
+						<option value="" disabled>Nao selecionado</option>
+					</select>
+				</div>
+				<div class="form-group col-sm-3">
+					<label for="dtabert">Data Abertura</label>
+			        <input type="text" class="form-control" name="dtabert" id="dtabert" readonly>
+				</div>
+			</div>
+			
+<!--			<div class="row"-->
+<!--                <div class="form-group col-sm-3"-->
+<!--                    <label for="probrelac">Problema Reclamado</label-->
+                    <input type="hidden" class="form-control" name="probrelac" id="probrelac" readonly>
+<!--				</div-->
+<!--			</div> -->
+			
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<label for="descricao">Descri&ccedil;&atilde;o</label>
+			        <textarea class="form-control" name="descricao" id="descricao" readonly="readonly" rows="6"></textarea>
+				</div>
+			</div>
+			<div class="row comentario" style="display: none" >
+				<div class="form-group col-sm-12">
+					<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Coment&aacute;rio</th>
+							<th>Agente</th>
+							<th>Nome Agente</th>
+						</tr>
+					</thead>
+					<tbody id="bodyTable">
+						
+					</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<fieldset>
+						<legend>Aprova&ccedil;&atilde;o</legend>
+						<div class="radio">
+							<label style="color: green">
+						    	<input type="radio" name="status_aprovacao" id="statusaprovado" value="Aprovado"> Aprovado
+						    </label>
+					    </div>
+					    <div class="radio">
+						    <label style="color: red">
+						    	<input type="radio" name="status_aprovacao" id="statusreprovado" value="Reprovado"> Reprovado
+						    </label>
+					    </div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<label for="justificativa">Justificativa</label>
+			        <textarea class="form-control" name="justificativa" id="justificativa" rows="6" ></textarea>
+				</div>
+			</div>
+		</form>
+	</div>
+	</body>
+</html>

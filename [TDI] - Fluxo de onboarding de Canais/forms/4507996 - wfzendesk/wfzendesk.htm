@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+		<script src="/portal/resources/js/jquery/jquery.js"></script>
+		<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+		<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+		<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+		
+		<script src="/totvs/js/totvs-tdi-3.0.js"></script>
+
+		<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+   
+<title>APROVA&Ccedil;&Atilde;O FLUIG</title>
+		
+		<script>
+		
+ 			function init() {
+ 				
+				//TRATAMENTO DA URL - PARA AUTENTICAR NO IDENTITY
+					if ($('#urlticket').val() != ""){
+						
+			// FOI SOLICITADO A RETIRADA DESTE LINK						
+		 				//prefluigp12
+		 				// botao >> https://p12.customerfi.com/cloudpass/launchpad/launchApp/ggxxx38e7epbitvd1460745436638
+		 				//var urlRelay = "https://p12.customerfi.com/cloudpass/launchpad/launchApp?id=ggxxx38e7epbitvd1460745436638&RelayState=" + $('#urlticket').val();
+		 				
+		 				//producao 
+		 				// botao >>  https://totvs.fluigidentity.com/cloudpass/launchpad/launchApp/0w68h87llm8e2rp41463690860303/isPersonal=false
+		 				//var urlRelay = "https://totvs.fluigidentity.com/cloudpass/launchpad/launchApp?id=0w68h87llm8e2rp41463690860303&RelayState=" + $('#urlticket').val();
+		 				
+		 				//$('#urlticket').val(urlRelay);
+					}
+		// FIM TRATAMENTO DA URL
+
+		// tratamento para quando é solicitacao do tipo ouvidoria - vem o tipo da zendesk.
+		var tipo_solicitacao = $('#tipo_solicitacao').val();
+		
+		if (tipo_solicitacao.startsWith("ouvidoria")) {
+
+			//console.log(".title: " + $(".title").html());
+			
+			//alteracao do Titulo para ouvidoria 
+			$(".title").html("WORKFLOW OUVIDORIA");
+
+			
+			$('#labTicket').text("No Solic Ouvidoria");
+			
+			$('#labTicketOrigem').text("No Solic Reclamada");
+			document.getElementById('labTicketOrigem').innerHTML = "No Solic Reclamada";
+			
+			$('#labJustif').text("Descreva a ação realizada para solução da Ouvidoria");
+
+			//$('#labJustif').removeClass('col-sm-3');
+			//$('#labJustif').removeClass('control-label');
+			//$('#labJustif').addClass('col-sm-7 control-label');
+			
+			//$('#justificativa').removeClass('col-sm-4');
+			//$('#justificativa').addClass('col-sm-10');
+			
+			console.log("show na div");
+			$('#divTicketReclam').show();
+
+			if ($('#ticket_reclamado').val() == ""
+					|| $('#ticket_reclamado').val() == null
+					|| $('#ticket_reclamado').val() == "undefined") {
+				console.log("ticket_reclamado invalido! - hide");
+				$('#btnTicketReclamado').hide();
+			} else if ($('#urlticket_reclamado').val() == ""
+					|| $('#urlticket_reclamado').val() == null
+					|| $('#urlticket_reclamado').val() == "undefined") {
+				console.log("ticket_reclamado não é valido! - hide");
+				$('#btnTicketReclamado').hide();
+			} else {
+				console.log("ticket_reclamado esta valido! - show");
+				$('#btnTicketReclamado').show();
+			}
+			
+			$('#divAprovac').html('CONSIDERA&Ccedil;&Otilde;ES');
+			
+			$('#status_aprovacao').val('Aprovado');
+			$('#labIdAprovado').hide();
+			$('#status_aprovacao').hide();
+			
+		} else {
+			$('#divTicketReclam').hide();
+		}
+		// fim tratamento
+	}
+ 			
+	//tratamento para  verificar se o numero do chamado possui letras 
+	//caso sim, colocar link do portal de clientes
+	//caso nao, assumir link da zendesk
+	function validaUrlTicketReclamado(){
+		var tipo_solicitacao = $('#tipo_solicitacao').val();
+		console.log("validaUrlTicketReclamado - tipo solic: "
+				+ $('#tipo_solicitacao').val());
+ 				
+		if (tipo_solicitacao.startsWith("ouvidoria")){
+
+			console.log(" validaUrlTicketReclamado - conteudo da url :"
+					+ $('#urlticket_reclamado').val());
+
+			if ($('#urlticket_reclamado').val() != ""
+					&& $('#urlticket_reclamado').val() != null
+					&& $('#urlticket_reclamado').val() != "undefined") {
+
+				console
+						.log(" validaUrlTicketReclamado - TICKET ORIGEM É NUMERO? "
+								+ isNumber($('#ticket_reclamado').val()));
+
+				if (isNumber($('#ticket_reclamado').val()) == false) {
+					//teste ex: TVFGW9
+					$('#urlticket_reclamado').val(
+							"http://10.80.129.188/portal/p/10098/consulta#s/"
+									+ $('#ticket_reclamado').val());
+
+					//producao
+					//$('#urlticket_reclamado').val("https://suporte.totvs.com/portal/p/10098/consulta#s/" + $('#ticket_reclamado').val());
+
+					console.log(" URL TICKET ORIGEM: "
+							+ $('#urlticket_reclamado').val());
+				}
+
+				window.open(
+						document.getElementById('urlticket_reclamado').value,
+						'_blank');
+
+			} else {
+				Alert("Link do Ticket origem e invalido!");
+			}
+		}
+	}
+ 			
+ 			function isNumber(n) {
+ 			    return !isNaN(parseFloat(n)) && isFinite(n);
+ 			}
+		</script>
+	</head>
+   
+	<body onload="init()">
+	<div class="fluig-style-guide"> 
+		
+		<form class="form-horizontal" role="form">
+			<input type="hidden" name="ecmvalidate" id="ecmvalidate" value=""/>
+         	<input type="hidden" name="tiporg" id="tiporg"/>
+         	<input type='hidden' name='hieraraprovadores' id='hieraraprovadores'/>
+         	<input type='hidden' name='hieraraprovadoresoriginal' id='hieraraprovadoresoriginal'/>
+         	<input type='hidden' name='cicloaprovacao' id='cicloaprovacao'/>
+         	<input type='hidden' name='cicloaprovacaofluig' id='cicloaprovacaofluig'/>
+         	<input type='hidden' name='cicloatual' id='cicloatual'/>
+         	<input type='hidden' name='managerMode' id='managerMode'/>
+         	<input type='hidden' name='status' id='status'/>
+         	<input type='hidden' name='idAprovador' id='idAprovador'/>
+         	<input type='hidden' name='emailAprovador' id='emailAprovador'/>
+         	<input type='hidden' name='comentarios' id='comentarios' />
+         	<input type='hidden' name='requesterId' id='requesterId' />
+         	<input type='hidden' name='urlticket' id='urlticket' />
+         	<input type='hidden' name='urlticket_reclamado' id='urlticket_reclamado' />
+         	<!--  <input type='hidden' name='tipoSolic' id='tipoSolic' /-->
+         	<!-- conteudos possiveis no campo abaixo(definido por rafael zendesk):  workflow  ou  ouvidoria-->
+         	<input type='hidden' name='tipo_solicitacao' id='tipo_solicitacao'/>
+         	
+         	<!--Usuario que  esta movimentando a tarefa no momento - para casos de substituto ou gestor de processo -->
+         	<input type='hidden' name='emailUsuar_movimenta_tar' id='emailUsuar_movimenta_tar'/>
+         	
+         	<input type="hidden" name="codcon" id="codcon" />
+         	<input type="hidden" name="codorg" id="codorg" />
+         	<input type="hidden" name="codprod" id="codprod" />
+         	<input type="hidden" class="form-control" name="probrelac" id="probrelac" readonly>
+         	
+         	<div class="panel panel-default">
+				<div id="tit1" class="panel-totvs panel-heading">DETALHAMENTO DA SOLICITA&Ccedil;&Atilde;O</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<label id="labTicket" for="ticket" class="col-sm-4 control-label">Ticket</label>
+						<div class="col-sm-2">
+				            <input type="text" id="ticket" name="ticket" class="form-control" readonly />
+				        </div>
+				        <!-- <div class="col-sm-2 form-inline">
+							<input type="button" class="btn btn-link" value="Clique aqui para acessar o Ticket"
+			        			onclick="window.open(document.getElementById('urlticket').value, '_blank')" />						
+				        </div>
+				        -->
+					</div>
+					<div id="divTicketReclam" class="form-group" >
+						<label id="labTicketOrigem" for="ticket_reclamado"
+							class="col-sm-4 control-label">Ticket Origem</label>
+						<div class="col-sm-2">
+							<input type="text" id="ticket_reclamado" name="ticket_reclamado"
+								class="form-control" readonly />
+						</div>
+						<div class="col-sm-2 form-inline">
+							<!--input type="button" class="btn btn-link" value="Clique aqui para acessar o Ticket Origem"
+			        			onclick="window.open(document.getElementById('urlticket_reclamado').value, '_blank')" /-->
+							<input type="button" id="btnTicketReclamado" class="btn btn-link"
+								value="Clique aqui para acessar"
+								onclick="validaUrlTicketReclamado();" />
+
+				        </div>
+					</div>
+					
+					<div class="form-group">
+						<label for="nmorg" class="col-sm-4 control-label">Cliente</label>
+						<div class="col-sm-2">
+							<input type="text" id="nmorg" name="nmorg" class="form-control"
+								readonly />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="nmcont" class="col-sm-4 control-label">Contato</label>
+						<div class="col-sm-8 form-inline">
+							<input id="nmcont" name="nmcont" size="40" class="form-control"
+								readonly type="text" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="nmprod" class="col-sm-4 control-label">Produto</label>
+						<div class="col-sm-2">
+							<input type="text" id="nmprod" name="nmprod" class="form-control"
+								readonly />
+						</div>
+					</div>
+					<!-- div class="form-group">
+						<label for="priorid" class="col-sm-4 control-label">Prioridade</label>
+						<div class="col-sm-2">
+							<input type="text" id="priorid" name="priorid" class="form-control" readonly /-->
+							
+					<!-- 				            <select class="form-control" name="priorid" id="priorid" readonly> -->
+					<!-- 								<option value="low" disabled>Baixa</option> -->
+					<!-- 								<option value="normal" disabled>Normal</option> -->
+					<!-- 								<option value="high" disabled>Alta</option> -->
+					<!-- 								<option value="urgent" disabled>Urgente</option> -->
+					<!-- 								option value="1" disabled>1=Planejada</option -->
+					<!-- 								<option value="" disabled>Nao selecionado</option> -->
+					<!-- 							</select> -->
+					<!-- /div-->
+				    <!--/div-->
+				
+					<div class="form-group">
+						<label for="dtabert" class="col-sm-4 control-label">Data
+							Abertura</label>
+						<div class="col-sm-2">
+							<input type="text" id="dtabert" name="dtabert"
+								class="form-control" readonly />
+						</div>
+					</div>
+					<div class="form-group">
+						<label id="labDescricao" for="descricao"
+							class="col-sm-4 control-label">Assunto</label>
+						<div class="col-sm-7">
+							<textarea id="descricao" name="descricao" class="form-control"
+								rows=4 cols=40 data-required=true readonly></textarea>
+						</div>
+					</div>
+					<div class="row comentario" style="display: none">
+						<div class="form-group col-sm-10">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>Coment&aacute;rio</th>
+										<th>Agente</th>
+										<th>Nome Agente</th>
+									</tr>
+								</thead>
+								<tbody id="bodyTable">
+								
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="panel panel-default panel-aprovacao">
+				<div id="divAprovac" class="panel-totvs panel-heading">APROVA&Ccedil;&Atilde;O</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<label id= "labIdAprovado" for="idAprovado" class="col-sm-4 control-label">Aprovado?</label>
+						<div class="col-sm-4">
+							<select class="form-control" name="status_aprovacao"
+								id="status_aprovacao" data-required=true>
+								<option value="" selected="selected">Selecione!</option>
+								<option value="Aprovado">Aprovado</option>
+								<option value="Reprovado">Reprovado</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+					<!-- 
+						<label id="labJustif" for="justificativa" class="col-sm-7 control-label">Justificativa</label>
+						<div>
+							<textarea id="justificativa" name="justificativa"
+								class="col-sm-10" rows=4 cols=40 data-required=true></textarea>
+						</div>
+					-->
+					<label id="labJustif" for="justificativa" class="col-sm-4 control-label">Justificativa</label>
+						<div>
+							<textarea id="justificativa" name="justificativa" class="col-sm-4" rows=4 cols=40 data-required=true></textarea>
+				        </div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	</body>
+</html>
