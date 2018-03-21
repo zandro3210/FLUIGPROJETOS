@@ -16,11 +16,15 @@ var Attachments = {
 	},
 	/** Valida se foi enviado anexos na atividade. **/
 	validate: function(quantity){
-		log.info('@nrAttachment validate start ');
+		log.info('@nrAttachment validate start quantity:'+ quantity);
 	    var nrAttachmentPrevious = parseInt(hAPI.getCardValue("nrAnexo"));
+	    log.info("@CanaisOnBoard Attachments hAPI.getCardValue('nrAnexo')" + nrAttachmentPrevious);
 		var minimalAmountExpected = nrAttachmentPrevious+quantity;
+		log.info("@CanaisOnBoard Attachments nrAttachmentPrevious+quantity" + minimalAmountExpected);
 	    var nrAttachmentCurrent = hAPI.listAttachments().size();
-	  
+	    log.info("@CanaisOnBoard Attachments hAPI.listAttachments().size()" + nrAttachmentCurrent);
+
+
 	    if(nrAttachmentCurrent < minimalAmountExpected){
 			var expected = minimalAmountExpected - nrAttachmentPrevious;
 			var sended = nrAttachmentCurrent - nrAttachmentPrevious;

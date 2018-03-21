@@ -33,7 +33,7 @@ function beforeTaskSave(colleagueId,nextSequenceId,userList){
 	//// Retirando do BeforeStateENtry
 
 	log.info("@beforeTaskSave CANAISONBOARDS diz: "+CURRENT_STATE);
-	if(CURRENT_STATE != Activity.INICIO && CURRENT_STATE != Activity.ZERO)
+	if(CURRENT_STATE != Activity.INICIO && CURRENT_STATE != Activity.ZERO && CURRENT_STATE != Activity.ANALISAR_CONTRATO_ASSINADO )
 	{
 		log.info("@beforeTaskSave Attachments.updateTotal()");
 		try {

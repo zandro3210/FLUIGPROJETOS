@@ -36,57 +36,69 @@ $(document).ready(function(){
 		else
 		   $("#_divCanaisReprovacao").removeClass("hidden");
 	});
-
+	$('input[type=radio][name=_reprovadoContratoAssinado]').on('change', function(){
+		if ($("#_reprovadoContratoAssinado").prop("checked"))
+		   $("#_div_reprovadoContratoAssinado").addClass("hidden");
+		else
+		   $("#_div_reprovadoContratoAssinado").removeClass("hidden");
+	});
 	$("#addConditions").on("click", function(){
 		var index = wdkAddChild("tblConditions");		
 	});
 	
-	if(CURRENT_STATE == Activity.ZERO || CURRENT_STATE == Activity.INICIO) CustomForm.setServerUrl();
-	else CustomForm.disableChild('panelQuadroSocietario');
+	if(CURRENT_STATE == Activity.ZERO || CURRENT_STATE == Activity.INICIO) 
+		CustomForm.setServerUrl();
+	else 
+		CustomForm.disableChild('panelQuadroSocietario');
 	
-	if(CURRENT_STATE != Activity.INFORMAR_CODIGO_UNIDADE && CURRENT_STATE != Activity.AGUARDAR_ENCERRAMENTO_CHAMADOS) $('#panelCriaoUnidadeCrm').toggle();
+	if(CURRENT_STATE != Activity.INFORMAR_CODIGO_UNIDADE && CURRENT_STATE != Activity.AGUARDAR_ENCERRAMENTO_CHAMADOS) 
+		$('#panelCriaoUnidadeCrm').toggle();
+
+	if( CURRENT_STATE != Activity.ZERO )
+		$("#li_decisoes").removeClass("hidden");
 
 	if( CURRENT_STATE == Activity.ANALISAR_SOLICITACAO_FINANCEIRO )
 	{
-		$("#panelAprovacaoFinanceira").removeClass("hidden");
-	}
-	if( CURRENT_STATE >= Activity.ANALISAR_SOLICITACAO_FINANCEIRO )
-	{
-		$("#li_decisoes").removeClass("hidden");
+		ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_FINANCEIRO]);
+		ExibicaoDecisoesInput([Activity.ANALISAR_SOLICITACAO_FINANCEIRO]);
 	}
 	
-	if (CURRENT_STATE > Activity.ANALISAR_SOLICITACAO_FINANCEIRO){
-		$("#panelAprovacaoFinanceira").removeClass("hidden");
-		$("#panelAprovacaoFinanceira :input").attr("disabled", true);
-		$("#_divTextoReprovacao").removeClass("hidden");
+	if (CURRENT_STATE == Activity.ANALISAR_REPROVACAO_CANAIS){
+
+		ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_FINANCEIRO,Activity.ANALISAR_REPROVACAO_CANAIS]);
+		ExibicaoDecisoesInput([Activity.ANALISAR_REPROVACAO_CANAIS]);
+
 	}
 
-	if (CURRENT_STATE > Activity.ANALISAR_REPROVACAO_CANAIS){
-		$("#panelReprovacaoCanais").removeClass("hidden");
-		$("#panelReprovacaoCanais :input").attr("disabled", true);
-		$("#_divCanaisReprovacao").removeClass("hidden");
-	}
-
-	if (CURRENT_STATE > Activity.ANALISAR_SOLICITACAO_CANAIS){
-		$("#panelSCanais").removeClass("hidden");
-		$("#panelSCanais :input").attr("disabled", true);
-		$("#_divSCanais").removeClass("hidden");
+	if (CURRENT_STATE == Activity.ANALISAR_SOLICITACAO_CANAIS){
+		ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_FINANCEIRO,Activity.ANALISAR_SOLICITACAO_CANAIS]);	
+		ExibicaoDecisoesInput([Activity.ANALISAR_SOLICITACAO_CANAIS]);
 	}
 
 
-	if (CURRENT_STATE > Activity.ANALISAR_REPROVACAO_FRANQUIA){
-		$("#panelReprovadoFranquia").removeClass("hidden");
-		$("#panelReprovadoFranquia :input").attr("disabled", true);
-		$("#_divFranquiaReprovacao").removeClass("hidden");
+	if (CURRENT_STATE == Activity.ANALISAR_REPROVACAO_FRANQUIA){
+
+		ExibicaoDecisoesInput([Activity.ANALISAR_REPROVACAO_FRANQUIA]);
+		ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_FINANCEIRO]);
+		if ($("#tipoSolic").val() == "master")
+		{
+			ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_CANAIS]);
+		}else{
+			ExibicaoDecisoesPanel([Activity.ANALISAR_REPROVACAO_CANAIS]);
+		}
+	
 	}
 
-	if( CURRENT_STATE == Activity.ANALISAR_REPROVACAO_CANAIS )
+	if( CURRENT_STATE == Activity.ANALISAR_CONTRATO_ASSINADO )
 	{
-		$("#panelReprovacaoCanais").removeClass("hidden");		
-	}
-	if( CURRENT_STATE == Activity.ANALISAR_REPROVACAO_FRANQUIA )
-	{
-		$("#panelReprovadoFranquia").removeClass("hidden");
+		ExibicaoDecisoesPanel([Activity.ANALISAR_CONTRATO_ASSINADO,Activity,ANALISAR_SOLICITACAO_FINANCEIRO,Activity.ANALISAR_REPROVACAO_FRANQUIA]);
+		if ($("#tipoSolic").val() == "master")
+		{
+			ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_CANAIS]);
+		}else{
+			ExibicaoDecisoesPanel([Activity.ANALISAR_REPROVACAO_CANAIS]);
+		}
+		ExibicaoDecisoesInput([Activity.ANALISAR_SOLICITACAO_FINANCEIRO,Activity.ANALISAR_REPROVACAO_CANAIS,Activity.ANALISAR_SOLICITACAO_CANAIS,Activity.ANALISAR_REPROVACAO_FRANQUIA,Activity.ANALISAR_CONTRATO_ASSINADO]);	
 	}
 
 	
@@ -130,6 +142,22 @@ $(document).ready(function(){
 	});
 
 });
+function ExibicaoDecisoesPanel(array){
+	for (i = 0; i < array.length; i++) { 
+		$("#panelDecisao" + array[i] ).removeClass("hidden");
+		if ($("#panelDecisao" + array[i]).find('input:checked').val() == "false")
+			$("#panelDecisao" + array[i]).find('textarea').parent('div').removeClass("hidden")
+	}
+}
+function ExibicaoDecisoesInput(array){
+	for (i = 0; i < array.length; i++) { 
+		$("#panelDecisao" + array[i] +" :input").attr("disabled", false);
+		
+	}
+	$("#panelDecisao" + array[i] +" :input").attr("disabled", false);
+}
+
+
 function titleize(text) {
     var words = text.toLowerCase().split(" ");
     for (var a = 0; a < words.length; a++) {

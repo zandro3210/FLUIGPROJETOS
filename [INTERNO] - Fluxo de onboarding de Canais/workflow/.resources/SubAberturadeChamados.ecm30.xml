@@ -29,10 +29,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>SubAberturadeChamados</processId>
-      <version>4</version>
+      <version>7</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
-    <formId>307</formId>
+    <formId>332</formId>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>false</updateAttachmentsVersion>
     <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
@@ -443,6 +443,98 @@
   </list>
   <list/>
   <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>activity</eventId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>var Activity = {&#xd;
+	ZERO: 4,&#xd;
+	EMAIL_CORPORATIVO: 9,&#xd;
+	CRIACAO_COD_CRM: 11,&#xd;
+	PORTAL_CLIENTE: 13,&#xd;
+	USUARIO_CRM_VENDAS: 15&#xd;
+}&#xd;
+function ajax(option) { // $.ajax(...) without jquery.&#xd;
+    if (typeof(option.url) == &quot;undefined&quot;) {&#xd;
+        try {&#xd;
+            option.url = location.href;&#xd;
+        } catch(e) {&#xd;
+            var ajaxLocation;&#xd;
+            ajaxLocation = document.createElement(&quot;a&quot;);&#xd;
+            ajaxLocation.href = &quot;&quot;;&#xd;
+            option.url = ajaxLocation.href;&#xd;
+        }&#xd;
+    }&#xd;
+    if (typeof(option.type) == &quot;undefined&quot;) {&#xd;
+        option.type = &quot;GET&quot;;&#xd;
+    }&#xd;
+    if (typeof(option.data) == &quot;undefined&quot;) {&#xd;
+        option.data = null;&#xd;
+    } else {&#xd;
+        var data = &quot;&quot;;&#xd;
+        for (var x in option.data) {&#xd;
+            if (data != &quot;&quot;) {&#xd;
+                data += &quot;&amp;&quot;;&#xd;
+            }&#xd;
+            data += encodeURIComponent(x)+&quot;=&quot;+encodeURIComponent(option.data[x]);&#xd;
+        };&#xd;
+        option.data = data;&#xd;
+    }&#xd;
+    if (typeof(option.statusCode) == &quot;undefined&quot;) { // 4&#xd;
+        option.statusCode = {};&#xd;
+    }&#xd;
+    if (typeof(option.beforeSend) == &quot;undefined&quot;) { // 1&#xd;
+        option.beforeSend = function () {};&#xd;
+    }&#xd;
+    if (typeof(option.success) == &quot;undefined&quot;) { // 4 et sans erreur&#xd;
+        option.success = function () {};&#xd;
+    }&#xd;
+    if (typeof(option.error) == &quot;undefined&quot;) { // 4 et avec erreur&#xd;
+        option.error = function () {};&#xd;
+    }&#xd;
+    if (typeof(option.complete) == &quot;undefined&quot;) { // 4&#xd;
+        option.complete = function () {};&#xd;
+    }&#xd;
+    typeof(option.statusCode[&quot;404&quot;]);&#xd;
+&#xd;
+    var xhr = null;&#xd;
+&#xd;
+    if (window.XMLHttpRequest || window.ActiveXObject) {&#xd;
+        if (window.ActiveXObject) { try { xhr = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;); } catch(e) { xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;); } }&#xd;
+        else { xhr = new XMLHttpRequest(); }&#xd;
+    } else { alert(&quot;Votre navigateur ne supporte pas l&apos;objet XMLHTTPRequest...&quot;); return null; }&#xd;
+&#xd;
+    xhr.onreadystatechange = function() {&#xd;
+        if (xhr.readyState == 1) {&#xd;
+            option.beforeSend();&#xd;
+        }&#xd;
+        if (xhr.readyState == 4) {&#xd;
+            option.complete(xhr, xhr.status);&#xd;
+            if (xhr.status == 200 || xhr.status == 0) {&#xd;
+                option.success(xhr.responseText);&#xd;
+            } else {&#xd;
+                option.error(xhr.status);&#xd;
+                if (typeof(option.statusCode[xhr.status]) != &quot;undefined&quot;) {&#xd;
+                    option.statusCode[xhr.status]();&#xd;
+                }&#xd;
+            }&#xd;
+        }&#xd;
+    };&#xd;
+&#xd;
+    if (option.type == &quot;POST&quot;) {&#xd;
+        xhr.open(option.type, option.url, true);&#xd;
+        xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded; charset=UTF-8&quot;);&#xd;
+        xhr.send(option.data);&#xd;
+    } else {&#xd;
+        xhr.open(option.type, option.url+option.data, true);&#xd;
+        xhr.send(null);&#xd;
+    }&#xd;
+&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
         <companyId>1</companyId>

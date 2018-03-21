@@ -637,7 +637,7 @@
 
 					</div>
 					<div role="tabpanel" class="tab-pane" id="decisoes">
-						<div class="panel panel-info hidden panel-default" id="panelSCanais">
+						<div class="panel panel-info hidden panel-default" id="panelDecisao23">
 							<div class="panel-heading ">
 								<h3 class="panel-title">
 									<b>Analisar Solicitação Canais </b> (Escolher ação)
@@ -648,13 +648,13 @@
 								<div class="form-group row">
 									<div class="col-md-12">
 										<label class="radio-inline">
-											<input type="radio" name="_aprovadoSCanais" id="_aprovadoSCanais" value="true" checked="checked">Aprovado</label>
+											<input type="radio" name="_aprovadoSCanais" disabled="disabled" id="_aprovadoSCanais" value="true" checked="checked">Aprovado</label>
 										<label class="radio-inline">
-											<input type="radio" name="_aprovadoSCanais" id="_aprovadoSCanais" value="false">Reprovado</label>
+											<input type="radio" name="_aprovadoSCanais" disabled="disabled" id="_aprovadoSCanais" value="false">Reprovado</label>
 									</div>
 									<div class="col-md-4 hidden" id="_divSCanais">
 										<label for="_motivoSCanais">Motivo:</label>
-										<textarea type="text" class="form-control" name="_motivoSCanais" id="_motivoSCanais"></textarea>
+										<textarea type="text" class="form-control textarea" disabled="disabled" name="_motivoSCanais" id="_motivoSCanais"></textarea>
 									</div>
 								</div>
 
@@ -664,7 +664,34 @@
 						</div>
 
 
-						<div class="panel panel-info hidden panel-default" id="panelReprovadoFranquia">
+						<div class="panel panel-info hidden panel-default" id="panelDecisao51">
+							<div class="panel-heading ">
+								<h3 class="panel-title">
+									<b>Analisar Contrato Assinado </b> (Escolher ação)
+								</h3>
+							</div>
+
+							<div class="panel-body">
+								<div class="form-group row">
+									<div class="col-md-12">
+										<label class="radio-inline">
+											<input type="radio" name="_reprovadoContratoAssinado" disabled="disabled" id="_reprovadoContratoAssinado" value="true" >Aprovado</label>
+										<label class="radio-inline">
+											<input type="radio" name="_reprovadoContratoAssinado" disabled="disabled" id="_reprovadoContratoAssinado"  value="false">Reprovado</label>
+									</div>
+									<div class="col-md-4 hidden" id="_div_reprovadoContratoAssinado">
+										<label for="_motivoontratoAssinado">Motivo:</label>
+										<textarea type="text" class="form-control textarea" disabled="disabled" name="_motivoontratoAssinado" id="_motivoontratoAssinado"></textarea>
+									</div>
+								</div>
+
+
+
+							</div>
+						</div>
+
+
+						<div class="panel panel-info hidden panel-default" id="panelDecisao42">
 							<div class="panel-heading ">
 								<h3 class="panel-title">
 									<b>Analisar Reprovação Franquia </b> (Escolher ação)
@@ -675,13 +702,13 @@
 								<div class="form-group row">
 									<div class="col-md-12">
 										<label class="radio-inline">
-											<input type="radio" name="_reprovadoFranquia" id="_reprovadoFranquia" value="true" checked="checked">Aprovado</label>
+											<input type="radio" name="_reprovadoFranquia" disabled="disabled" id="_reprovadoFranquia" value="true" checked="checked">Aprovado</label>
 										<label class="radio-inline">
-											<input type="radio" name="_reprovadoFranquia" id="_reprovadoFranquia" value="false">Reprovado</label>
+											<input type="radio" name="_reprovadoFranquia"  disabled="disabled" id="_reprovadoFranquia" value="false">Reprovado</label>
 									</div>
 									<div class="col-md-4 hidden" id="_divFranquiaReprovacao">
 										<label for="_motivoReprovadoFranquia">Motivo:</label>
-										<textarea type="text" class="form-control" name="_motivoReprovadoFranquia" id="_motivoReprovadoFranquia"></textarea>
+										<textarea type="text" class="form-control textarea" disabled="disabled" name="_motivoReprovadoFranquia" id="_motivoReprovadoFranquia"></textarea>
 									</div>
 								</div>
 
@@ -690,7 +717,7 @@
 							</div>
 						</div>
 
-						<div class="panel panel-info hidden panel-default" id="panelReprovacaoCanais">
+						<div class="panel panel-info hidden panel-default" id="panelDecisao17">
 							<div class="panel-heading ">
 								<h3 class="panel-title">
 									<b>Analisar Reprovação Canais </b> (Escolher ação)
@@ -701,13 +728,13 @@
 								<div class="form-group row">
 									<div class="col-md-12">
 										<label class="radio-inline">
-											<input type="radio" name="_aprovadoCanais" id="_aprovadoCanais" value="true" checked="checked">Aprovado</label>
+											<input type="radio" name="_aprovadoCanais" disabled="disabled" id="_aprovadoCanais" value="true" checked="checked">Aprovado</label>
 										<label class="radio-inline">
-											<input type="radio" name="_aprovadoCanais" id="_aprovadoCanais" value="false">Reprovado</label>
+											<input type="radio" name="_aprovadoCanais" disabled="disabled" id="_aprovadoCanais" value="false">Reprovado</label>
 									</div>
 									<div class="col-md-4 hidden" id="_divCanaisReprovacao">
 										<label for="_motivoReprovadoCanais">Motivo:</label>
-										<textarea type="text" class="form-control" name="_motivoReprovadoCanais" id="_motivoReprovadoCanais"></textarea>
+										<textarea type="text" class="form-control textarea" disabled="disabled" name="_motivoReprovadoCanais" id="_motivoReprovadoCanais"></textarea>
 									</div>
 								</div>
 
@@ -717,7 +744,7 @@
 						</div>
 
 
-						<div class="panel panel-info hidden panel-default" id="panelAprovacaoFinanceira">
+						<div class="panel panel-info hidden panel-default" id="panelDecisao16">
 							<div class="panel-heading ">
 								<h3 class="panel-title">
 									<b>Analisar Solicitação Financeira</b> (Escolher ação)
@@ -728,13 +755,13 @@
 								<div class="form-group row">
 									<div class="col-md-12">
 										<label class="radio-inline">
-											<input type="radio" name="_aprovadoFinanceiro" id="_aprovadoFinanceiro" value="true" checked="checked">Aprovado</label>
+											<input type="radio" name="_aprovadoFinanceiro" disabled="disabled" id="_aprovadoFinanceiro" value="true" checked="checked">Aprovado</label>
 										<label class="radio-inline">
-											<input type="radio" name="_aprovadoFinanceiro" id="_aprovadoFinanceiro" value="false">Reprovado</label>
+											<input type="radio" name="_aprovadoFinanceiro" disabled="disabled" id="_aprovadoFinanceiro" value="false">Reprovado</label>
 									</div>
 									<div class="col-md-4 hidden" id="_divTextoReprovacao">
 										<label for="_motivoReprovadoFinanceiro">Motivo:</label>
-										<textarea type="text" class="form-control" name="_motivoReprovadoFinanceiro" id="_motivoReprovadoFinanceiro"></textarea>
+										<textarea type="text" class="form-control textarea" disabled="disabled" name="_motivoReprovadoFinanceiro" id="_motivoReprovadoFinanceiro"></textarea>
 									</div>
 								</div>
 
