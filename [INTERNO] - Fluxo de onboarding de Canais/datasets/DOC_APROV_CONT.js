@@ -1,0 +1,1 @@
+function createDataset(fields, constraints, sortFields) {                var campos = new Array("SELECT COUNT(*) FROM APROVACAO ");                var dataset = DatasetFactory.getDataset("ds_sql", campos, null, null);return dataset;}

@@ -10,7 +10,7 @@
     <publicProcess>true</publicProcess>
     <volumeId>Default</volumeId>
     <categoryId>Canais</categoryId>
-    <managerEngineAllocationId>Papel</managerEngineAllocationId>
+    <managerEngineAllocationId></managerEngineAllocationId>
     <managerEngineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</managerEngineAllocationConfiguration>
     <snapshotFrequency>0</snapshotFrequency>
     <baseDay>0</baseDay>
@@ -29,10 +29,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Fluxo de onboarding de Canais</processId>
-      <version>39</version>
+      <version>8</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
-    <formId>5963800</formId>
+    <formId>301</formId>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>false</updateAttachmentsVersion>
     <controlsAttachmentsSecurity>true</controlsAttachmentsSecurity>
@@ -60,8 +60,8 @@
       <deadlineTime>0</deadlineTime>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Papel</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardSolicitante&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>true</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -161,8 +161,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Pool Papel</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardFinanceiro&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -213,8 +213,7 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Pool Papel</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -265,8 +264,7 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Pool Papel</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -471,8 +469,7 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Pool Papel</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -523,8 +520,7 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Pool Papel</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -627,8 +623,7 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Pool Papel</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -832,8 +827,7 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Pool Papel</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -1334,7 +1328,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;cnpjOk&quot;) == &quot;true&quot;)</condition>
@@ -1345,7 +1339,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -1356,7 +1350,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
@@ -1367,7 +1361,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_aprovadoFinanceiro&quot;) == &quot;true&quot;)</condition>
@@ -1378,7 +1372,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>3</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_aprovadoFinanceiro&quot;) == &quot;false&quot;)</condition>
@@ -1389,7 +1383,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>36</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;capilaridadeOk&quot;) == &quot;true&quot;)</condition>
@@ -1400,7 +1394,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>36</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -1411,7 +1405,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>47</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
@@ -1422,7 +1416,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>47</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -1433,7 +1427,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>65</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
@@ -1444,7 +1438,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>65</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -1455,7 +1449,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>106</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -1468,7 +1462,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>112</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
@@ -1479,7 +1473,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>39</version>
+        <version>8</version>
         <sequence>112</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2474,7 +2468,7 @@ var CustomServiceTask85 = {&#xd;
       </workflowProcessEventPK>
       <eventDescription>function servicetask8(attempt, message) {&#xd;
 	log.info(&apos;Start servicetask8 servicetask8 &apos;);&#xd;
-	var isOk = verifyCnpj();&#xd;
+	var isOk = &quot;true&quot;;&#xd;
 	&#xd;
 	hAPI.setCardValue(&quot;cnpjOk&quot;, isOk);&#xd;
 	log.info(&apos;@servicetask8  isOk:  &apos;+isOk);&#xd;
@@ -2501,6 +2495,41 @@ function verifyCnpj(){&#xd;
 &#xd;
 	return dataset.getValue(0, &quot;cnpjOk&quot;);&#xd;
 }</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeStateEntry</eventId>
+        <processId>canaisOnboard</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeStateEntry(sequenceId){&#xd;
+	log.info(&quot;@beforeStateEntry CANAISONBOARDS diz: &quot;+sequenceId);&#xd;
+	if(sequenceId == Activity.ANALISAR_CNPJ )&#xd;
+	{&#xd;
+		hAPI.setCardValue(&quot;thash&quot;, encrypt(&quot;onboard&quot;,hAPI.getCardValue(&quot;nrSolicitacao&quot;)));&#xd;
+	} &#xd;
+	&#xd;
+}&#xd;
+function encrypt(key, value) {&#xd;
+	var result=&quot;&quot;;&#xd;
+	for(i=0;i&lt;value.length;++i)&#xd;
+	{&#xd;
+	  result+=String.fromCharCode(key[i % key.length]^value.charCodeAt(i));&#xd;
+	}&#xd;
+	log.info(&quot;@beforeStateEntry encrypt result: &quot;+result);&#xd;
+	return result;&#xd;
+  }&#xd;
+  &#xd;
+  function decrypt()&#xd;
+  {&#xd;
+   var result=&quot;&quot;;&#xd;
+	for(i=0;i&lt;value.length;++i)&#xd;
+	{&#xd;
+	  result+=String.fromCharCode(key[i % key.length]^value.charCodeAt(i));&#xd;
+	}&#xd;
+	return result;&#xd;
+  }</eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
@@ -2633,7 +2662,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>11</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2644,7 +2673,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>11</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -2655,7 +2684,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2666,7 +2695,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2677,7 +2706,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>53</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2688,7 +2717,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>60</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2699,7 +2728,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>63</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2710,7 +2739,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>63</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -2721,7 +2750,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>63</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -2732,7 +2761,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>70</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2743,7 +2772,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>70</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -2754,7 +2783,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>71</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2765,7 +2794,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>94</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2776,7 +2805,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>94</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -2787,7 +2816,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>94</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -2798,7 +2827,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>95</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2809,7 +2838,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>95</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -2820,7 +2849,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>97</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2831,7 +2860,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>97</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -2842,7 +2871,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>103</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2853,7 +2882,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>108</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2864,7 +2893,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>109</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2875,7 +2904,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>109</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -2886,7 +2915,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>109</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -2897,7 +2926,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>39</version>
+        <version>8</version>
         <linkSequence>118</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>

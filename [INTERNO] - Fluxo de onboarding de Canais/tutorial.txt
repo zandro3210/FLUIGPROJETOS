@@ -1,0 +1,3 @@
+Passos para o funcionamento da funcionalidade: Página pública.
+
+Parametrização de Dataset dsMoveTask.

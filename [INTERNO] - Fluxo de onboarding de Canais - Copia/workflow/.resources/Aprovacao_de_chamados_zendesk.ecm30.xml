@@ -1,0 +1,1799 @@
+<list>
+  <ProcessDefinition>
+    <processDefinitionPK>
+      <companyId>1</companyId>
+      <processId>Aprovacao_de_chamados_zendesk</processId>
+    </processDefinitionPK>
+    <processDescription>Aprovação</processDescription>
+    <instruction>Aprovacao </instruction>
+    <active>true</active>
+    <publicProcess>true</publicProcess>
+    <volumeId>Default</volumeId>
+    <categoryId>TI.Atendimento</categoryId>
+    <managerEngineAllocationId>Papel</managerEngineAllocationId>
+    <managerEngineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;AGENTES_ZENDESK_FLUIG_TDI&lt;/Role&gt;&lt;/AssignmentController&gt;</managerEngineAllocationConfiguration>
+    <snapshotFrequency>0</snapshotFrequency>
+    <baseDay>0</baseDay>
+    <baseMonth>0</baseMonth>
+    <periodId>Zendesk</periodId>
+    <uniqueCardVersion>false</uniqueCardVersion>
+    <keyWord></keyWord>
+    <complementsLevel>0</complementsLevel>
+    <notifyRequisitionerComplements>false</notifyRequisitionerComplements>
+    <notifyManagerComplements>false</notifyManagerComplements>
+    <deadlineTime>0</deadlineTime>
+    <warningDeadlineTime>0</warningDeadlineTime>
+    <notifyAuthorityComplements>false</notifyAuthorityComplements>
+  </ProcessDefinition>
+  <ProcessDefinitionVersion>
+    <processDefinitionVersionPK>
+      <companyId>1</companyId>
+      <processId>Aprovação</processId>
+      <version>49</version>
+    </processDefinitionVersionPK>
+    <versionDescription>Nova Versão.</versionDescription>
+    <formId>4507996</formId>
+    <editionMode>true</editionMode>
+    <updateAttachmentsVersion>false</updateAttachmentsVersion>
+    <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
+    <active>true</active>
+    <blockedVersion>false</blockedVersion>
+    <counterSign>false</counterSign>
+    <openInstances>0</openInstances>
+    <bpmnVersion>1</bpmnVersion>
+    <processStates/>
+    <favorito>false</favorito>
+    <inheritFormSecurity>false</inheritFormSecurity>
+    <mobileReady>true</mobileReady>
+  </ProcessDefinitionVersion>
+  <list>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </processStatePK>
+      <stateName>Início</stateName>
+      <stateDescription>Início</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>true</initialState>
+      <notifyAuthorityDelay>false</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>0</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>10</positionX>
+      <positionY>138</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>10</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </processStatePK>
+      <stateName>Aguardando Ação</stateName>
+      <stateDescription>Aguardando Ação</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>86400</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;idAprovador&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>false</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>0</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>120</positionX>
+      <positionY>121</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId>Zendesk</periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+        <sequence>6</sequence>
+      </processStatePK>
+      <stateName>Automático próximo aprovador</stateName>
+      <stateDescription>Automático próximo aprovador</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>306</positionX>
+      <positionY>202</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </processStatePK>
+      <stateName>Fim</stateName>
+      <stateDescription>Fim</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>430</positionX>
+      <positionY>131</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+        <sequence>16</sequence>
+      </processStatePK>
+      <stateName>Encerrado (Cancelado)</stateName>
+      <stateDescription>Encerrado (Cancelado)</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>430</positionX>
+      <positionY>235</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+  </list>
+  <list>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>49</version>
+        <sequence>6</sequence>
+      </conditionProcessStatePK>
+      <condition>proximoAprovador()</condition>
+      <destinationSequenceId>2</destinationSequenceId>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>49</version>
+        <sequence>6</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>16</destinationSequenceId>
+    </ConditionProcessState>
+  </list>
+  <list>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+        <linkSequence>3</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>1</initialStateSequence>
+      <finalStateSequence>2</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+        <linkSequence>5</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>2</initialStateSequence>
+      <finalStateSequence>4</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+        <linkSequence>7</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>2</initialStateSequence>
+      <finalStateSequence>6</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>true</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+        <linkSequence>11</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>6</initialStateSequence>
+      <finalStateSequence>2</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <expression></expression>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+        <linkSequence>17</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>6</initialStateSequence>
+      <finalStateSequence>16</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+  </list>
+  <list/>
+  <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>proximoAprovador</eventId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function proximoAprovador(){&#xd;
+	&#xd;
+	log.info(&apos;Aprovacao_de_chamados_zendesk proximoAprovador &apos; + getValue(&quot;WKNumProces&quot;) + &quot;:&quot; + getValue(&quot;WKUser&quot;));&#xd;
+	&#xd;
+	var cicloAprovacao = hAPI.getCardValue(&quot;cicloaprovacao&quot;);&#xd;
+	if (cicloAprovacao == null || cicloAprovacao == &quot;null&quot; || cicloAprovacao == &quot;&quot;){&#xd;
+		cicloAprovacao = &quot;1&quot;;&#xd;
+		hAPI.setCardValue(&quot;cicloaprovacao&quot;,cicloAprovacao);&#xd;
+		log.info(&apos;ENTROU NO CICLO 1 : VALOR&apos; + cicloAprovacao);&#xd;
+	} &#xd;
+	&#xd;
+	log.info(&apos;Aprovacao_de_chamados_zendesk cicloaprovacao &apos; + cicloAprovacao);&#xd;
+	&#xd;
+	var listaAprovadores = hAPI.getCardValue(&quot;hieraraprovadores&quot;).split(&quot;,&quot;);&#xd;
+	&#xd;
+	log.info(&apos;@ CRIS listaAprovadores: &apos; + listaAprovadores + &quot; - listaAprovadores.length: &quot; + listaAprovadores.length);&#xd;
+	&#xd;
+	&#xd;
+	if(cicloAprovacao &lt; 3 &amp;&amp; cicloAprovacao &lt;= (listaAprovadores.length - 1)) {&#xd;
+		&#xd;
+		// PEGA DO 1 EM DIANTE - PEGA DO SEGUNDO EM DIANTE&#xd;
+		var emailProximoAprovador = listaAprovadores[cicloAprovacao];&#xd;
+		&#xd;
+		log.info(&quot;Aprovacao_de_chamados_zendesk proximoAprovador: emailProximoAprovador &quot; + emailProximoAprovador);&#xd;
+		&#xd;
+		var cEmail = DatasetFactory.createConstraint(&quot;mail&quot;, emailProximoAprovador, emailProximoAprovador, ConstraintType.MUST);&#xd;
+		var fields = new Array(&quot;colleagueId&quot;,&quot;colleagueName&quot;);&#xd;
+		var colaborador = DatasetFactory.getDataset(&quot;colleague&quot;, fields, new Array(cEmail), null);&#xd;
+		&#xd;
+		if (colaborador) {&#xd;
+			var idProximoAprovador = colaborador.getValue(0, &quot;colleagueId&quot;);&#xd;
+			&#xd;
+			log.info(&apos;Aprovacao_de_chamados_zendesk - idProximoAprovador: &apos; + idProximoAprovador);&#xd;
+			&#xd;
+			globalVars.put(&quot;idAprovador&quot;, idProximoAprovador);&#xd;
+			hAPI.setCardValue(&quot;idAprovador&quot;, idProximoAprovador);&#xd;
+			&#xd;
+			globalVars.put(&quot;emailAprovador&quot;, emailProximoAprovador);&#xd;
+			hAPI.setCardValue(&quot;emailAprovador&quot;, emailProximoAprovador);&#xd;
+			&#xd;
+			//incrementa ciclo aprovacao&#xd;
+			cicloAprovacao++;&#xd;
+			hAPI.setCardValue(&quot;cicloAprovacao&quot;, cicloAprovacao);&#xd;
+			log.info(&apos;Aprovacao_de_chamados_zendesk - cicloAprovacao ficou: &apos; + cicloAprovacao);&#xd;
+			&#xd;
+			log.info(&apos;Aprovacao_de_chamados_zendesk proximoAprovador true&apos;);&#xd;
+			&#xd;
+			return true;&#xd;
+		}&#xd;
+		else &#xd;
+		{&#xd;
+			log.info(&apos;Aprovacao_de_chamados_zendesk proximoAprovador false - colaborador nao encontrado&apos;);&#xd;
+			return false;&#xd;
+		}&#xd;
+		&#xd;
+	} else {&#xd;
+		log.info(&apos;Aprovacao_de_chamados_zendesk proximoAprovador false - ciclo maior que 3 ou lista chegou no ultimo&apos;);&#xd;
+		return false;&#xd;
+	}&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeCancelProcess</eventId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeCancelProcess(colleagueId,processId){
+	
+	var numProcess 	= getValue(&quot;WKNumProces&quot;);
+	if(numProcess != 1942997){
+	log.info(&apos; @@1 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao - INICIO  - numProcess &apos; + 
+				numProcess  + &apos; colleagueId &apos; + colleagueId);
+	
+	try {
+		
+		log.info(&apos; @@2 - 1104 - CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao  - numProcess &apos; + 
+				numProcess  + 
+				+ &apos; ticket: &apos; + hAPI.getCardValue(&apos;ticket&apos;) 
+				+ &apos; urlticket: &apos; + hAPI.getCardValue(&apos;urlticket&apos;)
+				+ &apos; nmcont: &apos; + hAPI.getCardValue(&apos;nmcont&apos;) 
+				+ &apos; nmorg: &apos; + hAPI.getCardValue(&apos;nmorg&apos;) 
+				+ &apos; idAprovador: &apos; + hAPI.getCardValue(&apos;idAprovador&apos;)
+				+ &apos; hieraraprovadoresoriginal: &apos; + hAPI.getCardValue(&apos;hieraraprovadoresoriginal&apos;)
+				+ &apos; priorid: &apos; + hAPI.getCardValue(&apos;priorid&apos;)
+				+ &apos; probrelac: &apos; + hAPI.getCardValue(&apos;probrelac&apos;)
+				+ &apos;requesterId:&apos; + hAPI.getCardValue(&apos;requesterId&apos;)
+				+ &apos; cicloatual: &apos; + hAPI.getCardValue(&apos;cicloatual&apos;)
+				+ &apos; emailUsuar_movimenta_tar: &apos; + hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;));
+		
+		
+		// Conecta o servico
+		var NOME_SERVICO = &quot;WSZendesk&quot;;
+		var CAMINHO_SERVICO = &quot;totvs.tdi.zendesk.WorkflowToZendesk_Service&quot;;		
+		var servico = ServiceManager.getService(NOME_SERVICO);
+		log.info(&quot; @@3 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao  - numProcess &quot; + 
+				numProcess  + &quot; - SERVICO:&quot; + servico);
+		var instancia = servico.instantiate(CAMINHO_SERVICO);
+		log.info(&quot; @@4 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao  - numProcess &quot; + 
+				numProcess  + &quot; - INSTANCIA:&quot; + instancia);
+		var ws = instancia.getWorkflowToZendeskPort();
+		
+		//get email do colleagueId
+		var cId = DatasetFactory.createConstraint(&quot;colleagueId&quot;, colleagueId, colleagueId, ConstraintType.MUST);
+		var fields = new Array(&quot;colleagueId&quot;,&quot;colleagueName&quot;, &quot;mail&quot;);
+		var colaborador = DatasetFactory.getDataset(&quot;colleague&quot;, fields, new Array(cId), null);
+		
+		var emailAprovador = colaborador.getValue(0, &quot;mail&quot;);
+			
+   	    var tipo_solicitacao = hAPI.getCardValue(&apos;tipo_solicitacao&apos;);
+
+		//dados do ticket
+		var ticketId = hAPI.getCardValue(&apos;ticket&apos;);
+		
+		log.info (&apos;getValue(WKUserComment): &apos; + getValue(&quot;WKUserComment&quot;));
+		
+		if (getValue(&quot;WKUserComment&quot;).startsWith(&quot;#cancelTI&quot;)){
+			var statusAprovacao = &apos;CanceladoManualFluig&apos;;
+			// é quando ocorre erro de tarefa automatica, ou outra situacao que tenha que ser forcado
+			var justificativa = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  processId + &apos; cancelada automaticamente devido prazo limite estipulado.&apos;;
+		}
+		else if (getValue(&quot;WKUserComment&quot;).toLowerCase() == &quot;@cancelzend@&quot; ||
+				 getValue(&quot;WKUserComment&quot;).startsWith(&quot;@cancelzend@&quot;) ||
+				 getValue(&quot;WKUserComment&quot;).startsWith(&quot;@CANCELZEND@&quot;)){
+				var statusAprovacao = &apos;CanceladoManualZendesk&apos;;
+				var justificativa = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  processId + &apos; cancelada pelo Zendesk - Ticket Resolvido&apos;;
+		}
+		else{
+			var statusAprovacao = &apos;CanceladoManualFluig&apos;;
+			var justificativa = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  processId + &apos; cancelada manualmente por &apos; + emailAprovador + &apos; Observa&amp;ccedil;&amp;otilde;es: &apos; + getValue(&quot;WKUserComment&quot;);
+		}
+
+		var cicloAprovacao = hAPI.getCardValue(&apos;cicloatual&apos;);
+	
+		var ticket = servico.instantiate(&apos;totvs.tdi.zendesk.Ticket&apos;);
+		ticket.setId(ticketId);
+		
+		var dados = servico.instantiate(&apos;totvs.tdi.zendesk.Dados&apos;);
+		dados.setRequesterId(hAPI.getCardValue(&apos;requesterId&apos;));
+
+		 var comment = servico.instantiate(&apos;totvs.tdi.zendesk.Comment&apos;);
+		 comment.setPublic(false);
+		 comment.setBody(justificativa);
+
+		 dados.setComment(comment);
+		 
+		 var aprovacao = servico.instantiate(&apos;totvs.tdi.zendesk.Aprovacao&apos;);
+	    	aprovacao.setStatusAprovacao(statusAprovacao);
+	    	//aprovacao.setCicloAprovacao(cicloAprovacao);
+	    	aprovacao.setCicloAprovacao(parseInt(cicloAprovacao));
+	    	
+	    	//aprovacao.setIdProcesso(numProcess);
+	    	aprovacao.setIdProcesso(parseFloat(numProcess));
+	    	
+	    	aprovacao.setHistoricoDeAprovacao(justificativa);
+	    	aprovacao.setAprovador(emailAprovador);
+	    	
+ 	 ticket.setAprovacao(aprovacao);
+     ticket.setDados(dados);
+	     
+	    log.info(&apos; @@5 - 1104 - CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao  - numProcess &apos; + 
+				numProcess  +
+				&apos; &gt;&gt; setTicketId: &apos; + ticketId +
+				&apos; &gt;&gt; setRequesterId: &apos; + hAPI.getCardValue(&apos;requesterId&apos;) +
+				&apos; &gt;&gt; setPublic: false&apos; +
+				&apos; &gt;&gt; setBody: &apos; + justificativa +
+				&apos; &gt;&gt; setComment&apos; + comment +
+				&apos; &gt;&gt; setAprovador: &apos; + emailAprovador +
+				&apos; &gt;&gt; setHistoricoDeAprovacao: &apos; + justificativa +
+				&apos; &gt;&gt; setStatusAprovacao: &apos; + statusAprovacao +
+				&apos; &gt;&gt; setCicloAprovacao: &apos; + cicloAprovacao +
+				&apos; &gt;&gt; setIdProcesso: &apos; + numProcess);		
+        	
+	    // TRATAMENTO DE RETORNOS DE CODIGOS - nao é possivel so pelo codigo, pois tem valores no json que podem coincidir com estes numeros
+        // https://pt.wikipedia.org/wiki/Lista_de_c%C3%B3digos_de_status_HTTP
+    	//retornoUP.indexOf(&quot;422&quot;) &gt; -1 ||
+	    
+	    var retorno = ws.updateTicket(ticket);
+	    
+		if (retorno) {
+			if (retorno != null) {
+
+				var retornoUP = retorno.toUpperCase();
+				log.info(&apos; @@5.0 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - RETORNO UPPER - numProcess &apos; + 
+						  numProcess  + retornoUP);
+				if (getValue(&quot;WKUserComment&quot;).startsWith(&quot;#cancelTI&quot;) ){
+					// deixar passar o cancelamento, pois é quando ocorre erro de tarefa automatica, ou outra situacao que tenha que ser forcado
+				}
+				else{				
+					 if (retornoUP.indexOf(&quot;ERROR: ZENDESK ERROR&quot;) &gt; -1 || 
+					    	 retornoUP.indexOf(&quot;CONNECTION REFUSED&quot;) &gt; -1 ||
+					    	 retornoUP.indexOf(&quot;BAD REQUEST&quot;) &gt; -1 ||
+					    	 retornoUP.indexOf(&apos;&quot;ERRO&quot;:&quot;ERRO DE AUTENTICA&quot;&apos;) &gt; -1 ||
+					    	 retornoUP.indexOf(&quot;CONNECTEXCEPTION&quot;) &gt; -1 ||
+					    	 retornoUP.indexOf(&quot;UNPROCESSABLE ENTITY&quot;) &gt; -1 ||
+					    	 retornoUP.indexOf(&quot;429 - NULL - SERVER:&quot;) &gt; -1 
+				    	 ){
+				    	
+						 if (retornoUP.indexOf(&quot;429 - NULL - SERVER:&quot;) &gt; -1){
+							 log.info(&apos;%%5.1.1 ERROR ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry  - numProcess &apos; + 
+									  numProcess  + &apos;retorno: &apos; + retorno);
+							throw(&apos;Estamos com alto consumo de requisicoes na Zendesk e não foi possivel completar sua transação. Por favor confirme o cancelamento novamente.   &apos; +
+								  &apos;ERROR: &apos; + retorno);
+						 }
+						 else{
+							log.info(&apos;%%5.1 ERROR ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry  - numProcess &apos; + 
+									  numProcess  + &apos;retorno: &apos; + retorno);
+							throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +
+								  &apos;ERROR: &apos; + retorno);	
+						 }
+					}
+				}
+			}
+			else{
+				log.info(&apos;%%5.2 NULO - CANCEL MANUAL: Aprovacao de Chamados Zendesk - beforeCancelProcess &apos; + retorno);
+				throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +
+					  &apos;ERROR: &apos; + retorno);	
+			}
+			
+		}
+		else{
+			log.info(&apos;%%5.5 UNIDEFINED - CANCEL MANUAL: Aprovacao de Chamados Zendesk - beforeCancelProcess &apos; + retorno);
+			throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +
+				  &apos;ERROR: &apos; + retorno);	
+		}
+		
+	    
+        log.info (&apos; @@6 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao - RETORNO - numProcess &apos; + 
+					numProcess  +
+				  &apos;retorno: &apos; + retorno);
+	}catch(E){
+		log.info(&apos;ERROR CATCH CANCEL MANUAL: Aprovacao de Chamados Zendesk - beforeCancelProcess &apos; + E);
+		throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +
+				  &apos;ERROR: &apos; + retorno);	
+	}
+
+    log.info (&apos; @@7 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao  FIM - numProcess &apos; + 
+			numProcess );
+	}else{log.info(&quot;Cancelando o processo: &quot;+numProcess)}
+}
+
+/* ANTIGO
+
+function beforeCancelProcess(colleagueId,processId){
+
+var numProcess 	= getValue(&quot;WKNumProces&quot;);
+log.info(&apos; @@1 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao - INICIO  - numProcess &apos; + 
+			numProcess  + &apos; colleagueId &apos; + colleagueId);
+
+try {
+	
+	log.info(&apos; @@2 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao  - numProcess &apos; + 
+			numProcess  + 
+			+ &apos; ticket: &apos; + hAPI.getCardValue(&apos;ticket&apos;) 
+			+ &apos; urlticket: &apos; + hAPI.getCardValue(&apos;urlticket&apos;)
+			+ &apos; nmcont: &apos; + hAPI.getCardValue(&apos;nmcont&apos;) 
+			+ &apos; nmorg: &apos; + hAPI.getCardValue(&apos;nmorg&apos;) 
+			+ &apos; idAprovador: &apos; + hAPI.getCardValue(&apos;idAprovador&apos;)
+			+ &apos; hieraraprovadoresoriginal: &apos; + hAPI.getCardValue(&apos;hieraraprovadoresoriginal&apos;)
+			+ &apos; priorid: &apos; + hAPI.getCardValue(&apos;priorid&apos;)
+			+ &apos; probrelac: &apos; + hAPI.getCardValue(&apos;probrelac&apos;)
+			+ &apos;requesterId:&apos; + hAPI.getCardValue(&apos;requesterId&apos;)
+			+ &apos; cicloatual: &apos; + hAPI.getCardValue(&apos;cicloatual&apos;)
+			+ &apos; emailUsuar_movimenta_tar: &apos; + hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;));
+	
+	
+	// Conecta o servico
+	var NOME_SERVICO = &quot;WSZendesk&quot;;
+	var CAMINHO_SERVICO = &quot;totvs.tdi.zendesk.WorkflowToZendesk_Service&quot;;		
+	var servico = ServiceManager.getService(NOME_SERVICO);
+	log.info(&quot; @@3 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao  - numProcess &quot; + 
+			numProcess  +
+			&quot; - SERVICO:&quot; + servico);
+	var instancia = servico.instantiate(CAMINHO_SERVICO);
+	log.info(&quot; @@4 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao  - numProcess &quot; + 
+			numProcess  +
+			&quot; - INSTANCIA:&quot; + instancia);
+	var ws = instancia.getWorkflowToZendeskPort();
+	
+	//get email do colleagueId
+	var cId = DatasetFactory.createConstraint(&quot;colleagueId&quot;, colleagueId, colleagueId, ConstraintType.MUST);
+	var fields = new Array(&quot;colleagueId&quot;,&quot;colleagueName&quot;, &quot;mail&quot;);
+	var colaborador = DatasetFactory.getDataset(&quot;colleague&quot;, fields, new Array(cId), null);
+	
+	var emailAprovador = colaborador.getValue(0, &quot;mail&quot;);
+		
+	//dados do ticket
+	var ticketId = hAPI.getCardValue(&apos;ticket&apos;);
+	
+	log.info (&apos;getValue(WKUserComment): &apos; + getValue(&quot;WKUserComment&quot;));
+	
+	// alterado em 17/08
+	if (getValue(&quot;WKUserComment&quot;).startsWith(&quot;#cancelTI&quot;)){
+		var statusAprovacao = &apos;CanceladoManualFluig&apos;;
+		// é quando ocorre erro de tarefa automatica, ou outra situacao que tenha que ser forcado
+		var justificativa = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  processId + &apos; cancelada automaticamente devido prazo limite estipulado.&apos;;
+	}
+	else if (getValue(&quot;WKUserComment&quot;).toLowerCase() == &quot;@cancelzend@&quot; ||
+			 getValue(&quot;WKUserComment&quot;).startsWith(&quot;@cancelzend@&quot;) ||
+			 getValue(&quot;WKUserComment&quot;).startsWith(&quot;@CANCELZEND@&quot;)){
+			var statusAprovacao = &apos;CanceladoManualZendesk&apos;;
+			var justificativa = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  processId + &apos; cancelada pelo Zendesk - Ticket Resolvido&apos;;
+	}
+	else{
+		var statusAprovacao = &apos;CanceladoManualFluig&apos;;
+		var justificativa = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  processId + &apos; cancelada manualmente por &apos; + emailAprovador + &apos; Observa&amp;ccedil;&amp;otilde;es: &apos; + getValue(&quot;WKUserComment&quot;);
+	}
+
+	var cicloAprovacao = hAPI.getCardValue(&apos;cicloatual&apos;);
+
+	var ticket = servico.instantiate(&apos;totvs.tdi.zendesk.Ticket&apos;);
+	ticket.setTicketId(ticketId);
+	// nao alterar o status do ticket
+    //ticket.setStatus(&quot;open&quot;);
+
+	//ticket.setRequesterId(emailAprovador);
+    // ALTERACAO 31/05 - 01/06
+    ticket.setRequesterId(hAPI.getCardValue(&apos;requesterId&apos;));
+
+    var comment = servico.instantiate(&apos;totvs.tdi.zendesk.Comment&apos;);
+    //comment.setPublic(true);
+    //alteração para onda 2
+    var tipo_solicitacao = hAPI.getCardValue(&apos;tipo_solicitacao&apos;);
+
+    comment.setPublic(false);
+    comment.setBody(justificativa);
+    ticket.setComment(comment);
+    
+    var custom = servico.instantiate(&apos;totvs.tdi.zendesk.CustomFields&apos;);
+    custom.setAprovador(emailAprovador);
+    custom.setHistoricoDeAprovacao(justificativa);
+    custom.setStatusAprovacao(statusAprovacao);
+    custom.setCicloAprovacao(cicloAprovacao);
+    custom.setIdProcesso(processId);
+    ticket.setCustomFields(custom);
+     
+    log.info(&apos; @@5 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao  - numProcess &apos; + 
+			numProcess  +
+			&apos; &gt;&gt; setTicketId: &apos; + ticketId +
+			&apos; &gt;&gt; setRequesterId: &apos; + hAPI.getCardValue(&apos;requesterId&apos;) +
+			&apos; &gt;&gt; setPublic: false&apos; +
+			&apos; &gt;&gt; setBody: &apos; + justificativa +
+			&apos; &gt;&gt; setComment&apos; + comment +
+			&apos; &gt;&gt; setAprovador: &apos; + emailAprovador +
+			&apos; &gt;&gt; setHistoricoDeAprovacao: &apos; + justificativa +
+			&apos; &gt;&gt; setStatusAprovacao: &apos; + statusAprovacao +
+			&apos; &gt;&gt; setCicloAprovacao: &apos; + cicloAprovacao +
+			&apos; &gt;&gt; setIdProcesso: &apos; + numProcess +
+			&apos; &gt;&gt; setCustomFields: &apos; + custom);		
+    	
+    // TRATAMENTO DE RETORNOS DE CODIGOS - nao é possivel so pelo codigo, pois tem valores no json que podem coincidir com estes numeros
+    // https://pt.wikipedia.org/wiki/Lista_de_c%C3%B3digos_de_status_HTTP
+	//retornoUP.indexOf(&quot;422&quot;) &gt; -1 ||
+    
+    if (getValue(&quot;WKUserComment&quot;).startsWith(&quot;#cancelTI&quot;) ){
+		// deixar passar o cancelamento, pois é quando ocorre erro de tarefa automatica, ou outra situacao que tenha que ser forcado
+	}
+	else{	    
+		
+		var retorno = ws.updateTicket(ticket);
+    
+		if (retorno) {
+			if (retorno != null) {
+
+				var retornoUP = retorno.toUpperCase();
+				log.info(&apos; @@5.0 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - RETORNO UPPER - numProcess &apos; + 
+						  numProcess  + retornoUP);
+							
+			    if (retornoUP.indexOf(&quot;ERROR: ZENDESK ERROR&quot;) &gt; -1 ||
+			    	retornoUP.indexOf(&quot;CONNECTION REFUSED&quot;) &gt; -1 ||
+			    	retornoUP.indexOf(&quot;BAD REQUEST&quot;) &gt; -1 
+			    	){
+			    	
+					log.info(&apos;%%5.1 ERROR CANCEL MANUAL: Aprovacao de Chamados Zendesk - beforeCancelProcess &apos; + retorno);
+					throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +
+						  &apos;ERROR: &apos; + retorno);	
+				};
+			}
+			else{
+				log.info(&apos;%%5.2 NULO - CANCEL MANUAL: Aprovacao de Chamados Zendesk - beforeCancelProcess &apos; + retorno);
+				throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +
+					  &apos;ERROR: &apos; + retorno);	
+			}
+			
+		}
+		else{
+			log.info(&apos;%%5.5 UNIDEFINED - CANCEL MANUAL: Aprovacao de Chamados Zendesk - beforeCancelProcess &apos; + retorno);
+			throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +
+				  &apos;ERROR: &apos; + retorno);	
+		}
+	
+    
+        log.info (&apos; @@6 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao - RETORNO - numProcess &apos; + 
+					numProcess  +
+				  &apos;retorno: &apos; + retorno);
+	}
+}catch(E){
+	if (retorno){
+		log.info(&apos;ERROR CATCH CANCEL MANUAL: Aprovacao de Chamados Zendesk - beforeCancelProcess &apos; + E);
+		throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +
+				  &apos;ERROR: &apos; + retorno);
+	}
+	else{
+		log.info(&apos;ERROR CATCH CANCEL MANUAL: Aprovacao de Chamados Zendesk - beforeCancelProcess &apos; + E);
+		throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; + E);
+	}
+}
+
+log.info (&apos; @@7 CRIS - CANCELAMENTO MANUAL - Aprovacao de Chamados Zendesk - beforeCancelProcess - Cancela Solicitacao  FIM - numProcess &apos; + 
+		numProcess );
+
+}
+*/</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>onNotify</eventId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function onNotify(subject, receivers, template, params){&#xd;
+	&#xd;
+	log.info(&apos;@@ Aprovacao de Chamados Zendesk - onNotify - INICIO&apos;);&#xd;
+	&#xd;
+	var tipo_solicitacao = hAPI.getCardValue(&apos;tipo_solicitacao&apos;);&#xd;
+		log.info(&apos;Aprovacao de Chamados Zendesk - onNotify - tipo_solicitacao: &apos; + tipo_solicitacao);&#xd;
+		&#xd;
+		if (tipo_solicitacao != null &amp;&amp; tipo_solicitacao != &quot;&quot;){&#xd;
+			&#xd;
+			if (tipo_solicitacao.startsWith(&quot;ouvidoria&quot;) ||&#xd;
+				tipo_solicitacao.startsWith(&quot;OUVIDORIA&quot;)){&#xd;
+				&#xd;
+				var comentario = &quot;Workflow de Ouvidoria - No Solic Ouvidoria: &quot; +&#xd;
+								 hAPI.getCardValue(&apos;ticket&apos;) +&#xd;
+								 &quot; - Cliente: &quot; + hAPI.getCardValue(&apos;nmorg&apos;);&#xd;
+				&#xd;
+				if (hAPI.getCardValue(&apos;ticket_reclamado&apos;) != null &amp;&amp; hAPI.getCardValue(&apos;ticket_reclamado&apos;) != &quot;&quot;){&#xd;
+					comentario = comentario +  &quot; - No Solic Reclamada: &quot; + hAPI.getCardValue(&apos;ticket_reclamado&apos;);&#xd;
+				}&#xd;
+				&#xd;
+				log.info(&apos;Aprovacao de Chamados Zendesk - onNotify comentario: &apos; + comentario);&#xd;
+				&#xd;
+				subject.add(comentario);&#xd;
+			}&#xd;
+		}&#xd;
+	&#xd;
+	log.info(&apos;Aprovacao de Chamados Zendesk - onNotify - FIM&apos;);	&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeStateEntry</eventId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeStateEntry(sequenceId){&#xd;
+&#xd;
+}&#xd;
+/*  &#xd;
+	var numProcess 	= getValue(&quot;WKNumProces&quot;);&#xd;
+	&#xd;
+	log.info(&apos;Aprovacao de Chamados Zendesk - beforeStateEntry - numProcess &apos; + numProcess +&#xd;
+			&apos; sequenceId: &apos; + sequenceId );&#xd;
+	&#xd;
+	if (sequenceId != &quot;1&quot;) {&#xd;
+		log.info(&quot;BSE - Troca do ecmvalidate&quot;);&#xd;
+		hAPI.setCardValue(&quot;ecmvalidate&quot;, &quot;1&quot;);&#xd;
+		log.info(&quot;BSE - Novo ecmvalidate = &quot; + hAPI.getCardValue(&quot;ecmvalidate&quot;));&#xd;
+	}&#xd;
+	&#xd;
+	// APOS CRIACAO - VAI PARA O PRIMEIRO APROVADOR&#xd;
+	if (sequenceId == 2){&#xd;
+		log.info(&apos;@CRIS - ATIV 2 - Aprovacao de Chamados Zendesk - beforeStateEntry - APROVACAO numProcess &apos; + numProcess +&#xd;
+				&apos; sequenceId: &apos; + sequenceId + &apos; ticket: &apos; + hAPI.getCardValue(&apos;ticket&apos;) &#xd;
+				+ &apos; urlticket: &apos; + hAPI.getCardValue(&apos;urlticket&apos;)&#xd;
+				+ &apos; nmcont: &apos; + hAPI.getCardValue(&apos;nmcont&apos;) &#xd;
+				+ &apos; nmorg: &apos; + hAPI.getCardValue(&apos;nmorg&apos;) &#xd;
+				+ &apos; idAprovador: &apos; + hAPI.getCardValue(&apos;idAprovador&apos;)&#xd;
+				+ &apos; hieraraprovadoresoriginal: &apos; + hAPI.getCardValue(&apos;hieraraprovadoresoriginal&apos;)&#xd;
+				+ &apos; priorid: &apos; + hAPI.getCardValue(&apos;priorid&apos;)&#xd;
+				+ &apos; probrelac: &apos; + hAPI.getCardValue(&apos;probrelac&apos;)&#xd;
+				+ &apos;requesterId:&apos; + hAPI.getCardValue(&apos;requesterId&apos;)&#xd;
+				+ &apos;tipo_solicitacao:&apos; + hAPI.getCardValue(&apos;tipo_solicitacao&apos;)&#xd;
+				+ &apos; cicloatual: &apos; + hAPI.getCardValue(&apos;cicloatual&apos;) +&#xd;
+				+ &apos; emailUsuar_movimenta_tar: &apos; + hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;));&#xd;
+		&#xd;
+		//valida hierarquia aprovacao e retira o e-mail do presidente&#xd;
+		if(hAPI.getCardValue(&apos;hieraraprovadoresoriginal&apos;) == null || hAPI.getCardValue(&apos;hieraraprovadoresoriginal&apos;) == &quot;&quot;){&#xd;
+			&#xd;
+			log.info(&apos;Aprovacao de Chamados Zendesk - beforeStateEntry - verifica hierarquia aprovacao - processo &apos; + numProcess);&#xd;
+		&#xd;
+			var aprovadores = (hAPI.getCardValue(&apos;hieraraprovadores&apos;)).toLowerCase();&#xd;
+			//setando emails originais&#xd;
+			hAPI.setCardValue(&apos;hieraraprovadoresoriginal&apos;,aprovadores);&#xd;
+			&#xd;
+			&#xd;
+			// verificando duplicados e retirando&#xd;
+			var arrayUnicos = &quot;&quot;;&#xd;
+			var arrayVerifDuplic = aprovadores.split(&quot;,&quot;);&#xd;
+			for ( var a = 0; a &lt; arrayVerifDuplic.length; a++) {&#xd;
+				if(arrayUnicos.indexOf(arrayVerifDuplic[a]) == -1){&#xd;
+					if (arrayUnicos.length &gt; 0) {&#xd;
+						arrayUnicos += &quot;,&quot; + arrayVerifDuplic[a];&#xd;
+					}&#xd;
+					else{&#xd;
+						arrayUnicos += arrayVerifDuplic[a];&#xd;
+					}&#xd;
+				}&#xd;
+			}&#xd;
+			&#xd;
+			log.info(&quot;arrayUnicos: &quot; + arrayUnicos + &quot; - processo &quot; + numProcess);&#xd;
+						&#xd;
+			var cAtive = DatasetFactory.createConstraint(&quot;metadata#active&quot;, true, true, ConstraintType.MUST);&#xd;
+			var dsEmailsExcluidos = DatasetFactory.getDataset(&quot;dsEmailsExcluidosEscalonamentoZendesk&quot;, null, new Array(cAtive), null);&#xd;
+			&#xd;
+			if(dsEmailsExcluidos.values.length &gt; 0) {&#xd;
+				log.info(&quot;dsEmailsExcluidos.values.length &gt; 0 - processo &quot; + numProcess);&#xd;
+				&#xd;
+				var arrayHierarquia = arrayUnicos.split(&quot;,&quot;);&#xd;
+				var novaHierarquia = arrayHierarquia[0];&#xd;
+				&#xd;
+				var arrayExcluidos = (dsEmailsExcluidos.getValue(0, &apos;emailsExcluidos&apos;)).toLowerCase();&#xd;
+				&#xd;
+				if(arrayHierarquia.length &gt; 1) {&#xd;
+					&#xd;
+					log.info(&quot;arrayHierarquia.length &gt; 1 - processo &quot; + numProcess);&#xd;
+&#xd;
+					for(h=1;h&lt;arrayHierarquia.length;h++) {&#xd;
+					  	if(arrayExcluidos.indexOf(arrayHierarquia[h]) == -1){&#xd;
+					  		novaHierarquia += &quot;,&quot; + arrayHierarquia[h];&#xd;
+					  		log.info(&quot;novaHierarquia:&quot; + novaHierarquia + &quot; - processo &quot; + numProcess);&#xd;
+					  	}&#xd;
+					}&#xd;
+				  hAPI.setCardValue(&apos;hieraraprovadores&apos;,novaHierarquia);&#xd;
+				  log.info(&apos;@CRISAprovacao de Chamados Zendesk - beforeStateEntry - nova hierarquia &apos; + novaHierarquia + &apos; - processo &apos; + numProcess);&#xd;
+				}&#xd;
+			}&#xd;
+		}&#xd;
+	}&#xd;
+  &#xd;
+	&#xd;
+	//APROVADOR MOVIMENTANDO A ATIVIDADE 2 - FINALIZACAO&#xd;
+	if (sequenceId == 4) {&#xd;
+	  &#xd;
+		log.info(&apos;Aprovacao de Chamados Zendesk - beforeStateEntry - Finaliza Solicitacao &apos; + numProcess );&#xd;
+		&#xd;
+		log.info(&apos;@CRIS - 1104 - ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry - APROVACAO numProcess &apos; + numProcess +&#xd;
+				&apos; sequenceId: &apos; + sequenceId + &apos; ticket: &apos; + hAPI.getCardValue(&apos;ticket&apos;) &#xd;
+				+ &apos; urlticket: &apos; + hAPI.getCardValue(&apos;urlticket&apos;)&#xd;
+				+ &apos; nmcont: &apos; + hAPI.getCardValue(&apos;nmcont&apos;) &#xd;
+				+ &apos; nmorg: &apos; + hAPI.getCardValue(&apos;nmorg&apos;) &#xd;
+				+ &apos; idAprovador: &apos; + hAPI.getCardValue(&apos;idAprovador&apos;)&#xd;
+				+ &apos; hieraraprovadoresoriginal: &apos; + hAPI.getCardValue(&apos;hieraraprovadoresoriginal&apos;)&#xd;
+				+ &apos; priorid: &apos; + hAPI.getCardValue(&apos;priorid&apos;)&#xd;
+				+ &apos; probrelac: &apos; + hAPI.getCardValue(&apos;probrelac&apos;)&#xd;
+				+ &apos;requesterId:&apos; + hAPI.getCardValue(&apos;requesterId&apos;)&#xd;
+				+ &apos;tipo_solicitacao:&apos; + hAPI.getCardValue(&apos;tipo_solicitacao&apos;)&#xd;
+				+ &apos; cicloatual: &apos; + hAPI.getCardValue(&apos;cicloatual&apos;) &#xd;
+				+ &apos; emailUsuar_movimenta_tar: &apos; + hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) +&#xd;
+				&apos; LIBERACAO ONDA 2 - 29072016 23 H&apos;);&#xd;
+		&#xd;
+		try {&#xd;
+			// Conecta o servico&#xd;
+			var NOME_SERVICO = &quot;WSZendesk&quot;;&#xd;
+			var CAMINHO_SERVICO = &quot;totvs.tdi.zendesk.WorkflowToZendesk_Service&quot;;		&#xd;
+			var servico = ServiceManager.getService(NOME_SERVICO);&#xd;
+			log.info(&quot;SERVICO:&quot; + servico);&#xd;
+			var instancia = servico.instantiate(CAMINHO_SERVICO);&#xd;
+			log.info(&quot;instancia:&quot; + instancia);&#xd;
+			var ws = instancia.getWorkflowToZendeskPort();&#xd;
+				&#xd;
+			//dados do ticket&#xd;
+			var ticketId = hAPI.getCardValue(&apos;ticket&apos;);&#xd;
+			var statusAprovacao = hAPI.getCardValue(&apos;status_aprovacao&apos;);&#xd;
+			var cicloAprovacao = hAPI.getCardValue(&apos;cicloatual&apos;);&#xd;
+			var justificativa = hAPI.getCardValue(&apos;justificativa&apos;);&#xd;
+			var idAprovador = hAPI.getCardValue(&apos;idAprovador&apos;);&#xd;
+			var emailAprovador = hAPI.getCardValue(&apos;emailAprovador&apos;);&#xd;
+			&#xd;
+			var comentarios = &apos;&apos;;&#xd;
+			var tipo_solicitacao = hAPI.getCardValue(&apos;tipo_solicitacao&apos;);&#xd;
+			&#xd;
+			log.info(&apos;Aprovacao de Chamados Zendesk - beforeStateEntry - numProcess &apos; + numProcess +&#xd;
+			 &apos; - tipo_solicitacao: &apos; + tipo_solicitacao); &#xd;
+			&#xd;
+			if (tipo_solicitacao.startsWith(&quot;ouvidoria&quot;) ||&#xd;
+				tipo_solicitacao.startsWith(&quot;OUVIDORIA&quot;)){&#xd;
+				if ((hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) == &quot;&quot;) ||&#xd;
+				    (hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) == hAPI.getCardValue(&apos;emailAprovador&apos;))) {&#xd;
+					comentarios = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  numProcess + &apos; finalizada por &apos; + emailAprovador + &apos;. Observa&amp;ccedil;&amp;otilde;es: &apos; + justificativa;&#xd;
+				}&#xd;
+				else{&#xd;
+					comentarios = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  numProcess + &apos; finalizada em nome de &apos; + emailAprovador + &apos;. Observa&amp;ccedil;&amp;otilde;es: &apos; + justificativa +&#xd;
+								  &apos;. Responsavel Substituto: &apos; + hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;);&#xd;
+				}&#xd;
+			}&#xd;
+			else{&#xd;
+				if (statusAprovacao == &apos;Aprovado&apos;) {&#xd;
+					if ((hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) == &quot;&quot;) ||&#xd;
+					   (hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) == hAPI.getCardValue(&apos;emailAprovador&apos;))) {&#xd;
+						comentarios = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  numProcess + &apos; aprovada por &apos; + emailAprovador + &apos;. Observa&amp;ccedil;&amp;otilde;es: &apos; + justificativa;&#xd;
+					}&#xd;
+					else{&#xd;
+						comentarios = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  numProcess + &apos; aprovada em nome de &apos; + emailAprovador + &apos;. Observa&amp;ccedil;&amp;otilde;es: &apos; + justificativa +&#xd;
+									  &apos;. Responsavel Substituto: &apos; + hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;);&#xd;
+					}&#xd;
+				} else {&#xd;
+					if ((hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) == &quot;&quot;) ||&#xd;
+						(hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) == hAPI.getCardValue(&apos;emailAprovador&apos;))) {&#xd;
+						comentarios = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; + numProcess + &apos; reprovada por &apos; + emailAprovador + &apos;. Observa&amp;ccedil;&amp;otilde;es: &apos; + justificativa;&#xd;
+					}&#xd;
+					else{&#xd;
+						comentarios = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; + numProcess + &apos; reprovada em nome de &apos; + emailAprovador + &apos;. Observa&amp;ccedil;&amp;otilde;es: &apos; + justificativa +&#xd;
+						  			  &apos;. Responsavel Substituto: &apos; + hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;);&#xd;
+						&#xd;
+					}&#xd;
+				}&#xd;
+			}&#xd;
+			&#xd;
+			var ticket = servico.instantiate(&apos;totvs.tdi.zendesk.Ticket&apos;);&#xd;
+			ticket.setId(ticketId);&#xd;
+	        &#xd;
+			var dados = servico.instantiate(&apos;totvs.tdi.zendesk.Dados&apos;);&#xd;
+			dados.setRequesterId(hAPI.getCardValue(&apos;requesterId&apos;));&#xd;
+			&#xd;
+	        var comment = servico.instantiate(&apos;totvs.tdi.zendesk.Comment&apos;);&#xd;
+		    comment.setPublic(false);&#xd;
+	    	comment.setBody(comentarios);&#xd;
+		    &#xd;
+		    dados.setComment(comment);&#xd;
+		    &#xd;
+		    var tipo_solicitacao = hAPI.getCardValue(&apos;tipo_solicitacao&apos;);&#xd;
+	    	&#xd;
+	    	var aprovacao = servico.instantiate(&apos;totvs.tdi.zendesk.Aprovacao&apos;);&#xd;
+	    	aprovacao.setStatusAprovacao(statusAprovacao);&#xd;
+	    	//aprovacao.setCicloAprovacao(cicloAprovacao);&#xd;
+	    	aprovacao.setCicloAprovacao(parseInt(cicloAprovacao));&#xd;
+	    	&#xd;
+	    	//aprovacao.setIdProcesso(numProcess);&#xd;
+	    	aprovacao.setIdProcesso(parseFloat(numProcess));&#xd;
+	    	&#xd;
+	    	aprovacao.setHistoricoDeAprovacao(comentarios);&#xd;
+	    	aprovacao.setAprovador(emailAprovador);&#xd;
+	        &#xd;
+	        ticket.setAprovacao(aprovacao);&#xd;
+	        ticket.setDados(dados);&#xd;
+	        &#xd;
+	        &#xd;
+	        log.info(&apos;@CRIS - 1104 - ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry - ANTES WS.UPDATETICKET&apos; +&#xd;
+	        		&apos; - processo : &apos; + numProcess +&#xd;
+					&apos; &gt;&gt; sequenceId: &apos; + sequenceId + &#xd;
+					&apos; &gt;&gt; setTicketId: &apos; + ticketId +&#xd;
+					&apos; &gt;&gt; setRequesterId: &apos; + hAPI.getCardValue(&apos;requesterId&apos;) +&#xd;
+					&apos; &gt;&gt; setPublic: false&apos; +&#xd;
+					&apos; &gt;&gt; setBody: &apos; + comentarios +&#xd;
+					&apos; &gt;&gt; setComment&apos; + comment +&#xd;
+					&apos; &gt;&gt; setAprovador: &apos; + emailAprovador +&#xd;
+					&apos; &gt;&gt; setHistoricoDeAprovacao: &apos; + comentarios +&#xd;
+					&apos; &gt;&gt; setStatusAprovacao: &apos; + statusAprovacao +&#xd;
+					&apos; &gt;&gt; setCicloAprovacao: &apos; + cicloAprovacao +&#xd;
+					&apos; &gt;&gt; setIdProcesso: &apos; + numProcess);		&#xd;
+	        	        &#xd;
+	        &#xd;
+	        var retorno = ws.updateTicket(ticket);&#xd;
+		    &#xd;
+			if (retorno) {&#xd;
+				if (retorno != null) {&#xd;
+&#xd;
+					var retornoUP = retorno.toUpperCase();&#xd;
+					log.info(&apos; @@5.0 CRIS - ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry - RETORNO UPPER - numProcess &apos; + &#xd;
+							  numProcess  + &quot; - &quot; + retornoUP);&#xd;
+				&#xd;
+					 if (retornoUP.indexOf(&quot;ERROR: ZENDESK ERROR&quot;) &gt; -1 || &#xd;
+				    	 retornoUP.indexOf(&quot;CONNECTION REFUSED&quot;) &gt; -1 ||&#xd;
+				    	 retornoUP.indexOf(&quot;BAD REQUEST&quot;) &gt; -1 ||&#xd;
+				    	 retornoUP.indexOf(&apos;&quot;ERRO&quot;:&quot;ERRO DE AUTENTICA&quot;&apos;) &gt; -1 ||&#xd;
+					     retornoUP.indexOf(&quot;CONNECTEXCEPTION&quot;) &gt; -1 ||&#xd;
+						 retornoUP.indexOf(&quot;UNPROCESSABLE ENTITY&quot;) &gt; -1 ||&#xd;
+						 retornoUP.indexOf(&quot;429 - NULL - SERVER:&quot;) &gt; -1 &#xd;
+						){&#xd;
+				    	&#xd;
+						 if (retornoUP.indexOf(&quot;429 - NULL - SERVER:&quot;) &gt; -1){&#xd;
+							 log.info(&apos;%%5.1.1 ERROR ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry  - numProcess &apos; + &#xd;
+									  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+							throw(&apos;Estamos com alto consumo de requisicoes na Zendesk e não foi possivel completar sua transação. Por favor envie/finalize novamente.   &apos; +&#xd;
+								  &apos;ERROR: &apos; + retorno);&#xd;
+						 }&#xd;
+						 else{&#xd;
+							log.info(&apos;%%5.1 ERROR ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry  - numProcess &apos; + &#xd;
+									  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+							throw(&apos;Falha na integração com a Zendesk. Por favor envie/finalize novamente.   &apos; +&#xd;
+								  &apos;ERROR: &apos; + retorno);	&#xd;
+						 }&#xd;
+					}&#xd;
+				}&#xd;
+				else{&#xd;
+					log.info(&apos;%%5.2 NULO - ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry - numProcess &apos; + &#xd;
+							  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+					throw(&apos;Falha na integração com a Zendesk. Por favor envie/finalize novamente.   &apos; +&#xd;
+						  &apos;ERROR: &apos; + retorno);	&#xd;
+				}&#xd;
+				&#xd;
+			}&#xd;
+			else{&#xd;
+				log.info(&apos;%%5.5 UNIDEFINED - ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry - numProcess &apos; + &#xd;
+						  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+				throw(&apos;Falha na integração com a Zendesk. Por favor envie/finalize novamente.   &apos; +&#xd;
+					  &apos;ERROR: &apos; + retorno);	&#xd;
+			}&#xd;
+				        &#xd;
+	        &#xd;
+	        log.info (&apos;%%6 - ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry - RETORNO DO WS.UPDATETICKET &apos; +&#xd;
+	        		  &apos; - processo : &apos; + numProcess +&#xd;
+					  &apos; &gt;&gt; sequenceId: &apos; + sequenceId + &#xd;
+					  &apos;retorno: &apos; + retorno);&#xd;
+	        &#xd;
+		}catch(E){&#xd;
+			log.info(&apos;ERROR - ATIV 4 -: Aprovacao de Chamados Zendesk - beforeStateEntry &apos; + E);&#xd;
+			throw(&apos;ERROR: Aprovacao de Chamados Zendesk - beforeStateEntry &apos; + E);&#xd;
+		}&#xd;
+	}&#xd;
+  &#xd;
+	//CANCELAMENTO AUTOMATICO&#xd;
+	if (sequenceId == 16) {&#xd;
+		log.info(&apos;Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO - numProcess: &apos; + numProcess );&#xd;
+		&#xd;
+&#xd;
+		log.info(&apos;@CRIS - 1104 - ATIV 16 - Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO numProcess &apos; + numProcess +&#xd;
+				&apos; sequenceId: &apos; + sequenceId + &apos; ticket: &apos; + hAPI.getCardValue(&apos;ticket&apos;) &#xd;
+				+ &apos; urlticket: &apos; + hAPI.getCardValue(&apos;urlticket&apos;)&#xd;
+				+ &apos; nmcont: &apos; + hAPI.getCardValue(&apos;nmcont&apos;) &#xd;
+				+ &apos; nmorg: &apos; + hAPI.getCardValue(&apos;nmorg&apos;) &#xd;
+				+ &apos; idAprovador: &apos; + hAPI.getCardValue(&apos;idAprovador&apos;)&#xd;
+				+ &apos; hieraraprovadoresoriginal: &apos; + hAPI.getCardValue(&apos;hieraraprovadoresoriginal&apos;)&#xd;
+				+ &apos; priorid: &apos; + hAPI.getCardValue(&apos;priorid&apos;)&#xd;
+				+ &apos; probrelac: &apos; + hAPI.getCardValue(&apos;probrelac&apos;)&#xd;
+				+ &apos;requesterId:&apos; + hAPI.getCardValue(&apos;requesterId&apos;)&#xd;
+				+ &apos;tipo_solicitacao:&apos; + hAPI.getCardValue(&apos;tipo_solicitacao&apos;)&#xd;
+				+ &apos; cicloatual: &apos; + hAPI.getCardValue(&apos;cicloatual&apos;));&#xd;
+		&#xd;
+		try {&#xd;
+			// Conecta o servico&#xd;
+			var NOME_SERVICO = &quot;WSZendesk&quot;;&#xd;
+			var CAMINHO_SERVICO = &quot;totvs.tdi.zendesk.WorkflowToZendesk_Service&quot;;		&#xd;
+			var servico = ServiceManager.getService(NOME_SERVICO);&#xd;
+			log.info(&quot;SERVICO:&quot; + servico);&#xd;
+			var instancia = servico.instantiate(CAMINHO_SERVICO);&#xd;
+			log.info(&quot;instancia:&quot; + instancia);&#xd;
+			var ws = instancia.getWorkflowToZendeskPort();&#xd;
+				&#xd;
+			 var tipo_solicitacao = hAPI.getCardValue(&apos;tipo_solicitacao&apos;);&#xd;
+&#xd;
+			 &#xd;
+			//dados do ticket&#xd;
+			var ticketId = hAPI.getCardValue(&apos;ticket&apos;);&#xd;
+			var statusAprovacao = &apos;CanceladoAutomatico&apos;;&#xd;
+			var cicloAprovacao = hAPI.getCardValue(&apos;cicloatual&apos;);&#xd;
+			var justificativa = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; + numProcess + &apos; cancelada automaticamente devido prazo limite estipulado.&apos;;&#xd;
+			var emailAprovador = hAPI.getCardValue(&apos;emailAprovador&apos;);&#xd;
+		&#xd;
+			var ticket = servico.instantiate(&apos;totvs.tdi.zendesk.Ticket&apos;);&#xd;
+			ticket.setId(ticketId);&#xd;
+&#xd;
+			var dados = servico.instantiate(&apos;totvs.tdi.zendesk.Dados&apos;);&#xd;
+			dados.setRequesterId(hAPI.getCardValue(&apos;requesterId&apos;));&#xd;
+	&#xd;
+			 var comment = servico.instantiate(&apos;totvs.tdi.zendesk.Comment&apos;);&#xd;
+			 comment.setPublic(false);&#xd;
+			 comment.setBody(justificativa);&#xd;
+&#xd;
+			 dados.setComment(comment);&#xd;
+			&#xd;
+			 var aprovacao = servico.instantiate(&apos;totvs.tdi.zendesk.Aprovacao&apos;);&#xd;
+		    	aprovacao.setStatusAprovacao(statusAprovacao);&#xd;
+		    	//aprovacao.setCicloAprovacao(cicloAprovacao);&#xd;
+		    	aprovacao.setCicloAprovacao(parseInt(cicloAprovacao));&#xd;
+		    	&#xd;
+		    	//aprovacao.setIdProcesso(numProcess);&#xd;
+		    	aprovacao.setIdProcesso(parseFloat(numProcess));&#xd;
+		    	&#xd;
+		    	aprovacao.setHistoricoDeAprovacao(justificativa);&#xd;
+		    	aprovacao.setAprovador(emailAprovador);&#xd;
+		    	&#xd;
+	    	ticket.setAprovacao(aprovacao);&#xd;
+	        ticket.setDados(dados);&#xd;
+		     &#xd;
+	        log.info(&apos;@CRIS - 1104 - ATIV 16 - Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO &apos; +&#xd;
+	        		&apos; - processo : &apos; + numProcess +&#xd;
+					&apos; &gt;&gt; sequenceId: &apos; + sequenceId + &#xd;
+					&apos; &gt;&gt; setTicketId: &apos; + ticketId +&#xd;
+					&apos; &gt;&gt; setRequesterId: &apos; + hAPI.getCardValue(&apos;requesterId&apos;) +&#xd;
+					&apos; &gt;&gt; setPublic: false&apos; +&#xd;
+					&apos; &gt;&gt; setBody: &apos; + justificativa +&#xd;
+					&apos; &gt;&gt; setComment&apos; + comment +&#xd;
+					&apos; &gt;&gt; setAprovador: &apos; + emailAprovador +&#xd;
+					&apos; &gt;&gt; setHistoricoDeAprovacao: &apos; + justificativa +&#xd;
+					&apos; &gt;&gt; setStatusAprovacao: &apos; + statusAprovacao +&#xd;
+					&apos; &gt;&gt; setCicloAprovacao: &apos; + cicloAprovacao +&#xd;
+					&apos; &gt;&gt; setIdProcesso: &apos; + numProcess );		&#xd;
+	        	        		    &#xd;
+		    var retorno = ws.updateTicket(ticket);&#xd;
+		    &#xd;
+			if (retorno) {&#xd;
+				if (retorno != null) {&#xd;
+&#xd;
+					var retornoUP = retorno.toUpperCase();&#xd;
+					log.info(&apos; @@5.0 CRIS - ATIV 16 - Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO - RETORNO UPPER - numProcess &apos; + &#xd;
+							  numProcess  + retornoUP);&#xd;
+				&#xd;
+					 if (retornoUP.indexOf(&quot;ERROR: ZENDESK ERROR&quot;) &gt; -1 || &#xd;
+				    	 retornoUP.indexOf(&quot;CONNECTION REFUSED&quot;) &gt; -1 ||&#xd;
+				    	 retornoUP.indexOf(&quot;BAD REQUEST&quot;) &gt; -1 ||&#xd;
+				    	 retornoUP.indexOf(&apos;&quot;ERRO&quot;:&quot;ERRO DE AUTENTICA&quot;&apos;) &gt; -1 ||&#xd;
+				    	 retornoUP.indexOf(&quot;CONNECTEXCEPTION&quot;) &gt; -1 ||&#xd;
+				    	 retornoUP.indexOf(&quot;UNPROCESSABLE ENTITY&quot;) &gt; -1 ||&#xd;
+					 	 retornoUP.indexOf(&quot;429 - NULL - SERVER:&quot;) &gt; -1 &#xd;
+				    	){&#xd;
+				    	&#xd;
+						 if (retornoUP.indexOf(&quot;429 - NULL - SERVER:&quot;) &gt; -1){&#xd;
+							 log.info(&apos;%%5.1.1 ERROR ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry  - numProcess &apos; + &#xd;
+									  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+							throw(&apos;Estamos com alto consumo de requisicoes na Zendesk e não foi possivel completar sua transação. Por favor confirme o cancelamento novamente.   &apos; +&#xd;
+								  &apos;ERROR: &apos; + retorno);&#xd;
+						 }&#xd;
+						 else{&#xd;
+							log.info(&apos;%%5.1 ERROR ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry  - numProcess &apos; + &#xd;
+									  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+							throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +&#xd;
+								  &apos;ERROR: &apos; + retorno);	&#xd;
+						 }&#xd;
+					}&#xd;
+				}&#xd;
+				else{&#xd;
+					log.info(&apos;%%5.2 NULO - ATIV 16 - Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO - numProcess &apos; + &#xd;
+							  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+					throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +&#xd;
+						  &apos;ERROR: &apos; + retorno);	&#xd;
+				}&#xd;
+				&#xd;
+			}&#xd;
+			else{&#xd;
+				log.info(&apos;%%5.5 UNIDEFINED - ATIV 16 - Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO - numProcess &apos; + &#xd;
+						  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+				throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +&#xd;
+					  &apos;ERROR: &apos; + retorno);	&#xd;
+			}&#xd;
+		    &#xd;
+		    &#xd;
+	        log.info (&apos;@CRIS - ATIV 16 - Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO numProcess &apos; + numProcess +&#xd;
+	        		  &apos; &gt;&gt; sequenceId: &apos; + sequenceId + &#xd;
+					  &apos;retorno: &apos; + retorno);&#xd;
+		    &#xd;
+		}catch(E){&#xd;
+			log.info(&apos;ERROR - ATIV 16 : Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO&apos; + E);&#xd;
+			throw(&apos;ERROR: Aprovacao de Chamados Zendesk - beforeStateEntry &apos; + E);&#xd;
+		}&#xd;
+	}&#xd;
+}&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+ANTIGO&#xd;
+  &#xd;
+ function beforeStateEntry(sequenceId){&#xd;
+	var numProcess 	= getValue(&quot;WKNumProces&quot;);&#xd;
+	&#xd;
+	log.info(&apos;Aprovacao de Chamados Zendesk - beforeStateEntry - numProcess &apos; + numProcess +&#xd;
+			&apos; sequenceId: &apos; + sequenceId );&#xd;
+	&#xd;
+	if (sequenceId != &quot;1&quot;) {&#xd;
+		log.info(&quot;BSE - Troca do ecmvalidate&quot;);&#xd;
+		hAPI.setCardValue(&quot;ecmvalidate&quot;, &quot;1&quot;);&#xd;
+		log.info(&quot;BSE - Novo ecmvalidate = &quot; + hAPI.getCardValue(&quot;ecmvalidate&quot;));&#xd;
+	}&#xd;
+	&#xd;
+	// APOS CRIACAO - VAI PARA O PRIMEIRO APROVADOR&#xd;
+	if (sequenceId == 2){&#xd;
+		log.info(&apos;@CRIS - ATIV 2 - Aprovacao de Chamados Zendesk - beforeStateEntry - APROVACAO numProcess &apos; + numProcess +&#xd;
+				&apos; sequenceId: &apos; + sequenceId + &apos; ticket: &apos; + hAPI.getCardValue(&apos;ticket&apos;) &#xd;
+				+ &apos; urlticket: &apos; + hAPI.getCardValue(&apos;urlticket&apos;)&#xd;
+				+ &apos; nmcont: &apos; + hAPI.getCardValue(&apos;nmcont&apos;) &#xd;
+				+ &apos; nmorg: &apos; + hAPI.getCardValue(&apos;nmorg&apos;) &#xd;
+				+ &apos; idAprovador: &apos; + hAPI.getCardValue(&apos;idAprovador&apos;)&#xd;
+				+ &apos; hieraraprovadoresoriginal: &apos; + hAPI.getCardValue(&apos;hieraraprovadoresoriginal&apos;)&#xd;
+				+ &apos; priorid: &apos; + hAPI.getCardValue(&apos;priorid&apos;)&#xd;
+				+ &apos; probrelac: &apos; + hAPI.getCardValue(&apos;probrelac&apos;)&#xd;
+				+ &apos;requesterId:&apos; + hAPI.getCardValue(&apos;requesterId&apos;)&#xd;
+				+ &apos;tipo_solicitacao:&apos; + hAPI.getCardValue(&apos;tipo_solicitacao&apos;)&#xd;
+				+ &apos; cicloatual: &apos; + hAPI.getCardValue(&apos;cicloatual&apos;) +&#xd;
+				+ &apos; emailUsuar_movimenta_tar: &apos; + hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;));&#xd;
+		&#xd;
+		//valida hierarquia aprovacao e retira o e-mail do presidente&#xd;
+		if(hAPI.getCardValue(&apos;hieraraprovadoresoriginal&apos;) == null || hAPI.getCardValue(&apos;hieraraprovadoresoriginal&apos;) == &quot;&quot;){&#xd;
+			&#xd;
+			log.info(&apos;Aprovacao de Chamados Zendesk - beforeStateEntry - verifica hierarquia aprovacao - processo &apos; + numProcess);&#xd;
+		&#xd;
+			var aprovadores = (hAPI.getCardValue(&apos;hieraraprovadores&apos;)).toLowerCase();&#xd;
+			//setando emails originais&#xd;
+			hAPI.setCardValue(&apos;hieraraprovadoresoriginal&apos;,aprovadores);&#xd;
+			&#xd;
+			&#xd;
+			// verificando duplicados e retirando&#xd;
+			var arrayUnicos = &quot;&quot;;&#xd;
+			var arrayVerifDuplic = aprovadores.split(&quot;,&quot;);&#xd;
+			for ( var a = 0; a &lt; arrayVerifDuplic.length; a++) {&#xd;
+				if(arrayUnicos.indexOf(arrayVerifDuplic[a]) == -1){&#xd;
+					if (arrayUnicos.length &gt; 0) {&#xd;
+						arrayUnicos += &quot;,&quot; + arrayVerifDuplic[a];&#xd;
+					}&#xd;
+					else{&#xd;
+						arrayUnicos += arrayVerifDuplic[a];&#xd;
+					}&#xd;
+				}&#xd;
+			}&#xd;
+			&#xd;
+			log.info(&quot;arrayUnicos: &quot; + arrayUnicos + &quot; - processo &quot; + numProcess);&#xd;
+						&#xd;
+			var cAtive = DatasetFactory.createConstraint(&quot;metadata#active&quot;, true, true, ConstraintType.MUST);&#xd;
+			var dsEmailsExcluidos = DatasetFactory.getDataset(&quot;dsEmailsExcluidosEscalonamentoZendesk&quot;, null, new Array(cAtive), null);&#xd;
+			&#xd;
+			if(dsEmailsExcluidos.values.length &gt; 0) {&#xd;
+				log.info(&quot;dsEmailsExcluidos.values.length &gt; 0 - processo &quot; + numProcess);&#xd;
+				&#xd;
+				var arrayHierarquia = arrayUnicos.split(&quot;,&quot;);&#xd;
+				var novaHierarquia = arrayHierarquia[0];&#xd;
+				&#xd;
+				var arrayExcluidos = (dsEmailsExcluidos.getValue(0, &apos;emailsExcluidos&apos;)).toLowerCase();&#xd;
+				&#xd;
+				if(arrayHierarquia.length &gt; 1) {&#xd;
+					&#xd;
+					log.info(&quot;arrayHierarquia.length &gt; 1 - processo &quot; + numProcess);&#xd;
+&#xd;
+					for(h=1;h&lt;arrayHierarquia.length;h++) {&#xd;
+					  	if(arrayExcluidos.indexOf(arrayHierarquia[h]) == -1){&#xd;
+					  		novaHierarquia += &quot;,&quot; + arrayHierarquia[h];&#xd;
+					  		log.info(&quot;novaHierarquia:&quot; + novaHierarquia + &quot; - processo &quot; + numProcess);&#xd;
+					  	}&#xd;
+					}&#xd;
+				  hAPI.setCardValue(&apos;hieraraprovadores&apos;,novaHierarquia);&#xd;
+				  log.info(&apos;@CRISAprovacao de Chamados Zendesk - beforeStateEntry - nova hierarquia &apos; + novaHierarquia + &apos; - processo &apos; + numProcess);&#xd;
+				}&#xd;
+			}&#xd;
+		}&#xd;
+	}&#xd;
+  &#xd;
+	&#xd;
+	//APROVADOR MOVIMENTANDO A ATIVIDADE 2 - FINALIZACAO&#xd;
+	if (sequenceId == 4) {&#xd;
+	  &#xd;
+		log.info(&apos;Aprovacao de Chamados Zendesk - beforeStateEntry - Finaliza Solicitacao &apos; + numProcess );&#xd;
+		&#xd;
+		log.info(&apos;@CRIS - ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry - APROVACAO numProcess &apos; + numProcess +&#xd;
+				&apos; sequenceId: &apos; + sequenceId + &apos; ticket: &apos; + hAPI.getCardValue(&apos;ticket&apos;) &#xd;
+				+ &apos; urlticket: &apos; + hAPI.getCardValue(&apos;urlticket&apos;)&#xd;
+				+ &apos; nmcont: &apos; + hAPI.getCardValue(&apos;nmcont&apos;) &#xd;
+				+ &apos; nmorg: &apos; + hAPI.getCardValue(&apos;nmorg&apos;) &#xd;
+				+ &apos; idAprovador: &apos; + hAPI.getCardValue(&apos;idAprovador&apos;)&#xd;
+				+ &apos; hieraraprovadoresoriginal: &apos; + hAPI.getCardValue(&apos;hieraraprovadoresoriginal&apos;)&#xd;
+				+ &apos; priorid: &apos; + hAPI.getCardValue(&apos;priorid&apos;)&#xd;
+				+ &apos; probrelac: &apos; + hAPI.getCardValue(&apos;probrelac&apos;)&#xd;
+				+ &apos;requesterId:&apos; + hAPI.getCardValue(&apos;requesterId&apos;)&#xd;
+				+ &apos;tipo_solicitacao:&apos; + hAPI.getCardValue(&apos;tipo_solicitacao&apos;)&#xd;
+				+ &apos; cicloatual: &apos; + hAPI.getCardValue(&apos;cicloatual&apos;) &#xd;
+				+ &apos; emailUsuar_movimenta_tar: &apos; + hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) +&#xd;
+				&apos; LIBERACAO ONDA 2 - 29072016 23 H&apos;);&#xd;
+		&#xd;
+		try {&#xd;
+			// Conecta o servico&#xd;
+			var NOME_SERVICO = &quot;WSZendesk&quot;;&#xd;
+			var CAMINHO_SERVICO = &quot;totvs.tdi.zendesk.WorkflowToZendesk_Service&quot;;		&#xd;
+			var servico = ServiceManager.getService(NOME_SERVICO);&#xd;
+			log.info(&quot;SERVICO:&quot; + servico);&#xd;
+			var instancia = servico.instantiate(CAMINHO_SERVICO);&#xd;
+			log.info(&quot;instancia:&quot; + instancia);&#xd;
+			var ws = instancia.getWorkflowToZendeskPort();&#xd;
+				&#xd;
+			//dados do ticket&#xd;
+			var ticketId = hAPI.getCardValue(&apos;ticket&apos;);&#xd;
+			var statusAprovacao = hAPI.getCardValue(&apos;status_aprovacao&apos;);&#xd;
+			var cicloAprovacao = hAPI.getCardValue(&apos;cicloatual&apos;);&#xd;
+			var justificativa = hAPI.getCardValue(&apos;justificativa&apos;);&#xd;
+			var idAprovador = hAPI.getCardValue(&apos;idAprovador&apos;);&#xd;
+			var emailAprovador = hAPI.getCardValue(&apos;emailAprovador&apos;);&#xd;
+			&#xd;
+			var comentarios = &apos;&apos;;&#xd;
+			var tipo_solicitacao = hAPI.getCardValue(&apos;tipo_solicitacao&apos;);&#xd;
+			&#xd;
+			log.info(&apos;Aprovacao de Chamados Zendesk - beforeStateEntry - numProcess &apos; + numProcess +&#xd;
+			 &apos; - tipo_solicitacao: &apos; + tipo_solicitacao); &#xd;
+			&#xd;
+			if (tipo_solicitacao.startsWith(&quot;ouvidoria&quot;) ||&#xd;
+				tipo_solicitacao.startsWith(&quot;OUVIDORIA&quot;)){&#xd;
+				if ((hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) == &quot;&quot;) ||&#xd;
+				    (hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) == hAPI.getCardValue(&apos;emailAprovador&apos;))) {&#xd;
+					comentarios = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  numProcess + &apos; finalizada por &apos; + emailAprovador + &apos;. Observa&amp;ccedil;&amp;otilde;es: &apos; + justificativa;&#xd;
+				}&#xd;
+				else{&#xd;
+					comentarios = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  numProcess + &apos; finalizada em nome de &apos; + emailAprovador + &apos;. Observa&amp;ccedil;&amp;otilde;es: &apos; + justificativa +&#xd;
+								  &apos;. Responsavel Substituto: &apos; + hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;);&#xd;
+				}&#xd;
+			}&#xd;
+			else{&#xd;
+				if (statusAprovacao == &apos;Aprovado&apos;) {&#xd;
+					if ((hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) == &quot;&quot;) ||&#xd;
+					   (hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) == hAPI.getCardValue(&apos;emailAprovador&apos;))) {&#xd;
+						comentarios = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  numProcess + &apos; aprovada por &apos; + emailAprovador + &apos;. Observa&amp;ccedil;&amp;otilde;es: &apos; + justificativa;&#xd;
+					}&#xd;
+					else{&#xd;
+						comentarios = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; +  numProcess + &apos; aprovada em nome de &apos; + emailAprovador + &apos;. Observa&amp;ccedil;&amp;otilde;es: &apos; + justificativa +&#xd;
+									  &apos;. Responsavel Substituto: &apos; + hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;);&#xd;
+					}&#xd;
+				} else {&#xd;
+					if ((hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) == &quot;&quot;) ||&#xd;
+						(hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;) == hAPI.getCardValue(&apos;emailAprovador&apos;))) {&#xd;
+						comentarios = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; + numProcess + &apos; reprovada por &apos; + emailAprovador + &apos;. Observa&amp;ccedil;&amp;otilde;es: &apos; + justificativa;&#xd;
+					}&#xd;
+					else{&#xd;
+						comentarios = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; + numProcess + &apos; reprovada em nome de &apos; + emailAprovador + &apos;. Observa&amp;ccedil;&amp;otilde;es: &apos; + justificativa +&#xd;
+						  			  &apos;. Responsavel Substituto: &apos; + hAPI.getCardValue(&apos;emailUsuar_movimenta_tar&apos;);&#xd;
+						&#xd;
+					}&#xd;
+				}&#xd;
+			}&#xd;
+			&#xd;
+			var ticket = servico.instantiate(&apos;totvs.tdi.zendesk.Ticket&apos;);&#xd;
+	        ticket.setTicketId(ticketId);&#xd;
+	        &#xd;
+	        // nao alterar o status do ticket&#xd;
+	        //ticket.setStatus(&quot;open&quot;);&#xd;
+&#xd;
+	        // ALTERACAO 31/05 - 01/06&#xd;
+	        ticket.setRequesterId(hAPI.getCardValue(&apos;requesterId&apos;));&#xd;
+	&#xd;
+	        var comment = servico.instantiate(&apos;totvs.tdi.zendesk.Comment&apos;);&#xd;
+		    //alteração para onda 2&#xd;
+		    var tipo_solicitacao = hAPI.getCardValue(&apos;tipo_solicitacao&apos;);&#xd;
+		    &#xd;
+		    comment.setPublic(false);&#xd;
+	    	comment.setBody(comentarios);&#xd;
+	        ticket.setComment(comment);&#xd;
+	        var custom = servico.instantiate(&apos;totvs.tdi.zendesk.CustomFields&apos;);&#xd;
+	        custom.setAprovador(emailAprovador);&#xd;
+	        custom.setHistoricoDeAprovacao(comentarios);&#xd;
+	        custom.setStatusAprovacao(statusAprovacao);&#xd;
+	        custom.setCicloAprovacao(cicloAprovacao);&#xd;
+	        custom.setIdProcesso(numProcess);&#xd;
+	        ticket.setCustomFields(custom);&#xd;
+	        &#xd;
+	        &#xd;
+	        log.info(&apos;@CRIS - ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry - ANTES WS.UPDATETICKET&apos; +&#xd;
+	        		&apos; - processo : &apos; + numProcess +&#xd;
+					&apos; &gt;&gt; sequenceId: &apos; + sequenceId + &#xd;
+					&apos; &gt;&gt; setTicketId: &apos; + ticketId +&#xd;
+					&apos; &gt;&gt; setRequesterId: &apos; + hAPI.getCardValue(&apos;requesterId&apos;) +&#xd;
+					&apos; &gt;&gt; setPublic: false&apos; +&#xd;
+					&apos; &gt;&gt; setBody: &apos; + comentarios +&#xd;
+					&apos; &gt;&gt; setComment&apos; + comment +&#xd;
+					&apos; &gt;&gt; setAprovador: &apos; + emailAprovador +&#xd;
+					&apos; &gt;&gt; setHistoricoDeAprovacao: &apos; + comentarios +&#xd;
+					&apos; &gt;&gt; setStatusAprovacao: &apos; + statusAprovacao +&#xd;
+					&apos; &gt;&gt; setCicloAprovacao: &apos; + cicloAprovacao +&#xd;
+					&apos; &gt;&gt; setIdProcesso: &apos; + numProcess +&#xd;
+					&apos; &gt;&gt; setCustomFields: &apos; + custom);		&#xd;
+	        	        &#xd;
+	        &#xd;
+	        var retorno = ws.updateTicket(ticket);&#xd;
+		    &#xd;
+			if (retorno) {&#xd;
+				if (retorno != null) {&#xd;
+&#xd;
+					var retornoUP = retorno.toUpperCase();&#xd;
+					log.info(&apos; @@5.0 CRIS - ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry - RETORNO UPPER - numProcess &apos; + &#xd;
+							  numProcess  + retornoUP);&#xd;
+				&#xd;
+				    if (retornoUP.indexOf(&quot;ERROR: ZENDESK ERROR&quot;) &gt; -1 || &#xd;
+				    	retornoUP.indexOf(&quot;CONNECTION REFUSED&quot;) &gt; -1 ||&#xd;
+				    	retornoUP.indexOf(&quot;BAD REQUEST&quot;) &gt; -1 &#xd;
+				    	){&#xd;
+				    	&#xd;
+						log.info(&apos;%%5.1 ERROR ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry  - numProcess &apos; + &#xd;
+								  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+						throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +&#xd;
+							  &apos;ERROR: &apos; + retorno);	&#xd;
+					};&#xd;
+				}&#xd;
+				else{&#xd;
+					log.info(&apos;%%5.2 NULO - ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry - numProcess &apos; + &#xd;
+							  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+					throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +&#xd;
+						  &apos;ERROR: &apos; + retorno);	&#xd;
+				}&#xd;
+				&#xd;
+			}&#xd;
+			else{&#xd;
+				log.info(&apos;%%5.5 UNIDEFINED - ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry - numProcess &apos; + &#xd;
+						  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+				throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +&#xd;
+					  &apos;ERROR: &apos; + retorno);	&#xd;
+			}&#xd;
+				        &#xd;
+	        &#xd;
+	        log.info (&apos;%%6 - ATIV 4 - Aprovacao de Chamados Zendesk - beforeStateEntry - RETORNO DO WS.UPDATETICKET &apos; +&#xd;
+	        		  &apos; - processo : &apos; + numProcess +&#xd;
+					  &apos; &gt;&gt; sequenceId: &apos; + sequenceId + &#xd;
+					  &apos;retorno: &apos; + retorno);&#xd;
+	        &#xd;
+		}catch(E){&#xd;
+			log.info(&apos;ERROR - ATIV 4 -: Aprovacao de Chamados Zendesk - beforeStateEntry &apos; + E);&#xd;
+			throw(&apos;ERROR: Aprovacao de Chamados Zendesk - beforeStateEntry &apos; + E);&#xd;
+		}&#xd;
+	}&#xd;
+  &#xd;
+	//CANCELAMENTO AUTOMATICO&#xd;
+	if (sequenceId == 12) {&#xd;
+		log.info(&apos;Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO - numProcess: &apos; + numProcess );&#xd;
+		&#xd;
+&#xd;
+		log.info(&apos;@CRIS - ATIV 12 - Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO numProcess &apos; + numProcess +&#xd;
+				&apos; sequenceId: &apos; + sequenceId + &apos; ticket: &apos; + hAPI.getCardValue(&apos;ticket&apos;) &#xd;
+				+ &apos; urlticket: &apos; + hAPI.getCardValue(&apos;urlticket&apos;)&#xd;
+				+ &apos; nmcont: &apos; + hAPI.getCardValue(&apos;nmcont&apos;) &#xd;
+				+ &apos; nmorg: &apos; + hAPI.getCardValue(&apos;nmorg&apos;) &#xd;
+				+ &apos; idAprovador: &apos; + hAPI.getCardValue(&apos;idAprovador&apos;)&#xd;
+				+ &apos; hieraraprovadoresoriginal: &apos; + hAPI.getCardValue(&apos;hieraraprovadoresoriginal&apos;)&#xd;
+				+ &apos; priorid: &apos; + hAPI.getCardValue(&apos;priorid&apos;)&#xd;
+				+ &apos; probrelac: &apos; + hAPI.getCardValue(&apos;probrelac&apos;)&#xd;
+				+ &apos;requesterId:&apos; + hAPI.getCardValue(&apos;requesterId&apos;)&#xd;
+				+ &apos;tipo_solicitacao:&apos; + hAPI.getCardValue(&apos;tipo_solicitacao&apos;)&#xd;
+				+ &apos; cicloatual: &apos; + hAPI.getCardValue(&apos;cicloatual&apos;));&#xd;
+		&#xd;
+		try {&#xd;
+			// Conecta o servico&#xd;
+			var NOME_SERVICO = &quot;WSZendesk&quot;;&#xd;
+			var CAMINHO_SERVICO = &quot;totvs.tdi.zendesk.WorkflowToZendesk_Service&quot;;		&#xd;
+			var servico = ServiceManager.getService(NOME_SERVICO);&#xd;
+			log.info(&quot;SERVICO:&quot; + servico);&#xd;
+			var instancia = servico.instantiate(CAMINHO_SERVICO);&#xd;
+			log.info(&quot;instancia:&quot; + instancia);&#xd;
+			var ws = instancia.getWorkflowToZendeskPort();&#xd;
+				&#xd;
+			//dados do ticket&#xd;
+			var ticketId = hAPI.getCardValue(&apos;ticket&apos;);&#xd;
+			//alterado em 17/08/16&#xd;
+			//comentar //var statusAprovacao = &apos;Cancelado&apos;;&#xd;
+			var statusAprovacao = &apos;CanceladoAutomatico&apos;;&#xd;
+			var cicloAprovacao = hAPI.getCardValue(&apos;cicloatual&apos;);&#xd;
+			var justificativa = &apos;Solicita&amp;ccedil;&amp;atilde;o &apos; + numProcess + &apos; cancelada automaticamente devido prazo limite estipulado.&apos;;&#xd;
+			var emailAprovador = hAPI.getCardValue(&apos;emailAprovador&apos;);&#xd;
+		&#xd;
+			var ticket = servico.instantiate(&apos;totvs.tdi.zendesk.Ticket&apos;);&#xd;
+			ticket.setTicketId(ticketId);&#xd;
+			// nao alterar o status do ticket&#xd;
+	        //ticket.setStatus(&quot;open&quot;);&#xd;
+			&#xd;
+			// ALTERACAO 31/05 - 01/06&#xd;
+	        ticket.setRequesterId(hAPI.getCardValue(&apos;requesterId&apos;));&#xd;
+	&#xd;
+			&#xd;
+	        var comment = servico.instantiate(&apos;totvs.tdi.zendesk.Comment&apos;);&#xd;
+		    &#xd;
+	        //alteração para onda 2&#xd;
+		    var tipo_solicitacao = hAPI.getCardValue(&apos;tipo_solicitacao&apos;);&#xd;
+		    &#xd;
+		    comment.setPublic(false);&#xd;
+	    	comment.setBody(justificativa);&#xd;
+		    ticket.setComment(comment);&#xd;
+		    var custom = servico.instantiate(&apos;totvs.tdi.zendesk.CustomFields&apos;);&#xd;
+		    custom.setAprovador(emailAprovador);&#xd;
+		    custom.setHistoricoDeAprovacao(justificativa);&#xd;
+		    custom.setStatusAprovacao(statusAprovacao);&#xd;
+		    custom.setCicloAprovacao(cicloAprovacao);&#xd;
+	        custom.setIdProcesso(numProcess);&#xd;
+		    ticket.setCustomFields(custom);&#xd;
+		     &#xd;
+	        log.info(&apos;@CRIS - ATIV 12 - Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO &apos; +&#xd;
+	        		&apos; - processo : &apos; + numProcess +&#xd;
+					&apos; &gt;&gt; sequenceId: &apos; + sequenceId + &#xd;
+					&apos; &gt;&gt; setTicketId: &apos; + ticketId +&#xd;
+					&apos; &gt;&gt; setRequesterId: &apos; + hAPI.getCardValue(&apos;requesterId&apos;) +&#xd;
+					&apos; &gt;&gt; setPublic: false&apos; +&#xd;
+					&apos; &gt;&gt; setBody: &apos; + justificativa +&#xd;
+					&apos; &gt;&gt; setComment&apos; + comment +&#xd;
+					&apos; &gt;&gt; setAprovador: &apos; + emailAprovador +&#xd;
+					&apos; &gt;&gt; setHistoricoDeAprovacao: &apos; + justificativa +&#xd;
+					&apos; &gt;&gt; setStatusAprovacao: &apos; + statusAprovacao +&#xd;
+					&apos; &gt;&gt; setCicloAprovacao: &apos; + cicloAprovacao +&#xd;
+					&apos; &gt;&gt; setIdProcesso: &apos; + numProcess +&#xd;
+					&apos; &gt;&gt; setCustomFields: &apos; + custom);		&#xd;
+	        	        		    &#xd;
+		    var retorno = ws.updateTicket(ticket);&#xd;
+		    &#xd;
+			if (retorno) {&#xd;
+				if (retorno != null) {&#xd;
+&#xd;
+					var retornoUP = retorno.toUpperCase();&#xd;
+					log.info(&apos; @@5.0 CRIS - ATIV 12 - Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO - RETORNO UPPER - numProcess &apos; + &#xd;
+							  numProcess  + retornoUP);&#xd;
+				&#xd;
+				    if (retornoUP.indexOf(&quot;ERROR: ZENDESK ERROR&quot;) &gt; -1 || &#xd;
+				    	retornoUP.indexOf(&quot;CONNECTION REFUSED&quot;) &gt; -1 ||&#xd;
+				    	retornoUP.indexOf(&quot;BAD REQUEST&quot;) &gt; -1 &#xd;
+				    	){&#xd;
+				    	&#xd;
+						log.info(&apos;%%5.1 ERROR ATIV 12 - Aprovacao de Chamados Zendesk - beforeStateEntry  - CANCELAMENTO AUTOMATICO - numProcess &apos; + &#xd;
+								  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+						throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +&#xd;
+							  &apos;ERROR: &apos; + retorno);	&#xd;
+					};&#xd;
+				}&#xd;
+				else{&#xd;
+					log.info(&apos;%%5.2 NULO - ATIV 12 - Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO - numProcess &apos; + &#xd;
+							  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+					throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +&#xd;
+						  &apos;ERROR: &apos; + retorno);	&#xd;
+				}&#xd;
+				&#xd;
+			}&#xd;
+			else{&#xd;
+				log.info(&apos;%%5.5 UNIDEFINED - ATIV 12 - Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO - numProcess &apos; + &#xd;
+						  numProcess  + &apos;retorno: &apos; + retorno);&#xd;
+				throw(&apos;Falha na integração com a Zendesk. Por favor confirme o cancelamento novamente.   &apos; +&#xd;
+					  &apos;ERROR: &apos; + retorno);	&#xd;
+			}&#xd;
+		    &#xd;
+		    &#xd;
+	        log.info (&apos;@CRIS - ATIV 12 - Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO numProcess &apos; + numProcess +&#xd;
+	        		  &apos; &gt;&gt; sequenceId: &apos; + sequenceId + &#xd;
+					  &apos;retorno: &apos; + retorno);&#xd;
+		    &#xd;
+		}catch(E){&#xd;
+			log.info(&apos;ERROR - ATIV 12 : Aprovacao de Chamados Zendesk - beforeStateEntry - CANCELAMENTO AUTOMATICO&apos; + E);&#xd;
+			throw(&apos;ERROR: Aprovacao de Chamados Zendesk - beforeStateEntry &apos; + E);&#xd;
+		}&#xd;
+	}&#xd;
+}&#xd;
+ */</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterTaskCreate</eventId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterTaskCreate(colleagueId){&#xd;
+ 			var numProcess 	= getValue(&quot;WKNumProces&quot;);&#xd;
+ 			var nrProximaAtividade = getValue(&quot;WKNextState&quot;);&#xd;
+ 		&#xd;
+ 			log.info(&apos;Aprovacao de Chamados Zendesk - afterTaskCreate - numProcess &apos; + numProcess +&#xd;
+ 					&apos; colleagueId: &apos; + colleagueId );&#xd;
+ 			&#xd;
+ 			/*&#xd;
+ 			 * Define prazo da aprovacao de acordo com o tipo da solicitacao&#xd;
+ 			 * Caso seja 2 - Solicitacao Ouvidoria - prazo de 8 horas uteis&#xd;
+ 			*/&#xd;
+ 			&#xd;
+ 			var tipo_solicitacao = hAPI.getCardValue(&apos;tipo_solicitacao&apos;);&#xd;
+ 			var idAprovador = hAPI.getCardValue(&apos;idAprovador&apos;);&#xd;
+ 			&#xd;
+ 			log.info(&apos;Aprovacao de Chamados Zendesk - afterTaskCreate - numProcess &apos; + numProcess +&#xd;
+ 					&apos; nrProximaAtividade: &apos; + nrProximaAtividade + &apos; altera prazo - Tipo solicitacao &apos; + tipo_solicitacao);&#xd;
+ 			&#xd;
+ 			var data = new java.util.Date();&#xd;
+ 			var hora    = data.getHours();          // 0-23&#xd;
+ 			var min     = data.getMinutes();        // 0-59&#xd;
+ 			var seg     = data.getSeconds();        // 0-59&#xd;
+ 			var totalHoraAtual = (parseInt(hora)*60*60) + (parseInt(min)*60) + seg;&#xd;
+ 			&#xd;
+ 			log.info(&apos;Aprovacao de Chamados Zendesk - afterTaskCreate - numProcess &apos; + numProcess +&#xd;
+ 					 &apos;Prazo original tarefa - hora: &apos; + hora + &apos;minuto : &apos; + min + &apos;segundo: &apos; + seg);&#xd;
+ 			log.info(&apos;Aprovacao de Chamados Zendesk - afterTaskCreate - numProcess &apos; + numProcess +&#xd;
+ 					 &apos;Tipo solicitacao: &apos; + tipo_solicitacao);&#xd;
+ 		&#xd;
+ 			log.info(&apos;Aprovacao de Chamados Zendesk - afterTaskCreate - numProcess &apos; + numProcess +&#xd;
+ 					 &apos;Prazo original tarefa em segundos:&apos; + totalHoraAtual); &#xd;
+ 		&#xd;
+ 			if (nrProximaAtividade == 2){&#xd;
+ 			&#xd;
+ 				log.info(&apos;Aprovacao de Chamados Zendesk - afterTaskCreate - numProcess &apos; + numProcess +&#xd;
+ 						 &apos; - entrou prox atividade = 2&apos;); &#xd;
+ 		&#xd;
+ 				if (tipo_solicitacao != null){&#xd;
+ 					log.info(&apos;Aprovacao de Chamados Zendesk - afterTaskCreate - numProcess &apos; + numProcess +&#xd;
+ 					 &apos; - tipo_solicitacao != null &apos;); &#xd;
+ 		&#xd;
+ 					if(tipo_solicitacao.startsWith(&quot;ouvidoria&quot;) ||&#xd;
+ 					   tipo_solicitacao.startsWith(&quot;OUVIDORIA&quot;)){&#xd;
+ 		&#xd;
+ 						log.info(&apos;Aprovacao de Chamados Zendesk - afterTaskCreate - numProcess &apos; + numProcess +&#xd;
+ 						 &apos; - tipo_solicitacao eh ouvidoria&apos;); &#xd;
+ 		&#xd;
+ 						//teste&#xd;
+ 						//var prazoMinutos = 5;&#xd;
+ 		&#xd;
+ 						//producao&#xd;
+ 						//var prazoMinutos = 480; // equivalente a 8 horas&#xd;
+ 						//alterado em 23/08 - solicitado que fosse 24 horas corridas - criado calendario Zendesk&#xd;
+ 						// exceto final de semana&#xd;
+ 						var prazoMinutos = 1440; // equivalente a 24 horas&#xd;
+ 		&#xd;
+ 						&#xd;
+ 						 //Calcula o prazo com tempo em segundos com a hora atual - senao ele assume a primeira hora do calendario(8:00)&#xd;
+ 						 //foi usado esta funcao em minutos para facilitar os testes&#xd;
+ 						 //var obj = hAPI.calculateDeadLineTime(data,totalHoraAtual, prazoMinutos, &quot;Comercial&quot;);&#xd;
+ 						 var obj = hAPI.calculateDeadLineTime(data,totalHoraAtual, prazoMinutos, &quot;Zendesk&quot;);&#xd;
+ 						 var dt = obj[0];&#xd;
+ 						 var segundos = obj[1];&#xd;
+ 						 &#xd;
+ 						 &#xd;
+ 						 log.info(&apos;Tempo contando como novo prazo : data &apos; + dt + &apos; segundos &apos; + segundos);&#xd;
+ 						 &#xd;
+ 						 &#xd;
+ 						log.info(&apos;Aprovacao de Chamados Zendesk - afterTaskCreate - altera prazo: data &apos; + dt + &#xd;
+ 								 &apos; segundos &apos; + segundos);&#xd;
+ 						 &#xd;
+ 						 //Altera o prazo do processo&#xd;
+ 						 hAPI.setDueDate(numProcess,0,idAprovador,dt,segundos);&#xd;
+ 					}&#xd;
+ 					else{&#xd;
+ 						&#xd;
+ 						log.info(&apos;Aprovacao de Chamados Zendesk - afterTaskCreate - numProcess &apos; + numProcess +&#xd;
+ 						 &apos; - tipo_solicitacao eh NORMAL&apos;); &#xd;
+ 		&#xd;
+ 						//teste&#xd;
+ 						//var prazoMinutos = 3;&#xd;
+ 		&#xd;
+ 						//alterado em 23/08 - solicitado que fosse 24 horas corridas - criado calendario Zendesk&#xd;
+ 						// exceto final de semana&#xd;
+ 						var prazoMinutos = 2880; // equivalente a 24 horas&#xd;
+ 		&#xd;
+						log.info(&quot;@Prazo minutos e datas: &quot;+prazoMinutos+&quot;/data: &quot;+data+&quot;/totalHoraAtual: &quot;+totalHoraAtual);&#xd;
+		&#xd;
+ 						var obj = hAPI.calculateDeadLineTime(data,totalHoraAtual, prazoMinutos, &quot;Zendesk&quot;);&#xd;
+ 						log.info(&quot;@LOG OBJ &quot;+obj);&#xd;
+						var dt = obj[0];&#xd;
+ 						var segundos = obj[1];&#xd;
+ 						 &#xd;
+ 						log.info(&quot;@Passou aqui1&quot;);&#xd;
+						&#xd;
+ 						log.info(&apos;Tempo contando como novo prazo : data &apos; + dt + &apos; segundos &apos; + segundos);&#xd;
+ 						 &#xd;
+ 						 &#xd;
+ 						log.info(&apos;Aprovacao de Chamados Zendesk - afterTaskCreate - altera prazo: data &apos; + dt + &#xd;
+ 								 &apos; segundos &apos; + segundos);&#xd;
+ 						 &#xd;
+ 						 //Altera o prazo do processo&#xd;
+ 						 hAPI.setDueDate(numProcess,0,idAprovador,dt,segundos);&#xd;
+						 log.info(&quot;@Passou aqui2&quot;);&#xd;
+ 					}&#xd;
+ 				}	&#xd;
+ 			}&#xd;
+ 		}</eventDescription>
+    </WorkflowProcessEvent>
+  </list>
+  <list/>
+  <list/>
+  <list>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>20</positionX>
+      <positionY>0</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+        <componGrafSequence>14</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>verfiicar param acompanhamento aprovacao - marcar notif respons em producao</stateName>
+    </ProcessComponGraf>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>171</positionX>
+      <positionY>0</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>1</version>
+        <componGrafSequence>15</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>verfiicar gestor do processo - se esta parametrizado para a producao</stateName>
+    </ProcessComponGraf>
+  </list>
+  <list/>
+  <list>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Aprovacao_de_chamados_zendesk</processId>
+        <version>49</version>
+        <linkSequence>11</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>173</positionX>
+      <positionY>260</positionY>
+    </ProcessLinkBend>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+</list>

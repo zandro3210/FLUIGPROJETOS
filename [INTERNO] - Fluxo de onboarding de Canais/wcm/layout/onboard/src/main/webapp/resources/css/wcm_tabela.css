@@ -1,0 +1,32 @@
+.wcm_newspaper{
+	font-size: 12px;
+	width:100%;
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #0A8ECC;
+}
+.wcm_newspaper th{
+	padding: 10px 10px 10px 10px;
+	font-weight: normal;
+	font-size: 14px;
+	color: #0A8ECC;
+	text-align:left;
+}
+.wcm_newspaper tbody{
+	background: #fff;
+}
+.wcm_newspaper thead{
+
+}
+.wcm_newspaper td{
+	padding: 10px;
+	border-top: 1px inset #eee;
+
+}
+.wcm_newspaper tbody tr:hover td{
+	color: #0A8ECC;
+	background: #eee;
+}
+.wcm_selected{
+background: #eee;
+}

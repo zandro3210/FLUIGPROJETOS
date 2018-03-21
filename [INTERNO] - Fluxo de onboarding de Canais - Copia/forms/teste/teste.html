@@ -35,7 +35,7 @@
 			<input name="nrAnexo" id="nrAnexo" type="hidden" />
 			<input name="token" id="token" type="hidden" />
 			<input name="territorio" id="territorio" type="hidden" />
-
+			<input name="thash" id="thash" type="hidden" />
 			<input name="codPlanilha" id="codPlanilha" type="hidden" />
 			<input name="codItem" id="codItem" type="hidden" />
 			<input name="codTerritorio" id="codTerritorio" type="hidden" />
@@ -51,10 +51,37 @@
 				</div>
 			</div>
 
+			<div class="panel panel-info hidden panel-default" id="panelReprovacaoCanais">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<b>Analisar Reprovação</b> (Escolher ação)
+					</h3>
+				</div>
+
+				<div class="panel-body">
+					<div class="form-group row">
+						<div class="col-md-12">
+							<label class="radio-inline">
+								<input type="radio" name="_reprovadoCanais" id="_reprovadoCanais" value="true" checked="checked">Aprovado</label>
+							<label class="radio-inline">
+								<input type="radio" name="_reprovadoCanais" id="_reprovadoCanais" value="false">Reprovado</label>
+						</div>
+						<div class="col-md-4 hidden" id="_divTextoReprovacao">
+							<label for="_motivoReprovadoCanais">Motivo:</label>
+							<textarea type="text" class="form-control" name="_motivoReprovadoCanais" id="_motivoReprovadoCanais"></textarea>
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+
+
 			<div class="panel panel-info hidden panel-default" id="panelAprovacaoFinanceira">
 				<div class="panel-heading ">
 					<h3 class="panel-title">
-						<b>Solicitação Financeira</b>
+						<b>Solicitação Financeira</b> (Escolher ação)
 					</h3>
 				</div>
 
