@@ -1,27 +1,51 @@
 function beforeStateEntry(sequenceId){
-	log.info("@beforeStateEntry CANAISONBOARDS diz: "+sequenceId);
-	if(sequenceId == Activity.ANALISAR_CNPJ )
+	log.info("@SubAbeturadeChamados  beforeStateEntry sequenceId: "+sequenceId);
+	if(sequenceId == Activity.EMAIL_CORPORATIVO )
 	{
-		hAPI.setCardValue("thash", encrypt("onboard",hAPI.getCardValue("nrSolicitacao")));
+		var subject = "Solicitação de Abertura E-Mail Corporativo";
+		var template = "abertura_de_chamados";
+		var params = [];
+
+		var mensagem = "";
+		if (hAPI.getCardValue("tipoSolic") == "master" )
+			mensagem += "Víncular a nuvem de relacionamento FlyPartners"
+		else
+			mensagem += "Necessário acesso aos portais (Portal do Cliente, fluig TOTVS e Academia Virtual)"
+
+		mensagem +="<br/><br/><br/><table>";
+			mensagem +="<tr>";
+				mensagem +="<th>Campos<th/>";
+				mensagem +="<th>Valores<th/>";
+			mensagem +="</tr>";
+			mensagem +="<tr>";
+				mensagem +="<td>Razão Social</td>";
+				mensagem +="<td>" +  hAPI.getCardValue("razaoSocial") +"</td>";
+			mensagem +="</tr>";
+			mensagem +="<tr>";
+				mensagem +="<td>CNPJ</td>";
+				mensagem +="<td>" +  hAPI.getCardValue("nrCnpj") +"</td>";
+			mensagem +="</tr>";
+			mensagem +="<tr>";
+				mensagem +="<td>Sugestão de E-mail</td>";
+				mensagem +="<td>" +  hAPI.getCardValue("sugestaoEmail") +"</td>";
+			mensagem +="</tr>";
+		mensagem +="</table>";
+		
+		var url = "<a style='color:red;' href='" + SERVER + "portal/p/7143/FluxoOnBoard?token=" + hAPI.getCardValue("token") + "&task="+  Activity.EMAIL_CORPORATIVO + "'>Por favor após terminar atividade clique aqui </a><br />";		
+		params.push({name:"TITULO",value: "E-mail Corporativo - Fluxo onBoard"});
+		params.push({name:"MENSAGEM",value: mensagem});
+	    params.push({name:"URL",value: url  });
+
+		var receivers = [];
+		receivers.push("meninodexte16@msn.com");
+		log.info("@SubAbeturadeChamados  beforeStateEntry onNotify() ");
+		onNotify(subject, receivers, template, params,  "text/html" );
 	} 
 	
 }
-function encrypt(key, value) {
-	var result="";
-	for(i=0;i<value.length;++i)
-	{
-	  result+=String.fromCharCode(key[i % key.length]^value.charCodeAt(i));
-	}
-	log.info("@beforeStateEntry encrypt result: "+result);
-	return result;
-  }
-  
-  function decrypt()
-  {
-   var result="";
-	for(i=0;i<value.length;++i)
-	{
-	  result+=String.fromCharCode(key[i % key.length]^value.charCodeAt(i));
-	}
-	return result;
-  }
+
+
+
+
+
+

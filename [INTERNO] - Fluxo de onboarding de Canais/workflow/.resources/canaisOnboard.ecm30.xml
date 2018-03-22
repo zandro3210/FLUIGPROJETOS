@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Fluxo de onboarding de Canais</processId>
-      <version>17</version>
+      <version>18</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>307</formId>
@@ -2129,7 +2129,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;cnpjOk&quot;) == &quot;true&quot;)</condition>
@@ -2140,7 +2140,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2151,7 +2151,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_aprovadoFinanceiro&quot;) == &quot;false&quot;)</condition>
@@ -2162,7 +2162,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
@@ -2173,7 +2173,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>3</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2184,7 +2184,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>36</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;capilaridadeOk&quot;) == &quot;true&quot;)</condition>
@@ -2195,7 +2195,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>36</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2206,7 +2206,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>47</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
@@ -2217,7 +2217,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>47</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2228,7 +2228,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>65</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
@@ -2239,7 +2239,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>65</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2250,7 +2250,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>106</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2263,7 +2263,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>112</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_aprovadoCanais&quot;) == &quot;false&quot;)</condition>
@@ -2274,7 +2274,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>112</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
@@ -2285,7 +2285,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>3</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>112</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2296,7 +2296,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>120</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_reprovadoFranquia&quot;) == &quot;false&quot;)</condition>
@@ -2307,7 +2307,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>120</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_reprovadoFranquia&quot;) == &quot;true&quot;)</condition>
@@ -2318,7 +2318,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>124</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_aprovadoSCanais&quot;) == &quot;false&quot;)</condition>
@@ -2329,7 +2329,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>124</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_aprovadoSCanais&quot;) == &quot;true&quot;)</condition>
@@ -2340,7 +2340,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>129</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
@@ -2351,7 +2351,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>129</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2362,7 +2362,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>131</sequence>
       </conditionProcessStatePK>
       <condition>true&#xd;
@@ -2374,7 +2374,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>140</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2385,7 +2385,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>158</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2396,7 +2396,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>158</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -2407,7 +2407,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>174</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2418,7 +2418,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>182</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_reprovadoContratoAssinado&quot;) == &quot;false&quot;)</condition>
@@ -2429,7 +2429,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>17</version>
+        <version>18</version>
         <sequence>182</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_reprovadoContratoAssinado&quot;) != &quot;false&quot;)</condition>
@@ -3665,83 +3665,7 @@ function callDatasetRest(urlWithParams){&#xd;
 	INFORMAR_CODIGO_UNIDADE: 61,&#xd;
 	AGUARDAR_ENCERRAMENTO_CHAMADOS: 69&#xd;
 }&#xd;
-function ajax(option) { // $.ajax(...) without jquery.&#xd;
-    if (typeof(option.url) == &quot;undefined&quot;) {&#xd;
-        try {&#xd;
-            option.url = location.href;&#xd;
-        } catch(e) {&#xd;
-            var ajaxLocation;&#xd;
-            ajaxLocation = document.createElement(&quot;a&quot;);&#xd;
-            ajaxLocation.href = &quot;&quot;;&#xd;
-            option.url = ajaxLocation.href;&#xd;
-        }&#xd;
-    }&#xd;
-    if (typeof(option.type) == &quot;undefined&quot;) {&#xd;
-        option.type = &quot;GET&quot;;&#xd;
-    }&#xd;
-    if (typeof(option.data) == &quot;undefined&quot;) {&#xd;
-        option.data = null;&#xd;
-    } else {&#xd;
-        var data = &quot;&quot;;&#xd;
-        for (var x in option.data) {&#xd;
-            if (data != &quot;&quot;) {&#xd;
-                data += &quot;&amp;&quot;;&#xd;
-            }&#xd;
-            data += encodeURIComponent(x)+&quot;=&quot;+encodeURIComponent(option.data[x]);&#xd;
-        };&#xd;
-        option.data = data;&#xd;
-    }&#xd;
-    if (typeof(option.statusCode) == &quot;undefined&quot;) { // 4&#xd;
-        option.statusCode = {};&#xd;
-    }&#xd;
-    if (typeof(option.beforeSend) == &quot;undefined&quot;) { // 1&#xd;
-        option.beforeSend = function () {};&#xd;
-    }&#xd;
-    if (typeof(option.success) == &quot;undefined&quot;) { // 4 et sans erreur&#xd;
-        option.success = function () {};&#xd;
-    }&#xd;
-    if (typeof(option.error) == &quot;undefined&quot;) { // 4 et avec erreur&#xd;
-        option.error = function () {};&#xd;
-    }&#xd;
-    if (typeof(option.complete) == &quot;undefined&quot;) { // 4&#xd;
-        option.complete = function () {};&#xd;
-    }&#xd;
-    typeof(option.statusCode[&quot;404&quot;]);&#xd;
-&#xd;
-    var xhr = null;&#xd;
-&#xd;
-    if (window.XMLHttpRequest || window.ActiveXObject) {&#xd;
-        if (window.ActiveXObject) { try { xhr = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;); } catch(e) { xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;); } }&#xd;
-        else { xhr = new XMLHttpRequest(); }&#xd;
-    } else { alert(&quot;Votre navigateur ne supporte pas l&apos;objet XMLHTTPRequest...&quot;); return null; }&#xd;
-&#xd;
-    xhr.onreadystatechange = function() {&#xd;
-        if (xhr.readyState == 1) {&#xd;
-            option.beforeSend();&#xd;
-        }&#xd;
-        if (xhr.readyState == 4) {&#xd;
-            option.complete(xhr, xhr.status);&#xd;
-            if (xhr.status == 200 || xhr.status == 0) {&#xd;
-                option.success(xhr.responseText);&#xd;
-            } else {&#xd;
-                option.error(xhr.status);&#xd;
-                if (typeof(option.statusCode[xhr.status]) != &quot;undefined&quot;) {&#xd;
-                    option.statusCode[xhr.status]();&#xd;
-                }&#xd;
-            }&#xd;
-        }&#xd;
-    };&#xd;
-&#xd;
-    if (option.type == &quot;POST&quot;) {&#xd;
-        xhr.open(option.type, option.url, true);&#xd;
-        xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded; charset=UTF-8&quot;);&#xd;
-        xhr.send(option.data);&#xd;
-    } else {&#xd;
-        xhr.open(option.type, option.url+option.data, true);&#xd;
-        xhr.send(null);&#xd;
-    }&#xd;
-&#xd;
-}</eventDescription>
+</eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
@@ -3912,103 +3836,6 @@ function ajax(option) { // $.ajax(...) without jquery.&#xd;
 		log.info(&quot;Municipio informado nao existe no cadastro de capilaridade&quot;);&#xd;
 		throw &quot;Municipio informado nao existe no cadastro de capilaridade&quot;;&#xd;
 	}&#xd;
-}</eventDescription>
-    </WorkflowProcessEvent>
-    <WorkflowProcessEvent>
-      <workflowProcessEventPK>
-        <companyId>1</companyId>
-        <eventId>activity.1</eventId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-      </workflowProcessEventPK>
-      <eventDescription>var Activity = {&#xd;
-	ZERO: 0,&#xd;
-	INICIO: 4,&#xd;
-	ANALISAR_CNPJ: 8,&#xd;
-	FIM_CANCELADO: 14,&#xd;
-	ANALISAR_REPROVACAO_CANAIS: 17,&#xd;
-	ANALISAR_REPROVACAO_FRANQUIA: 42,&#xd;
-	ANALISAR_CONTRATO_ASSINADO: 51,&#xd;
-	ANEXAR_CONTRATO: 58,&#xd;
-	INFORMAR_CODIGO_UNIDADE: 61,&#xd;
-	AGUARDAR_ENCERRAMENTO_CHAMADOS: 69&#xd;
-}&#xd;
-function ajax(option) { // $.ajax(...) without jquery.&#xd;
-    if (typeof(option.url) == &quot;undefined&quot;) {&#xd;
-        try {&#xd;
-            option.url = location.href;&#xd;
-        } catch(e) {&#xd;
-            var ajaxLocation;&#xd;
-            ajaxLocation = document.createElement(&quot;a&quot;);&#xd;
-            ajaxLocation.href = &quot;&quot;;&#xd;
-            option.url = ajaxLocation.href;&#xd;
-        }&#xd;
-    }&#xd;
-    if (typeof(option.type) == &quot;undefined&quot;) {&#xd;
-        option.type = &quot;GET&quot;;&#xd;
-    }&#xd;
-    if (typeof(option.data) == &quot;undefined&quot;) {&#xd;
-        option.data = null;&#xd;
-    } else {&#xd;
-        var data = &quot;&quot;;&#xd;
-        for (var x in option.data) {&#xd;
-            if (data != &quot;&quot;) {&#xd;
-                data += &quot;&amp;&quot;;&#xd;
-            }&#xd;
-            data += encodeURIComponent(x)+&quot;=&quot;+encodeURIComponent(option.data[x]);&#xd;
-        };&#xd;
-        option.data = data;&#xd;
-    }&#xd;
-    if (typeof(option.statusCode) == &quot;undefined&quot;) { // 4&#xd;
-        option.statusCode = {};&#xd;
-    }&#xd;
-    if (typeof(option.beforeSend) == &quot;undefined&quot;) { // 1&#xd;
-        option.beforeSend = function () {};&#xd;
-    }&#xd;
-    if (typeof(option.success) == &quot;undefined&quot;) { // 4 et sans erreur&#xd;
-        option.success = function () {};&#xd;
-    }&#xd;
-    if (typeof(option.error) == &quot;undefined&quot;) { // 4 et avec erreur&#xd;
-        option.error = function () {};&#xd;
-    }&#xd;
-    if (typeof(option.complete) == &quot;undefined&quot;) { // 4&#xd;
-        option.complete = function () {};&#xd;
-    }&#xd;
-    typeof(option.statusCode[&quot;404&quot;]);&#xd;
-&#xd;
-    var xhr = null;&#xd;
-&#xd;
-    if (window.XMLHttpRequest || window.ActiveXObject) {&#xd;
-        if (window.ActiveXObject) { try { xhr = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;); } catch(e) { xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;); } }&#xd;
-        else { xhr = new XMLHttpRequest(); }&#xd;
-    } else { alert(&quot;Votre navigateur ne supporte pas l&apos;objet XMLHTTPRequest...&quot;); return null; }&#xd;
-&#xd;
-    xhr.onreadystatechange = function() {&#xd;
-        if (xhr.readyState == 1) {&#xd;
-            option.beforeSend();&#xd;
-        }&#xd;
-        if (xhr.readyState == 4) {&#xd;
-            option.complete(xhr, xhr.status);&#xd;
-            if (xhr.status == 200 || xhr.status == 0) {&#xd;
-                option.success(xhr.responseText);&#xd;
-            } else {&#xd;
-                option.error(xhr.status);&#xd;
-                if (typeof(option.statusCode[xhr.status]) != &quot;undefined&quot;) {&#xd;
-                    option.statusCode[xhr.status]();&#xd;
-                }&#xd;
-            }&#xd;
-        }&#xd;
-    };&#xd;
-&#xd;
-    if (option.type == &quot;POST&quot;) {&#xd;
-        xhr.open(option.type, option.url, true);&#xd;
-        xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded; charset=UTF-8&quot;);&#xd;
-        xhr.send(option.data);&#xd;
-    } else {&#xd;
-        xhr.open(option.type, option.url+option.data, true);&#xd;
-        xhr.send(null);&#xd;
-    }&#xd;
-&#xd;
 }</eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
@@ -4264,7 +4091,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>11</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4275,7 +4102,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>11</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -4286,7 +4113,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4297,7 +4124,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4308,7 +4135,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>53</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4319,7 +4146,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>60</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4330,7 +4157,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>94</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4341,7 +4168,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>94</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -4352,7 +4179,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>94</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -4363,7 +4190,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>97</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4374,7 +4201,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>97</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -4385,7 +4212,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>105</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4396,7 +4223,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>107</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4407,7 +4234,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>108</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4418,7 +4245,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>109</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4429,7 +4256,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>109</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -4440,7 +4267,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>109</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -4451,7 +4278,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>114</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4462,7 +4289,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>114</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -4473,7 +4300,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>114</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -4484,7 +4311,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>115</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4495,7 +4322,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>115</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -4506,7 +4333,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>118</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4517,7 +4344,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>119</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4528,7 +4355,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>119</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -4539,7 +4366,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>122</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4550,7 +4377,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>122</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -4561,7 +4388,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>125</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4572,7 +4399,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>126</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4583,7 +4410,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>126</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -4594,7 +4421,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>127</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4605,7 +4432,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>127</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -4616,7 +4443,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>132</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4627,7 +4454,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>136</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4638,7 +4465,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>141</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4649,7 +4476,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>142</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4660,7 +4487,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>142</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -4671,7 +4498,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>167</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4682,7 +4509,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>172</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4693,7 +4520,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>173</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4704,7 +4531,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>180</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4715,7 +4542,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>184</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4726,7 +4553,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>185</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4737,7 +4564,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>185</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -4748,7 +4575,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>17</version>
+        <version>18</version>
         <linkSequence>185</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -4874,6 +4701,16 @@ function verifyCnpj(){&#xd;
       <subProcessCode>SubAberturadeChamados</subProcessCode>
       <processField>nome</processField>
       <subProcessField>nome</subProcessField>
+      <mapFlow>2</mapFlow>
+    </SubProcessFieldRelationship>
+    <SubProcessFieldRelationship>
+      <tenantId>1</tenantId>
+      <processCode>canaisOnboard</processCode>
+      <stateSequence>178</stateSequence>
+      <version>1</version>
+      <subProcessCode>SubAberturadeChamados</subProcessCode>
+      <processField>token</processField>
+      <subProcessField>token</subProcessField>
       <mapFlow>2</mapFlow>
     </SubProcessFieldRelationship>
     <SubProcessFieldRelationship>

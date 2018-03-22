@@ -1,3 +1,8 @@
 Passos para o funcionamento da funcionalidade: Página pública.
 
+Deploy do layer
 Parametrização de Dataset dsMoveTask.
+Subir serviço ECMWorkflowEngineService. - > http://spon010113223:8080/webdesk/ECMWorkflowEngineService?wsdl
+
+Colocar dentro do processo SubAberturadeChamados a matricula de um admininistrador para disparo de e-mail
+Adicionar o template de e-mail "abertura_de_chamados"  

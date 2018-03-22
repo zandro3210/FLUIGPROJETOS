@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>SubAberturadeChamados</processId>
-      <version>7</version>
+      <version>36</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>332</formId>
@@ -111,8 +111,7 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -136,7 +135,7 @@
       <allowanceManagerTime>0</allowanceManagerTime>
       <frequenceManagerTime>0</frequenceManagerTime>
       <inhibitTransfer>true</inhibitTransfer>
-      <periodId></periodId>
+      <periodId>Default</periodId>
       <stateType>0</stateType>
       <bpmnType>80</bpmnType>
       <signalId>0</signalId>
@@ -163,8 +162,7 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -215,8 +213,7 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -283,8 +280,60 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>680</positionX>
-      <positionY>60</positionY>
+      <positionX>690</positionX>
+      <positionY>73</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>23</sequence>
+      </processStatePK>
+      <stateName>Cadastro de Fornecedor</stateName>
+      <stateDescription>Cadastro de Fornecedor</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>830</positionX>
+      <positionY>73</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -334,8 +383,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>840</positionX>
-      <positionY>130</positionY>
+      <positionX>870</positionX>
+      <positionY>160</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -428,11 +477,28 @@
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
         <version>1</version>
-        <linkSequence>22</linkSequence>
+        <linkSequence>24</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
       <initialStateSequence>15</initialStateSequence>
+      <finalStateSequence>23</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>25</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>23</initialStateSequence>
       <finalStateSequence>21</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -450,89 +516,62 @@
         <processId>SubAberturadeChamados</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>var Activity = {&#xd;
+      <eventDescription>var PRD = &quot;https://wscorp.totvs.com.br&quot;;&#xd;
+var HML = &quot;http://spon010113223:8080/&quot;;&#xd;
+var SERVER = HML;&#xd;
+var Activity = {&#xd;
 	ZERO: 4,&#xd;
 	EMAIL_CORPORATIVO: 9,&#xd;
 	CRIACAO_COD_CRM: 11,&#xd;
 	PORTAL_CLIENTE: 13,&#xd;
-	USUARIO_CRM_VENDAS: 15&#xd;
+	USUARIO_CRM_VENDAS: 15,&#xd;
+	CADASTRO_FORNECEDOR: 23&#xd;
 }&#xd;
-function ajax(option) { // $.ajax(...) without jquery.&#xd;
-    if (typeof(option.url) == &quot;undefined&quot;) {&#xd;
-        try {&#xd;
-            option.url = location.href;&#xd;
-        } catch(e) {&#xd;
-            var ajaxLocation;&#xd;
-            ajaxLocation = document.createElement(&quot;a&quot;);&#xd;
-            ajaxLocation.href = &quot;&quot;;&#xd;
-            option.url = ajaxLocation.href;&#xd;
-        }&#xd;
-    }&#xd;
-    if (typeof(option.type) == &quot;undefined&quot;) {&#xd;
-        option.type = &quot;GET&quot;;&#xd;
-    }&#xd;
-    if (typeof(option.data) == &quot;undefined&quot;) {&#xd;
-        option.data = null;&#xd;
-    } else {&#xd;
-        var data = &quot;&quot;;&#xd;
-        for (var x in option.data) {&#xd;
-            if (data != &quot;&quot;) {&#xd;
-                data += &quot;&amp;&quot;;&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>onNotify</eventId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function onNotify(subject, receivers, template, params){&#xd;
+	&#xd;
+&#xd;
+    log.info(&quot;@SubAberturadeChamados onNotify start&quot;);&#xd;
+&#xd;
+        try{&#xd;
+            //Monta mapa com parâmetros do template&#xd;
+            var parametros = new java.util.HashMap();&#xd;
+            for (i in params) { &#xd;
+                log.info(&quot;@SubAberturadeChamados params[i].name: &apos;&quot; + params[i].name + &quot;&apos; params[i].value: &apos;&quot; + params[i].value+ &quot;&apos;&quot;);&#xd;
+                parametros.put(params[i].name,  params[i].value);&#xd;
             }&#xd;
-            data += encodeURIComponent(x)+&quot;=&quot;+encodeURIComponent(option.data[x]);&#xd;
-        };&#xd;
-        option.data = data;&#xd;
-    }&#xd;
-    if (typeof(option.statusCode) == &quot;undefined&quot;) { // 4&#xd;
-        option.statusCode = {};&#xd;
-    }&#xd;
-    if (typeof(option.beforeSend) == &quot;undefined&quot;) { // 1&#xd;
-        option.beforeSend = function () {};&#xd;
-    }&#xd;
-    if (typeof(option.success) == &quot;undefined&quot;) { // 4 et sans erreur&#xd;
-        option.success = function () {};&#xd;
-    }&#xd;
-    if (typeof(option.error) == &quot;undefined&quot;) { // 4 et avec erreur&#xd;
-        option.error = function () {};&#xd;
-    }&#xd;
-    if (typeof(option.complete) == &quot;undefined&quot;) { // 4&#xd;
-        option.complete = function () {};&#xd;
-    }&#xd;
-    typeof(option.statusCode[&quot;404&quot;]);&#xd;
+            &#xd;
+ &#xd;
+         &#xd;
+            //Este parâmetro é obrigatório e representa o assunto do e-mail&#xd;
+            parametros.put(&quot;subject&quot;, subject);&#xd;
+            log.info(&quot;@SubAberturadeChamados subject: &apos;&quot; + subject + &quot;&apos;&quot;);&#xd;
+            //Monta lista de destinatários&#xd;
+            var destinatarios = new java.util.ArrayList();&#xd;
 &#xd;
-    var xhr = null;&#xd;
-&#xd;
-    if (window.XMLHttpRequest || window.ActiveXObject) {&#xd;
-        if (window.ActiveXObject) { try { xhr = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;); } catch(e) { xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;); } }&#xd;
-        else { xhr = new XMLHttpRequest(); }&#xd;
-    } else { alert(&quot;Votre navigateur ne supporte pas l&apos;objet XMLHTTPRequest...&quot;); return null; }&#xd;
-&#xd;
-    xhr.onreadystatechange = function() {&#xd;
-        if (xhr.readyState == 1) {&#xd;
-            option.beforeSend();&#xd;
-        }&#xd;
-        if (xhr.readyState == 4) {&#xd;
-            option.complete(xhr, xhr.status);&#xd;
-            if (xhr.status == 200 || xhr.status == 0) {&#xd;
-                option.success(xhr.responseText);&#xd;
-            } else {&#xd;
-                option.error(xhr.status);&#xd;
-                if (typeof(option.statusCode[xhr.status]) != &quot;undefined&quot;) {&#xd;
-                    option.statusCode[xhr.status]();&#xd;
-                }&#xd;
+            &#xd;
+            for (i in receivers) { &#xd;
+                log.info(&quot;@SubAberturadeChamados receivers[i]: &apos;&quot; + receivers[i] + &quot;&apos;&quot;);&#xd;
+                destinatarios.add(receivers[i]);&#xd;
             }&#xd;
+          &#xd;
+            log.info(&quot;@SubAberturadeChamados template: &apos;&quot; + template + &quot;&apos;&quot;);&#xd;
+            //Envia e-mail&#xd;
+            notifier.notify(&quot;zandro3210&quot;, template, parametros, destinatarios, &quot;text/html&quot;);&#xd;
+         &#xd;
+        } catch(e){&#xd;
+            log.error(&quot;@SubAberturadeChamados erro:&quot; + e);&#xd;
         }&#xd;
-    };&#xd;
-&#xd;
-    if (option.type == &quot;POST&quot;) {&#xd;
-        xhr.open(option.type, option.url, true);&#xd;
-        xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded; charset=UTF-8&quot;);&#xd;
-        xhr.send(option.data);&#xd;
-    } else {&#xd;
-        xhr.open(option.type, option.url+option.data, true);&#xd;
-        xhr.send(null);&#xd;
-    }&#xd;
-&#xd;
+    &#xd;
+	&#xd;
 }</eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
@@ -569,32 +608,57 @@ process.instructions=&#xd;
         <version>1</version>
       </workflowProcessEventPK>
       <eventDescription>function beforeStateEntry(sequenceId){&#xd;
-	log.info(&quot;@beforeStateEntry CANAISONBOARDS diz: &quot;+sequenceId);&#xd;
-	if(sequenceId == Activity.ANALISAR_CNPJ )&#xd;
+	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry sequenceId: &quot;+sequenceId);&#xd;
+	if(sequenceId == Activity.EMAIL_CORPORATIVO )&#xd;
 	{&#xd;
-		hAPI.setCardValue(&quot;thash&quot;, encrypt(&quot;onboard&quot;,hAPI.getCardValue(&quot;nrSolicitacao&quot;)));&#xd;
+		var subject = &quot;Solicitação de Abertura E-Mail Corporativo&quot;;&#xd;
+		var template = &quot;abertura_de_chamados&quot;;&#xd;
+		var params = [];&#xd;
+&#xd;
+		var mensagem = &quot;&quot;;&#xd;
+		if (hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot; )&#xd;
+			mensagem += &quot;Víncular a nuvem de relacionamento FlyPartners&quot;&#xd;
+		else&#xd;
+			mensagem += &quot;Necessário acesso aos portais (Portal do Cliente, fluig TOTVS e Academia Virtual)&quot;&#xd;
+&#xd;
+		mensagem +=&quot;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;&quot;;&#xd;
+			mensagem +=&quot;&lt;tr&gt;&quot;;&#xd;
+				mensagem +=&quot;&lt;th&gt;Campos&lt;th/&gt;&quot;;&#xd;
+				mensagem +=&quot;&lt;th&gt;Valores&lt;th/&gt;&quot;;&#xd;
+			mensagem +=&quot;&lt;/tr&gt;&quot;;&#xd;
+			mensagem +=&quot;&lt;tr&gt;&quot;;&#xd;
+				mensagem +=&quot;&lt;td&gt;Razão Social&lt;/td&gt;&quot;;&#xd;
+				mensagem +=&quot;&lt;td&gt;&quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;) +&quot;&lt;/td&gt;&quot;;&#xd;
+			mensagem +=&quot;&lt;/tr&gt;&quot;;&#xd;
+			mensagem +=&quot;&lt;tr&gt;&quot;;&#xd;
+				mensagem +=&quot;&lt;td&gt;CNPJ&lt;/td&gt;&quot;;&#xd;
+				mensagem +=&quot;&lt;td&gt;&quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;) +&quot;&lt;/td&gt;&quot;;&#xd;
+			mensagem +=&quot;&lt;/tr&gt;&quot;;&#xd;
+			mensagem +=&quot;&lt;tr&gt;&quot;;&#xd;
+				mensagem +=&quot;&lt;td&gt;Sugestão de E-mail&lt;/td&gt;&quot;;&#xd;
+				mensagem +=&quot;&lt;td&gt;&quot; +  hAPI.getCardValue(&quot;sugestaoEmail&quot;) +&quot;&lt;/td&gt;&quot;;&#xd;
+			mensagem +=&quot;&lt;/tr&gt;&quot;;&#xd;
+		mensagem +=&quot;&lt;/table&gt;&quot;;&#xd;
+		&#xd;
+		var url = &quot;&lt;a style=&apos;color:red;&apos; href=&apos;&quot; + SERVER + &quot;portal/p/7143/FluxoOnBoard?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot;+  Activity.EMAIL_CORPORATIVO + &quot;&apos;&gt;Por favor após terminar atividade clique aqui &lt;/a&gt;&lt;br /&gt;&quot;;		&#xd;
+		params.push({name:&quot;TITULO&quot;,value: &quot;E-mail Corporativo - Fluxo onBoard&quot;});&#xd;
+		params.push({name:&quot;MENSAGEM&quot;,value: mensagem});&#xd;
+	    params.push({name:&quot;URL&quot;,value: url  });&#xd;
+&#xd;
+		var receivers = [];&#xd;
+		receivers.push(&quot;meninodexte16@msn.com&quot;);&#xd;
+		log.info(&quot;@SubAbeturadeChamados  beforeStateEntry onNotify() &quot;);&#xd;
+		onNotify(subject, receivers, template, params,  &quot;text/html&quot; );&#xd;
 	} &#xd;
 	&#xd;
 }&#xd;
-function encrypt(key, value) {&#xd;
-	var result=&quot;&quot;;&#xd;
-	for(i=0;i&lt;value.length;++i)&#xd;
-	{&#xd;
-	  result+=String.fromCharCode(key[i % key.length]^value.charCodeAt(i));&#xd;
-	}&#xd;
-	log.info(&quot;@beforeStateEntry encrypt result: &quot;+result);&#xd;
-	return result;&#xd;
-  }&#xd;
-  &#xd;
-  function decrypt()&#xd;
-  {&#xd;
-   var result=&quot;&quot;;&#xd;
-	for(i=0;i&lt;value.length;++i)&#xd;
-	{&#xd;
-	  result+=String.fromCharCode(key[i % key.length]^value.charCodeAt(i));&#xd;
-	}&#xd;
-	return result;&#xd;
-  }</eventDescription>
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+</eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
       <workflowProcessEventPK>

@@ -127,7 +127,7 @@ h2{
 
 		<form action="mailto:%WFMailTo%" method="POST" name="APROVPC">
 			<h1>Fluxo Onboarding</h1>
-			<h2>Aprova&ccedil;&atilde;o</h2>
+			<h2>Atividade Solicitada foi?</h2>
 		</center>
 
 
@@ -138,8 +138,8 @@ h2{
 		<tr>
 				<center>
 
-					<input type="radio" name=PCAPROVA value="true" class="btn">Aprovar
-					<input type="radio" name=PCAPROVA value="false" class="btn">Rejeitar
+					<input type="radio" name=PCAPROVA value="true" class="btn">Realizada
+					<input type="radio" name=PCAPROVA value="false" class="btn">Cancelada
 				
 					<button type="submit" id="btnEnviar" name="Enviar" class="btn">Enviar</button>
 		         </center>
@@ -205,21 +205,38 @@ function servicePost(url,data,success){
 
 $( document ).ready(function() {
    
-    gerarArrayTabela();
+
 	
 }); 
 
 $( "#btnEnviar" ).click(function() {
 	 debugger;
- 
+ tomandoDecisao();
 });
 function tomandoDecisao(){
 
 
 	 var url_string = window.location.href; //window.location.href
 	var url = new URL(url_string);
-	var thash = url.searchParams.get("hash");
-	var atividade = url.searchParams.get("num");
+	var token = url.searchParams.get("token");
+	var atividade = url.searchParams.get("task");
+
+
+
+	var url = "api/public/ecm/dataset/search";
+	var data = {
+		datasetId: "CanaisOnBoard2",
+		filterFields: "token," + token
+			//	filterFields: "id," + proc +,"id," + documentId + ",version," + documentVersion + ",tablename,tabcliente"
+	}
+
+
+   var success = function(data){
+	  console.log(data);
+	 
+    }
+
+    var result = servicePost(url,data,success);
 }
 function gerarTabelaProduto(datasetPrincipal){
 	var url = "api/public/ecm/dataset/search";
@@ -229,8 +246,8 @@ function gerarTabelaProduto(datasetPrincipal){
 		var documentVersion = datasetPrincipal.content[i]["metadata#version"];
 		
 		var data = {
-			datasetId: "ds_table_childs",
-			filterFields: "id," + proc +,"id," + documentId + ",version," + documentVersion + ",tablename,tabcliente"
+			datasetId: "CanaisOnBoard2",
+	
 		}
 
 		var success = function(data){
@@ -244,52 +261,8 @@ function gerarTabelaProduto(datasetPrincipal){
 	}
              
 }
-function gerarTabelaCliente(datasetPrincipal){
-	var url = "api/public/ecm/dataset/search";
- 	for (var i = 0; i < datasetPrincipal.content.length; i++) {
-              
-		var documentId = datasetPrincipal.content[i]["metadata#id"]; 
-		var documentVersion = datasetPrincipal.content[i]["metadata#version"];
-		
-		var data = {
-			datasetId: "form_exemple_mail",
-			searchField: "documentid",
-			filterFields: "metadata#id," + documentId + ",metadata#version," + documentVersion + ",tablename,tabproduto"	
-		}
 
-		var success = function(data){
-		console.log(data);
-	
-		}
-
-		var result = servicePost(url,data,success);
-			
-			
-	}
-             
-}
-function gerarArrayTabela(){
-
- 
-    var url_string = window.location.href; //window.location.href
-	var url = new URL(url_string);
-	var thash = url.searchParams.get("hash");
-
-	var url = "api/public/ecm/dataset/search";
-	var data = {
-		datasetId: "form_exemple_mail",
-		filterFields: "documentid," + thash
-		
-	}
-
-
-   var success = function(data){
-	  console.log(data);
-	  gerarTabelaCliente(data);
-      gerarTabelaProduto(data);
-    }
-
-    var result = servicePost(url,data,success);
+  
 
 
           
@@ -297,7 +270,7 @@ function gerarArrayTabela(){
     
 
 
-}
+
 
 function enviaRespstaRM(){
 	// Chamada do WEBService 
