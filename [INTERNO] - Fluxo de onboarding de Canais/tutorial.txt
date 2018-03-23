@@ -6,3 +6,6 @@ Subir serviço ECMWorkflowEngineService. - > http://spon010113223:8080/webdesk/E
 
 Colocar dentro do processo SubAberturadeChamados a matricula de um admininistrador para disparo de e-mail
 Adicionar o template de e-mail "abertura_de_chamados"  
+
+
+Movimentação da atividade via página pública criação de parametrização de usuário para movimenta-lá.

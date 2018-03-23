@@ -2,15 +2,16 @@ function beforeStateEntry(sequenceId){
 	log.info("@SubAbeturadeChamados  beforeStateEntry sequenceId: "+sequenceId);
 	if(sequenceId == Activity.EMAIL_CORPORATIVO )
 	{
-		var subject = "Solicitação de Abertura E-Mail Corporativo";
+		var subject = retornaParametrizacao("emailCortitulo");
+		log.info("@SubAbeturadeChamados  beforeStateEntry subject: '"+subject + "'");
 		var template = "abertura_de_chamados";
 		var params = [];
 
 		var mensagem = "";
 		if (hAPI.getCardValue("tipoSolic") == "master" )
-			mensagem += "Víncular a nuvem de relacionamento FlyPartners"
+			mensagem +=  retornaParametrizacao("emailCormaster");
 		else
-			mensagem += "Necessário acesso aos portais (Portal do Cliente, fluig TOTVS e Academia Virtual)"
+			mensagem += retornaParametrizacao("emailCorfranquia");
 
 		mensagem +="<br/><br/><br/><table>";
 			mensagem +="<tr>";
@@ -31,21 +32,17 @@ function beforeStateEntry(sequenceId){
 			mensagem +="</tr>";
 		mensagem +="</table>";
 		
-		var url = "<a style='color:red;' href='" + SERVER + "portal/p/7143/FluxoOnBoard?token=" + hAPI.getCardValue("token") + "&task="+  Activity.EMAIL_CORPORATIVO + "'>Por favor após terminar atividade clique aqui </a><br />";		
+		var url = "<a style='color:red;' href='" + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task="+  Activity.CRIACAO_COD_CRM + "'>Por favor após terminar atividade clique aqui </a><br />";		
 		params.push({name:"TITULO",value: "E-mail Corporativo - Fluxo onBoard"});
 		params.push({name:"MENSAGEM",value: mensagem});
 	    params.push({name:"URL",value: url  });
-
+		
 		var receivers = [];
-		receivers.push("meninodexte16@msn.com");
+		receivers.push(retornaParametrizacao("emailCoremail"));
 		log.info("@SubAbeturadeChamados  beforeStateEntry onNotify() ");
 		onNotify(subject, receivers, template, params,  "text/html" );
 	} 
 	
 }
-
-
-
-
 
 

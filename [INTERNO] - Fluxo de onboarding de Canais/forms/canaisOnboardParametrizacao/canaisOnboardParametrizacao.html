@@ -1,0 +1,209 @@
+<html>
+
+<head>
+	<link type="text/css" rel="stylesheet" href="/portal/resources/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="custom.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../vcXMLRPC.js"></script>
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<!-- Hidden -->
+			<input name="nmAdmUsername" id="nmAdmUsername" type="hidden" />
+			<input name="nmAdmCompanyid" id="nmAdmCompanyid" type="hidden" />
+			<input name="nmAdmUserid" id="nmAdmUserid" type="hidden" />
+			<input name="nmMatriculaaberturachamado" id="nmMatriculaaberturachamado" type="hidden" />
+			<div class="row card">
+				<div class="container">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2 class="titulo-postagem">
+								<strong>Parametrizações do Processo Fluxo onBoard</strong>
+							</h2>
+						</div>
+						<div class="panel-body">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active">
+									<a href="#geral" aria-controls="geral" role="tab" data-toggle="tab">Configurações Gerais</a>
+								</li>
+								<li role="presentation" id="li_decisoes">
+									<a href="#subprocesso" aria-controls="subprocesso" role="tab" data-toggle="tab">Subprocesso (Abertura de Chamados)</a>
+								</li>
+							</ul>
+
+							<div class="tab-content" style="padding:0px!important">
+								<div role="tabpanel" class="tab-pane active" id="geral">
+									<div class="panel panel-info panel-default" id="panelGeral">
+										<div class="panel-heading ">
+											<h3 class="panel-title">
+												<b>Parâmetros de autenticação</b>
+											</h3>
+										</div>
+
+										<div class="panel-body">
+
+											<div class="form-group row">
+												<div class="col-md-4">
+													<label for="dtInclusao">Usuário Administrador</label>
+													<input type="zoom" class="form-control" id="usuarioAdm" name="usuarioAdm" data-zoom="{
+													'displayKey':'login',
+													'datasetId':'colleague',
+													'maximumSelectionLength':'2',
+													'placeholder':'Escolha o usuário',
+													'fields':[
+														{
+														'field':'colleagueId',
+														'label':'ID'
+														},{
+														'field':'colleagueName',
+														'label':'Nome'
+														
+														},{
+														'field':'login',
+														'label':'Login',
+														'standard':'true'
+														}
+													]
+												}" />
+												</div>
+												<div class="col-md-3">
+													<label for="nmAdmPassword">Usuário Administrador (Senha)</label>
+													<input type="password" class="form-control" id="nmAdmPassword" name="nmAdmPassword" />
+												</div>
+											</div>
+
+										</div>
+									</div>
+									<div class="panel panel-info panel-default" id="panelGeral">
+											<div class="panel-heading ">
+												<h3 class="panel-title">
+													<b>Pagina pública</b>
+												</h3>
+											</div>
+	
+											<div class="panel-body">
+	
+												<div class="form-group row">
+													<div class="col-md-4">
+														<label for="nmUrl">URL da página</label>
+														<input type="text" class="form-control" id="nmUrl" name="nmUrl" />
+													</div>
+
+												</div>
+	
+											</div>
+										</div>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="subprocesso">
+									<div class="panel panel-info panel-default">
+										<div class="panel-heading ">
+											<h3 class="panel-title">
+												<b>Movimentação Automática</b>
+											</h3>
+										</div>
+
+										<div class="panel-body">
+
+											<div class="form-group row">
+												<div class="col-md-4">
+													<label for="dtInclusao">Usuário Responsável</label>
+													<input type="zoom" class="form-control" id="usuarioResponsavelMovimentacao" name="usuarioResponsavelMovimentacao" data-zoom="{
+														'displayKey':'login',
+														'datasetId':'colleague',
+														'maximumSelectionLength':'2',
+														'placeholder':'Escolha o usuário',
+														'fields':[
+															{
+															'field':'colleagueId',
+															'label':'ID'
+															},{
+															'field':'colleagueName',
+															'label':'Nome'
+															},{
+															'field':'login',
+															'label':'Login',
+															'standard':'true'
+															}
+														]
+													}" />
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+									<div class="panel panel-info panel-default">
+										<div class="panel-heading ">
+											<h3 class="panel-title">
+												<b>E-mail Corporativo </b>
+											</h3>
+										</div>
+
+										<div class="panel-body">
+
+										    <div class="form-group row">
+												<div class="col-md-6">
+													<label for="emailCoremail">Enviar E-mail para:</label>
+													<!-- value: Solicitação de Abertura E-Mail Corporativo -->
+													<input type="text" class="form-control" id="emailCoremail" name="emailCoremail" />
+												</div>
+
+											</div>
+
+
+											<div class="form-group row">
+												<div class="col-md-6">
+													<label for="emailCortitulo">Título (Mensagem)</label>
+													<!-- value: Solicitação de Abertura E-Mail Corporativo -->
+													<input type="text" class="form-control" id="emailCortitulo" name="emailCortitulo" />
+												</div>
+
+											</div>
+
+											<div class="form-group row">
+												<div class="col-md-6">
+													<label for="emailCormaster">Quando for Master PVF ou PVF (Mensagem)</label>
+													<!-- value: Víncular a nuvem de relacionamento FlyPartners -->
+													<input type="text" class="form-control" id="emailCormaster" name="emailCormaster" />
+												</div>
+
+											</div>
+											<div class="form-group row">
+												<div class="col-md-6">
+													<label for="emailCorfranquia">Quando for canais complementares ou franquia (Mensagem)</label>
+													<!-- value:  Necessário acesso aos portais (Portal do Cliente, fluig TOTVS e Academia Virtual) -->
+													<input type="text" class="form-control" id="emailCorfranquia" name="emailCorfranquia" />
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+
+
+
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+
+	</div>
+
+
+	</form>
+	</div>
+</body>
+
+</html>

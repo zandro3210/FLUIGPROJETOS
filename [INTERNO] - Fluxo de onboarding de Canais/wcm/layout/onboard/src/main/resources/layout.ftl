@@ -4,7 +4,10 @@
 	<title>Fluxo Onboarding</title>
 		<script src="/webdesk/vcXMLRPC.js"></script>
 	<script  src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-
+<script src="/onboard/resources/js/hmac-sha1.js"></script>
+<script src="/onboard/resources/js/hmac-sha256.js"></script>
+<script src="/onboard/resources/js/enc-base64-min.js"></script>
+<script src="/onboard/resources/js/oauth-1.0a.js"></script>
 
 
 
@@ -125,7 +128,7 @@ h2{
 			<img src="http://www.fecap.br/novosite/public/img/totvs/totvs.jpg" style="float:right">
 		</div>
 
-		<form action="mailto:%WFMailTo%" method="POST" name="APROVPC">
+		<form>
 			<h1>Fluxo Onboarding</h1>
 			<h2>Atividade Solicitada foi?</h2>
 		</center>
@@ -157,10 +160,7 @@ h2{
 
 	</div>
 
-<script src="/onboard/resources/js/hmac-sha1_pt_BR.js"></script>
-<script src="/onboard/resources/js/hmac-sha256_pt_BR.js"></script>
-<script src="/onboard/resources/js/enc-base64-min_pt_BR.js"></script>
-<script src="/onboard/resources/js/oauth-1.0a_pt_BR.js"></script>
+
 
 
 <script>
@@ -219,14 +219,14 @@ function tomandoDecisao(){
 	 var url_string = window.location.href; //window.location.href
 	var url = new URL(url_string);
 	var token = url.searchParams.get("token");
-	var atividade = url.searchParams.get("task");
+	var task = url.searchParams.get("task");
 
 
 
 	var url = "api/public/ecm/dataset/search";
 	var data = {
-		datasetId: "CanaisOnBoard2",
-		filterFields: "token," + token
+		datasetId: "dsCanaisMoveTask",
+		filterFields: "token," + token + ",task," + task
 			//	filterFields: "id," + proc +,"id," + documentId + ",version," + documentVersion + ",tablename,tabcliente"
 	}
 

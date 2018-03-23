@@ -91,7 +91,7 @@ $(document).ready(function(){
 
 	if( CURRENT_STATE == Activity.ANALISAR_CONTRATO_ASSINADO )
 	{
-		ExibicaoDecisoesPanel([Activity.ANALISAR_CONTRATO_ASSINADO,Activity,ANALISAR_SOLICITACAO_FINANCEIRO,Activity.ANALISAR_REPROVACAO_FRANQUIA]);
+		ExibicaoDecisoesPanel([Activity.ANALISAR_CONTRATO_ASSINADO,Activity.ANALISAR_SOLICITACAO_FINANCEIRO,Activity.ANALISAR_REPROVACAO_FRANQUIA]);
 		if ($("#tipoSolic").val() == "master")
 		{
 			ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_CANAIS]);
