@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>SubAberturadeChamados</processId>
-      <version>45</version>
+      <version>47</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>332</formId>
@@ -76,8 +76,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>150</positionX>
-      <positionY>82</positionY>
+      <positionX>90</positionX>
+      <positionY>240</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -111,7 +111,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -126,8 +127,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>240</positionX>
-      <positionY>70</positionY>
+      <positionX>400</positionX>
+      <positionY>37</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -178,7 +179,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>400</positionX>
-      <positionY>70</positionY>
+      <positionY>134</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -228,8 +229,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>550</positionX>
-      <positionY>70</positionY>
+      <positionX>400</positionX>
+      <positionY>231</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -280,8 +281,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>690</positionX>
-      <positionY>73</positionY>
+      <positionX>400</positionX>
+      <positionY>340</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -332,8 +333,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>830</positionX>
-      <positionY>73</positionY>
+      <positionX>400</positionX>
+      <positionY>450</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -353,6 +354,56 @@
       <destinationStates/>
       <digitalSignature>false</digitalSignature>
       <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>26</sequence>
+      </processStatePK>
+      <stateName>Paralelo</stateName>
+      <stateDescription>Paralelo</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>false</automatic>
+      <positionX>230</positionX>
+      <positionY>220</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>3</stateType>
+      <bpmnType>126</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>27</sequence>
+      </processStatePK>
+      <stateName>Join</stateName>
+      <stateDescription>Join</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>false</automatic>
+      <positionX>640</positionX>
+      <positionY>220</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>4</stateType>
+      <bpmnType>127</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
     </ProcessState>
     <ProcessState>
       <processStatePK>
@@ -383,8 +434,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>870</positionX>
-      <positionY>160</positionY>
+      <positionX>790</positionX>
+      <positionY>240</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -409,11 +460,28 @@
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
         <version>1</version>
-        <linkSequence>10</linkSequence>
+        <linkSequence>28</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>4</initialStateSequence>
+      <initialStateSequence>27</initialStateSequence>
+      <finalStateSequence>21</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>29</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>26</initialStateSequence>
       <finalStateSequence>9</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -426,11 +494,11 @@
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
         <version>1</version>
-        <linkSequence>12</linkSequence>
+        <linkSequence>30</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>9</initialStateSequence>
+      <initialStateSequence>26</initialStateSequence>
       <finalStateSequence>11</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -443,11 +511,11 @@
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
         <version>1</version>
-        <linkSequence>14</linkSequence>
+        <linkSequence>31</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>11</initialStateSequence>
+      <initialStateSequence>26</initialStateSequence>
       <finalStateSequence>13</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -460,11 +528,11 @@
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
         <version>1</version>
-        <linkSequence>16</linkSequence>
+        <linkSequence>32</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>13</initialStateSequence>
+      <initialStateSequence>26</initialStateSequence>
       <finalStateSequence>15</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -477,11 +545,11 @@
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
         <version>1</version>
-        <linkSequence>24</linkSequence>
+        <linkSequence>33</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>15</initialStateSequence>
+      <initialStateSequence>26</initialStateSequence>
       <finalStateSequence>23</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -494,12 +562,97 @@
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
         <version>1</version>
-        <linkSequence>25</linkSequence>
+        <linkSequence>34</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>4</initialStateSequence>
+      <finalStateSequence>26</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>35</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
       <initialStateSequence>23</initialStateSequence>
-      <finalStateSequence>21</finalStateSequence>
+      <finalStateSequence>27</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>37</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>15</initialStateSequence>
+      <finalStateSequence>27</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>38</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>11</initialStateSequence>
+      <finalStateSequence>27</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>39</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>9</initialStateSequence>
+      <finalStateSequence>27</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>40</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>13</initialStateSequence>
+      <finalStateSequence>27</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -684,13 +837,13 @@ process.instructions=&#xd;
 			mensagem +=&quot;&lt;/tr&gt;&quot;;&#xd;
 		mensagem +=&quot;&lt;/table&gt;&quot;;&#xd;
 		&#xd;
-		var url = &quot;&lt;a style=&apos;color:red;&apos; href=&apos;&quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot;+  Activity.CRIACAO_COD_CRM + &quot;&apos;&gt;Por favor após terminar atividade clique aqui &lt;/a&gt;&lt;br /&gt;&quot;;		&#xd;
+		var url = &quot;&lt;a style=&apos;color:red;&apos; href=&apos;&quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot;+  Activity.CRIACAO_COD_CRM + &quot;&amp;thread=1&apos;&gt;Por favor após terminar atividade clique aqui &lt;/a&gt;&lt;br /&gt;&quot;;		&#xd;
 		params.push({name:&quot;TITULO&quot;,value: &quot;E-mail Corporativo - Fluxo onBoard&quot;});&#xd;
 		params.push({name:&quot;MENSAGEM&quot;,value: mensagem});&#xd;
 	    params.push({name:&quot;URL&quot;,value: url  });&#xd;
-&#xd;
+		&#xd;
 		var receivers = [];&#xd;
-		receivers.push(&quot;meninodexte16@msn.com&quot;);&#xd;
+		receivers.push(retornaParametrizacao(&quot;emailCoremail&quot;));&#xd;
 		log.info(&quot;@SubAbeturadeChamados  beforeStateEntry onNotify() &quot;);&#xd;
 		onNotify(subject, receivers, template, params,  &quot;text/html&quot; );&#xd;
 	} &#xd;
@@ -718,7 +871,7 @@ process.instructions=&#xd;
   <list>
     <SwimLane>
       <color>FFFFFF</color>
-      <height>191</height>
+      <height>571</height>
       <width>961</width>
       <positionX>10</positionX>
       <positionY>10</positionY>
@@ -734,7 +887,7 @@ process.instructions=&#xd;
     </SwimLane>
     <SwimLane>
       <color>008080</color>
-      <height>191</height>
+      <height>571</height>
       <width>931</width>
       <positionX>40</positionX>
       <positionY>10</positionY>
@@ -751,7 +904,96 @@ process.instructions=&#xd;
   </list>
   <list/>
   <list/>
-  <list/>
+  <list>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>47</version>
+        <linkSequence>29</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>260</positionX>
+      <positionY>72</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>47</version>
+        <linkSequence>30</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>260</positionX>
+      <positionY>169</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>47</version>
+        <linkSequence>32</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>260</positionX>
+      <positionY>375</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>47</version>
+        <linkSequence>33</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>260</positionX>
+      <positionY>484</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>47</version>
+        <linkSequence>35</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>669</positionX>
+      <positionY>484</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>47</version>
+        <linkSequence>37</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>669</positionX>
+      <positionY>375</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>47</version>
+        <linkSequence>38</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>669</positionX>
+      <positionY>169</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>47</version>
+        <linkSequence>39</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>670</positionX>
+      <positionY>72</positionY>
+    </ProcessLinkBend>
+  </list>
   <list/>
   <list/>
   <list/>

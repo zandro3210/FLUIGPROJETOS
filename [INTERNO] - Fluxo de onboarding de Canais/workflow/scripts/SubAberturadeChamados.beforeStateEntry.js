@@ -32,7 +32,7 @@ function beforeStateEntry(sequenceId){
 			mensagem +="</tr>";
 		mensagem +="</table>";
 		
-		var url = "<a style='color:red;' href='" + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task="+  Activity.CRIACAO_COD_CRM + "'>Por favor após terminar atividade clique aqui </a><br />";		
+		var url = "<a style='color:red;' href='" + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task="+  Activity.JOIN_CHAMADOS + "&thread=1'>Por favor após terminar atividade clique aqui </a><br />";		
 		params.push({name:"TITULO",value: "E-mail Corporativo - Fluxo onBoard"});
 		params.push({name:"MENSAGEM",value: mensagem});
 	    params.push({name:"URL",value: url  });

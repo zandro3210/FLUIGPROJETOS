@@ -1,299 +1,230 @@
-
+<!DOCTYPE html>
 <html>
+
 <head>
-	<title>Fluxo Onboarding</title>
-		<script src="/webdesk/vcXMLRPC.js"></script>
-	<script  src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="/onboard/resources/js/hmac-sha1.js"></script>
-<script src="/onboard/resources/js/hmac-sha256.js"></script>
-<script src="/onboard/resources/js/enc-base64-min.js"></script>
-<script src="/onboard/resources/js/oauth-1.0a.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#2196F3">
+    <title>Fluig - Fluxo On Boarding</title>
+    <script src="/webdesk/vcXMLRPC.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 
+    <script src="/onboard/resources/js/hmac-sha1.js"></script>
+    <script src="/onboard/resources/js/hmac-sha256.js"></script>
+    <script src="/onboard/resources/js/enc-base64-min.js"></script>
+    <script src="/onboard/resources/js/oauth-1.0a.js"></script>
 
+    <!-- CSS  -->
+    <link href="/onboard/resources/css/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="/onboard/resources/css/custom-min.css" type="text/css" rel="stylesheet">
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    
 </head>
 
-<style>
-/*ESTILO WEB*/
+<body id="top" class="scrollspy">
 
-body{
-	font-family: 'Myriad Pro', arial, sans-serif;
-	font-size: 14px;
-	background: #e1e1e1;
-	color:#2f2f2f;
-}
+    <!-- Pre Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
 
-div.container{
-	width: 95%;
-	margin:0 auto;
-	background: #FFFFFF;
-	padding: 20px;
-}
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
 
-table.info th{
-	background: #e5e5e5;
-	color:#045028;
-	font-weight: bold;
-}
+    </div>
 
-table.info {
-	width: 70%;
-	margin: 30px auto 0 auto;
-}
+    <!--Navigation-->
+    <div class="navbar-fixed">
+        <nav id="nav_f" class="default_color" role="navigation">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" id="logo-container" class="brand-logo">Tomada de decisão</a>
+                    <ul class="right hide-on-med-and-down">
+                        <img width="65px" src="https://www.fluig.com/blog/wp-content/uploads/2014/12/fluig-LOGO-RGB-06.png">
+                    </ul>
+                    <ul id="nav-mobile" class="side-nav">
 
-table{
-	width:100%;
-	padding:10px;
-	margin-top:30px;
-	max-width: 100%;
-	border-collapse: collapse;
-	border-spacing: 0;
-	text-align: center;
-	border:1px solid #DFDFDF;
-}
+                    </ul>
+                    <a href="#" data-activates="nav-mobile" class="button-collapse">
+                        <i class="mdi-navigation-menu"></i>
+                    </a>
 
-table th, table td{
-	padding: 5px 2px;
-	font-size: 12px;
-}
-
-table th{
-	text-transform: uppercase;
-	background: #056633;
-	color:#FFFFFF;
-	border-color: #045028;
-	font-weight: normal;
-}
-
-table td{
-	text-transform: uppercase;
-	border-color: #DFDFDF;
-}
-
-tr:nth-child(2n+1){
-	background:#efefef;
-}
-
-
-.btn{
-	border-radius:3px;
-	border:0;
-	text-transform: uppercase;
-	font-weight: bold;
-	transition:background ease 0.3s;
-	cursor: pointer;
-	text-decoration:none;
-	background: #056633;
-	color: #FFFFFF;
-	font-size: 12px;
-	padding: 10px 15px;
-}
-
-.btn:hover, .btn:visited, .btn:active, .btn:focus{
-	background: #04a9c7;
-}
-
-hr{
-	border-bottom:1px solid #DFDFDF;
-	border-top:none;
-}
-
-.header{
-	border-bottom:2px solid #DFDFDF;
-	padding:0 0 20px 0;
-}
-.header img{
-	max-height: 50px;
-}
-
-h1{
-	font-weight: bold;
-	color: #04a9c7;
-	text-align:center;
-	font-style: italic;
-}
-h2{
-	text-align: center;
-	margin: 0;
-}
-
-</style>
-
-<body>
-	<div class="container">
-
-		<div class="header">
-		
-			<img src="http://www.fecap.br/novosite/public/img/totvs/totvs.jpg" style="float:right">
-		</div>
-
-		<form>
-			<h1>Fluxo Onboarding</h1>
-			<h2>Atividade Solicitada foi?</h2>
-		</center>
+                </div>
+            </div>
+        </nav>
+    </div>
 
 
 
-		<table class="info">
-			
-		<br>
-		<tr>
-				<center>
+    <!--Intro and service-->
+    <div id="intro" class="section scrollspy">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h2 class="center header text_h2"> Fluxo On Boarding -
+                        <span class="span_h2">fluig </span>
+                    </h2>
+                </div>
+                <div class="container">
 
-					<input type="radio" name=PCAPROVA value="true" class="btn">Realizada
-					<input type="radio" name=PCAPROVA value="false" class="btn">Cancelada
-				
-					<button type="submit" id="btnEnviar" name="Enviar" class="btn">Enviar</button>
-		         </center>
-		</tr>
-		<br>
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <div class="card card-avatar">
+
+                                <div class="card-content">
+                                    <span id="titulo" class="card-title activator grey-text text-darken-4">Atividade "Criação de E-Mail Corporativo" foi executada com sucesso?</span>
+                                        <br>
+                                        <form class="col s12">
+                                            <div class="row">
+                                                <div class="input-field col s6">
+
+                                                    <div class="switch">
+                                                        <label>
+                                                            Não
+                                                            <input id="ckDecisao" type="checkbox">
+                                                            <span class="lever"></span>
+                                                            Sim
+                                                        </label>
+                                                    </div>
 
 
-		
+                                                </div>
 
-		</table>
-		<br>
-		
-		
-		</form>
+                                                <div class="col offset-s7 s5">
+                                                    <!-- Modal Trigger -->
+                                                    <button  id="btnEnviar" disabled="disabled" class="btn waves-effect waves-light btn ">Enviar</button>
 
-	</div>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
 
 
-<script>
+    <!--Footer-->
+    <footer id="contact" class="page-footer default_color scrollspy">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
 
-function servicePost(url,data,success){
+                </div>
+                <div class="col l3 s12">
 
-	var domain = window.location.origin+ "/";
-	var oauth = OAuth({
-		consumer: {
-			'key': '987654321', // Consumer Key:*
-			'secret': '123' // Consumer Secret
-		},
-		signature_method: 'HMAC-SHA1',
-		hash_function: function(base_string, key) {
-			return CryptoJS.HmacSHA1(base_string, key).toString(CryptoJS.enc.Base64);
-		}
-	});
+                </div>
+                <div class="col l3 s12">
 
-	var request_data = {
-		url:  domain + url, // Altere o endereço da API desejada
-		method: 'GET',
-		data: data
-	};
-
-	var token = {
-		'key': 'a9b07478-ba0b-41cb-91b5-6b2cd56b6fd8', // Seu access token
-		'secret': '589e3730-c6ce-4a46-baa8-eed97ce126fc0f834f9e-521d-46a3-85e7-dcc14d672eb2' // Seu token secret
-	}
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright default_color">
+            <div class="container">
+                Página exclusiva para o uso do processo fluxo on Boarding</a>
+            </div>
+        </div>
+    </footer>
 
 
-	$.ajax({
-	url: request_data.url,
-	type: request_data.method,
-	data: oauth.authorize(request_data, token),
-	success: success
+    <!--  Scripts-->
+    <script src="/onboard/resources/js/plugin-min.js"></script>
+    <script src="/onboard/resources/js/custom-min.js"></script>
 
-	});
-	
+    <script>
+      
 
-	//http://spon010113223:8080/api/public/ecm/dataset/search?oauth_consumer_key=987654321&oauth_token=a9b07478-ba0b-41cb-91b5-6b2cd56b6fd8&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1517599064&oauth_nonce=WPKKyJ&oauth_version=1.0&oauth_signature=+kSXhgnQ2Mw+nCkGBAJnh1aEbKw=&datasetId=form_exemple_mail
-}
+        $("#ckDecisao").change(function () {
+            $("#btnEnviar").attr("disabled",!$("#ckDecisao")["0"].checked);
+        });
 
-$( document ).ready(function() {
-   
+
+        function servicePost(url, data, success) {
+
+            var domain = window.location.origin + "/";
+            var oauth = OAuth({
+                consumer: {
+                    'key': '987654321', // Consumer Key:*
+                    'secret': '123' // Consumer Secret
+                },
+                signature_method: 'HMAC-SHA1',
+                hash_function: function (base_string, key) {
+                    return CryptoJS.HmacSHA1(base_string, key).toString(CryptoJS.enc.Base64);
+                }
+            });
+
+            var request_data = {
+                url: domain + url, // Altere o endereço da API desejada
+                method: 'GET',
+                data: data
+            };
+
+            var token = {
+                'key': 'a9b07478-ba0b-41cb-91b5-6b2cd56b6fd8', // Seu access token
+                'secret': '589e3730-c6ce-4a46-baa8-eed97ce126fc0f834f9e-521d-46a3-85e7-dcc14d672eb2' // Seu token secret
+            }
+
+
+            $.ajax({
+                url: request_data.url,
+                type: request_data.method,
+                data: oauth.authorize(request_data, token),
+                success: success
+
+            });
+
+
+            //http://spon010113223:8080/api/public/ecm/dataset/search?oauth_consumer_key=987654321&oauth_token=a9b07478-ba0b-41cb-91b5-6b2cd56b6fd8&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1517599064&oauth_nonce=WPKKyJ&oauth_version=1.0&oauth_signature=+kSXhgnQ2Mw+nCkGBAJnh1aEbKw=&datasetId=form_exemple_mail
+        }
 
 	
-}); 
-
-$( "#btnEnviar" ).click(function() {
-	 debugger;
- tomandoDecisao();
-});
-function tomandoDecisao(){
+        $("#btnEnviar").click(function () {
+			debugger;
+            tomandoDecisao();
+        });
+        function tomandoDecisao() {
 
 
-	 var url_string = window.location.href; //window.location.href
-	var url = new URL(url_string);
-	var token = url.searchParams.get("token");
-	var task = url.searchParams.get("task");
+            var url_string = window.location.href; //window.location.href
+            var url = new URL(url_string);
+            var token = url.searchParams.get("token");
+            var task = url.searchParams.get("task");
+            var thread = url.searchParams.get("thread");
 
 
-
-	var url = "api/public/ecm/dataset/search";
-	var data = {
-		datasetId: "dsCanaisMoveTask",
-		filterFields: "token," + token + ",task," + task
-			//	filterFields: "id," + proc +,"id," + documentId + ",version," + documentVersion + ",tablename,tabcliente"
-	}
-
-
-   var success = function(data){
-	  console.log(data);
-	 
-    }
-
-    var result = servicePost(url,data,success);
-}
-function gerarTabelaProduto(datasetPrincipal){
-	var url = "api/public/ecm/dataset/search";
- 	for (var i = 0; i < datasetPrincipal.content.length; i++) {
-              
-		var documentId = datasetPrincipal.content[i]["metadata#id"]; 
-		var documentVersion = datasetPrincipal.content[i]["metadata#version"];
-		
-		var data = {
-			datasetId: "CanaisOnBoard2",
-	
-		}
-
-		var success = function(data){
-		console.log(data);
-	
-		}
-
-		var result = servicePost(url,data,success);
-			
-			
-	}
-             
-}
-
-  
+            var url = "api/public/ecm/dataset/search";
+            var data = {
+                datasetId: "dsCanaisMoveTask",
+                filterFields: "token," + token + ",task," + task + ",thread," + thread
+                //	filterFields: "id," + proc +,"id," + documentId + ",version," + documentVersion + ",tablename,tabcliente"
+            }
 
 
-          
-    
-    
+            var success = function (data) {
+                console.log(data);
+
+            }
+
+            var result = servicePost(url, data, success);
+        }
+       
 
 
 
 
-function enviaRespstaRM(){
-	// Chamada do WEBService 
-	// URL para do mesmo
-    var url = "api/public/ecm/dataset/search";
-	// Parâmetros conforme a credencial do WS
-	var data = {
-		NomedoseuCampo: ValordoseuCampo		
-	}
 
-   var success = function(data){
-	   // Função caso ocorra tudo corretamente 
-	  console.log("Sucesso!")
-    }
 
-    var result = servicePost(url,data,success);
-}
-$( "#btnEnviar" ).click(function() {
-	enviaRespstaRM();
-	  
-});
 
-</script>
 
+    </script>
 </body>
+
 </html>

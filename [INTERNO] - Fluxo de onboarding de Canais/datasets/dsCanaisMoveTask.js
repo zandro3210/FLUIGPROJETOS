@@ -37,16 +37,17 @@ function createDataset(fields, constraints, sortFields) {
         var choosedState = constraints[1].getInitialValue(); // número da atividade.
         // Conecta o servico e busca os ECMWorkflowEngineService
         var servico = ServiceManager.getService("ECMWorkflowEngineService").getBean();
-        log.error("---@dsCanaisMoveTask start serviceWork.getBean()");
+        log.error("---@dsCanaisMoveTask  serviceWork.getBean()");
         var ECMWorkflowEngineServiceService = servico.instantiate("com.totvs.technology.ecm.workflow.ws.ECMWorkflowEngineServiceService");
-        log.error("---@dsCanaisMoveTask start ECMWorkflowEngineServiceService.getWorkflowEngineServicePort()");
+        log.error("---@dsCanaisMoveTask  ECMWorkflowEngineServiceService.getWorkflowEngineServicePort()");
         var WorkflowEngineService = ECMWorkflowEngineServiceService.getWorkflowEngineServicePort();
-        log.error("---@dsCanaisMoveTask start saveAndSendTasksaveAndSendTask");
+        log.error("---@dsCanaisMoveTask  saveAndSendTasksaveAndSendTask");
 
 
 
 
-        var companyId = getValue("WKCompany");
+ 
+        log.error("---@dsCanaisMoveTask  companyid:'" + companyId + "'" );
         var colleagueIds = servico.instantiate("net.java.dev.jaxb.array.StringArray");
         colleagueIds.getItem().add(params.getValue(0, "usuarioResponsavelMovimentacao"));
         var comments = " atividade movimentada pela página pública";
@@ -75,7 +76,7 @@ function createDataset(fields, constraints, sortFields) {
             cardData,
             appointment,
             managerMode,
-            0);
+            constraints[2].getInitialValue());
 
 
 
