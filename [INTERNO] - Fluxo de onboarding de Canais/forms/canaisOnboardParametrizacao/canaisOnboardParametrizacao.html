@@ -18,6 +18,9 @@
 			<input name="nmAdmCompanyid" id="nmAdmCompanyid" type="hidden" />
 			<input name="nmAdmUserid" id="nmAdmUserid" type="hidden" />
 			<input name="nmMatriculaaberturachamado" id="nmMatriculaaberturachamado" type="hidden" />
+			<input name="nmcriacaoCorgrupo" id="nmcriacaoCorgrupo" type="hidden" />
+
+			
 			<div class="row card">
 				<div class="container">
 					<div class="panel panel-default">
@@ -81,24 +84,24 @@
 										</div>
 									</div>
 									<div class="panel panel-info panel-default" id="panelGeral">
-											<div class="panel-heading ">
-												<h3 class="panel-title">
-													<b>Pagina pública</b>
-												</h3>
-											</div>
-	
-											<div class="panel-body">
-	
-												<div class="form-group row">
-													<div class="col-md-4">
-														<label for="nmUrl">URL da página</label>
-														<input type="text" class="form-control" id="nmUrl" name="nmUrl" />
-													</div>
-
-												</div>
-	
-											</div>
+										<div class="panel-heading ">
+											<h3 class="panel-title">
+												<b>Pagina pública</b>
+											</h3>
 										</div>
+
+										<div class="panel-body">
+
+											<div class="form-group row">
+												<div class="col-md-4">
+													<label for="nmUrl">URL da página</label>
+													<input type="text" class="form-control" id="nmUrl" name="nmUrl" />
+												</div>
+
+											</div>
+
+										</div>
+									</div>
 								</div>
 								<div role="tabpanel" class="tab-pane" id="subprocesso">
 									<div class="panel panel-info panel-default">
@@ -147,18 +150,15 @@
 
 										<div class="panel-body">
 
-										    <div class="form-group row">
-												<div class="col-md-6">
+
+											<div class="form-group row">
+												<div class="col-md-3">
 													<label for="emailCoremail">Enviar E-mail para:</label>
 													<!-- value: Solicitação de Abertura E-Mail Corporativo -->
 													<input type="text" class="form-control" id="emailCoremail" name="emailCoremail" />
 												</div>
 
-											</div>
-
-
-											<div class="form-group row">
-												<div class="col-md-6">
+												<div class="col-md-3">
 													<label for="emailCortitulo">Título (Mensagem)</label>
 													<!-- value: Solicitação de Abertura E-Mail Corporativo -->
 													<input type="text" class="form-control" id="emailCortitulo" name="emailCortitulo" />
@@ -172,9 +172,6 @@
 													<!-- value: Víncular a nuvem de relacionamento FlyPartners -->
 													<input type="text" class="form-control" id="emailCormaster" name="emailCormaster" />
 												</div>
-
-											</div>
-											<div class="form-group row">
 												<div class="col-md-6">
 													<label for="emailCorfranquia">Quando for canais complementares ou franquia (Mensagem)</label>
 													<!-- value:  Necessário acesso aos portais (Portal do Cliente, fluig TOTVS e Academia Virtual) -->
@@ -184,6 +181,31 @@
 											</div>
 										</div>
 									</div>
+
+									<div class="panel panel-info panel-default">
+											<div class="panel-heading ">
+												<h3 class="panel-title">
+													<b>Criação do Código no CRM </b>
+												</h3>
+											</div>
+	
+											<div class="panel-body">
+	
+	
+												<div class="form-group row">
+													<div class="col-md-3">
+														<label for="criacaoCorgrupo">Grupo (Zendesk):</label>													
+														<select class="form-control" id="criacaoCorgrupo" name="criacaoCorgrupo"></select>
+													</div>
+	
+													
+	
+												</div>
+	
+											
+												
+											</div>
+										</div>
 								</div>
 
 
