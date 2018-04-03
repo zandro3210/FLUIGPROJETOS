@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
 	<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="activity.js"></script>
 	<script type="text/javascript" src="custom.js" charset="utf-8"></script>
 	<script type="text/javascript" src="../vcXMLRPC.js"></script>
 </head>
@@ -20,7 +21,7 @@
 			<input name="nmMatriculaaberturachamado" id="nmMatriculaaberturachamado" type="hidden" />
 			<input name="nmcriacaoCorgrupo" id="nmcriacaoCorgrupo" type="hidden" />
 
-			
+
 			<div class="row card">
 				<div class="container">
 					<div class="panel panel-default">
@@ -183,29 +184,50 @@
 									</div>
 
 									<div class="panel panel-info panel-default">
-											<div class="panel-heading ">
-												<h3 class="panel-title">
-													<b>Criação do Código no CRM </b>
-												</h3>
-											</div>
-	
-											<div class="panel-body">
-	
-	
-												<div class="form-group row">
-													<div class="col-md-3">
-														<label for="criacaoCorgrupo">Grupo (Zendesk):</label>													
-														<select class="form-control" id="criacaoCorgrupo" name="criacaoCorgrupo"></select>
-													</div>
-	
-													
-	
-												</div>
-	
-											
-												
-											</div>
+										<div class="panel-heading ">
+											<h3 class="panel-title">
+												<b>Criação do Código no CRM </b>
+											</h3>
 										</div>
+
+										<div class="panel-body">
+
+
+											<div class="form-group row">
+												<div class="col-md-3">
+													<label for="criacaoCorgrupo">Grupo (Zendesk):</label>
+													<select class="form-control" id="criacaoCorgrupo" name="criacaoCorgrupo"></select>
+												</div>
+
+												<div class="col-md-3">
+													<label for="criacaoCortitulo">Título do Ticket:</label>
+													<input class="form-control" id="criacaoCortitulo" name="criacaoCortitulo"></input>
+												</div>
+
+												<div class="col-md-3">
+													<label for="criacaoCorstatus">Status</label>
+													<select class="form-control" id="criacaoCorstatus" name="criacaoCorstatus">
+														<option value="normal">Normal</option>
+														<option value="high">High</option>
+														<option value="urgent">Urgent</option>
+														<option value="low">low</option>
+													</select>
+												</div>
+
+											</div>
+											<div class="form-group row">
+												<div class="col-md-6">
+													<label for="criacaoCordescricao">Descrição do Ticket:</label>
+													<textarea rows="4" id="criacaoCordescricao" name="criacaoCordescricao" class="form-control" >												
+												    </textarea>
+
+												</div>
+
+											</div>
+
+
+										</div>
+									</div>
 								</div>
 
 

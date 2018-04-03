@@ -1,3 +1,5 @@
+
+
 function beforeStateEntry(sequenceId) {
 	log.info("@SubAbeturadeChamados  beforeStateEntry sequenceId: " + sequenceId);
 	if (sequenceId == Activity.EMAIL_CORPORATIVO) {
@@ -58,105 +60,117 @@ function solicitacaoEmailcoporativo() {
 }
 function solicitacaoCodigoCRM() {
 
-	var url = "https://apimanager-homolog.totvs.com/api/token";
+	var url = SERVER_ZENDESK + "/api/token";
+	var params = "grant_type=client_credentials";
 	var headers = [];
+	var method = "POST";
+	headers.push({ name: "Content-Type", key : "application/x-www-form-urlencoded"});
+	headers.push({ name: "charset", key : "utf-8"});
+	headers.push({ name: "Accept", key : "*/*"});
+	headers.push({ name: "Authorization", key : "Basic MUZ5ZDNRUUVlVGVXZ1VmdUd4Y2Q3YnI5d1k0YTowS1lSN1hKU3pjWkJ5N1hKTF9BYjlQUUNLQkVh"});
 
 
+	var token = Rest(url, params, null, method, headers);
 
-	log.info("@SubAbeturadeChamados start solicitacaoCodigoCRM");
-	var string = DsGenericRest.callRequest(url, null, null, "POST", headers);
+	log.info("@SubAbeturadeChamados RestPost token.access_token:" + token.access_token);
+
+	
+	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
+	var mensagem = "";
+	mensagem += "Razão Social: " +  hAPI.getCardValue("razaoSocial");
+	mensagem += "CNPJ: " +  hAPI.getCardValue("nrCnpj");
+	mensagem += "Endereço Completo: " +  hAPI.getCardValue("endereco");
+	mensagem += "Cidade: " +  hAPI.getCardValue("nmMunicipio");
+	mensagem += "Estado: " +  hAPI.getCardValue("uf");
+	mensagem += "Nome Responsável: " +  hAPI.getCardValue("nome");
+	mensagem += "Telefone: " +  hAPI.getCardValue("telefone");
+	mensagem += "E-mail: " +  ( hAPI.getCardValue("tipoSolic") == "master" ?  hAPI.getCardValue("sugestaoEmail") : hAPI.getCardValue("email") );
+	mensagem += "Unidade Responsável: " +  hAPI.getCardValue("dsUnidadeResponsavel");
+	mensagem += "Código da unidade Responsável: " +  hAPI.getCardValue("cdUnidadeResponsavel");
+	mensagem += "Por favor após terminar atividade clique aqui" + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_CHAMADOS + "&thread=2";
+	
+	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoCortitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoCortitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoCorstatus") +'","group_id":41198947,"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
+
+
+	var headers = [];
+	var method = "POST";
+	headers.push({ name: "Content-Type", key : "application/json"});
+	headers.push({ name: "charset", key : "utf-8"});
+	headers.push({ name: "Authorization-zendesk", key : "Basic " + "bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw=="});
+	headers.push({ name: "Authorization", key : "Bearer " + token.access_token});
+
+
+	var token = Rest(url, params, null,method, headers);
+
+	
+
 
 }
-var DsGenericRest = {
 
-	callRequest: function (url, params, login, method, headers) {
+function Rest(url, params, login, method, headers) {
 		try {
 
-			var urlParameters = new java.lang.String("grant_type=client_credentials");
-		
-			var postData = 	new java.net.URLEncoder.encode(urlParameters,"UTF-8");
-			log.info("@SubAbeturadeChamados postData:'" + postData+"'");
 
-			log.info("@SubAbeturadeChamados url:" + url);
+
+
+			log.info("@SubAbeturadeChamados RestPost url:" + url);
 			var wurl =  new java.net.URL(url);
 		
 			var conn = wurl.openConnection();
 
-
 			
+			if (method == "POST")
+			    conn.setDoOutput(true);
 
-			conn.setDoOutput(true);
-			conn.setRequestMethod( "POST" );
+			conn.setRequestMethod(method);
+			log.info("@SubAbeturadeChamados RestPost method:" + method);
 			conn.setInstanceFollowRedirects(false);
-			conn.setRequestProperty( "Content-Type", "application/x-www-form-urlencoded");
-			conn.setRequestProperty("charset", "utf-8");
-			conn.setRequestProperty( "Accept", "*/*" );
-			conn.setRequestProperty( "Authorization", "Basic MUZ5ZDNRUUVlVGVXZ1VmdUd4Y2Q3YnI5d1k0YTowS1lSN1hKU3pjWkJ5N1hKTF9BYjlQUUNLQkVh");
+
+			for (i = 0; i < headers.length; i++) { 
+				log.info("@SubAbeturadeChamados RestPost headers[i].name:'" + headers[i].name + "' headers[i].key:'" + headers[i].key + "'");
+				conn.setRequestProperty( headers[i].name, headers[i].key);
+			}
+					
+			if (method == "POST"){
+				conn.setUseCaches(false);
+				var writer = new java.io.OutputStreamWriter(conn.getOutputStream());
+				log.info("@SubAbeturadeChamados RestPost conn.getOutputStream():'" + conn.getOutputStream()+"'");
+			}
+			
+
+			if (params){
+				writer.write(params);
+				log.info("@SubAbeturadeChamados RestPost params:'" + params +"'");
+				writer.flush();
+			}
 		
-			conn.setUseCaches(false);
-			var writer = new java.io.OutputStreamWriter(conn.getOutputStream());
-			log.info("@SubAbeturadeChamados conn.getOutputStream():'" + conn.getOutputStream()+"'");
-			writer.write(postData);
-			writer.flush();
-
-
-			
-			log.info("@SubAbeturadeChamados conn.getResponseCode():'" + conn.getResponseCode()+"'");
+		
+			log.info("@SubAbeturadeChamados RestPost conn.getResponseCode():'" + conn.getResponseCode()+"'");
 			var line;
-			log.info("@SubAbeturadeChamados conn.getInputStream():'" + conn.getInputStream()+"'");
+			log.info("@SubAbeturadeChamados RestPost conn.getInputStream():'" + conn.getInputStream()+"'");
 			var reader = new java.io.BufferedReader(new java.io.InputStreamReader(conn.getInputStream()));
-			log.info("@SubAbeturadeChamados reader:'" + reader+"'");
+			log.info("@SubAbeturadeChamados RestPost reader:'" + reader+"'");
 
-			
+			var response = new java.lang.StringBuffer();
 
 			while ((line = reader.readLine()) != null) {
-				log.info("@SubAbeturadeChamados line:'" + line+"'");
+				log.info("@SubAbeturadeChamados RestPost line:'" + line+"'");
+				response.append(line);
 			}
-			writer.close();
+			if (method == "POST")
+				writer.close();
+
 			reader.close();
 
-			
+			return JSON.parse(response);
 
 
 
 		
 		} catch (e) {
-			log.error("@SubAbeturadeChamados/readResponse diz: Erro ao ler resposta");
-			log.error("@SubAbeturadeChamados/readResponse diz: " + e);
+			log.error("@SubAbeturadeChamados RestPost erro: " + e);
+			return e;
 		}
-
-
-		try{
-
-			var url =  new java.net.URL("http://apimanager-homolog.totvs.com/api/zendesk/1.0/groups");
-			var con =  url.openConnection();
-	
-			// optional default is GET
-			con.setRequestMethod("GET");
-	
-			//add request header
-			con.setRequestProperty("Authorization-zendesk", "Basic bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw==");
-			con.setRequestProperty("Authorization", "Bearer e3ad16f6-0a64-308a-8118-482039724c47");
-	
 			
-			log.info("@SubAbeturadeChamados GET con.getResponseCode():'" + con.getResponseCode()+"'");
-			var reader = new java.io.BufferedReader(new java.io.InputStreamReader(con.getInputStream()));
-			log.info("@SubAbeturadeChamados GET reader:'" + reader+"'");
-
-			log.info("@SubAbeturadeChamados GET  con.getResponseCode():'" + con.getResponseCode() +"'");
-			
-			while ((line = reader.readLine()) != null) {
-				reader.append(line);
-				log.info("@SubAbeturadeChamados GET  line:'" + line+"'");
-			}
-			writer.close();
-			reader.close();
-			//print result
-		
-		}catch(e){
-			log.info("@SubAbeturadeChamados GET  error:'" + e+"'");
-		}
-		
-	}
 
 }

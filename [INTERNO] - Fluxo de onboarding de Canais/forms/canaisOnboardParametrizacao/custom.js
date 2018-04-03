@@ -1,5 +1,5 @@
-$( document ).ready(function() {
-
+$(document).ready(function () {
+ debugger
 	configuracaoZendesk();
 });
 
@@ -22,60 +22,61 @@ $(document).on('change', "#usuarioAdm", function () {
 		}
 	}
 });
-function carregarCombos(){
+function carregarCombos() {
 
 	carregarGrupoZendesk();
 }
 var access_token;
-function configuracaoZendesk(){
+function configuracaoZendesk() {
+	
 
 	var settings = {
-		"async": true,
-		"crossDomain": true,
-		"url": "https://apimanager-homolog.totvs.com/api/token",
+		"url": HML_ZENDESK + "/api/token",
 		"method": "POST",
 		"headers": {
-		  "authorization": "Basic MUZ5ZDNRUUVlVGVXZ1VmdUd4Y2Q3YnI5d1k0YTowS1lSN1hKU3pjWkJ5N1hKTF9BYjlQUUNLQkVh",
-		  "content-type": "application/x-www-form-urlencoded",
+			"authorization": "Basic MUZ5ZDNRUUVlVGVXZ1VmdUd4Y2Q3YnI5d1k0YTowS1lSN1hKU3pjWkJ5N1hKTF9BYjlQUUNLQkVh",
+			"content-type": "application/x-www-form-urlencoded",
+			"cache-control": "no-cache",
+			"postman-token": "f1501702-bced-321b-0be2-97b1f9c8d644",
+			"Access-Control-Allow-Origin" : "http://spon010113223:8080/"		
 		},
 		"data": {
-		  "grant_type": "client_credentials"
+			"grant_type": "client_credentials"
 		}
-	  }
-	  
-	  $.ajax(settings).done(function (data) {
+	}
+
+	$.ajax(settings).done(function (data) {
 		access_token = data.access_token;
 		carregarCombos();
-	  });
+	});
 
 }
-function carregarGrupoZendesk(){
+function carregarGrupoZendesk() {
 	var settings = {
-		"async": true,
-		"crossDomain": true,
 		"url": "https://apimanager-homolog.totvs.com/api/zendesk/1.0/groups",
 		"method": "GET",
 		"headers": {
-		  "authorization-zendesk": "Basic bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw==",
-		  "authorization": "Bearer " + access_token,
+			"authorization-zendesk": "Basic bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw==",
+			"authorization": "Bearer " + access_token,
+			"Access-Control-Allow-Origin" : "http://spon010113223:8080/"		
 		}
-	  }
-	  $("#criacaoCorgrupo").find('option').remove();
-	  $("#criacaoCorgrupo").append($('<option>', {
+	}
+	$("#criacaoCorgrupo").find('option').remove();
+	$("#criacaoCorgrupo").append($('<option>', {
 		value: "",
 		text: "(Selecione)"
-	 }));
-	  $.ajax(settings).done(function (data) {
-		$.each( data.groups, function( index, value ) {
+	}));
+	$.ajax(settings).done(function (data) {
+		$.each(data.groups, function (index, value) {
 			$("#criacaoCorgrupo").append($('<option>', {
 				value: value.id,
 				text: value.name
-			}));		  
+			}));
 		});
 		$("#criacaoCorgrupo").val($("#nmcriacaoCorgrupo").val());
-	  });
+	});
 
-	 
+
 }
 $(document).on('change', "#criacaoCorgrupo", function () {
 	$("#nmcriacaoCorgrupo").val(this.value);

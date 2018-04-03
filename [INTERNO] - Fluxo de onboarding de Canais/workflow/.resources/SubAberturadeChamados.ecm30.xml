@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>SubAberturadeChamados</processId>
-      <version>116</version>
+      <version>135</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>332</formId>
@@ -685,6 +685,10 @@
       <eventDescription>var PRD = &quot;https://wscorp.totvs.com.br&quot;;&#xd;
 var HML = &quot;http://spon010113223:8080/&quot;;&#xd;
 var SERVER = HML;&#xd;
+&#xd;
+var PRD_ZENDESK = &quot;https://wscorp.totvs.com.br&quot;;&#xd;
+var HML_ZENDESK = &quot;https://apimanager-homolog.totvs.com&quot;;&#xd;
+var SERVER_ZENDESK = HML_ZENDESK;&#xd;
 var Activity = {&#xd;
 	ZERO: 4,&#xd;
 	EMAIL_CORPORATIVO: 9,&#xd;
@@ -804,7 +808,9 @@ process.instructions=&#xd;
         <processId>SubAberturadeChamados</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>function beforeStateEntry(sequenceId) {&#xd;
+      <eventDescription>&#xd;
+&#xd;
+function beforeStateEntry(sequenceId) {&#xd;
 	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry sequenceId: &quot; + sequenceId);&#xd;
 	if (sequenceId == Activity.EMAIL_CORPORATIVO) {&#xd;
 		solicitacaoEmailcoporativo();&#xd;
@@ -864,109 +870,116 @@ function solicitacaoEmailcoporativo() {&#xd;
 }&#xd;
 function solicitacaoCodigoCRM() {&#xd;
 &#xd;
-	var url = &quot;https://apimanager-homolog.totvs.com/api/token&quot;;&#xd;
+	var url = SERVER_ZENDESK + &quot;/api/token&quot;;&#xd;
+	var params = &quot;grant_type=client_credentials&quot;;&#xd;
 	var headers = [];&#xd;
+	var method = &quot;POST&quot;;&#xd;
+	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/x-www-form-urlencoded&quot;});&#xd;
+	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
+	headers.push({ name: &quot;Accept&quot;, key : &quot;*/*&quot;});&#xd;
+	headers.push({ name: &quot;Authorization&quot;, key : &quot;Basic MUZ5ZDNRUUVlVGVXZ1VmdUd4Y2Q3YnI5d1k0YTowS1lSN1hKU3pjWkJ5N1hKTF9BYjlQUUNLQkVh&quot;});&#xd;
 &#xd;
 &#xd;
+	var token = Rest(url, params, null, method, headers);&#xd;
 &#xd;
-	log.info(&quot;@SubAbeturadeChamados start solicitacaoCodigoCRM&quot;);&#xd;
-	var string = DsGenericRest.callRequest(url, null, null, &quot;POST&quot;, headers);&#xd;
+	log.info(&quot;@SubAbeturadeChamados RestPost token.access_token:&quot; + token.access_token);&#xd;
+&#xd;
+	&#xd;
+	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;Titulo&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;Corpo do Ticket&quot;},&quot;priority&quot;:&quot;normal&quot;,&quot;group_id&quot;:41198947,&quot;external_id&quot;:&quot;&quot;}}&apos;;&#xd;
+&#xd;
+&#xd;
+	var headers = [];&#xd;
+	var method = &quot;POST&quot;;&#xd;
+	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
+	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
+	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + &quot;bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw==&quot;});&#xd;
+	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + token.access_token});&#xd;
+&#xd;
+&#xd;
+	var token = Rest(url, params, null,method, headers);&#xd;
+&#xd;
+	&#xd;
+&#xd;
 &#xd;
 }&#xd;
-var DsGenericRest = {&#xd;
 &#xd;
-	callRequest: function (url, params, login, method, headers) {&#xd;
+function Rest(url, params, login, method, headers) {&#xd;
 		try {&#xd;
 &#xd;
-			var urlParameters = new java.lang.String(&quot;grant_type=client_credentials&quot;);&#xd;
-		&#xd;
-			var postData = 	new java.net.URLEncoder.encode(urlParameters,&quot;UTF-8&quot;);&#xd;
-			log.info(&quot;@SubAbeturadeChamados postData:&apos;&quot; + postData+&quot;&apos;&quot;);&#xd;
 &#xd;
-			log.info(&quot;@SubAbeturadeChamados url:&quot; + url);&#xd;
+&#xd;
+&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost url:&quot; + url);&#xd;
 			var wurl =  new java.net.URL(url);&#xd;
 		&#xd;
 			var conn = wurl.openConnection();&#xd;
 &#xd;
-&#xd;
 			&#xd;
+			if (method == &quot;POST&quot;)&#xd;
+			    conn.setDoOutput(true);&#xd;
 &#xd;
-			conn.setDoOutput(true);&#xd;
-			conn.setRequestMethod( &quot;POST&quot; );&#xd;
+			conn.setRequestMethod(method);&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost method:&quot; + method);&#xd;
 			conn.setInstanceFollowRedirects(false);&#xd;
-			conn.setRequestProperty( &quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);&#xd;
-			conn.setRequestProperty(&quot;charset&quot;, &quot;utf-8&quot;);&#xd;
-			conn.setRequestProperty( &quot;Accept&quot;, &quot;*/*&quot; );&#xd;
-			conn.setRequestProperty( &quot;Authorization&quot;, &quot;Basic MUZ5ZDNRUUVlVGVXZ1VmdUd4Y2Q3YnI5d1k0YTowS1lSN1hKU3pjWkJ5N1hKTF9BYjlQUUNLQkVh&quot;);&#xd;
+&#xd;
+			for (i = 0; i &lt; headers.length; i++) { &#xd;
+				log.info(&quot;@SubAbeturadeChamados RestPost headers[i].name:&apos;&quot; + headers[i].name + &quot;&apos; headers[i].key:&apos;&quot; + headers[i].key + &quot;&apos;&quot;);&#xd;
+				conn.setRequestProperty( headers[i].name, headers[i].key);&#xd;
+			}&#xd;
+					&#xd;
+			if (method == &quot;POST&quot;){&#xd;
+				conn.setUseCaches(false);&#xd;
+				var writer = new java.io.OutputStreamWriter(conn.getOutputStream());&#xd;
+				log.info(&quot;@SubAbeturadeChamados RestPost conn.getOutputStream():&apos;&quot; + conn.getOutputStream()+&quot;&apos;&quot;);&#xd;
+			}&#xd;
+			&#xd;
+&#xd;
+			if (params){&#xd;
+				writer.write(params);&#xd;
+				log.info(&quot;@SubAbeturadeChamados RestPost params:&apos;&quot; + params +&quot;&apos;&quot;);&#xd;
+				writer.flush();&#xd;
+			}&#xd;
 		&#xd;
-			conn.setUseCaches(false);&#xd;
-			var writer = new java.io.OutputStreamWriter(conn.getOutputStream());&#xd;
-			log.info(&quot;@SubAbeturadeChamados conn.getOutputStream():&apos;&quot; + conn.getOutputStream()+&quot;&apos;&quot;);&#xd;
-			writer.write(postData);&#xd;
-			writer.flush();&#xd;
-&#xd;
-&#xd;
-			&#xd;
-			log.info(&quot;@SubAbeturadeChamados conn.getResponseCode():&apos;&quot; + conn.getResponseCode()+&quot;&apos;&quot;);&#xd;
+		&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost conn.getResponseCode():&apos;&quot; + conn.getResponseCode()+&quot;&apos;&quot;);&#xd;
 			var line;&#xd;
-			log.info(&quot;@SubAbeturadeChamados conn.getInputStream():&apos;&quot; + conn.getInputStream()+&quot;&apos;&quot;);&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost conn.getInputStream():&apos;&quot; + conn.getInputStream()+&quot;&apos;&quot;);&#xd;
 			var reader = new java.io.BufferedReader(new java.io.InputStreamReader(conn.getInputStream()));&#xd;
-			log.info(&quot;@SubAbeturadeChamados reader:&apos;&quot; + reader+&quot;&apos;&quot;);&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost reader:&apos;&quot; + reader+&quot;&apos;&quot;);&#xd;
 &#xd;
-			&#xd;
+			var response = new java.lang.StringBuffer();&#xd;
 &#xd;
 			while ((line = reader.readLine()) != null) {&#xd;
-				log.info(&quot;@SubAbeturadeChamados line:&apos;&quot; + line+&quot;&apos;&quot;);&#xd;
+				log.info(&quot;@SubAbeturadeChamados RestPost line:&apos;&quot; + line+&quot;&apos;&quot;);&#xd;
+				response.append(line);&#xd;
 			}&#xd;
-			writer.close();&#xd;
+			if (method == &quot;POST&quot;)&#xd;
+				writer.close();&#xd;
+&#xd;
 			reader.close();&#xd;
 &#xd;
-			&#xd;
+			return JSON.parse(response);&#xd;
 &#xd;
 &#xd;
 &#xd;
 		&#xd;
 		} catch (e) {&#xd;
-			log.error(&quot;@SubAbeturadeChamados/readResponse diz: Erro ao ler resposta&quot;);&#xd;
-			log.error(&quot;@SubAbeturadeChamados/readResponse diz: &quot; + e);&#xd;
+			log.error(&quot;@SubAbeturadeChamados RestPost erro: &quot; + e);&#xd;
+			return e;&#xd;
 		}&#xd;
-&#xd;
-&#xd;
-		try{&#xd;
-&#xd;
-			var url =  new java.net.URL(&quot;http://apimanager-homolog.totvs.com/api/zendesk/1.0/groups&quot;);&#xd;
-			var con =  url.openConnection();&#xd;
-	&#xd;
-			// optional default is GET&#xd;
-			con.setRequestMethod(&quot;GET&quot;);&#xd;
-	&#xd;
-			//add request header&#xd;
-			con.setRequestProperty(&quot;Authorization-zendesk&quot;, &quot;Basic bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw==&quot;);&#xd;
-			con.setRequestProperty(&quot;Authorization&quot;, &quot;Bearer e3ad16f6-0a64-308a-8118-482039724c47&quot;);&#xd;
-	&#xd;
 			&#xd;
-			log.info(&quot;@SubAbeturadeChamados GET con.getResponseCode():&apos;&quot; + con.getResponseCode()+&quot;&apos;&quot;);&#xd;
-			var reader = new java.io.BufferedReader(new java.io.InputStreamReader(con.getInputStream()));&#xd;
-			log.info(&quot;@SubAbeturadeChamados GET reader:&apos;&quot; + reader+&quot;&apos;&quot;);&#xd;
-&#xd;
-			log.info(&quot;@SubAbeturadeChamados GET  con.getResponseCode():&apos;&quot; + con.getResponseCode() +&quot;&apos;&quot;);&#xd;
-			&#xd;
-			while ((line = reader.readLine()) != null) {&#xd;
-				reader.append(line);&#xd;
-				log.info(&quot;@SubAbeturadeChamados GET  line:&apos;&quot; + line+&quot;&apos;&quot;);&#xd;
-			}&#xd;
-			writer.close();&#xd;
-			reader.close();&#xd;
-			//print result&#xd;
-		&#xd;
-		}catch(e){&#xd;
-			log.info(&quot;@SubAbeturadeChamados GET  error:&apos;&quot; + e+&quot;&apos;&quot;);&#xd;
-		}&#xd;
-		&#xd;
-	}&#xd;
 &#xd;
 }&#xd;
-</eventDescription>
+function obj_to_query(obj) {&#xd;
+    var parts = [];&#xd;
+    for (var key in obj) {&#xd;
+        if (obj.hasOwnProperty(key)) {&#xd;
+            parts.push(encodeURIComponent(key) + &apos;=&apos; + encodeURIComponent(obj[key]));&#xd;
+        }&#xd;
+    }&#xd;
+    return &quot;?&quot; + parts.join(&apos;&amp;&apos;);&#xd;
+}</eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
@@ -1024,7 +1037,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>116</version>
+        <version>135</version>
         <linkSequence>29</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1035,7 +1048,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>116</version>
+        <version>135</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1046,7 +1059,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>116</version>
+        <version>135</version>
         <linkSequence>32</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1057,7 +1070,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>116</version>
+        <version>135</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1068,7 +1081,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>116</version>
+        <version>135</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1079,7 +1092,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>116</version>
+        <version>135</version>
         <linkSequence>37</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1090,7 +1103,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>116</version>
+        <version>135</version>
         <linkSequence>38</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1101,7 +1114,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>116</version>
+        <version>135</version>
         <linkSequence>39</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
