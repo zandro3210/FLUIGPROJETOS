@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>SubAberturadeChamados</processId>
-      <version>47</version>
+      <version>116</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>332</formId>
@@ -691,7 +691,8 @@ var Activity = {&#xd;
 	CRIACAO_COD_CRM: 11,&#xd;
 	PORTAL_CLIENTE: 13,&#xd;
 	USUARIO_CRM_VENDAS: 15,&#xd;
-	CADASTRO_FORNECEDOR: 23&#xd;
+	CADASTRO_FORNECEDOR: 23,&#xd;
+	JOIN_CHAMADOS: 27&#xd;
 }&#xd;
 </eventDescription>
     </WorkflowProcessEvent>
@@ -803,54 +804,168 @@ process.instructions=&#xd;
         <processId>SubAberturadeChamados</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>function beforeStateEntry(sequenceId){&#xd;
-	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry sequenceId: &quot;+sequenceId);&#xd;
-	if(sequenceId == Activity.EMAIL_CORPORATIVO )&#xd;
-	{&#xd;
-		var subject = retornaParametrizacao(&quot;emailCortitulo&quot;);&#xd;
-		log.info(&quot;@SubAbeturadeChamados  beforeStateEntry subject: &apos;&quot;+subject + &quot;&apos;&quot;);&#xd;
-		var template = &quot;abertura_de_chamados&quot;;&#xd;
-		var params = [];&#xd;
+      <eventDescription>function beforeStateEntry(sequenceId) {&#xd;
+	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry sequenceId: &quot; + sequenceId);&#xd;
+	if (sequenceId == Activity.EMAIL_CORPORATIVO) {&#xd;
+		solicitacaoEmailcoporativo();&#xd;
+	}&#xd;
 &#xd;
-		var mensagem = &quot;&quot;;&#xd;
-		if (hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot; )&#xd;
-			mensagem +=  retornaParametrizacao(&quot;emailCormaster&quot;);&#xd;
-		else&#xd;
-			mensagem += retornaParametrizacao(&quot;emailCorfranquia&quot;);&#xd;
+	if (sequenceId == Activity.CRIACAO_COD_CRM) {&#xd;
+		solicitacaoCodigoCRM();&#xd;
+	}&#xd;
 &#xd;
-		mensagem +=&quot;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;&quot;;&#xd;
-			mensagem +=&quot;&lt;tr&gt;&quot;;&#xd;
-				mensagem +=&quot;&lt;th&gt;Campos&lt;th/&gt;&quot;;&#xd;
-				mensagem +=&quot;&lt;th&gt;Valores&lt;th/&gt;&quot;;&#xd;
-			mensagem +=&quot;&lt;/tr&gt;&quot;;&#xd;
-			mensagem +=&quot;&lt;tr&gt;&quot;;&#xd;
-				mensagem +=&quot;&lt;td&gt;Razão Social&lt;/td&gt;&quot;;&#xd;
-				mensagem +=&quot;&lt;td&gt;&quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;) +&quot;&lt;/td&gt;&quot;;&#xd;
-			mensagem +=&quot;&lt;/tr&gt;&quot;;&#xd;
-			mensagem +=&quot;&lt;tr&gt;&quot;;&#xd;
-				mensagem +=&quot;&lt;td&gt;CNPJ&lt;/td&gt;&quot;;&#xd;
-				mensagem +=&quot;&lt;td&gt;&quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;) +&quot;&lt;/td&gt;&quot;;&#xd;
-			mensagem +=&quot;&lt;/tr&gt;&quot;;&#xd;
-			mensagem +=&quot;&lt;tr&gt;&quot;;&#xd;
-				mensagem +=&quot;&lt;td&gt;Sugestão de E-mail&lt;/td&gt;&quot;;&#xd;
-				mensagem +=&quot;&lt;td&gt;&quot; +  hAPI.getCardValue(&quot;sugestaoEmail&quot;) +&quot;&lt;/td&gt;&quot;;&#xd;
-			mensagem +=&quot;&lt;/tr&gt;&quot;;&#xd;
-		mensagem +=&quot;&lt;/table&gt;&quot;;&#xd;
-		&#xd;
-		var url = &quot;&lt;a style=&apos;color:red;&apos; href=&apos;&quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot;+  Activity.CRIACAO_COD_CRM + &quot;&amp;thread=1&apos;&gt;Por favor após terminar atividade clique aqui &lt;/a&gt;&lt;br /&gt;&quot;;		&#xd;
-		params.push({name:&quot;TITULO&quot;,value: &quot;E-mail Corporativo - Fluxo onBoard&quot;});&#xd;
-		params.push({name:&quot;MENSAGEM&quot;,value: mensagem});&#xd;
-	    params.push({name:&quot;URL&quot;,value: url  });&#xd;
-		&#xd;
-		var receivers = [];&#xd;
-		receivers.push(retornaParametrizacao(&quot;emailCoremail&quot;));&#xd;
-		log.info(&quot;@SubAbeturadeChamados  beforeStateEntry onNotify() &quot;);&#xd;
-		onNotify(subject, receivers, template, params,  &quot;text/html&quot; );&#xd;
-	} &#xd;
-	&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
 }&#xd;
 &#xd;
+function solicitacaoEmailcoporativo() {&#xd;
+	var subject = retornaParametrizacao(&quot;emailCortitulo&quot;);&#xd;
+	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry subject: &apos;&quot; + subject + &quot;&apos;&quot;);&#xd;
+	var template = &quot;abertura_de_chamados&quot;;&#xd;
+	var params = [];&#xd;
 &#xd;
+	var mensagem = &quot;&quot;;&#xd;
+	if (hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)&#xd;
+		mensagem += retornaParametrizacao(&quot;emailCormaster&quot;);&#xd;
+	else&#xd;
+		mensagem += retornaParametrizacao(&quot;emailCorfranquia&quot;);&#xd;
+&#xd;
+	mensagem += &quot;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;th&gt;Campos&lt;th/&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;th&gt;Valores&lt;th/&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;td&gt;Razão Social&lt;/td&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;td&gt;&quot; + hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;&lt;/td&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;td&gt;CNPJ&lt;/td&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;td&gt;&quot; + hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;&lt;/td&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;td&gt;Sugestão de E-mail&lt;/td&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;td&gt;&quot; + hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&lt;/td&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;/table&gt;&quot;;&#xd;
+&#xd;
+	var url = &quot;&lt;a style=&apos;color:red;&apos; href=&apos;&quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=1&apos;&gt;Por favor após terminar atividade clique aqui &lt;/a&gt;&lt;br /&gt;&quot;;&#xd;
+	params.push({ name: &quot;TITULO&quot;, value: &quot;E-mail Corporativo - Fluxo onBoard&quot; });&#xd;
+	params.push({ name: &quot;MENSAGEM&quot;, value: mensagem });&#xd;
+	params.push({ name: &quot;URL&quot;, value: url });&#xd;
+&#xd;
+	var receivers = [];&#xd;
+	receivers.push(retornaParametrizacao(&quot;emailCoremail&quot;));&#xd;
+	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry onNotify() &quot;);&#xd;
+	onNotify(subject, receivers, template, params, &quot;text/html&quot;);&#xd;
+}&#xd;
+function solicitacaoCodigoCRM() {&#xd;
+&#xd;
+	var url = &quot;https://apimanager-homolog.totvs.com/api/token&quot;;&#xd;
+	var headers = [];&#xd;
+&#xd;
+&#xd;
+&#xd;
+	log.info(&quot;@SubAbeturadeChamados start solicitacaoCodigoCRM&quot;);&#xd;
+	var string = DsGenericRest.callRequest(url, null, null, &quot;POST&quot;, headers);&#xd;
+&#xd;
+}&#xd;
+var DsGenericRest = {&#xd;
+&#xd;
+	callRequest: function (url, params, login, method, headers) {&#xd;
+		try {&#xd;
+&#xd;
+			var urlParameters = new java.lang.String(&quot;grant_type=client_credentials&quot;);&#xd;
+		&#xd;
+			var postData = 	new java.net.URLEncoder.encode(urlParameters,&quot;UTF-8&quot;);&#xd;
+			log.info(&quot;@SubAbeturadeChamados postData:&apos;&quot; + postData+&quot;&apos;&quot;);&#xd;
+&#xd;
+			log.info(&quot;@SubAbeturadeChamados url:&quot; + url);&#xd;
+			var wurl =  new java.net.URL(url);&#xd;
+		&#xd;
+			var conn = wurl.openConnection();&#xd;
+&#xd;
+&#xd;
+			&#xd;
+&#xd;
+			conn.setDoOutput(true);&#xd;
+			conn.setRequestMethod( &quot;POST&quot; );&#xd;
+			conn.setInstanceFollowRedirects(false);&#xd;
+			conn.setRequestProperty( &quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);&#xd;
+			conn.setRequestProperty(&quot;charset&quot;, &quot;utf-8&quot;);&#xd;
+			conn.setRequestProperty( &quot;Accept&quot;, &quot;*/*&quot; );&#xd;
+			conn.setRequestProperty( &quot;Authorization&quot;, &quot;Basic MUZ5ZDNRUUVlVGVXZ1VmdUd4Y2Q3YnI5d1k0YTowS1lSN1hKU3pjWkJ5N1hKTF9BYjlQUUNLQkVh&quot;);&#xd;
+		&#xd;
+			conn.setUseCaches(false);&#xd;
+			var writer = new java.io.OutputStreamWriter(conn.getOutputStream());&#xd;
+			log.info(&quot;@SubAbeturadeChamados conn.getOutputStream():&apos;&quot; + conn.getOutputStream()+&quot;&apos;&quot;);&#xd;
+			writer.write(postData);&#xd;
+			writer.flush();&#xd;
+&#xd;
+&#xd;
+			&#xd;
+			log.info(&quot;@SubAbeturadeChamados conn.getResponseCode():&apos;&quot; + conn.getResponseCode()+&quot;&apos;&quot;);&#xd;
+			var line;&#xd;
+			log.info(&quot;@SubAbeturadeChamados conn.getInputStream():&apos;&quot; + conn.getInputStream()+&quot;&apos;&quot;);&#xd;
+			var reader = new java.io.BufferedReader(new java.io.InputStreamReader(conn.getInputStream()));&#xd;
+			log.info(&quot;@SubAbeturadeChamados reader:&apos;&quot; + reader+&quot;&apos;&quot;);&#xd;
+&#xd;
+			&#xd;
+&#xd;
+			while ((line = reader.readLine()) != null) {&#xd;
+				log.info(&quot;@SubAbeturadeChamados line:&apos;&quot; + line+&quot;&apos;&quot;);&#xd;
+			}&#xd;
+			writer.close();&#xd;
+			reader.close();&#xd;
+&#xd;
+			&#xd;
+&#xd;
+&#xd;
+&#xd;
+		&#xd;
+		} catch (e) {&#xd;
+			log.error(&quot;@SubAbeturadeChamados/readResponse diz: Erro ao ler resposta&quot;);&#xd;
+			log.error(&quot;@SubAbeturadeChamados/readResponse diz: &quot; + e);&#xd;
+		}&#xd;
+&#xd;
+&#xd;
+		try{&#xd;
+&#xd;
+			var url =  new java.net.URL(&quot;http://apimanager-homolog.totvs.com/api/zendesk/1.0/groups&quot;);&#xd;
+			var con =  url.openConnection();&#xd;
+	&#xd;
+			// optional default is GET&#xd;
+			con.setRequestMethod(&quot;GET&quot;);&#xd;
+	&#xd;
+			//add request header&#xd;
+			con.setRequestProperty(&quot;Authorization-zendesk&quot;, &quot;Basic bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw==&quot;);&#xd;
+			con.setRequestProperty(&quot;Authorization&quot;, &quot;Bearer e3ad16f6-0a64-308a-8118-482039724c47&quot;);&#xd;
+	&#xd;
+			&#xd;
+			log.info(&quot;@SubAbeturadeChamados GET con.getResponseCode():&apos;&quot; + con.getResponseCode()+&quot;&apos;&quot;);&#xd;
+			var reader = new java.io.BufferedReader(new java.io.InputStreamReader(con.getInputStream()));&#xd;
+			log.info(&quot;@SubAbeturadeChamados GET reader:&apos;&quot; + reader+&quot;&apos;&quot;);&#xd;
+&#xd;
+			log.info(&quot;@SubAbeturadeChamados GET  con.getResponseCode():&apos;&quot; + con.getResponseCode() +&quot;&apos;&quot;);&#xd;
+			&#xd;
+			while ((line = reader.readLine()) != null) {&#xd;
+				reader.append(line);&#xd;
+				log.info(&quot;@SubAbeturadeChamados GET  line:&apos;&quot; + line+&quot;&apos;&quot;);&#xd;
+			}&#xd;
+			writer.close();&#xd;
+			reader.close();&#xd;
+			//print result&#xd;
+		&#xd;
+		}catch(e){&#xd;
+			log.info(&quot;@SubAbeturadeChamados GET  error:&apos;&quot; + e+&quot;&apos;&quot;);&#xd;
+		}&#xd;
+		&#xd;
+	}&#xd;
+&#xd;
+}&#xd;
 </eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
@@ -909,7 +1024,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>47</version>
+        <version>116</version>
         <linkSequence>29</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -920,7 +1035,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>47</version>
+        <version>116</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -931,7 +1046,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>47</version>
+        <version>116</version>
         <linkSequence>32</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -942,7 +1057,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>47</version>
+        <version>116</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -953,7 +1068,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>47</version>
+        <version>116</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -964,7 +1079,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>47</version>
+        <version>116</version>
         <linkSequence>37</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -975,7 +1090,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>47</version>
+        <version>116</version>
         <linkSequence>38</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -986,7 +1101,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>47</version>
+        <version>116</version>
         <linkSequence>39</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
