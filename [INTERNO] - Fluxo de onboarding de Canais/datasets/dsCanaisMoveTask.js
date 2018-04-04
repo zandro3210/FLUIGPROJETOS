@@ -57,10 +57,24 @@ function createDataset(fields, constraints, sortFields) {
         var cardData = WorkflowEngineService.getInstanceCardData(username, password, companyId, userId, processInstanceId);
 
 
+        if (constraints[2].getInitialValue() == "2"){
+            var codUnidadeVenda = servico.instantiate("net.java.dev.jaxb.array.StringArray");
+            codUnidadeVenda.getItem().add("criacaoCoridUnidadeVenda");
+            codUnidadeVenda.getItem().add(constraints[3].getInitialValue());
+            cardData.getItem().add(codUnidadeVenda);
+            log.error("---@dsCanaisMoveTask  codUnidadeVenda:'" + constraints[3].getInitialValue() + "'" );
+
+
+           
+            
+        }
+        
 
 
         var appointment = servico.instantiate("com.totvs.technology.ecm.workflow.ws.ProcessTaskAppointmentDtoArray");
         var managerMode = false;
+
+
 
 
         WorkflowEngineService.saveAndSendTask(username,

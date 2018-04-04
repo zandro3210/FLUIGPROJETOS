@@ -20,18 +20,19 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     
-</head>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" type="text/css" rel="stylesheet">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
+
+</head>
+<style>
+.toast {
+      font-size: 12px; !important;
+        line-height: normal !important;
+}
+</style>
 <body id="top" class="scrollspy">
 
-    <!-- Pre Loader -->
-    <div id="loader-wrapper">
-        <div id="loader"></div>
-
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-
-    </div>
 
     <!--Navigation-->
     <div class="navbar-fixed">
@@ -76,6 +77,10 @@
                                         <br>
                                         <form class="col s12">
                                             <div class="row">
+                                                <div id="div_criacaoCor" class="input-field col s6 hide">
+                                                    <input class="mdl-textfield__input" type="text" id="cdUnidadeVenda">
+                                                    <label class="mdl-textfield__label" for="cdUnidadeVenda">Codigo de Unidade de Venda</label>
+                                                </div>
                                                 <div class="input-field col s6">
 
                                                     <div class="switch">
@@ -89,10 +94,9 @@
 
 
                                                 </div>
-
                                                 <div class="col offset-s7 s5">
                                                     <!-- Modal Trigger -->
-                                                    <button  id="btnEnviar" disabled="disabled" class="btn waves-effect waves-light btn ">Enviar</button>
+                                                    <button  type="button" id="btnEnviar" disabled="disabled" class="btn waves-effect waves-light btn ">Enviar</button>
 
                                                 </div>
                                             </div>
@@ -132,6 +136,8 @@
                 Página exclusiva para o uso do processo fluxo on Boarding</a>
             </div>
         </div>
+         
+    </div>
     </footer>
 
 
@@ -140,8 +146,22 @@
     <script src="/onboard/resources/js/custom-min.js"></script>
 
     <script>
-      
+        var url_string = window.location.href; //window.location.href
+        var url = new URL(url_string);
+        var token = url.searchParams.get("token");
+        var task = url.searchParams.get("task");
+        var thread = url.searchParams.get("thread");
+         var current = url.searchParams.get("current");
+        $( document ).ready(function() {
+           configuracao();
+        });
 
+        function configuracao(){
+            if (thread == 2 && current == 11){
+                   $("#div_criacaoCor").removeClass("hide");
+            }
+
+        }
         $("#ckDecisao").change(function () {
             $("#btnEnviar").attr("disabled",!$("#ckDecisao")["0"].checked);
         });
@@ -188,22 +208,31 @@
 	
         $("#btnEnviar").click(function () {
 			debugger;
-            tomandoDecisao();
+            if (fValidar())
+                tomandoDecisao();
         });
+        function fValidar(){
+            if (thread == 2 &&  current == 11){
+                if ($("#cdUnidadeVenda").val().length == 0 && $("#div_criacaoCor").hasClass("hide") == false){
+                    toastr.error('Por favor preencha o código de unidade de venda')
+                    return false;
+                }
+                 
+            }
+            
+            return true;
+        }
         function tomandoDecisao() {
 
-
-            var url_string = window.location.href; //window.location.href
-            var url = new URL(url_string);
-            var token = url.searchParams.get("token");
-            var task = url.searchParams.get("task");
-            var thread = url.searchParams.get("thread");
-
+            var param_gen = "";
+           if (thread == 2 && $("#div_criacaoCor").hasClass("hide") == false)
+                param_gen = ",param," + $("#cdUnidadeVenda").val()
+         
 
             var url = "api/public/ecm/dataset/search";
             var data = {
                 datasetId: "dsCanaisMoveTask",
-                filterFields: "token," + token + ",task," + task + ",thread," + thread
+                filterFields: "token," + token + ",task," + task + ",thread," + thread + param_gen
                 //	filterFields: "id," + proc +,"id," + documentId + ",version," + documentVersion + ",tablename,tabcliente"
             }
 
