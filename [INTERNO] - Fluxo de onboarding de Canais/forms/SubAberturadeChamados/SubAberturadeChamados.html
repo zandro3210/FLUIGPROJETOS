@@ -1,11 +1,13 @@
+<html lang="en">
 
-<html lang="en"><head>
+<head>
 
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
-	<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
-	<link type="text/css" rel="stylesheet" href="/portal/resources/style-guide/css/fluig-style-guide.min.css"/>
-	<link type="text/css" rel="stylesheet" href="progressbar.css"/>
+	<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg"
+	 color="#111">
+	<link type="text/css" rel="stylesheet" href="/portal/resources/style-guide/css/fluig-style-guide.min.css" />
+	<link type="text/css" rel="stylesheet" href="progressbar.css" />
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
@@ -13,70 +15,56 @@
 	<script type="text/javascript" src="activity.js" charset="utf-8"></script>
 	<script type="text/javascript" src="../vcXMLRPC.js"></script>
 	<script type="text/javascript" src="custom.js" charset="utf-8"></script>
-	
-		
 
-		
-		
+
+
+
+
 </head>
-	  
-	  <body translate="no">
-	  
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700" rel="stylesheet" type="text/css">
-	  
-		<form name="form" role="form">
-				<input name="tipoSolic" id="tipoSolic" type="hidden" />
-				<input name="nmMunicipio" id="nmMunicipio" type="hidden" />
-				<input name="nrCnpj" id="nrCnpj" type="hidden" />
-				<input name="endereco" id="endereco" type="hidden" />
-				<input name="razaoSocial" id="razaoSocial" type="hidden" />
-				<input name="tpContrato" id="tpContrato" type="hidden" />
-				<input name="agencia" id="agencia" type="hidden" />
-				<input name="email" id="email" type="hidden" />
-				<input name="telefone" id="telefone" type="hidden" />
-				<input name="nrSolicitacao" id="nrSolicitacao" type="hidden" />
-				<input name="nrSubsolicitacao" id="nrSubsolicitacao" type="hidden" />
-				<input name="nome" id="nome" type="hidden" />
-				<input name="uf" id="uf" type="hidden" />
-				<input name="token" id="token" type="hidden" />
-				<input name="criacaoCoridticket" id="criacaoCoridticket" type="hidden" />
-				<input name="criacaoCoridUnidadeVenda" id="criacaoCoridUnidadeVenda" type="hidden" />
-				<input name="criacaoPortalidticket" id="criacaoPortalidticket" type="hidden" />
-				<input name="sugestaoEmail" id="sugestaoEmail" type="hidden" />
-				<link href='https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
-		
-				<h1>Abertura de Chamados (Acompanhamento)</h1>
-				
-				
-				<div class="checkout-wrap">
-				  <ul class="checkout-bar">
-				
-				
-				
-					<li id="step1" class="active">Criando E-mail coporativo</li>
-				
-					<li  id="step2" class="next">Criando Código de Unidade no CRM</li>
-				
-					<li id="step3" class="next">Inclusão no Portal do Cliente</li>
-				
-					<li  id="step4"class="next">Cad. de Usu.o CRM e Est. Vendas</li>
-				
-					<li id="step5" class="next">Cadastro de Fornecedor</li>
-				  </ul>
-				</div>
-				<div class="" style="padding:28px">
 
-				  
-				</div>
-		</form>
-		
-		
-	  
-	  
+<body translate="no">
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700" rel="stylesheet" type="text/css">
+
+	<form name="form" role="form">
+		<input name="tipoSolic" id="tipoSolic" type="hidden" />
+		<input name="nmMunicipio" id="nmMunicipio" type="hidden" />
+		<input name="nrCnpj" id="nrCnpj" type="hidden" />
+		<input name="endereco" id="endereco" type="hidden" />
+		<input name="razaoSocial" id="razaoSocial" type="hidden" />
+		<input name="tpContrato" id="tpContrato" type="hidden" />
+		<input name="agencia" id="agencia" type="hidden" />
+		<input name="email" id="email" type="hidden" />
+		<input name="telefone" id="telefone" type="hidden" />
+		<input name="nrSolicitacao" id="nrSolicitacao" type="hidden" />
+		<input name="nrSubsolicitacao" id="nrSubsolicitacao" type="hidden" />
+		<input name="nome" id="nome" type="hidden" />
+		<input name="uf" id="uf" type="hidden" />
+		<input name="token" id="token" type="hidden" />
+		<input name="criacaoCoridticket" id="criacaoCoridticket" type="hidden" />
+		<input name="criacaoEstruturaidticket" id="criacaoEstruturaidticket" type="hidden" />
+		<input name="criacaoFornecedoridticket" id="criacaoFornecedoridticket" type="hidden" />
+		<input name="criacaoCoridUnidadeVenda" id="criacaoCoridUnidadeVenda" type="hidden" />
+		<input name="criacaoPortalidticket" id="criacaoPortalidticket" type="hidden" />
+		<input name="sugestaoEmail" id="sugestaoEmail" type="hidden" />
+		<link href='https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
+
+		<h1>Abertura de Chamados (Acompanhamento)</h1>
+
 
 		
-		
-		</body>
 
-		
-		</html>
+
+		</div>
+	</form>
+
+
+
+
+
+
+
+</body>
+
+
+</html>

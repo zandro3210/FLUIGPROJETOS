@@ -155,10 +155,31 @@
         $( document ).ready(function() {
            configuracao();
         });
+var Activity = {
+	ZERO: 4,
+	EMAIL_CORPORATIVO: 9,
+	CRIACAO_COD_CRM: 11,
+	PORTAL_CLIENTE: 13,
+	USUARIO_CRM_VENDAS: 15,
+	CADASTRO_FORNECEDOR: 23,
+	JOIN_CHAMADOS: 27
+}
 
         function configuracao(){
             if (thread == 2 && current == 11){
                    $("#div_criacaoCor").removeClass("hide");
+            }
+            if (current == 11 ){
+                $("#titulo").text("Criação de código de unidade no CRM");
+            }
+            if (current == 13 ){
+                $("#titulo").text("Inclusão no portal do cliente");
+            }
+            if (current == 15 ){
+                $("#titulo").text("Criação de usário CRM e Estrutura de Vendas");
+            }
+            if (current == 23 ){
+                $("#titulo").text("Cadastro de fornecedor");
             }
 
         }
@@ -238,8 +259,10 @@
 
 
             var success = function (data) {
-                console.log(data);
-
+                toastr.success('Atividade movimentada com sucesso!')
+                $("#btnEnviar").prop("disabled",true);
+                $("#ckDecisao").prop("disabled",true); 
+                $("#cdUnidadeVenda").prop("disabled",true);
             }
 
             var result = servicePost(url, data, success);
