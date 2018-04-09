@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>SubAberturadeChamados</processId>
-      <version>149</version>
+      <version>154</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>332</formId>
@@ -858,16 +858,16 @@ function solicitacaoCodigoCRM() {&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
 	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;);&#xd;
-	mensagem += &quot;CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;);&#xd;
-	mensagem += &quot;Endereço Completo: &quot; +  hAPI.getCardValue(&quot;endereco&quot;);&#xd;
-	mensagem += &quot;Cidade: &quot; +  hAPI.getCardValue(&quot;nmMunicipio&quot;);&#xd;
-	mensagem += &quot;Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;);&#xd;
-	mensagem += &quot;Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;);&#xd;
-	mensagem += &quot;Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;);&#xd;
-	mensagem += &quot;E-mail: &quot; +  ( hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot; ?  hAPI.getCardValue(&quot;sugestaoEmail&quot;) : hAPI.getCardValue(&quot;email&quot;) );&#xd;
-	mensagem += &quot;Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;);&#xd;
-	mensagem += &quot;Código da unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;);&#xd;
-	mensagem += &quot;Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.USUARIO_CRM_VENDAS + &quot;&amp;thread=2&amp;current=&quot; + Activity.CRIACAO_COD_CRM;&#xd;
+	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;);&#xd;
+	mensagem += &quot; Endereço Completo: &quot; +  hAPI.getCardValue(&quot;endereco&quot;);&#xd;
+	mensagem += &quot; Cidade: &quot; +  hAPI.getCardValue(&quot;nmMunicipio&quot;);&#xd;
+	mensagem += &quot; Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;);&#xd;
+	mensagem += &quot; Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;);&#xd;
+	mensagem += &quot; Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;);&#xd;
+	mensagem += &quot; E-mail: &quot; +  ( hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot; ?  hAPI.getCardValue(&quot;sugestaoEmail&quot;) : hAPI.getCardValue(&quot;email&quot;) );&#xd;
+	mensagem += &quot; Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;);&#xd;
+	mensagem += &quot; Código da unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;);&#xd;
+	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.USUARIO_CRM_VENDAS + &quot;&amp;thread=2&amp;current=&quot; + Activity.CRIACAO_COD_CRM;&#xd;
 	&#xd;
 	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCorstatus&quot;) +&apos;&quot;,&quot;group_id&quot;:41198947,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
 &#xd;
@@ -895,8 +895,8 @@ function solicitacaoInclusaoPortal() {&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
 	mensagem += &quot;Solicito a inclusão do e-mail:&apos;&quot; +  hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&apos;&quot;;&#xd;
-	mensagem += &quot;CPF: &apos;&quot; +  hAPI.getCardValue(&quot;cpfSocio___1&quot;) + &quot;&apos;&quot;;&#xd;
-	mensagem += &quot;Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=3&amp;current=&quot; + Activity.PORTAL_CLIENTE;&#xd;
+	mensagem += &quot; CPF: &apos;&quot; +  hAPI.getCardValue(&quot;cpfSocio___1&quot;) + &quot;&apos;&quot;;&#xd;
+	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=3&amp;current=&quot; + Activity.PORTAL_CLIENTE;&#xd;
 	&#xd;
 	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortalstatus&quot;) +&apos;&quot;,&quot;group_id&quot;:41198947,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
 &#xd;
@@ -923,19 +923,19 @@ function solicitacaoCRMEstrutura() {&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
 	mensagem += &quot;Código do Gerente: &quot; +  hAPI.getCardValue(&quot;cdGerente&quot;);&#xd;
-	mensagem += &quot;Código do Gerente: &quot; +  hAPI.getCardValue(&quot;cdGerente&quot;);&#xd;
-	mensagem += &quot;Nome do Gerente: &quot; +  hAPI.getCardValue(&quot;nmGerente&quot;);&#xd;
-	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;);&#xd;
-	mensagem += &quot;CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;);&#xd;
-	mensagem += &quot;Endereço Completo: &quot; +  hAPI.getCardValue(&quot;endereco&quot;);&#xd;
-	mensagem += &quot;Cidade: &quot; +  hAPI.getCardValue(&quot;nmMunicipio&quot;);&#xd;
-	mensagem += &quot;Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;);&#xd;
-	mensagem += &quot;Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;);&#xd;
-	mensagem += &quot;Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;);&#xd;
-	mensagem += &quot;E-mail Partner: &quot; +   hAPI.getCardValue(&quot;sugestaoEmail&quot;);&#xd;
-	mensagem += &quot;Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;);&#xd;
-	mensagem += &quot;Código da unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;);&#xd;
-	mensagem += &quot;Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=2&amp;current=&quot; + Activity.USUARIO_CRM_VENDAS;&#xd;
+	mensagem += &quot; Código do Gerente: &quot; +  hAPI.getCardValue(&quot;cdGerente&quot;);&#xd;
+	mensagem += &quot; Nome do Gerente: &quot; +  hAPI.getCardValue(&quot;nmGerente&quot;);&#xd;
+	mensagem += &quot; Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;);&#xd;
+	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;);&#xd;
+	mensagem += &quot; Endereço Completo: &quot; +  hAPI.getCardValue(&quot;endereco&quot;);&#xd;
+	mensagem += &quot; Cidade: &quot; +  hAPI.getCardValue(&quot;nmMunicipio&quot;);&#xd;
+	mensagem += &quot; Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;);&#xd;
+	mensagem += &quot; Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;);&#xd;
+	mensagem += &quot; Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;);&#xd;
+	mensagem += &quot; E-mail Partner: &quot; +   hAPI.getCardValue(&quot;sugestaoEmail&quot;);&#xd;
+	mensagem += &quot; Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;);&#xd;
+	mensagem += &quot; Código da unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;);&#xd;
+	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=2&amp;current=&quot; + Activity.USUARIO_CRM_VENDAS;&#xd;
 	&#xd;
 	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturastatus&quot;) +&apos;&quot;,&quot;group_id&quot;:41198947,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
 &#xd;
@@ -961,12 +961,12 @@ function solicitacaoFornecedor() {&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
 	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;);&#xd;
-	mensagem += &quot;CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;);&#xd;
-	mensagem += &quot;Banco: &quot; +  hAPI.getCardValue(&quot;banco&quot;);&#xd;
-	mensagem += &quot;Agência: &quot; +  hAPI.getCardValue(&quot;agencia&quot;);&#xd;
-	mensagem += &quot;Conta: &quot; +  hAPI.getCardValue(&quot;conta&quot;);&#xd;
-	mensagem += &quot;E-mail para recibimento de relatório de comissões: &quot; +  hAPI.getCardValue(&quot;emailRecebimentoRelatrio&quot;);&#xd;
-	mensagem += &quot;Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=4&amp;current=&quot; + Activity.CADASTRO_FORNECEDOR;&#xd;
+	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;);&#xd;
+	mensagem += &quot; Banco: &quot; +  hAPI.getCardValue(&quot;banco&quot;);&#xd;
+	mensagem += &quot; Agência: &quot; +  hAPI.getCardValue(&quot;agencia&quot;);&#xd;
+	mensagem += &quot; Conta: &quot; +  hAPI.getCardValue(&quot;conta&quot;);&#xd;
+	mensagem += &quot; E-mail para recibimento de relatório de comissões: &quot; +  hAPI.getCardValue(&quot;emailRecebimentoRelatrio&quot;);&#xd;
+	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=4&amp;current=&quot; + Activity.CADASTRO_FORNECEDOR;&#xd;
 	&#xd;
 	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedorstatus&quot;) +&apos;&quot;,&quot;group_id&quot;:41198947,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
 &#xd;
@@ -1128,7 +1128,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>149</version>
+        <version>154</version>
         <linkSequence>29</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1139,7 +1139,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>149</version>
+        <version>154</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1150,7 +1150,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>149</version>
+        <version>154</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1161,7 +1161,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>149</version>
+        <version>154</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1172,7 +1172,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>149</version>
+        <version>154</version>
         <linkSequence>39</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1183,7 +1183,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>149</version>
+        <version>154</version>
         <linkSequence>39</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1194,7 +1194,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>149</version>
+        <version>154</version>
         <linkSequence>41</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1205,7 +1205,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>149</version>
+        <version>154</version>
         <linkSequence>42</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
