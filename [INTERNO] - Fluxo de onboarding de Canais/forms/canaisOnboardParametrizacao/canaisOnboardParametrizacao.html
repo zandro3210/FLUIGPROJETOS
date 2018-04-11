@@ -186,7 +186,7 @@
 									<div class="panel panel-info panel-default">
 										<div class="panel-heading ">
 											<h3 class="panel-title">
-												<b>Criação do Código no CRM </b>
+												<b>Criação do Código de unidade no CRM </b>
 											</h3>
 										</div>
 
@@ -194,10 +194,7 @@
 
 
 											<div class="form-group row">
-												<div class="col-md-3">
-													<label for="criacaoCorgrupo">Grupo (Zendesk):</label>
-													<select class="form-control" id="criacaoCorgrupo" name="criacaoCorgrupo"></select>
-												</div>
+												
 
 												<div class="col-md-3">
 													<label for="criacaoCortitulo">Título do Ticket:</label>
@@ -218,13 +215,49 @@
 											<div class="form-group row">
 												<div class="col-md-9">
 													<label for="criacaoCordescricao">Descrição do Ticket:</label>
-													<textarea rows="4" id="criacaoCordescricao" name="criacaoCordescricao" class="form-control" >												
-												    </textarea>
+													<textarea rows="4" id="criacaoCordescricao" name="criacaoCordescricao" class="form-control" ></textarea>
 
 												</div>
 
 											</div>
+											<div class="form-group row">
+												<div class="col-md-12">
+													<label for="tablecriacaoCor">Parâmetros da API</label>
+													<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoCor" id="tablecriacaoCor"
+													nodeletebutton="false" addbuttonclass="btn btn-primary">
+													   <thead>
+														   <tr>
+															   <td>
+																   <b>Descrição</b>
+															   </td>
+															   <td>
+																   <b>ID Zendesk</b>
+															   </td>
+															   <td>
+																<b>VALUE Zendesk</b>
+															</td>
+														   </tr>
+													   </thead>
+													   <tbody>
+														   <tr>
+															   <td>
+																   <input type="text" class="form-control" name="tablecriacaoCordescricao" id="tablecriacaoCordescricao">
+															   </td>
+															   <td>
+																   <input type="text" class="form-control" name="tablecriacaoCoridzendesk" id="tablecriacaoCoridzendesk" >
+															   </td>
+															   <td>
+																<input type="text" class="form-control" name="tablecriacaoCorvaluezendesk" id="tablecriacaoCorvaluezendesk" >
+															</td>
+															</td>
+														   </tr>
+													   </tbody>
+												   </table>
 
+												</div>
+
+											</div>
+										
 
 										</div>
 									</div>
@@ -239,10 +272,7 @@
 
 
 											<div class="form-group row">
-												<div class="col-md-3">
-													<label for="criacaoCorgrupo">Grupo (Zendesk):</label>
-													<select class="form-control" id="criacaoPortalgrupo" name="criacaoPortalgrupo"></select>
-												</div>
+												
 
 												<div class="col-md-3">
 													<label for="criacaoCortitulo">Título do Ticket:</label>
@@ -264,13 +294,49 @@
 												<div class="col-md-9">
 													<label for="criacaoPortaldescricao">Descrição do Ticket:</label>
 													
-													<textarea rows="4" id="criacaoPortaldescricao" name="criacaoPortaldescricao" class="form-control" >												
-												    </textarea>
+													<textarea rows="4" id="criacaoPortaldescricao" name="criacaoPortaldescricao" class="form-control" ></textarea>
 
 												</div>
 
 											</div>
 
+											<div class="form-group row">
+												<div class="col-md-12">
+													<label for="tablecriacaoPortal">Parâmetros da API</label>
+													<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoPortal" id="tablecriacaoPortal"
+													nodeletebutton="false" addbuttonclass="btn btn-primary">
+													   <thead>
+														   <tr>
+															   <td>
+																   <b>Descrição</b>
+															   </td>
+															   <td>
+																   <b>ID Zendesk</b>
+															   </td>
+															   <td>
+																<b>VALUE Zendesk</b>
+															</td>
+														   </tr>
+													   </thead>
+													   <tbody>
+														   <tr>
+															   <td>
+																   <input type="text" class="form-control" name="tablecriacaoPortaldescricao" id="tablecriacaoPortaldescricao">
+															   </td>
+															   <td>
+																   <input type="text" class="form-control" name="tablecriacaoPortalidzendesk" id="tablecriacaoPortalidzendesk" >
+															   </td>
+															   <td>
+																<input type="text" class="form-control" name="tablecriacaoPortalvaluezendesk" id="tablecriacaoPortalvaluezendesk" >
+															</td>
+															</td>
+														   </tr>
+													   </tbody>
+												   </table>
+
+												</div>
+
+											</div>
 
 										</div>
 									</div>
@@ -285,11 +351,7 @@
 
 
 											<div class="form-group row">
-												<div class="col-md-3">
-													<label for="criacaoCorgrupo">Grupo (Zendesk):</label>
-													<select class="form-control" id="criacaoEstruturagrupo" name="criacaoEstruturagrupo"></select>
-												</div>
-
+												
 												<div class="col-md-3">
 													<label for="criacaoCortitulo">Título do Ticket:</label>
 													<input class="form-control" id="criacaoEstruturatitulo" name="criacaoEstruturatitulo"></input>
@@ -310,12 +372,51 @@
 												<div class="col-md-9">
 													<label for="criacaoEstruturdescricao">Descrição do Ticket:</label>
 												
-													<textarea rows="4" id="criacaoEstruturadescricao" name="criacaoEstruturadescricao" class="form-control" >												
-												    </textarea>
+													<textarea rows="4" id="criacaoEstruturadescricao" name="criacaoEstruturadescricao" class="form-control" ></textarea>
 
 												</div>
 
 											</div>
+
+											<div class="form-group row">
+												<div class="col-md-12">
+													<label for="tablecriacaoEstrutura">Parâmetros da API</label>
+													<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoEstrutura" id="tablecriacaoEstrutura"
+													nodeletebutton="false" addbuttonclass="btn btn-primary">
+													   <thead>
+														   <tr>
+															   <td>
+																   <b>Descrição</b>
+															   </td>
+															   <td>
+																   <b>ID Zendesk</b>
+															   </td>
+															   <td>
+																<b>VALUE Zendesk</b>
+															</td>
+														   </tr>
+													   </thead>
+													   <tbody>
+														   <tr>
+															   <td>
+																   <input type="text" class="form-control" name="tablecriacaoEstdescricao" id="tablecriacaoEstdescricao">
+															   </td>
+															   <td>
+																   <input type="text" class="form-control" name="tablecriacaoEstidzendesk" id="tablecriacaoEstidzendesk" >
+															   </td>
+															   <td>
+																<input type="text" class="form-control" name="tablecriacaoEstvaluezendesk" id="tablecriacaoEstvaluezendesk" >
+															</td>
+															</td>
+														   </tr>
+													   </tbody>
+												   </table>
+
+												</div>
+
+											</div>	
+
+
 
 
 										</div>
@@ -331,11 +432,7 @@
 
 
 											<div class="form-group row">
-												<div class="col-md-3">
-													<label for="criacaoCorgrupo">Grupo (Zendesk):</label>
-													<select class="form-control" id="criacaoFornecedorgrupo" name="criacaoFornecedorgrupo"></select>
-												</div>
-
+											
 												<div class="col-md-3">
 													<label for="criacaoCortitulo">Título do Ticket:</label>
 													<input class="form-control" id="criacaoFornecedortitulo" name="criacaoFornecedortitulo"></input>
@@ -356,12 +453,48 @@
 												<div class="col-md-9">
 													<label for="criacaoFornecedordescricao">Descrição do Ticket:</label>
 												
-													<textarea rows="4" id="criacaoFornecedordescricao" name="criacaoFornecedordescricao" class="form-control" >												
-												    </textarea>
+													<textarea rows="4" id="criacaoFornecedordescricao" name="criacaoFornecedordescricao" class="form-control" ></textarea>
 
 												</div>
 
 											</div>
+											<div class="form-group row">
+												<div class="col-md-12">
+													<label for="tablecriacaoFornecedor">Parâmetros da API</label>
+													<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoFornecedor" id="tablecriacaoFornecedor"
+													nodeletebutton="false" addbuttonclass="btn btn-primary">
+													   <thead>
+														   <tr>
+															   <td>
+																   <b>Descrição</b>
+															   </td>
+															   <td>
+																   <b>ID Zendesk</b>
+															   </td>
+															   <td>
+																<b>VALUE Zendesk</b>
+															</td>
+														   </tr>
+													   </thead>
+													   <tbody>
+														   <tr>
+															   <td>
+																   <input type="text" class="form-control" name="tablecriacaoFordescricao" id="tablecriacaoFordescricao">
+															   </td>
+															   <td>
+																   <input type="text" class="form-control" name="tablecriacaoForidzendesk" id="tablecriacaoForidzendesk" >
+															   </td>
+															   <td>
+																<input type="text" class="form-control" name="tablecriacaoForvaluezendesk" id="tablecriacaoForvaluezendesk" >
+															</td>
+															</td>
+														   </tr>
+													   </tbody>
+												   </table>
+
+												</div>
+
+											</div>	
 
 
 										</div>

@@ -69,7 +69,23 @@ function solicitacaoEmailcoporativo() {
 function solicitacaoCodigoCRM() {
 
 	var access_token =	retornaTokenAccesstoken();
-	
+	var configuracaoFilho = {};
+	configuracaoFilho.colunas = [];
+	configuracaoFilho.colunas.push("tablecriacaoCordescricao");
+	configuracaoFilho.colunas.push("tablecriacaoCoridzendesk");
+	configuracaoFilho.colunas.push("tablecriacaoCorvaluezendesk");
+	configuracaoFilho.dataset = "dscanaisOnboardParametrizacao";
+	configuracaoFilho.tabela = "tablecriacaoCor";
+	configuracaoFilho.where = [];
+
+	var tablecriacaoCor = DatasetFactory.getDataset("dsCanaistablefilhos",[JSON.stringify(configuracaoFilho)],null ,null);
+
+	var api = '"custom_fields":[';
+	for (var i = 0; i < tablecriacaoCor.rowsCount; i++) {
+		api += '{ "id": "' + tablecriacaoCor.getValue(i, configuracaoFilho.colunas[1]) + '", "value" : "' + tablecriacaoCor.getValue(i, configuracaoFilho.colunas[2]) + '"},';
+	}
+	api = api.substring(0,api.length-1);
+	api += ']';
 	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
 	var mensagem = "";
 	mensagem += "Razão Social: " +  hAPI.getCardValue("razaoSocial");
@@ -84,7 +100,7 @@ function solicitacaoCodigoCRM() {
 	mensagem += " Código da unidade Responsável: " +  hAPI.getCardValue("cdUnidadeResponsavel");
 	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.USUARIO_CRM_VENDAS + "&thread=2&current=" + Activity.CRIACAO_COD_CRM;
 	
-	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoCortitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoCortitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoCorstatus") +'","group_id":41198947,"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
+	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoCortitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoCortitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoCorstatus") +'",' + api+ ',"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
 
 
 	var headers = [];
@@ -105,15 +121,23 @@ function solicitacaoCodigoCRM() {
 function solicitacaoInclusaoPortal() {
 
 	var access_token =	retornaTokenAccesstoken();
-	var dsCanaistableQuadroSocietario = DatasetFactory.getDataset("dsCanaistableQuadroSocietario", hAPI.getCardValue("token"), hAPI.getCardValue("token"), null);
+	var configuracaoFilho = {};
+	configuracaoFilho.colunas = [];
+	configuracaoFilho.colunas.push("cpfSocio");
+	configuracaoFilho.dataset = "CanaisOnBoard2";
+	configuracaoFilho.tabela = "tableQuadroSocietario";
+	configuracaoFilho.where = [];
+	configuracaoFilho.where.push({ name : "token" , value1: "" + hAPI.getCardValue("token"), value2: "" + hAPI.getCardValue("token")});
+
 	
+	var dsCanaistableQuadroSocietario =  DatasetFactory.getDataset("dsCanaistablefilhos",[JSON.stringify(configuracaoFilho)],null ,null);
 	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
 	var mensagem = "";
-	mensagem += "Solicito a inclusão do e-mail:'" + dsCanaistableQuadroSocietario.getValue(0, "cpfSocio");
-	mensagem += " CPF: '" +  hAPI.getCardValue("cpfSocio___1") + "'";
+	mensagem += "Solicito a inclusão do e-mail:'" + hAPI.getCardValue("sugestaoEmail") + "'";
+	mensagem += " CPF: '" +  dsCanaistableQuadroSocietario.getValue(0, "cpfSocio") + "'";
 	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_CHAMADOS + "&thread=3&current=" + Activity.PORTAL_CLIENTE;
 	
-	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoPortaltitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoPortaltitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoPortalstatus") +'","group_id":41198947,"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
+	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoPortaltitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoPortaltitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoPortalstatus") +'","external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
 
 
 	var headers = [];
@@ -134,7 +158,22 @@ function solicitacaoInclusaoPortal() {
 function solicitacaoCRMEstrutura() {
 
 	var access_token =	retornaTokenAccesstoken();
+	var configuracaoFilho = {};
+	configuracaoFilho.colunas = [];
+	configuracaoFilho.colunas.push("tablecriacaoEstdescricao");
+	configuracaoFilho.colunas.push("tablecriacaoEstidzendesk");
+	configuracaoFilho.colunas.push("tablecriacaoEstvaluezendesk");
+	configuracaoFilho.dataset = "dscanaisOnboardParametrizacao";
+	configuracaoFilho.tabela = "tablecriacaoEstrutura";
+	configuracaoFilho.where = [];
 	
+	var tablecriacaoEstrutura = DatasetFactory.getDataset("dsCanaistablefilhos",[JSON.stringify(configuracaoFilho)],null ,null);
+	var api = '"custom_fields":[';
+	for (var i = 0; i < tablecriacaoEstrutura.rowsCount; i++) {
+		api += '{ "id": "' + tablecriacaoEstrutura.getValue(i, configuracaoFilho.colunas[1]) + '", "value" : "' + tablecriacaoEstrutura.getValue(i, configuracaoFilho.colunas[2]) + '"},';
+	}
+	api = api.substring(0,api.length-1);
+	api += ']';
 	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
 	var mensagem = "";
 	if (hAPI.getCardValue("tipoSolicMaster") == "master" &&  hAPI.getCardValue("slVinculoMaster") == "nao" ){
@@ -169,7 +208,7 @@ function solicitacaoCRMEstrutura() {
 
 	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_CHAMADOS + "&thread=2&current=" + Activity.USUARIO_CRM_VENDAS;
 	
-	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoEstruturatitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoEstruturatitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoEstruturastatus") +'","group_id":41198947,"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
+	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoEstruturatitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoEstruturatitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoEstruturastatus") +'",' + api +',"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
 
 
 	var headers = [];
@@ -189,6 +228,20 @@ function solicitacaoCRMEstrutura() {
 function solicitacaoFornecedor() {
 
 	var access_token =	retornaTokenAccesstoken();
+	var configuracaoFilho = {};
+	configuracaoFilho.colunas = [];
+	configuracaoFilho.colunas.push("tablecriacaoFordescricao");
+	configuracaoFilho.colunas.push("tablecriacaoForidzendesk");
+	configuracaoFilho.colunas.push("tablecriacaoForvaluezendesk");
+	configuracaoFilho.dataset = "dscanaisOnboardParametrizacao";
+	configuracaoFilho.tabela = "tablecriacaoFornecedor";
+	configuracaoFilho.where = [];
+	
+	var tablecriacaoFornecedor =  DatasetFactory.getDataset("dsCanaistablefilhos",[JSON.stringify(configuracaoFilho)],null ,null);
+	var api = '"custom_fields":[';
+	for (var i = 0; i < tablecriacaoFornecedor.rowsCount; i++) {
+		api += '{ "id": "' + tablecriacaoFornecedor.getValue(i, configuracaoFilho.colunas[1]) + '", "value" : "' + tablecriacaoFornecedor.getValue(i, configuracaoFilho.colunas[2]) + '"},';
+	}
 	
 	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
 	var mensagem = "";
@@ -200,7 +253,7 @@ function solicitacaoFornecedor() {
 	mensagem += " E-mail para recibimento de relatório de comissões: " +  hAPI.getCardValue("emailRecebimentoRelatrio");
 	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_CHAMADOS + "&thread=4&current=" + Activity.CADASTRO_FORNECEDOR;
 	
-	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoFornecedortitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoFornecedortitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoFornecedorstatus") +'","group_id":41198947,"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
+	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoFornecedortitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoFornecedortitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoFornecedorstatus") +'",' + api +',external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
 
 
 	var headers = [];
