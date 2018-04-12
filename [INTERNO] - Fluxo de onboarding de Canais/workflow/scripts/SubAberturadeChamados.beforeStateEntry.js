@@ -7,19 +7,20 @@ function beforeStateEntry(sequenceId) {
 		solicitacaoEmailcoporativo();
 	}
 
-	if (sequenceId == Activity.CRIACAO_COD_CRM) {
+	log.error("@SubAberturadeChamados  criacaoCoridticket'" + 	hAPI.getCardValue("criacaoCoridticket")+ "'" );
+	if (sequenceId == Activity.CRIACAO_COD_CRM && hAPI.getCardValue("criacaoCoridticket") == "") {
 		solicitacaoCodigoCRM();
 	}
 
-	if (sequenceId == Activity.PORTAL_CLIENTE) {
+	if (sequenceId == Activity.PORTAL_CLIENTE  && hAPI.getCardValue("criacaoPortalidticket") == "" ) {
 		solicitacaoInclusaoPortal();
 	}
 
-	if (sequenceId == Activity.USUARIO_CRM_VENDAS) {
+	if (sequenceId == Activity.USUARIO_CRM_VENDAS && hAPI.getCardValue("criacaoEstruturaidticket") == "") {
 		solicitacaoCRMEstrutura();
 	}
 
-	if (sequenceId == Activity.CADASTRO_FORNECEDOR) {
+	if (sequenceId == Activity.CADASTRO_FORNECEDOR && hAPI.getCardValue("criacaoCoridticket") == "" ) {
 		solicitacaoFornecedor();
 	}
 
@@ -105,9 +106,12 @@ function solicitacaoCodigoCRM() {
 
 	var headers = [];
 	var method = "POST";
+	var authString = new java.lang.String(retornaParametrizacao("basicApizendesklogin")+":"+retornaParametrizacao("basicApizendeskpassword"));
+	var bytes = authString.getBytes();
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);
 	headers.push({ name: "Content-Type", key : "application/json"});
 	headers.push({ name: "charset", key : "utf-8"});
-	headers.push({ name: "Authorization-zendesk", key : "Basic " + "bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw=="});
+	headers.push({ name: "Authorization-zendesk", key : "Basic " + authEnc});
 	headers.push({ name: "Authorization", key : "Bearer " + access_token});
 
 
@@ -120,7 +124,7 @@ function solicitacaoCodigoCRM() {
 }
 function solicitacaoInclusaoPortal() {
 
-	var access_token =	retornaTokenAccesstoken();
+	
 	var configuracaoFilho = {};
 	configuracaoFilho.colunas = [];
 	configuracaoFilho.colunas.push("cpfSocio");
@@ -134,17 +138,21 @@ function solicitacaoInclusaoPortal() {
 	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
 	var mensagem = "";
 	mensagem += "Solicito a inclusão do e-mail:'" + hAPI.getCardValue("sugestaoEmail") + "'";
-	mensagem += " CPF: '" +  dsCanaistableQuadroSocietario.getValue(0, "cpfSocio") + "'";
+//	mensagem += " CPF: '" +  dsCanaistableQuadroSocietario.getValue(0, "cpfSocio") + "'";
+	
 	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_CHAMADOS + "&thread=3&current=" + Activity.PORTAL_CLIENTE;
 	
 	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoPortaltitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoPortaltitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoPortalstatus") +'","external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
 
-
+	var access_token =	retornaTokenAccesstoken();
 	var headers = [];
 	var method = "POST";
+	var authString = new java.lang.String(retornaParametrizacao("basicApizendesklogin")+":"+retornaParametrizacao("basicApizendeskpassword"));
+	var bytes = authString.getBytes();
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);
 	headers.push({ name: "Content-Type", key : "application/json"});
 	headers.push({ name: "charset", key : "utf-8"});
-	headers.push({ name: "Authorization-zendesk", key : "Basic " + "bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw=="});
+	headers.push({ name: "Authorization-zendesk", key : "Basic " + authEnc});
 	headers.push({ name: "Authorization", key : "Bearer " + access_token});
 
 
@@ -213,9 +221,12 @@ function solicitacaoCRMEstrutura() {
 
 	var headers = [];
 	var method = "POST";
+	var authString = new java.lang.String(retornaParametrizacao("basicApizendesklogin")+":"+retornaParametrizacao("basicApizendeskpassword"));
+	var bytes = authString.getBytes();
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);
 	headers.push({ name: "Content-Type", key : "application/json"});
 	headers.push({ name: "charset", key : "utf-8"});
-	headers.push({ name: "Authorization-zendesk", key : "Basic " + "bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw=="});
+	headers.push({ name: "Authorization-zendesk", key : "Basic " + authEnc});
 	headers.push({ name: "Authorization", key : "Bearer " + access_token});
 
 
@@ -242,7 +253,8 @@ function solicitacaoFornecedor() {
 	for (var i = 0; i < tablecriacaoFornecedor.rowsCount; i++) {
 		api += '{ "id": "' + tablecriacaoFornecedor.getValue(i, configuracaoFilho.colunas[1]) + '", "value" : "' + tablecriacaoFornecedor.getValue(i, configuracaoFilho.colunas[2]) + '"},';
 	}
-	
+	api = api.substring(0,api.length-1);
+	api += ']';
 	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
 	var mensagem = "";
 	mensagem += "Razão Social: " +  hAPI.getCardValue("razaoSocial");
@@ -258,9 +270,12 @@ function solicitacaoFornecedor() {
 
 	var headers = [];
 	var method = "POST";
+	var authString = new java.lang.String(retornaParametrizacao("basicApizendesklogin")+":"+retornaParametrizacao("basicApizendeskpassword"));
+	var bytes = authString.getBytes();
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);
 	headers.push({ name: "Content-Type", key : "application/json"});
 	headers.push({ name: "charset", key : "utf-8"});
-	headers.push({ name: "Authorization-zendesk", key : "Basic " + "bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw=="});
+	headers.push({ name: "Authorization-zendesk", key : "Basic " + authEnc});
 	headers.push({ name: "Authorization", key : "Bearer " + access_token});
 
 
@@ -344,10 +359,15 @@ function retornaTokenAccesstoken(){
 	var params = "grant_type=client_credentials";
 	var headers = [];
 	var method = "POST";
+	var authString = new java.lang.String(retornaParametrizacao("basicApimanagerlogin")+":"+retornaParametrizacao("basicApimanagerpassword"));
+	log.info("@SubAbeturadeChamados retornaParametrizacao('basicApimanagerlogin'):" + retornaParametrizacao("basicApimanagerlogin"));
+	log.info("@SubAbeturadeChamados retornaParametrizacao('basicApimanagerpassword'):" + retornaParametrizacao("basicApimanagerpassword"));
+	var bytes = authString.getBytes();
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);
 	headers.push({ name: "Content-Type", key : "application/x-www-form-urlencoded"});
 	headers.push({ name: "charset", key : "utf-8"});
 	headers.push({ name: "Accept", key : "*/*"});
-	headers.push({ name: "Authorization", key : "Basic MUZ5ZDNRUUVlVGVXZ1VmdUd4Y2Q3YnI5d1k0YTowS1lSN1hKU3pjWkJ5N1hKTF9BYjlQUUNLQkVh"});
+	headers.push({ name: "Authorization", key : "Basic " + authEnc});
 
 
 	var token = Rest(url, params, null, method, headers);

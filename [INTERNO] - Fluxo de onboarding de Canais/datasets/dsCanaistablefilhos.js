@@ -29,8 +29,8 @@ function createDataset(fields, constraints, sortFields) {
    
     //Cria a constraint para buscar os formulários ativos
     var cst = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
-
-
+    log.info("@dsCanaisTableFilhos fields.dataset:" + fields.dataset);
+    log.info("@dsCanaisTableFilhos fields.tabela:" + fields.tabela);
     
     constraint.push(cst);
 

@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>SubAberturadeChamados</processId>
-      <version>171</version>
+      <version>179</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>332</formId>
@@ -792,19 +792,20 @@ function beforeStateEntry(sequenceId) {&#xd;
 		solicitacaoEmailcoporativo();&#xd;
 	}&#xd;
 &#xd;
-	if (sequenceId == Activity.CRIACAO_COD_CRM) {&#xd;
+	log.error(&quot;@SubAberturadeChamados  criacaoCoridticket&apos;&quot; + 	hAPI.getCardValue(&quot;criacaoCoridticket&quot;)+ &quot;&apos;&quot; );&#xd;
+	if (sequenceId == Activity.CRIACAO_COD_CRM &amp;&amp; hAPI.getCardValue(&quot;criacaoCoridticket&quot;) == &quot;&quot;) {&#xd;
 		solicitacaoCodigoCRM();&#xd;
 	}&#xd;
 &#xd;
-	if (sequenceId == Activity.PORTAL_CLIENTE) {&#xd;
+	if (sequenceId == Activity.PORTAL_CLIENTE  &amp;&amp; hAPI.getCardValue(&quot;criacaoPortalidticket&quot;) == &quot;&quot; ) {&#xd;
 		solicitacaoInclusaoPortal();&#xd;
 	}&#xd;
 &#xd;
-	if (sequenceId == Activity.USUARIO_CRM_VENDAS) {&#xd;
+	if (sequenceId == Activity.USUARIO_CRM_VENDAS &amp;&amp; hAPI.getCardValue(&quot;criacaoEstruturaidticket&quot;) == &quot;&quot;) {&#xd;
 		solicitacaoCRMEstrutura();&#xd;
 	}&#xd;
 &#xd;
-	if (sequenceId == Activity.CADASTRO_FORNECEDOR) {&#xd;
+	if (sequenceId == Activity.CADASTRO_FORNECEDOR &amp;&amp; hAPI.getCardValue(&quot;criacaoCoridticket&quot;) == &quot;&quot; ) {&#xd;
 		solicitacaoFornecedor();&#xd;
 	}&#xd;
 &#xd;
@@ -890,9 +891,12 @@ function solicitacaoCodigoCRM() {&#xd;
 &#xd;
 	var headers = [];&#xd;
 	var method = &quot;POST&quot;;&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
+	var bytes = authString.getBytes();&#xd;
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
 	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
 	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
-	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + &quot;bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw==&quot;});&#xd;
+	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
 	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + access_token});&#xd;
 &#xd;
 &#xd;
@@ -905,31 +909,35 @@ function solicitacaoCodigoCRM() {&#xd;
 }&#xd;
 function solicitacaoInclusaoPortal() {&#xd;
 &#xd;
-	var access_token =	retornaTokenAccesstoken();&#xd;
+	&#xd;
 	var configuracaoFilho = {};&#xd;
 	configuracaoFilho.colunas = [];&#xd;
 	configuracaoFilho.colunas.push(&quot;cpfSocio&quot;);&#xd;
 	configuracaoFilho.dataset = &quot;CanaisOnBoard2&quot;;&#xd;
 	configuracaoFilho.tabela = &quot;tableQuadroSocietario&quot;;&#xd;
 	configuracaoFilho.where = [];&#xd;
-	configuracaoFilho.where.push({ name : &quot;token&quot; , value1: hAPI.getCardValue(&quot;token&quot;), value2: hAPI.getCardValue(&quot;token&quot;)});&#xd;
+	configuracaoFilho.where.push({ name : &quot;token&quot; , value1: &quot;&quot; + hAPI.getCardValue(&quot;token&quot;), value2: &quot;&quot; + hAPI.getCardValue(&quot;token&quot;)});&#xd;
 &#xd;
 	&#xd;
 	var dsCanaistableQuadroSocietario =  DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;,[JSON.stringify(configuracaoFilho)],null ,null);&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
 	mensagem += &quot;Solicito a inclusão do e-mail:&apos;&quot; + hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&apos;&quot;;&#xd;
-	mensagem += &quot; CPF: &apos;&quot; +  dsCanaistableQuadroSocietario.getValue(0, &quot;cpfSocio&quot;) + &quot;&apos;&quot;;&#xd;
+//	mensagem += &quot; CPF: &apos;&quot; +  dsCanaistableQuadroSocietario.getValue(0, &quot;cpfSocio&quot;) + &quot;&apos;&quot;;&#xd;
+	&#xd;
 	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=3&amp;current=&quot; + Activity.PORTAL_CLIENTE;&#xd;
 	&#xd;
 	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortalstatus&quot;) +&apos;&quot;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
 &#xd;
-&#xd;
+	var access_token =	retornaTokenAccesstoken();&#xd;
 	var headers = [];&#xd;
 	var method = &quot;POST&quot;;&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
+	var bytes = authString.getBytes();&#xd;
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
 	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
 	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
-	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + &quot;bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw==&quot;});&#xd;
+	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
 	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + access_token});&#xd;
 &#xd;
 &#xd;
@@ -998,9 +1006,12 @@ function solicitacaoCRMEstrutura() {&#xd;
 &#xd;
 	var headers = [];&#xd;
 	var method = &quot;POST&quot;;&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
+	var bytes = authString.getBytes();&#xd;
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
 	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
 	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
-	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + &quot;bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw==&quot;});&#xd;
+	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
 	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + access_token});&#xd;
 &#xd;
 &#xd;
@@ -1027,7 +1038,8 @@ function solicitacaoFornecedor() {&#xd;
 	for (var i = 0; i &lt; tablecriacaoFornecedor.rowsCount; i++) {&#xd;
 		api += &apos;{ &quot;id&quot;: &quot;&apos; + tablecriacaoFornecedor.getValue(i, configuracaoFilho.colunas[1]) + &apos;&quot;, &quot;value&quot; : &quot;&apos; + tablecriacaoFornecedor.getValue(i, configuracaoFilho.colunas[2]) + &apos;&quot;},&apos;;&#xd;
 	}&#xd;
-	&#xd;
+	api = api.substring(0,api.length-1);&#xd;
+	api += &apos;]&apos;;&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
 	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;);&#xd;
@@ -1043,9 +1055,12 @@ function solicitacaoFornecedor() {&#xd;
 &#xd;
 	var headers = [];&#xd;
 	var method = &quot;POST&quot;;&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
+	var bytes = authString.getBytes();&#xd;
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
 	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
 	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
-	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + &quot;bGVhbmRyb0Bha3RpZW5vdy5jb20vdG9rZW46RVNNa0VNRFladnRYMEVWSzBUSTVGRXYxYkgyWm5hbnUxZ3hxY29kUw==&quot;});&#xd;
+	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
 	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + access_token});&#xd;
 &#xd;
 &#xd;
@@ -1129,10 +1144,15 @@ function retornaTokenAccesstoken(){&#xd;
 	var params = &quot;grant_type=client_credentials&quot;;&#xd;
 	var headers = [];&#xd;
 	var method = &quot;POST&quot;;&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApimanagerlogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApimanagerpassword&quot;));&#xd;
+	log.info(&quot;@SubAbeturadeChamados retornaParametrizacao(&apos;basicApimanagerlogin&apos;):&quot; + retornaParametrizacao(&quot;basicApimanagerlogin&quot;));&#xd;
+	log.info(&quot;@SubAbeturadeChamados retornaParametrizacao(&apos;basicApimanagerpassword&apos;):&quot; + retornaParametrizacao(&quot;basicApimanagerpassword&quot;));&#xd;
+	var bytes = authString.getBytes();&#xd;
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
 	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/x-www-form-urlencoded&quot;});&#xd;
 	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
 	headers.push({ name: &quot;Accept&quot;, key : &quot;*/*&quot;});&#xd;
-	headers.push({ name: &quot;Authorization&quot;, key : &quot;Basic MUZ5ZDNRUUVlVGVXZ1VmdUd4Y2Q3YnI5d1k0YTowS1lSN1hKU3pjWkJ5N1hKTF9BYjlQUUNLQkVh&quot;});&#xd;
+	headers.push({ name: &quot;Authorization&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
 &#xd;
 &#xd;
 	var token = Rest(url, params, null, method, headers);&#xd;
@@ -1198,7 +1218,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>171</version>
+        <version>179</version>
         <linkSequence>29</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1209,7 +1229,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>171</version>
+        <version>179</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1220,7 +1240,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>171</version>
+        <version>179</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1231,7 +1251,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>171</version>
+        <version>179</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1242,7 +1262,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>171</version>
+        <version>179</version>
         <linkSequence>39</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1253,7 +1273,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>171</version>
+        <version>179</version>
         <linkSequence>39</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1264,7 +1284,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>171</version>
+        <version>179</version>
         <linkSequence>41</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1275,7 +1295,7 @@ process.instructions=&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SubAberturadeChamados</processId>
-        <version>171</version>
+        <version>179</version>
         <linkSequence>42</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
