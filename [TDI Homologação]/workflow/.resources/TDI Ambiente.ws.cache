@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_161" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>volume</string>
+   <array class="java.lang.String" length="1">
+    <void index="0">
+     <string>Default</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>expediente</string>
+   <array class="java.lang.String" length="5">
+    <void index="0">
+     <string>24/7 - testes e implantacoes janela</string>
+    </void>
+    <void index="1">
+     <string>Comercial</string>
+    </void>
+    <void index="2">
+     <string>Default</string>
+    </void>
+    <void index="3">
+     <string>horacorrida</string>
+    </void>
+    <void index="4">
+     <string>Zendesk</string>
+    </void>
+   </array>
+  </void>
+ </object>
+</java>

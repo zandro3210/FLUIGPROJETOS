@@ -1,3 +1,0 @@
-Server=1.6.2-EP9
-PluginFull>=1.5.7
-Plugin>=1.5.7

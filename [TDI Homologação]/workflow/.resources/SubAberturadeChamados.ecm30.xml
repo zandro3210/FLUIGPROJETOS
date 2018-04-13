@@ -1,0 +1,1312 @@
+<list>
+  <ProcessDefinition>
+    <processDefinitionPK>
+      <companyId>1</companyId>
+      <processId>SubAberturadeChamados</processId>
+    </processDefinitionPK>
+    <processDescription>SubAberturadeChamados</processDescription>
+    <instruction></instruction>
+    <active>true</active>
+    <publicProcess>false</publicProcess>
+    <volumeId>Default</volumeId>
+    <categoryId></categoryId>
+    <managerEngineAllocationId>Usuário</managerEngineAllocationId>
+    <managerEngineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</managerEngineAllocationConfiguration>
+    <snapshotFrequency>0</snapshotFrequency>
+    <baseDay>0</baseDay>
+    <baseMonth>0</baseMonth>
+    <periodId>Default</periodId>
+    <uniqueCardVersion>false</uniqueCardVersion>
+    <keyWord></keyWord>
+    <complementsLevel>1</complementsLevel>
+    <notifyRequisitionerComplements>true</notifyRequisitionerComplements>
+    <notifyManagerComplements>false</notifyManagerComplements>
+    <deadlineTime>0</deadlineTime>
+    <warningDeadlineTime>0</warningDeadlineTime>
+    <notifyAuthorityComplements>true</notifyAuthorityComplements>
+  </ProcessDefinition>
+  <ProcessDefinitionVersion>
+    <processDefinitionVersionPK>
+      <companyId>1</companyId>
+      <processId>SubAberturadeChamados</processId>
+      <version>179</version>
+    </processDefinitionVersionPK>
+    <versionDescription></versionDescription>
+    <formId>332</formId>
+    <editionMode>true</editionMode>
+    <updateAttachmentsVersion>false</updateAttachmentsVersion>
+    <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
+    <active>true</active>
+    <blockedVersion>false</blockedVersion>
+    <counterSign>false</counterSign>
+    <openInstances>0</openInstances>
+    <bpmnVersion>2</bpmnVersion>
+    <processStates/>
+    <favorito>false</favorito>
+    <inheritFormSecurity>false</inheritFormSecurity>
+    <mobileReady>false</mobileReady>
+  </ProcessDefinitionVersion>
+  <list>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </processStatePK>
+      <stateName>Início</stateName>
+      <stateDescription>Início</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>true</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>90</positionX>
+      <positionY>240</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>10</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>9</sequence>
+      </processStatePK>
+      <stateName>E-Mail Corporativo</stateName>
+      <stateDescription>E-Mail Corporativo</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>400</positionX>
+      <positionY>37</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId>Default</periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>11</sequence>
+      </processStatePK>
+      <stateName>Criação COD no CRM</stateName>
+      <stateDescription>Criação COD no CRM</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>400</positionX>
+      <positionY>134</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>13</sequence>
+      </processStatePK>
+      <stateName>Portal do Cliente</stateName>
+      <stateDescription>Portal do Cliente</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>400</positionX>
+      <positionY>231</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>15</sequence>
+      </processStatePK>
+      <stateName>Usuário CRM e EST. Vendas</stateName>
+      <stateDescription>Usuário CRM e EST. Vendas</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>600</positionX>
+      <positionY>130</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>23</sequence>
+      </processStatePK>
+      <stateName>Cadastro de Fornecedor</stateName>
+      <stateDescription>Cadastro de Fornecedor</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>400</positionX>
+      <positionY>340</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>26</sequence>
+      </processStatePK>
+      <stateName>Paralelo</stateName>
+      <stateDescription>Paralelo</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>false</automatic>
+      <positionX>230</positionX>
+      <positionY>220</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>3</stateType>
+      <bpmnType>126</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>27</sequence>
+      </processStatePK>
+      <stateName>Join</stateName>
+      <stateDescription>Join</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>false</automatic>
+      <positionX>730</positionX>
+      <positionY>220</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>4</stateType>
+      <bpmnType>127</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>21</sequence>
+      </processStatePK>
+      <stateName>Fim</stateName>
+      <stateDescription>Fim</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>880</positionX>
+      <positionY>240</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+  </list>
+  <list/>
+  <list>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>28</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>27</initialStateSequence>
+      <finalStateSequence>21</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>29</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>26</initialStateSequence>
+      <finalStateSequence>9</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>30</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>26</initialStateSequence>
+      <finalStateSequence>11</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>31</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>26</initialStateSequence>
+      <finalStateSequence>13</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>33</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>26</initialStateSequence>
+      <finalStateSequence>23</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>34</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>4</initialStateSequence>
+      <finalStateSequence>26</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>35</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>23</initialStateSequence>
+      <finalStateSequence>27</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>39</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>9</initialStateSequence>
+      <finalStateSequence>27</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>40</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>13</initialStateSequence>
+      <finalStateSequence>27</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>41</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>11</initialStateSequence>
+      <finalStateSequence>15</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <linkSequence>42</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>15</initialStateSequence>
+      <finalStateSequence>27</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+  </list>
+  <list/>
+  <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterProcessCreate</eventId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterProcessCreate(processId){&#xd;
+    log.info(&quot;@SubAberturadeChamados afterProcessCreate processId&quot; +  processId);&#xd;
+	hAPI.setCardValue(&quot;nrSubsolicitacao&quot;, processId);&#xd;
+&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>activity</eventId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>var PRD = &quot;https://wscorp.totvs.com.br&quot;;&#xd;
+var HML = &quot;http://spon010113223:8080/&quot;;&#xd;
+var SERVER = HML;&#xd;
+&#xd;
+var PRD_ZENDESK = &quot;https://wscorp.totvs.com.br&quot;;&#xd;
+var HML_ZENDESK = &quot;https://apimanager-homolog.totvs.com&quot;;&#xd;
+var SERVER_ZENDESK = HML_ZENDESK;&#xd;
+var Activity = {&#xd;
+	ZERO: 4,&#xd;
+	EMAIL_CORPORATIVO: 9,&#xd;
+	CRIACAO_COD_CRM: 11,&#xd;
+	PORTAL_CLIENTE: 13,&#xd;
+	USUARIO_CRM_VENDAS: 15,&#xd;
+	CADASTRO_FORNECEDOR: 23,&#xd;
+	JOIN_CHAMADOS: 27&#xd;
+}&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>onNotify</eventId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function onNotify(subject, receivers, template, params){&#xd;
+	&#xd;
+&#xd;
+    log.info(&quot;@SubAberturadeChamados onNotify start&quot;);&#xd;
+&#xd;
+        try{&#xd;
+            //Monta mapa com parâmetros do template&#xd;
+            var parametros = new java.util.HashMap();&#xd;
+            for (i in params) { &#xd;
+                log.info(&quot;@SubAberturadeChamados params[i].name: &apos;&quot; + params[i].name + &quot;&apos; params[i].value: &apos;&quot; + params[i].value+ &quot;&apos;&quot;);&#xd;
+                parametros.put(params[i].name,  params[i].value);&#xd;
+            }&#xd;
+            &#xd;
+ &#xd;
+         &#xd;
+            //Este parâmetro é obrigatório e representa o assunto do e-mail&#xd;
+            parametros.put(&quot;subject&quot;, subject);&#xd;
+            log.info(&quot;@SubAberturadeChamados subject: &apos;&quot; + subject + &quot;&apos;&quot;);&#xd;
+            //Monta lista de destinatários&#xd;
+            var destinatarios = new java.util.ArrayList();&#xd;
+&#xd;
+            &#xd;
+            for (i in receivers) { &#xd;
+                log.info(&quot;@SubAberturadeChamados receivers[i]: &apos;&quot; + receivers[i] + &quot;&apos;&quot;);&#xd;
+                destinatarios.add(receivers[i]);&#xd;
+            }&#xd;
+          &#xd;
+            log.info(&quot;@SubAberturadeChamados template: &apos;&quot; + template + &quot;&apos;&quot;);&#xd;
+            //Envia e-mail&#xd;
+            notifier.notify(&quot;zandro3210&quot;, template, parametros, destinatarios, &quot;text/html&quot;);&#xd;
+         &#xd;
+        } catch(e){&#xd;
+            log.error(&quot;@SubAberturadeChamados erro:&quot; + e);&#xd;
+        }&#xd;
+    &#xd;
+	&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>param</eventId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>&#xd;
+&#xd;
+function retornaParametrizacao(){&#xd;
+    return  DatasetFactory.getDataset(&quot;dscanaisOnboardParametrizacao&quot;, null, null, null);   &#xd;
+}&#xd;
+&#xd;
+&#xd;
+function retornaParametrizacao(param){&#xd;
+&#xd;
+    var params = DatasetFactory.getDataset(&quot;dscanaisOnboardParametrizacao&quot;, null, null, null);&#xd;
+    return params.getValue(0, param);&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>ENG_LITERALS</eventId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>#Tue Mar 20 16:22:33 BRT 2018&#xd;
+process.category=&#xd;
+process.description=SubAberturadeChamados&#xd;
+process.instructions=&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>ESP_LITERALS</eventId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>#Tue Mar 20 16:22:33 BRT 2018&#xd;
+process.category=&#xd;
+process.description=SubAberturadeChamados&#xd;
+process.instructions=&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeStateEntry</eventId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>&#xd;
+&#xd;
+function beforeStateEntry(sequenceId) {&#xd;
+	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry sequenceId: &quot; + sequenceId);&#xd;
+	log.error(&quot;@SubAberturadeChamados  hAPI.getActualThread:&apos;&quot; + hAPI.getActualThread(&quot;7143&quot;, getValue(&quot;WKNumProces&quot;), 15) + &quot;&apos;&quot; );&#xd;
+	if (sequenceId == Activity.EMAIL_CORPORATIVO) {&#xd;
+		solicitacaoEmailcoporativo();&#xd;
+	}&#xd;
+&#xd;
+	log.error(&quot;@SubAberturadeChamados  criacaoCoridticket&apos;&quot; + 	hAPI.getCardValue(&quot;criacaoCoridticket&quot;)+ &quot;&apos;&quot; );&#xd;
+	if (sequenceId == Activity.CRIACAO_COD_CRM &amp;&amp; hAPI.getCardValue(&quot;criacaoCoridticket&quot;) == &quot;&quot;) {&#xd;
+		solicitacaoCodigoCRM();&#xd;
+	}&#xd;
+&#xd;
+	if (sequenceId == Activity.PORTAL_CLIENTE  &amp;&amp; hAPI.getCardValue(&quot;criacaoPortalidticket&quot;) == &quot;&quot; ) {&#xd;
+		solicitacaoInclusaoPortal();&#xd;
+	}&#xd;
+&#xd;
+	if (sequenceId == Activity.USUARIO_CRM_VENDAS &amp;&amp; hAPI.getCardValue(&quot;criacaoEstruturaidticket&quot;) == &quot;&quot;) {&#xd;
+		solicitacaoCRMEstrutura();&#xd;
+	}&#xd;
+&#xd;
+	if (sequenceId == Activity.CADASTRO_FORNECEDOR &amp;&amp; hAPI.getCardValue(&quot;criacaoCoridticket&quot;) == &quot;&quot; ) {&#xd;
+		solicitacaoFornecedor();&#xd;
+	}&#xd;
+&#xd;
+}&#xd;
+&#xd;
+function solicitacaoEmailcoporativo() {&#xd;
+	var subject = retornaParametrizacao(&quot;emailCortitulo&quot;);&#xd;
+	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry subject: &apos;&quot; + subject + &quot;&apos;&quot;);&#xd;
+	var template = &quot;abertura_de_chamados&quot;;&#xd;
+	var params = [];&#xd;
+&#xd;
+	var mensagem = &quot;&quot;;&#xd;
+	if (hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)&#xd;
+		mensagem += retornaParametrizacao(&quot;emailCormaster&quot;);&#xd;
+	else&#xd;
+		mensagem += retornaParametrizacao(&quot;emailCorfranquia&quot;);&#xd;
+&#xd;
+	mensagem += &quot;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;th&gt;Campos&lt;th/&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;th&gt;Valores&lt;th/&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;td&gt;Razão Social&lt;/td&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;td&gt;&quot; + hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;&lt;/td&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;td&gt;CNPJ&lt;/td&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;td&gt;&quot; + hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;&lt;/td&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;td&gt;Sugestão de E-mail&lt;/td&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;td&gt;&quot; + hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&lt;/td&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
+	mensagem += &quot;&lt;/table&gt;&quot;;&#xd;
+&#xd;
+	var url = &quot;&lt;a style=&apos;color:red;&apos; href=&apos;&quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=1&amp;current=&quot; + Activity.EMAIL_CORPORATIVO  +&quot;&apos;&gt;Por favor após terminar atividade clique aqui &lt;/a&gt;&lt;br /&gt;&quot;;&#xd;
+	params.push({ name: &quot;TITULO&quot;, value: &quot;E-mail Corporativo - Fluxo onBoard&quot; });&#xd;
+	params.push({ name: &quot;MENSAGEM&quot;, value: mensagem });&#xd;
+	params.push({ name: &quot;URL&quot;, value: url });&#xd;
+&#xd;
+	var receivers = [];&#xd;
+	receivers.push(retornaParametrizacao(&quot;emailCoremail&quot;));&#xd;
+	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry onNotify() &quot;);&#xd;
+	onNotify(subject, receivers, template, params, &quot;text/html&quot;);&#xd;
+}&#xd;
+function solicitacaoCodigoCRM() {&#xd;
+&#xd;
+	var access_token =	retornaTokenAccesstoken();&#xd;
+	var configuracaoFilho = {};&#xd;
+	configuracaoFilho.colunas = [];&#xd;
+	configuracaoFilho.colunas.push(&quot;tablecriacaoCordescricao&quot;);&#xd;
+	configuracaoFilho.colunas.push(&quot;tablecriacaoCoridzendesk&quot;);&#xd;
+	configuracaoFilho.colunas.push(&quot;tablecriacaoCorvaluezendesk&quot;);&#xd;
+	configuracaoFilho.dataset = &quot;dscanaisOnboardParametrizacao&quot;;&#xd;
+	configuracaoFilho.tabela = &quot;tablecriacaoCor&quot;;&#xd;
+	configuracaoFilho.where = [];&#xd;
+&#xd;
+	var tablecriacaoCor = DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;,[JSON.stringify(configuracaoFilho)],null ,null);&#xd;
+&#xd;
+	var api = &apos;&quot;custom_fields&quot;:[&apos;;&#xd;
+	for (var i = 0; i &lt; tablecriacaoCor.rowsCount; i++) {&#xd;
+		api += &apos;{ &quot;id&quot;: &quot;&apos; + tablecriacaoCor.getValue(i, configuracaoFilho.colunas[1]) + &apos;&quot;, &quot;value&quot; : &quot;&apos; + tablecriacaoCor.getValue(i, configuracaoFilho.colunas[2]) + &apos;&quot;},&apos;;&#xd;
+	}&#xd;
+	api = api.substring(0,api.length-1);&#xd;
+	api += &apos;]&apos;;&#xd;
+	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
+	var mensagem = &quot;&quot;;&#xd;
+	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;);&#xd;
+	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;);&#xd;
+	mensagem += &quot; Endereço Completo: &quot; +  hAPI.getCardValue(&quot;endereco&quot;);&#xd;
+	mensagem += &quot; Cidade: &quot; +  hAPI.getCardValue(&quot;nmMunicipio&quot;);&#xd;
+	mensagem += &quot; Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;);&#xd;
+	mensagem += &quot; Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;);&#xd;
+	mensagem += &quot; Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;);&#xd;
+	mensagem += &quot; E-mail: &quot; +  ( hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot; ?  hAPI.getCardValue(&quot;sugestaoEmail&quot;) : hAPI.getCardValue(&quot;email&quot;) );&#xd;
+	mensagem += &quot; Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;);&#xd;
+	mensagem += &quot; Código da unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;);&#xd;
+	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.USUARIO_CRM_VENDAS + &quot;&amp;thread=2&amp;current=&quot; + Activity.CRIACAO_COD_CRM;&#xd;
+	&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCorstatus&quot;) +&apos;&quot;,&apos; + api+ &apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
+&#xd;
+&#xd;
+	var headers = [];&#xd;
+	var method = &quot;POST&quot;;&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
+	var bytes = authString.getBytes();&#xd;
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
+	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
+	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
+	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
+	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + access_token});&#xd;
+&#xd;
+&#xd;
+	var criacaoCor = Rest(url, params, null,method, headers);&#xd;
+	log.info(&quot;@SubAbeturadeChamados RestPost criacaoCor.ticket.id:&quot; + criacaoCor.ticket.id);&#xd;
+	hAPI.setCardValue(&quot;criacaoCoridticket&quot;,criacaoCor.ticket.id)&#xd;
+	&#xd;
+&#xd;
+&#xd;
+}&#xd;
+function solicitacaoInclusaoPortal() {&#xd;
+&#xd;
+	&#xd;
+	var configuracaoFilho = {};&#xd;
+	configuracaoFilho.colunas = [];&#xd;
+	configuracaoFilho.colunas.push(&quot;cpfSocio&quot;);&#xd;
+	configuracaoFilho.dataset = &quot;CanaisOnBoard2&quot;;&#xd;
+	configuracaoFilho.tabela = &quot;tableQuadroSocietario&quot;;&#xd;
+	configuracaoFilho.where = [];&#xd;
+	configuracaoFilho.where.push({ name : &quot;token&quot; , value1: &quot;&quot; + hAPI.getCardValue(&quot;token&quot;), value2: &quot;&quot; + hAPI.getCardValue(&quot;token&quot;)});&#xd;
+&#xd;
+	&#xd;
+	var dsCanaistableQuadroSocietario =  DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;,[JSON.stringify(configuracaoFilho)],null ,null);&#xd;
+	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
+	var mensagem = &quot;&quot;;&#xd;
+	mensagem += &quot;Solicito a inclusão do e-mail:&apos;&quot; + hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&apos;&quot;;&#xd;
+//	mensagem += &quot; CPF: &apos;&quot; +  dsCanaistableQuadroSocietario.getValue(0, &quot;cpfSocio&quot;) + &quot;&apos;&quot;;&#xd;
+	&#xd;
+	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=3&amp;current=&quot; + Activity.PORTAL_CLIENTE;&#xd;
+	&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortalstatus&quot;) +&apos;&quot;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
+&#xd;
+	var access_token =	retornaTokenAccesstoken();&#xd;
+	var headers = [];&#xd;
+	var method = &quot;POST&quot;;&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
+	var bytes = authString.getBytes();&#xd;
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
+	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
+	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
+	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
+	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + access_token});&#xd;
+&#xd;
+&#xd;
+	var criacaoCor = Rest(url, params, null,method, headers);&#xd;
+	log.info(&quot;@SubAbeturadeChamados RestPost criacaoCor.ticket.id:&quot; + criacaoCor.ticket.id);&#xd;
+	hAPI.setCardValue(&quot;criacaoPortalidticket&quot;,criacaoCor.ticket.id)&#xd;
+	&#xd;
+&#xd;
+&#xd;
+}&#xd;
+function solicitacaoCRMEstrutura() {&#xd;
+&#xd;
+	var access_token =	retornaTokenAccesstoken();&#xd;
+	var configuracaoFilho = {};&#xd;
+	configuracaoFilho.colunas = [];&#xd;
+	configuracaoFilho.colunas.push(&quot;tablecriacaoEstdescricao&quot;);&#xd;
+	configuracaoFilho.colunas.push(&quot;tablecriacaoEstidzendesk&quot;);&#xd;
+	configuracaoFilho.colunas.push(&quot;tablecriacaoEstvaluezendesk&quot;);&#xd;
+	configuracaoFilho.dataset = &quot;dscanaisOnboardParametrizacao&quot;;&#xd;
+	configuracaoFilho.tabela = &quot;tablecriacaoEstrutura&quot;;&#xd;
+	configuracaoFilho.where = [];&#xd;
+	&#xd;
+	var tablecriacaoEstrutura = DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;,[JSON.stringify(configuracaoFilho)],null ,null);&#xd;
+	var api = &apos;&quot;custom_fields&quot;:[&apos;;&#xd;
+	for (var i = 0; i &lt; tablecriacaoEstrutura.rowsCount; i++) {&#xd;
+		api += &apos;{ &quot;id&quot;: &quot;&apos; + tablecriacaoEstrutura.getValue(i, configuracaoFilho.colunas[1]) + &apos;&quot;, &quot;value&quot; : &quot;&apos; + tablecriacaoEstrutura.getValue(i, configuracaoFilho.colunas[2]) + &apos;&quot;},&apos;;&#xd;
+	}&#xd;
+	api = api.substring(0,api.length-1);&#xd;
+	api += &apos;]&apos;;&#xd;
+	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
+	var mensagem = &quot;&quot;;&#xd;
+	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;nao&quot; ){&#xd;
+		mensagem += &quot; Código da Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;);&#xd;
+		mensagem += &quot; Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;);&#xd;
+	}&#xd;
+	if (  hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;franquia&quot;   || (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;sim&quot;)){&#xd;
+		mensagem += &quot; Unidade de Venda: &quot; +  hAPI.getCardValue(&quot;criacaoCoridUnidadeVenda&quot;);&#xd;
+	}&#xd;
+&#xd;
+	mensagem += &quot; Código do Gerente: &quot; +  hAPI.getCardValue(&quot;cdGerente&quot;);&#xd;
+	mensagem += &quot; Nome do Gerente: &quot; +  hAPI.getCardValue(&quot;nmGerente&quot;);&#xd;
+	mensagem += &quot; Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;);&#xd;
+	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;);&#xd;
+	mensagem += &quot; Endereço Completo: &quot; +  hAPI.getCardValue(&quot;endereco&quot;);&#xd;
+	mensagem += &quot; Cidade: &quot; +  hAPI.getCardValue(&quot;nmMunicipio&quot;);&#xd;
+	mensagem += &quot; Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;);&#xd;
+	mensagem += &quot; Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;);&#xd;
+	mensagem += &quot; Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;);&#xd;
+	mensagem += &quot; E-mail Partner: &quot; +   hAPI.getCardValue(&quot;sugestaoEmail&quot;);&#xd;
+    mensagem += &quot; Tipo AGN: &quot;;&#xd;
+	&#xd;
+	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;sim&quot; ){&#xd;
+		mensagem += &quot; Master PVF&quot;;&#xd;
+	}&#xd;
+	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;nao&quot; ){&#xd;
+		mensagem += &quot; PVF&quot;;&#xd;
+	}&#xd;
+	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;franquia&quot;){&#xd;
+		mensagem += hAPI.getCardValue(&quot;tpContrato&quot;);&#xd;
+	}&#xd;
+&#xd;
+	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=2&amp;current=&quot; + Activity.USUARIO_CRM_VENDAS;&#xd;
+	&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturastatus&quot;) +&apos;&quot;,&apos; + api +&apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
+&#xd;
+&#xd;
+	var headers = [];&#xd;
+	var method = &quot;POST&quot;;&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
+	var bytes = authString.getBytes();&#xd;
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
+	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
+	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
+	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
+	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + access_token});&#xd;
+&#xd;
+&#xd;
+	var criacaoCor = Rest(url, params, null,method, headers);&#xd;
+	log.info(&quot;@SubAbeturadeChamados RestPost criacaoCor.ticket.id:&quot; + criacaoCor.ticket.id);&#xd;
+	hAPI.setCardValue(&quot;criacaoEstruturaidticket&quot;,criacaoCor.ticket.id)&#xd;
+&#xd;
+&#xd;
+}&#xd;
+function solicitacaoFornecedor() {&#xd;
+&#xd;
+	var access_token =	retornaTokenAccesstoken();&#xd;
+	var configuracaoFilho = {};&#xd;
+	configuracaoFilho.colunas = [];&#xd;
+	configuracaoFilho.colunas.push(&quot;tablecriacaoFordescricao&quot;);&#xd;
+	configuracaoFilho.colunas.push(&quot;tablecriacaoForidzendesk&quot;);&#xd;
+	configuracaoFilho.colunas.push(&quot;tablecriacaoForvaluezendesk&quot;);&#xd;
+	configuracaoFilho.dataset = &quot;dscanaisOnboardParametrizacao&quot;;&#xd;
+	configuracaoFilho.tabela = &quot;tablecriacaoFornecedor&quot;;&#xd;
+	configuracaoFilho.where = [];&#xd;
+	&#xd;
+	var tablecriacaoFornecedor =  DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;,[JSON.stringify(configuracaoFilho)],null ,null);&#xd;
+	var api = &apos;&quot;custom_fields&quot;:[&apos;;&#xd;
+	for (var i = 0; i &lt; tablecriacaoFornecedor.rowsCount; i++) {&#xd;
+		api += &apos;{ &quot;id&quot;: &quot;&apos; + tablecriacaoFornecedor.getValue(i, configuracaoFilho.colunas[1]) + &apos;&quot;, &quot;value&quot; : &quot;&apos; + tablecriacaoFornecedor.getValue(i, configuracaoFilho.colunas[2]) + &apos;&quot;},&apos;;&#xd;
+	}&#xd;
+	api = api.substring(0,api.length-1);&#xd;
+	api += &apos;]&apos;;&#xd;
+	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
+	var mensagem = &quot;&quot;;&#xd;
+	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;);&#xd;
+	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;);&#xd;
+	mensagem += &quot; Banco: &quot; +  hAPI.getCardValue(&quot;banco&quot;);&#xd;
+	mensagem += &quot; Agência: &quot; +  hAPI.getCardValue(&quot;agencia&quot;);&#xd;
+	mensagem += &quot; Conta: &quot; +  hAPI.getCardValue(&quot;conta&quot;);&#xd;
+	mensagem += &quot; E-mail para recibimento de relatório de comissões: &quot; +  hAPI.getCardValue(&quot;emailRecebimentoRelatrio&quot;);&#xd;
+	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=4&amp;current=&quot; + Activity.CADASTRO_FORNECEDOR;&#xd;
+	&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedorstatus&quot;) +&apos;&quot;,&apos; + api +&apos;,external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
+&#xd;
+&#xd;
+	var headers = [];&#xd;
+	var method = &quot;POST&quot;;&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
+	var bytes = authString.getBytes();&#xd;
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
+	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
+	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
+	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
+	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + access_token});&#xd;
+&#xd;
+&#xd;
+	var criacaoCor = Rest(url, params, null,method, headers);&#xd;
+	log.info(&quot;@SubAbeturadeChamados RestPost criacaoCor.ticket.id:&quot; + criacaoCor.ticket.id);&#xd;
+	hAPI.setCardValue(&quot;criacaoFornecedoridticket&quot;,criacaoCor.ticket.id)&#xd;
+&#xd;
+&#xd;
+}&#xd;
+&#xd;
+&#xd;
+function Rest(url, params, login, method, headers) {&#xd;
+		try {&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost url:&quot; + url);&#xd;
+			var wurl =  new java.net.URL(url);&#xd;
+		&#xd;
+			var conn = wurl.openConnection();&#xd;
+&#xd;
+			&#xd;
+			if (method == &quot;POST&quot;)&#xd;
+			    conn.setDoOutput(true);&#xd;
+&#xd;
+			conn.setRequestMethod(method);&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost method:&quot; + method);&#xd;
+			conn.setInstanceFollowRedirects(false);&#xd;
+&#xd;
+			for (i = 0; i &lt; headers.length; i++) { &#xd;
+				log.info(&quot;@SubAbeturadeChamados RestPost headers[i].name:&apos;&quot; + headers[i].name + &quot;&apos; headers[i].key:&apos;&quot; + headers[i].key + &quot;&apos;&quot;);&#xd;
+				conn.setRequestProperty( headers[i].name, headers[i].key);&#xd;
+			}&#xd;
+					&#xd;
+			if (method == &quot;POST&quot;){&#xd;
+				conn.setUseCaches(false);&#xd;
+				var writer = new java.io.OutputStreamWriter(conn.getOutputStream());&#xd;
+				log.info(&quot;@SubAbeturadeChamados RestPost conn.getOutputStream():&apos;&quot; + conn.getOutputStream()+&quot;&apos;&quot;);&#xd;
+			}&#xd;
+			&#xd;
+&#xd;
+			if (params){&#xd;
+				writer.write(params);&#xd;
+				log.info(&quot;@SubAbeturadeChamados RestPost params:&apos;&quot; + params +&quot;&apos;&quot;);&#xd;
+				writer.flush();&#xd;
+			}&#xd;
+		&#xd;
+		&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost conn.getResponseCode():&apos;&quot; + conn.getResponseCode()+&quot;&apos;&quot;);&#xd;
+			var line;&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost conn.getInputStream():&apos;&quot; + conn.getInputStream()+&quot;&apos;&quot;);&#xd;
+			var reader = new java.io.BufferedReader(new java.io.InputStreamReader(conn.getInputStream()));&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost reader:&apos;&quot; + reader+&quot;&apos;&quot;);&#xd;
+&#xd;
+			var response = new java.lang.StringBuffer();&#xd;
+&#xd;
+			while ((line = reader.readLine()) != null) {&#xd;
+				log.info(&quot;@SubAbeturadeChamados RestPost line:&apos;&quot; + line+&quot;&apos;&quot;);&#xd;
+				response.append(line);&#xd;
+			}&#xd;
+			if (method == &quot;POST&quot;)&#xd;
+				writer.close();&#xd;
+&#xd;
+			reader.close();&#xd;
+&#xd;
+			return JSON.parse(response);&#xd;
+&#xd;
+&#xd;
+&#xd;
+		&#xd;
+		} catch (e) {&#xd;
+			log.error(&quot;@SubAbeturadeChamados RestPost erro: &quot; + e);&#xd;
+			return e;&#xd;
+		}&#xd;
+			&#xd;
+&#xd;
+}&#xd;
+function retornaTokenAccesstoken(){&#xd;
+	var url = SERVER_ZENDESK + &quot;/api/token&quot;;&#xd;
+	var params = &quot;grant_type=client_credentials&quot;;&#xd;
+	var headers = [];&#xd;
+	var method = &quot;POST&quot;;&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApimanagerlogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApimanagerpassword&quot;));&#xd;
+	log.info(&quot;@SubAbeturadeChamados retornaParametrizacao(&apos;basicApimanagerlogin&apos;):&quot; + retornaParametrizacao(&quot;basicApimanagerlogin&quot;));&#xd;
+	log.info(&quot;@SubAbeturadeChamados retornaParametrizacao(&apos;basicApimanagerpassword&apos;):&quot; + retornaParametrizacao(&quot;basicApimanagerpassword&quot;));&#xd;
+	var bytes = authString.getBytes();&#xd;
+	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
+	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/x-www-form-urlencoded&quot;});&#xd;
+	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
+	headers.push({ name: &quot;Accept&quot;, key : &quot;*/*&quot;});&#xd;
+	headers.push({ name: &quot;Authorization&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
+&#xd;
+&#xd;
+	var token = Rest(url, params, null, method, headers);&#xd;
+&#xd;
+	log.info(&quot;@SubAbeturadeChamados RestPost token.access_token:&quot; + token.access_token);&#xd;
+&#xd;
+	return token.access_token;&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>POR_LITERALS</eventId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>#Tue Mar 20 16:22:33 BRT 2018&#xd;
+process.category=&#xd;
+process.description=SubAberturadeChamados&#xd;
+process.instructions=&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+  </list>
+  <list/>
+  <list>
+    <SwimLane>
+      <color>FFFFFF</color>
+      <height>571</height>
+      <width>961</width>
+      <positionX>10</positionX>
+      <positionY>10</positionY>
+      <stateName>Abertura de Chamados</stateName>
+      <type>1</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>008080</color>
+      <height>571</height>
+      <width>931</width>
+      <positionX>40</positionX>
+      <positionY>10</positionY>
+      <stateName></stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </swimLanePK>
+    </SwimLane>
+  </list>
+  <list/>
+  <list/>
+  <list>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>179</version>
+        <linkSequence>29</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>260</positionX>
+      <positionY>72</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>179</version>
+        <linkSequence>30</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>260</positionX>
+      <positionY>169</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>179</version>
+        <linkSequence>33</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>260</positionX>
+      <positionY>373</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>179</version>
+        <linkSequence>35</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>759</positionX>
+      <positionY>375</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>179</version>
+        <linkSequence>39</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>670</positionX>
+      <positionY>72</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>179</version>
+        <linkSequence>39</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>759</positionX>
+      <positionY>72</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>179</version>
+        <linkSequence>41</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>506</positionX>
+      <positionY>173</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SubAberturadeChamados</processId>
+        <version>179</version>
+        <linkSequence>42</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>759</positionX>
+      <positionY>169</positionY>
+    </ProcessLinkBend>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+</list>
