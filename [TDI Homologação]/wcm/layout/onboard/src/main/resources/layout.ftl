@@ -193,7 +193,7 @@ var Activity = {
             var domain = window.location.origin + "/";
             var oauth = OAuth({
                 consumer: {
-                    'key': '987654321', // Consumer Key:*
+                    'key': 'homofluxoonboard', // Consumer Key:*
                     'secret': '123' // Consumer Secret
                 },
                 signature_method: 'HMAC-SHA1',
@@ -209,8 +209,8 @@ var Activity = {
             };
 
             var token = {
-                'key': 'a9b07478-ba0b-41cb-91b5-6b2cd56b6fd8', // Seu access token
-                'secret': '589e3730-c6ce-4a46-baa8-eed97ce126fc0f834f9e-521d-46a3-85e7-dcc14d672eb2' // Seu token secret
+                'key': 'f232bd45-782b-468f-b2ab-b520b8091811', // Seu access token
+                'secret': '1a1b05d1-768a-4dfa-a5dc-decee8c91bd244ec5e41-839f-42d0-a680-247988d8ad37' // Seu token secret
             }
 
 

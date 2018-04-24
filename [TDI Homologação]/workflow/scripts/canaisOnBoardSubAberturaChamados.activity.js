@@ -1,5 +1,5 @@
 var PRD = "https://wscorp.totvs.com.br";
-var HML = "http://spon010113223:8080/";
+var HML = "http://devfluigcp-01.cp.totvs.com.br/";
 var SERVER = HML;
 
 var PRD_ZENDESK = "https://wscorp.totvs.com.br";

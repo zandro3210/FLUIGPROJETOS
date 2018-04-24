@@ -10,8 +10,8 @@
     <publicProcess>true</publicProcess>
     <volumeId>Default</volumeId>
     <categoryId>Canais</categoryId>
-    <managerEngineAllocationId>Usuário</managerEngineAllocationId>
-    <managerEngineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</managerEngineAllocationConfiguration>
+    <managerEngineAllocationId>Papel</managerEngineAllocationId>
+    <managerEngineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</managerEngineAllocationConfiguration>
     <snapshotFrequency>0</snapshotFrequency>
     <baseDay>0</baseDay>
     <baseMonth>0</baseMonth>
@@ -29,10 +29,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Fluxo de onboarding de Canais</processId>
-      <version>25</version>
+      <version>77</version>
     </processDefinitionVersionPK>
-    <versionDescription></versionDescription>
-    <formId>307</formId>
+    <versionDescription>Nova Versão.</versionDescription>
+    <formId>5963899</formId>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>false</updateAttachmentsVersion>
     <controlsAttachmentsSecurity>true</controlsAttachmentsSecurity>
@@ -60,8 +60,8 @@
       <deadlineTime>0</deadlineTime>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardSolicitante&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>true</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -161,8 +161,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardFinanceiro&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -213,8 +213,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -265,8 +265,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -331,8 +331,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>687</positionX>
-      <positionY>405</positionY>
+      <positionX>690</positionX>
+      <positionY>390</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -471,8 +471,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -523,8 +523,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -627,8 +627,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -745,7 +745,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1040</positionX>
-      <positionY>398</positionY>
+      <positionY>379</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -780,8 +780,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;zandro3210&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -823,10 +823,60 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
+        <sequence>132</sequence>
+      </processStatePK>
+      <stateName>Cadastro no ERP Oracle</stateName>
+      <stateDescription>Cadastro no ERP Oracle</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>2260</positionX>
+      <positionY>370</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>1</version>
         <sequence>133</sequence>
       </processStatePK>
-      <stateName>Disponibilização de Treinamentos</stateName>
-      <stateDescription>Disponibilização de Treinamentos</stateDescription>
+      <stateName>Geração de ordem de vendas para compra de showroom</stateName>
+      <stateDescription>Geração de ordem de vendas para compra de showroom</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -846,8 +896,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>2120</positionX>
-      <positionY>530</positionY>
+      <positionX>2430</positionX>
+      <positionY>350</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -873,10 +923,10 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <sequence>137</sequence>
+        <sequence>134</sequence>
       </processStatePK>
-      <stateName>Validação dos treinamentos</stateName>
-      <stateDescription>Validação dos treinamentos</stateDescription>
+      <stateName>Cadastro  no Market Place</stateName>
+      <stateDescription>Cadastro  no Market Place</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -896,58 +946,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>1908</positionX>
-      <positionY>540</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>143</sequence>
-      </processStatePK>
-      <stateName>Libera CRM</stateName>
-      <stateDescription>Libera CRM</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>1464</positionX>
-      <positionY>492</positionY>
+      <positionX>2580</positionX>
+      <positionY>370</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -975,8 +975,8 @@
         <version>1</version>
         <sequence>144</sequence>
       </processStatePK>
-      <stateName>Libera Marketplace</stateName>
-      <stateDescription>Libera Marketplace</stateDescription>
+      <stateName>Disponibilização de Treinamentos</stateName>
+      <stateDescription>Disponibilização de Treinamentos</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -996,308 +996,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>1464</positionX>
-      <positionY>553</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>145</sequence>
-      </processStatePK>
-      <stateName>Libera PTF Canais</stateName>
-      <stateDescription>Libera PTF Canais</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>1464</positionX>
-      <positionY>624</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>162</sequence>
-      </processStatePK>
-      <stateName>Cadastro no Master e Liberação de acessos</stateName>
-      <stateDescription>Cadastro no Master e Liberação de acessos</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>860</positionX>
-      <positionY>680</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>163</sequence>
-      </processStatePK>
-      <stateName>Cadastro no portal de comissões Bematech</stateName>
-      <stateDescription>Cadastro no portal de comissões Bematech</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>1032</positionX>
-      <positionY>684</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>166</sequence>
-      </processStatePK>
-      <stateName>Cadastro no ERP Oracle</stateName>
-      <stateDescription>Cadastro no ERP Oracle</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>2340</positionX>
-      <positionY>297</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>168</sequence>
-      </processStatePK>
-      <stateName>Geração de ordem de vendas para compra de showroom</stateName>
-      <stateDescription>Geração de ordem de vendas para compra de showroom</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>2510</positionX>
-      <positionY>280</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>170</sequence>
-      </processStatePK>
-      <stateName>Cadastro no Market Place</stateName>
-      <stateDescription>Cadastro no Market Place</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>2640</positionX>
-      <positionY>297</positionY>
+      <positionX>2100</positionX>
+      <positionY>522</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -1394,8 +1094,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>668</positionX>
-      <positionY>450</positionY>
+      <positionX>671</positionX>
+      <positionY>435</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -1489,7 +1189,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1020</positionX>
-      <positionY>460</positionY>
+      <positionY>441</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -1511,7 +1211,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <sequence>178</sequence>
+        <sequence>128</sequence>
       </processStatePK>
       <stateName>Abertura dos Chamados</stateName>
       <stateDescription>Abertura dos Chamados</stateDescription>
@@ -1529,13 +1229,13 @@
       <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
       <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
       <transferAttachments>false</transferAttachments>
-      <subProcessId>SubAberturadeChamados</subProcessId>
+      <subProcessId>canaisOnBoardSubAberturaChamados</subProcessId>
       <formFolder>0</formFolder>
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>1992</positionX>
-      <positionY>156</positionY>
+      <positionX>2000</positionX>
+      <positionY>187</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -1621,8 +1321,8 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <automatic>true</automatic>
-      <positionX>903</positionX>
-      <positionY>389</positionY>
+      <positionX>900</positionX>
+      <positionY>380</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -1647,7 +1347,7 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>1230</positionX>
-      <positionY>382</positionY>
+      <positionY>363</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -1786,18 +1486,18 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <sequence>129</sequence>
+        <sequence>130</sequence>
       </processStatePK>
-      <stateName>Tipo de Canal?</stateName>
-      <stateDescription>Tipo de Canal?</stateDescription>
+      <stateName>Vende Bemach?</stateName>
+      <stateDescription>Vende Bemach?</stateDescription>
       <joint>false</joint>
       <initialState>false</initialState>
       <transferAttachments>false</transferAttachments>
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <automatic>true</automatic>
-      <positionX>2140</positionX>
-      <positionY>140</positionY>
+      <positionX>2280</positionX>
+      <positionY>160</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -1813,16 +1513,16 @@
         <version>1</version>
         <sequence>131</sequence>
       </processStatePK>
-      <stateName>Vende Bemach?</stateName>
-      <stateDescription>Vende Bemach?</stateDescription>
+      <stateName>Tipo de Canal?</stateName>
+      <stateDescription>Tipo de Canal?</stateDescription>
       <joint>false</joint>
       <initialState>false</initialState>
       <transferAttachments>false</transferAttachments>
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <automatic>true</automatic>
-      <positionX>2280</positionX>
-      <positionY>132</positionY>
+      <positionX>2190</positionX>
+      <positionY>170</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -1836,132 +1536,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <sequence>140</sequence>
-      </processStatePK>
-      <stateName>Canal Certicado?</stateName>
-      <stateDescription>Canal Certicado?</stateDescription>
-      <joint>false</joint>
-      <initialState>false</initialState>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <automatic>true</automatic>
-      <positionX>1770</positionX>
-      <positionY>530</positionY>
-      <inhibitTransfer>false</inhibitTransfer>
-      <stateType>1</stateType>
-      <bpmnType>120</bpmnType>
-      <signalId>0</signalId>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>149</sequence>
-      </processStatePK>
-      <stateName>Paralelo</stateName>
-      <stateDescription>Paralelo</stateDescription>
-      <joint>false</joint>
-      <initialState>false</initialState>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <automatic>false</automatic>
-      <positionX>1644</positionX>
-      <positionY>544</positionY>
-      <inhibitTransfer>false</inhibitTransfer>
-      <stateType>3</stateType>
-      <bpmnType>126</bpmnType>
-      <signalId>0</signalId>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>154</sequence>
-      </processStatePK>
-      <stateName>Join</stateName>
-      <stateDescription>Join</stateDescription>
-      <joint>false</joint>
-      <initialState>false</initialState>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <automatic>false</automatic>
-      <positionX>1332</positionX>
-      <positionY>544</positionY>
-      <inhibitTransfer>false</inhibitTransfer>
-      <stateType>4</stateType>
-      <bpmnType>127</bpmnType>
-      <signalId>0</signalId>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>158</sequence>
-      </processStatePK>
-      <stateName>Bemacash Bar ou Chef?</stateName>
-      <stateDescription>Bemacash Bar ou Chef?</stateDescription>
-      <joint>false</joint>
-      <initialState>false</initialState>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <automatic>true</automatic>
-      <positionX>1176</positionX>
-      <positionY>530</positionY>
-      <inhibitTransfer>false</inhibitTransfer>
-      <stateType>1</stateType>
-      <bpmnType>120</bpmnType>
-      <signalId>0</signalId>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>174</sequence>
-      </processStatePK>
-      <stateName>Flag Sistema</stateName>
-      <stateDescription>Flag Sistema</stateDescription>
-      <joint>false</joint>
-      <initialState>false</initialState>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <automatic>true</automatic>
-      <positionX>2040</positionX>
-      <positionY>537</positionY>
-      <inhibitTransfer>false</inhibitTransfer>
-      <stateType>1</stateType>
-      <bpmnType>120</bpmnType>
-      <signalId>0</signalId>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>182</sequence>
+        <sequence>178</sequence>
       </processStatePK>
       <stateName>Aprovado?</stateName>
       <stateDescription>Aprovado?</stateDescription>
@@ -1971,8 +1546,8 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <automatic>true</automatic>
-      <positionX>1392</positionX>
-      <positionY>281</positionY>
+      <positionX>1380</positionX>
+      <positionY>270</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -2075,53 +1650,6 @@
       <destinationStates/>
       <digitalSignature>false</digitalSignature>
     </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>160</sequence>
-      </processStatePK>
-      <stateName>Fim</stateName>
-      <stateDescription>Fim</stateDescription>
-      <instruction>Atividade final do processo</instruction>
-      <deadlineTime>0</deadlineTime>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
-      <engineAllocationConfiguration></engineAllocationConfiguration>
-      <selectColleague>0</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>0</allowanceAuthorityTime>
-      <frequenceAuthorityTime>1</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>1188</positionX>
-      <positionY>713</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>60</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-    </ProcessState>
   </list>
   <list>
     <ConditionProcessState>
@@ -2129,7 +1657,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;cnpjOk&quot;) == &quot;true&quot;)</condition>
@@ -2140,7 +1668,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2151,7 +1679,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_aprovadoFinanceiro&quot;) == &quot;false&quot;)</condition>
@@ -2162,7 +1690,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
@@ -2173,7 +1701,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>3</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2184,7 +1712,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>36</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;capilaridadeOk&quot;) == &quot;true&quot;)</condition>
@@ -2195,7 +1723,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>36</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2206,7 +1734,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>47</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
@@ -2217,7 +1745,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>47</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2228,18 +1756,18 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>65</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
-      <destinationSequenceId>178</destinationSequenceId>
+      <destinationSequenceId>128</destinationSequenceId>
     </ConditionProcessState>
     <ConditionProcessState>
       <conditionProcessStatePK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>65</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2250,7 +1778,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>106</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2263,7 +1791,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>112</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_aprovadoCanais&quot;) == &quot;false&quot;)</condition>
@@ -2274,7 +1802,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>112</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
@@ -2285,7 +1813,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>3</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>112</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -2296,7 +1824,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>120</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_reprovadoFranquia&quot;) == &quot;false&quot;)</condition>
@@ -2307,7 +1835,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>120</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_reprovadoFranquia&quot;) == &quot;true&quot;)</condition>
@@ -2318,7 +1846,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>124</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_aprovadoSCanais&quot;) == &quot;false&quot;)</condition>
@@ -2329,7 +1857,7 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>124</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_aprovadoSCanais&quot;) == &quot;true&quot;)</condition>
@@ -2340,100 +1868,66 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>25</version>
-        <sequence>129</sequence>
+        <version>77</version>
+        <sequence>130</sequence>
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
-      <destinationSequenceId>131</destinationSequenceId>
+      <destinationSequenceId>132</destinationSequenceId>
     </ConditionProcessState>
     <ConditionProcessState>
       <conditionProcessStatePK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>25</version>
-        <sequence>129</sequence>
+        <version>77</version>
+        <sequence>130</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
-      <destinationSequenceId>133</destinationSequenceId>
+      <destinationSequenceId>144</destinationSequenceId>
     </ConditionProcessState>
     <ConditionProcessState>
       <conditionProcessStatePK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>25</version>
+        <version>77</version>
         <sequence>131</sequence>
       </conditionProcessStatePK>
-      <condition>true&#xd;
-</condition>
-      <destinationSequenceId>133</destinationSequenceId>
-    </ConditionProcessState>
-    <ConditionProcessState>
-      <conditionProcessStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <expressionOrder>1</expressionOrder>
-        <version>25</version>
-        <sequence>140</sequence>
-      </conditionProcessStatePK>
-      <condition>true</condition>
-      <destinationSequenceId>149</destinationSequenceId>
-    </ConditionProcessState>
-    <ConditionProcessState>
-      <conditionProcessStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <expressionOrder>1</expressionOrder>
-        <version>25</version>
-        <sequence>158</sequence>
-      </conditionProcessStatePK>
-      <condition>true</condition>
-      <destinationSequenceId>160</destinationSequenceId>
+      <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
+      <destinationSequenceId>144</destinationSequenceId>
     </ConditionProcessState>
     <ConditionProcessState>
       <conditionProcessStatePK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>2</expressionOrder>
-        <version>25</version>
-        <sequence>158</sequence>
-      </conditionProcessStatePK>
-      <condition>false</condition>
-      <destinationSequenceId>162</destinationSequenceId>
-    </ConditionProcessState>
-    <ConditionProcessState>
-      <conditionProcessStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <expressionOrder>1</expressionOrder>
-        <version>25</version>
-        <sequence>174</sequence>
+        <version>77</version>
+        <sequence>131</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
-      <destinationSequenceId>67</destinationSequenceId>
+      <destinationSequenceId>130</destinationSequenceId>
     </ConditionProcessState>
     <ConditionProcessState>
       <conditionProcessStatePK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <expressionOrder>1</expressionOrder>
-        <version>25</version>
-        <sequence>182</sequence>
+        <version>77</version>
+        <sequence>178</sequence>
       </conditionProcessStatePK>
-      <condition>(hAPI.getCardValue(&quot;_reprovadoContratoAssinado&quot;) == &quot;false&quot;)</condition>
-      <destinationSequenceId>85</destinationSequenceId>
-    </ConditionProcessState>
-    <ConditionProcessState>
-      <conditionProcessStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <expressionOrder>2</expressionOrder>
-        <version>25</version>
-        <sequence>182</sequence>
-      </conditionProcessStatePK>
-      <condition>(hAPI.getCardValue(&quot;_reprovadoContratoAssinado&quot;) != &quot;false&quot;)</condition>
+      <condition>(hAPI.getCardValue(&quot;_reprovadoContratoAssinado&quot;) == &quot;true&quot;)</condition>
       <destinationSequenceId>61</destinationSequenceId>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>77</version>
+        <sequence>178</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>85</destinationSequenceId>
     </ConditionProcessState>
   </list>
   <list>
@@ -3054,14 +2548,14 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <linkSequence>132</linkSequence>
+        <linkSequence>129</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>129</initialStateSequence>
-      <finalStateSequence>131</finalStateSequence>
+      <initialStateSequence>65</initialStateSequence>
+      <finalStateSequence>128</finalStateSequence>
       <returnLabel></returnLabel>
-      <name>Master/PVF</name>
+      <name></name>
       <automaticLink>false</automaticLink>
       <defaultLink>false</defaultLink>
       <type>0</type>
@@ -3071,14 +2565,14 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <linkSequence>134</linkSequence>
+        <linkSequence>135</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>129</initialStateSequence>
-      <finalStateSequence>133</finalStateSequence>
+      <initialStateSequence>131</initialStateSequence>
+      <finalStateSequence>130</finalStateSequence>
       <returnLabel></returnLabel>
-      <name>Complem.</name>
+      <name></name>
       <automaticLink>false</automaticLink>
       <defaultLink>false</defaultLink>
       <type>0</type>
@@ -3092,25 +2586,8 @@
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>131</initialStateSequence>
-      <finalStateSequence>133</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name>Sim</name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>141</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>137</initialStateSequence>
-      <finalStateSequence>140</finalStateSequence>
+      <initialStateSequence>130</initialStateSequence>
+      <finalStateSequence>132</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -3122,46 +2599,12 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <linkSequence>142</linkSequence>
+        <linkSequence>137</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>140</initialStateSequence>
+      <initialStateSequence>132</initialStateSequence>
       <finalStateSequence>133</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name>Não</name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>150</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>140</initialStateSequence>
-      <finalStateSequence>149</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name>Sim</name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>151</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>149</initialStateSequence>
-      <finalStateSequence>143</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -3173,11 +2616,45 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <linkSequence>152</linkSequence>
+        <linkSequence>138</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>149</initialStateSequence>
+      <initialStateSequence>133</initialStateSequence>
+      <finalStateSequence>134</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>1</version>
+        <linkSequence>143</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>128</initialStateSequence>
+      <finalStateSequence>131</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>1</version>
+        <linkSequence>145</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>134</initialStateSequence>
       <finalStateSequence>144</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -3190,165 +2667,12 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <linkSequence>153</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>149</initialStateSequence>
-      <finalStateSequence>145</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>155</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>143</initialStateSequence>
-      <finalStateSequence>154</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>156</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>144</initialStateSequence>
-      <finalStateSequence>154</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>157</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>145</initialStateSequence>
-      <finalStateSequence>154</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>159</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>154</initialStateSequence>
-      <finalStateSequence>158</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>161</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>158</initialStateSequence>
-      <finalStateSequence>160</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name>Não</name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>164</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>162</initialStateSequence>
-      <finalStateSequence>163</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>165</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>163</initialStateSequence>
-      <finalStateSequence>160</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>167</linkSequence>
+        <linkSequence>146</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
       <initialStateSequence>131</initialStateSequence>
-      <finalStateSequence>166</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name>Não</name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>169</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>166</initialStateSequence>
-      <finalStateSequence>168</finalStateSequence>
+      <finalStateSequence>144</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -3360,80 +2684,12 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <linkSequence>171</linkSequence>
+        <linkSequence>147</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>168</initialStateSequence>
-      <finalStateSequence>170</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>172</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>170</initialStateSequence>
-      <finalStateSequence>133</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>173</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>158</initialStateSequence>
-      <finalStateSequence>162</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name>Sim</name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>175</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>133</initialStateSequence>
-      <finalStateSequence>174</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>176</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>174</initialStateSequence>
-      <finalStateSequence>137</finalStateSequence>
+      <initialStateSequence>130</initialStateSequence>
+      <finalStateSequence>144</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -3449,10 +2705,27 @@
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>174</initialStateSequence>
+      <initialStateSequence>144</initialStateSequence>
       <finalStateSequence>67</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>1</version>
+        <linkSequence>179</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>178</initialStateSequence>
+      <finalStateSequence>61</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Aprovado</name>
       <automaticLink>false</automaticLink>
       <defaultLink>false</defaultLink>
       <type>0</type>
@@ -3466,10 +2739,10 @@
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>65</initialStateSequence>
-      <finalStateSequence>178</finalStateSequence>
+      <initialStateSequence>178</initialStateSequence>
+      <finalStateSequence>85</finalStateSequence>
       <returnLabel></returnLabel>
-      <name></name>
+      <name>Reprovado</name>
       <automaticLink>false</automaticLink>
       <defaultLink>false</defaultLink>
       <type>0</type>
@@ -3483,59 +2756,8 @@
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>178</initialStateSequence>
-      <finalStateSequence>129</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>183</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
       <initialStateSequence>51</initialStateSequence>
-      <finalStateSequence>182</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>184</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>182</initialStateSequence>
-      <finalStateSequence>85</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name>Reprovado</name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>185</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>182</initialStateSequence>
-      <finalStateSequence>61</finalStateSequence>
+      <finalStateSequence>178</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -3553,7 +2775,7 @@
       </processAttachmentSecurityPK>
       <engineAllocationId>Todos os Usuários</engineAllocationId>
       <accessLevel>PRME</accessLevel>
-      <editionMode>false</editionMode>
+      <editionMode>true</editionMode>
     </ProcessAttachmentSecurity>
   </list>
   <list>
@@ -3973,8 +3195,8 @@ function verifyCnpj(){&#xd;
   <list>
     <SwimLane>
       <color>FFFFFF</color>
-      <height>641</height>
-      <width>2751</width>
+      <height>491</height>
+      <width>2701</width>
       <positionX>10</positionX>
       <positionY>10</positionY>
       <stateName>Canais - Onboard</stateName>
@@ -3989,10 +3211,10 @@ function verifyCnpj(){&#xd;
     </SwimLane>
     <SwimLane>
       <color>82b0b7</color>
-      <height>128</height>
-      <width>2721</width>
+      <height>163</height>
+      <width>2671</width>
       <positionX>40</positionX>
-      <positionY>394</positionY>
+      <positionY>10</positionY>
       <stateName>Solicitante</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
@@ -4005,10 +3227,10 @@ function verifyCnpj(){&#xd;
     </SwimLane>
     <SwimLane>
       <color>adc9ac</color>
-      <height>128</height>
-      <width>2721</width>
+      <height>165</height>
+      <width>2671</width>
       <positionX>40</positionX>
-      <positionY>10</positionY>
+      <positionY>336</positionY>
       <stateName>Fluig / Canais</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
@@ -4020,12 +3242,12 @@ function verifyCnpj(){&#xd;
       </swimLanePK>
     </SwimLane>
     <SwimLane>
-      <color>d0daae</color>
-      <height>128</height>
-      <width>2721</width>
+      <color>d6e0d0</color>
+      <height>163</height>
+      <width>2671</width>
       <positionX>40</positionX>
-      <positionY>266</positionY>
-      <stateName>Financeiro</stateName>
+      <positionY>173</positionY>
+      <stateName>Protheus / CRM</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
       <swimLanePK>
@@ -4036,12 +3258,12 @@ function verifyCnpj(){&#xd;
       </swimLanePK>
     </SwimLane>
     <SwimLane>
-      <color>d6e0d0</color>
-      <height>128</height>
-      <width>2721</width>
-      <positionX>40</positionX>
-      <positionY>138</positionY>
-      <stateName>Protheus / CRM</stateName>
+      <color>d0daae</color>
+      <height>125</height>
+      <width>2671</width>
+      <positionX>30</positionX>
+      <positionY>366</positionY>
+      <stateName>Financeiro</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
       <swimLanePK>
@@ -4052,12 +3274,12 @@ function verifyCnpj(){&#xd;
       </swimLanePK>
     </SwimLane>
     <SwimLane>
-      <color>BC79FF</color>
-      <height>129</height>
-      <width>2721</width>
-      <positionX>40</positionX>
-      <positionY>522</positionY>
-      <stateName>Universidade</stateName>
+      <color>d0daae</color>
+      <height>125</height>
+      <width>2671</width>
+      <positionX>30</positionX>
+      <positionY>366</positionY>
+      <stateName>Financeiro</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
       <swimLanePK>
@@ -4068,12 +3290,12 @@ function verifyCnpj(){&#xd;
       </swimLanePK>
     </SwimLane>
     <SwimLane>
-      <color>FFFF9F</color>
-      <height>145</height>
-      <width>2730</width>
-      <positionX>40</positionX>
-      <positionY>640</positionY>
-      <stateName>Master</stateName>
+      <color>d0daae</color>
+      <height>125</height>
+      <width>2671</width>
+      <positionX>30</positionX>
+      <positionY>366</positionY>
+      <stateName>Financeiro</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
       <swimLanePK>
@@ -4081,6 +3303,38 @@ function verifyCnpj(){&#xd;
         <processId>canaisOnboard</processId>
         <version>1</version>
         <sequence>7</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>EEF178</color>
+      <height>125</height>
+      <width>2671</width>
+      <positionX>40</positionX>
+      <positionY>690</positionY>
+      <stateName>Master</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>1</version>
+        <sequence>8</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>398ACC</color>
+      <height>191</height>
+      <width>2671</width>
+      <positionX>40</positionX>
+      <positionY>500</positionY>
+      <stateName>Universidade</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>1</version>
+        <sequence>9</sequence>
       </swimLanePK>
     </SwimLane>
   </list>
@@ -4091,139 +3345,139 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>11</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>227</positionX>
-      <positionY>439</positionY>
+      <positionX>225</positionX>
+      <positionY>442</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>11</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
-      <positionX>227</positionX>
-      <positionY>72</positionY>
+      <positionX>225</positionX>
+      <positionY>71</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>932</positionX>
-      <positionY>316</positionY>
+      <positionX>933</positionX>
+      <positionY>318</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>492</positionX>
-      <positionY>464</positionY>
+      <positionX>493</positionX>
+      <positionY>449</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>53</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>1412</positionX>
-      <positionY>72</positionY>
+      <positionY>73</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>60</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>1593</positionX>
-      <positionY>439</positionY>
+      <positionY>421</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>94</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>902</positionX>
-      <positionY>487</positionY>
+      <positionX>866</positionX>
+      <positionY>465</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>94</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
-      <positionX>565</positionX>
-      <positionY>487</positionY>
+      <positionX>569</positionX>
+      <positionY>465</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>94</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
-      <positionX>565</positionX>
-      <positionY>195</positionY>
+      <positionX>569</positionX>
+      <positionY>196</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>97</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>1034</positionX>
-      <positionY>496</positionY>
+      <positionX>1032</positionX>
+      <positionY>490</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>97</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
-      <positionX>492</positionX>
-      <positionY>496</positionY>
+      <positionX>493</positionX>
+      <positionY>490</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>105</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>1093</positionX>
-      <positionY>259</positionY>
+      <positionY>254</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>107</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4234,7 +3488,7 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>108</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4245,95 +3499,84 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>109</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>244</positionX>
-      <positionY>461</positionY>
+      <positionX>243</positionX>
+      <positionY>464</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>109</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
-      <positionX>244</positionX>
-      <positionY>320</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>109</linkSequence>
-        <bendSequence>3</bendSequence>
-      </processLinkBendPK>
-      <positionX>244</positionX>
-      <positionY>187</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>114</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>865</positionX>
+      <positionX>243</positionX>
       <positionY>188</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>114</linkSequence>
-        <bendSequence>2</bendSequence>
+        <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>865</positionX>
-      <positionY>143</positionY>
+      <positionX>840</positionX>
+      <positionY>165</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
+        <linkSequence>114</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>840</positionX>
+      <positionY>140</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>77</version>
         <linkSequence>114</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
-      <positionX>925</positionX>
-      <positionY>143</positionY>
+      <positionX>922</positionX>
+      <positionY>140</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>115</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>810</positionX>
-      <positionY>376</positionY>
+      <positionX>809</positionX>
+      <positionY>356</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>115</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
-      <positionX>1060</positionX>
-      <positionY>376</positionY>
+      <positionX>1091</positionX>
+      <positionY>356</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>118</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -4344,243 +3587,188 @@ function verifyCnpj(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>119</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>808</positionX>
-      <positionY>113</positionY>
+      <positionX>814</positionX>
+      <positionY>118</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>119</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
       <positionX>672</positionX>
-      <positionY>113</positionY>
+      <positionY>118</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>122</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>1067</positionX>
-      <positionY>21</positionY>
+      <positionX>1106</positionX>
+      <positionY>14</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>122</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
       <positionX>672</positionX>
-      <positionY>21</positionY>
+      <positionY>14</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>125</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>1080</positionX>
-      <positionY>194</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>126</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>1047</positionX>
-      <positionY>144</positionY>
+      <positionY>140</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
+        <version>77</version>
         <linkSequence>126</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
-      <positionX>933</positionX>
-      <positionY>144</positionY>
+      <positionX>941</positionX>
+      <positionY>140</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>127</linkSequence>
+        <version>77</version>
+        <linkSequence>129</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>986</positionX>
-      <positionY>193</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>127</linkSequence>
-        <bendSequence>2</bendSequence>
-      </processLinkBendPK>
-      <positionX>1019</positionX>
-      <positionY>193</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>132</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>2238</positionX>
-      <positionY>190</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>136</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>2309</positionX>
-      <positionY>572</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>141</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>1907</positionX>
-      <positionY>588</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>142</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>1860</positionX>
-      <positionY>634</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>142</linkSequence>
-        <bendSequence>2</bendSequence>
-      </processLinkBendPK>
-      <positionX>2175</positionX>
-      <positionY>634</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>167</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>2392</positionX>
-      <positionY>190</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>172</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>2692</positionX>
-      <positionY>571</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>173</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>912</positionX>
-      <positionY>585</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>180</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>2044</positionX>
+      <positionX>2052</positionX>
       <positionY>317</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>184</linkSequence>
+        <version>77</version>
+        <linkSequence>145</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>1092</positionX>
-      <positionY>331</positionY>
+      <positionX>2632</positionX>
+      <positionY>561</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>185</linkSequence>
+        <version>77</version>
+        <linkSequence>146</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>1505</positionX>
-      <positionY>331</positionY>
+      <positionX>2214</positionX>
+      <positionY>278</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>185</linkSequence>
+        <version>77</version>
+        <linkSequence>146</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
-      <positionX>1505</positionX>
-      <positionY>64</positionY>
+      <positionX>2153</positionX>
+      <positionY>278</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
-        <version>25</version>
-        <linkSequence>185</linkSequence>
+        <version>77</version>
+        <linkSequence>147</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>2305</positionX>
+      <positionY>276</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>77</version>
+        <linkSequence>147</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>2304</positionX>
+      <positionY>314</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>77</version>
+        <linkSequence>147</linkSequence>
+        <bendSequence>3</bendSequence>
+      </processLinkBendPK>
+      <positionX>2152</positionX>
+      <positionY>314</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>77</version>
+        <linkSequence>179</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>1509</positionX>
+      <positionY>319</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>77</version>
+        <linkSequence>179</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>1509</positionX>
+      <positionY>91</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>77</version>
+        <linkSequence>179</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
       <positionX>1902</positionX>
-      <positionY>64</positionY>
+      <positionY>91</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>77</version>
+        <linkSequence>180</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>1093</positionX>
+      <positionY>320</positionY>
     </ProcessLinkBend>
   </list>
   <list/>
@@ -4593,10 +3781,9 @@ function verifyCnpj(){&#xd;
       <version>1</version>
       <sequence>8</sequence>
       <attempts>0</attempts>
-      <sucessFullMessage>Integração executada com sucesso</sucessFullMessage>
-      <serviceName></serviceName>
+      <sucessFullMessage></sucessFullMessage>
       <frequency>1</frequency>
-      <frequencyType>2</frequencyType>
+      <frequencyType>0</frequencyType>
     </ProcessStateService>
     <ProcessStateService>
       <companyId>1</companyId>
@@ -4605,7 +3792,6 @@ function verifyCnpj(){&#xd;
       <sequence>32</sequence>
       <attempts>0</attempts>
       <sucessFullMessage></sucessFullMessage>
-      <serviceName></serviceName>
       <frequency>1</frequency>
       <frequencyType>0</frequencyType>
     </ProcessStateService>
@@ -4615,10 +3801,9 @@ function verifyCnpj(){&#xd;
       <version>1</version>
       <sequence>78</sequence>
       <attempts>0</attempts>
-      <sucessFullMessage>Integração executada com sucesso</sucessFullMessage>
-      <serviceName></serviceName>
+      <sucessFullMessage></sucessFullMessage>
       <frequency>1</frequency>
-      <frequencyType>2</frequencyType>
+      <frequencyType>0</frequencyType>
     </ProcessStateService>
     <ProcessStateService>
       <companyId>1</companyId>
@@ -4626,8 +3811,7 @@ function verifyCnpj(){&#xd;
       <version>1</version>
       <sequence>85</sequence>
       <attempts>0</attempts>
-      <sucessFullMessage>Integração executada com sucesso</sucessFullMessage>
-      <serviceName></serviceName>
+      <sucessFullMessage></sucessFullMessage>
       <frequency>1</frequency>
       <frequencyType>0</frequencyType>
     </ProcessStateService>
@@ -4636,79 +3820,9 @@ function verifyCnpj(){&#xd;
     <SubProcessFieldRelationship>
       <tenantId>1</tenantId>
       <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
+      <stateSequence>128</stateSequence>
       <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
-      <processField>telefone</processField>
-      <subProcessField>telefone</subProcessField>
-      <mapFlow>2</mapFlow>
-    </SubProcessFieldRelationship>
-    <SubProcessFieldRelationship>
-      <tenantId>1</tenantId>
-      <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
-      <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
-      <processField>endereco</processField>
-      <subProcessField>endereco</subProcessField>
-      <mapFlow>2</mapFlow>
-    </SubProcessFieldRelationship>
-    <SubProcessFieldRelationship>
-      <tenantId>1</tenantId>
-      <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
-      <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
-      <processField>agencia</processField>
-      <subProcessField>agencia</subProcessField>
-      <mapFlow>2</mapFlow>
-    </SubProcessFieldRelationship>
-    <SubProcessFieldRelationship>
-      <tenantId>1</tenantId>
-      <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
-      <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
-      <processField>dsUnidadeResponsavel</processField>
-      <subProcessField>dsUnidadeResponsavel</subProcessField>
-      <mapFlow>2</mapFlow>
-    </SubProcessFieldRelationship>
-    <SubProcessFieldRelationship>
-      <tenantId>1</tenantId>
-      <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
-      <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
-      <processField>emailRecebimentoRelatrio</processField>
-      <subProcessField>emailRecebimentoRelatrio</subProcessField>
-      <mapFlow>2</mapFlow>
-    </SubProcessFieldRelationship>
-    <SubProcessFieldRelationship>
-      <tenantId>1</tenantId>
-      <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
-      <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
-      <processField>nrCnpj</processField>
-      <subProcessField>nrCnpj</subProcessField>
-      <mapFlow>2</mapFlow>
-    </SubProcessFieldRelationship>
-    <SubProcessFieldRelationship>
-      <tenantId>1</tenantId>
-      <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
-      <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
-      <processField>nome</processField>
-      <subProcessField>nome</subProcessField>
-      <mapFlow>2</mapFlow>
-    </SubProcessFieldRelationship>
-    <SubProcessFieldRelationship>
-      <tenantId>1</tenantId>
-      <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
-      <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
       <processField>token</processField>
       <subProcessField>token</subProcessField>
       <mapFlow>2</mapFlow>
@@ -4716,9 +3830,9 @@ function verifyCnpj(){&#xd;
     <SubProcessFieldRelationship>
       <tenantId>1</tenantId>
       <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
+      <stateSequence>128</stateSequence>
       <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
       <processField>banco</processField>
       <subProcessField>banco</subProcessField>
       <mapFlow>2</mapFlow>
@@ -4726,19 +3840,29 @@ function verifyCnpj(){&#xd;
     <SubProcessFieldRelationship>
       <tenantId>1</tenantId>
       <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
+      <stateSequence>128</stateSequence>
       <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
-      <processField>razaoSocial</processField>
-      <subProcessField>nmMunicipio</subProcessField>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
+      <processField>nrCnpj</processField>
+      <subProcessField>nrCnpj</subProcessField>
       <mapFlow>2</mapFlow>
     </SubProcessFieldRelationship>
     <SubProcessFieldRelationship>
       <tenantId>1</tenantId>
       <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
+      <stateSequence>128</stateSequence>
       <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
+      <processField>nome</processField>
+      <subProcessField>nome</subProcessField>
+      <mapFlow>2</mapFlow>
+    </SubProcessFieldRelationship>
+    <SubProcessFieldRelationship>
+      <tenantId>1</tenantId>
+      <processCode>canaisOnboard</processCode>
+      <stateSequence>128</stateSequence>
+      <version>1</version>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
       <processField>cdUnidadeResponsavel</processField>
       <subProcessField>cdUnidadeResponsavel</subProcessField>
       <mapFlow>2</mapFlow>
@@ -4746,19 +3870,9 @@ function verifyCnpj(){&#xd;
     <SubProcessFieldRelationship>
       <tenantId>1</tenantId>
       <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
+      <stateSequence>128</stateSequence>
       <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
-      <processField>nmSolicitante</processField>
-      <subProcessField>nrSolicitacao</subProcessField>
-      <mapFlow>2</mapFlow>
-    </SubProcessFieldRelationship>
-    <SubProcessFieldRelationship>
-      <tenantId>1</tenantId>
-      <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
-      <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
       <processField>sugestaoEmail</processField>
       <subProcessField>sugestaoEmail</subProcessField>
       <mapFlow>2</mapFlow>
@@ -4766,29 +3880,9 @@ function verifyCnpj(){&#xd;
     <SubProcessFieldRelationship>
       <tenantId>1</tenantId>
       <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
+      <stateSequence>128</stateSequence>
       <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
-      <processField>criacaoCoridticket</processField>
-      <subProcessField>criacaoCoridticket</subProcessField>
-      <mapFlow>0</mapFlow>
-    </SubProcessFieldRelationship>
-    <SubProcessFieldRelationship>
-      <tenantId>1</tenantId>
-      <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
-      <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
-      <processField>uf</processField>
-      <subProcessField>uf</subProcessField>
-      <mapFlow>2</mapFlow>
-    </SubProcessFieldRelationship>
-    <SubProcessFieldRelationship>
-      <tenantId>1</tenantId>
-      <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
-      <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
       <processField>razaoSocial</processField>
       <subProcessField>razaoSocial</subProcessField>
       <mapFlow>2</mapFlow>
@@ -4796,9 +3890,29 @@ function verifyCnpj(){&#xd;
     <SubProcessFieldRelationship>
       <tenantId>1</tenantId>
       <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
+      <stateSequence>128</stateSequence>
       <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
+      <processField>criacaoCoridticket</processField>
+      <subProcessField>criacaoCoridticket</subProcessField>
+      <mapFlow>0</mapFlow>
+    </SubProcessFieldRelationship>
+    <SubProcessFieldRelationship>
+      <tenantId>1</tenantId>
+      <processCode>canaisOnboard</processCode>
+      <stateSequence>128</stateSequence>
+      <version>1</version>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
+      <processField>uf</processField>
+      <subProcessField>uf</subProcessField>
+      <mapFlow>2</mapFlow>
+    </SubProcessFieldRelationship>
+    <SubProcessFieldRelationship>
+      <tenantId>1</tenantId>
+      <processCode>canaisOnboard</processCode>
+      <stateSequence>128</stateSequence>
+      <version>1</version>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
       <processField>conta</processField>
       <subProcessField>conta</subProcessField>
       <mapFlow>2</mapFlow>
@@ -4806,9 +3920,19 @@ function verifyCnpj(){&#xd;
     <SubProcessFieldRelationship>
       <tenantId>1</tenantId>
       <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
+      <stateSequence>128</stateSequence>
       <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
+      <processField>tipoSolic</processField>
+      <subProcessField>tipoSolic</subProcessField>
+      <mapFlow>2</mapFlow>
+    </SubProcessFieldRelationship>
+    <SubProcessFieldRelationship>
+      <tenantId>1</tenantId>
+      <processCode>canaisOnboard</processCode>
+      <stateSequence>128</stateSequence>
+      <version>1</version>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
       <processField>email</processField>
       <subProcessField>email</subProcessField>
       <mapFlow>2</mapFlow>
@@ -4816,9 +3940,9 @@ function verifyCnpj(){&#xd;
     <SubProcessFieldRelationship>
       <tenantId>1</tenantId>
       <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
+      <stateSequence>128</stateSequence>
       <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
       <processField>tpContrato</processField>
       <subProcessField>tpContrato</subProcessField>
       <mapFlow>2</mapFlow>
@@ -4826,11 +3950,61 @@ function verifyCnpj(){&#xd;
     <SubProcessFieldRelationship>
       <tenantId>1</tenantId>
       <processCode>canaisOnboard</processCode>
-      <stateSequence>178</stateSequence>
+      <stateSequence>128</stateSequence>
       <version>1</version>
-      <subProcessCode>SubAberturadeChamados</subProcessCode>
-      <processField>tipoSolic</processField>
-      <subProcessField>tipoSolic</subProcessField>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
+      <processField>nmSolicitante</processField>
+      <subProcessField>nrSolicitacao</subProcessField>
+      <mapFlow>2</mapFlow>
+    </SubProcessFieldRelationship>
+    <SubProcessFieldRelationship>
+      <tenantId>1</tenantId>
+      <processCode>canaisOnboard</processCode>
+      <stateSequence>128</stateSequence>
+      <version>1</version>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
+      <processField>emailRecebimentoRelatrio</processField>
+      <subProcessField>emailRecebimentoRelatrio</subProcessField>
+      <mapFlow>2</mapFlow>
+    </SubProcessFieldRelationship>
+    <SubProcessFieldRelationship>
+      <tenantId>1</tenantId>
+      <processCode>canaisOnboard</processCode>
+      <stateSequence>128</stateSequence>
+      <version>1</version>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
+      <processField>endereco</processField>
+      <subProcessField>endereco</subProcessField>
+      <mapFlow>2</mapFlow>
+    </SubProcessFieldRelationship>
+    <SubProcessFieldRelationship>
+      <tenantId>1</tenantId>
+      <processCode>canaisOnboard</processCode>
+      <stateSequence>128</stateSequence>
+      <version>1</version>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
+      <processField>agencia</processField>
+      <subProcessField>agencia</subProcessField>
+      <mapFlow>2</mapFlow>
+    </SubProcessFieldRelationship>
+    <SubProcessFieldRelationship>
+      <tenantId>1</tenantId>
+      <processCode>canaisOnboard</processCode>
+      <stateSequence>128</stateSequence>
+      <version>1</version>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
+      <processField>dsUnidadeResponsavel</processField>
+      <subProcessField>dsUnidadeResponsavel</subProcessField>
+      <mapFlow>2</mapFlow>
+    </SubProcessFieldRelationship>
+    <SubProcessFieldRelationship>
+      <tenantId>1</tenantId>
+      <processCode>canaisOnboard</processCode>
+      <stateSequence>128</stateSequence>
+      <version>1</version>
+      <subProcessCode>canaisOnBoardSubAberturaChamados</subProcessCode>
+      <processField>telefone</processField>
+      <subProcessField>telefone</subProcessField>
       <mapFlow>2</mapFlow>
     </SubProcessFieldRelationship>
   </list>

@@ -54,30 +54,31 @@ $(document).ready(function(){
 	if(CURRENT_STATE != Activity.INFORMAR_CODIGO_UNIDADE && CURRENT_STATE != Activity.AGUARDAR_ENCERRAMENTO_CHAMADOS) 
 		$('#panelCriaoUnidadeCrm').toggle();
 
-	if( CURRENT_STATE != Activity.ZERO )
-		$("#li_decisoes").removeClass("hidden");
+
 
 	if( CURRENT_STATE == Activity.ANALISAR_SOLICITACAO_FINANCEIRO )
 	{
+		$("#li_decisoes").removeClass("hidden");
 		ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_FINANCEIRO]);
 		ExibicaoDecisoesInput([Activity.ANALISAR_SOLICITACAO_FINANCEIRO]);
 	}
 	
 	if (CURRENT_STATE == Activity.ANALISAR_REPROVACAO_CANAIS){
-
+		$("#li_decisoes").removeClass("hidden");
 		ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_FINANCEIRO,Activity.ANALISAR_REPROVACAO_CANAIS]);
 		ExibicaoDecisoesInput([Activity.ANALISAR_REPROVACAO_CANAIS]);
 
 	}
 
 	if (CURRENT_STATE == Activity.ANALISAR_SOLICITACAO_CANAIS){
+		$("#li_decisoes").removeClass("hidden");
 		ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_FINANCEIRO,Activity.ANALISAR_SOLICITACAO_CANAIS]);	
 		ExibicaoDecisoesInput([Activity.ANALISAR_SOLICITACAO_CANAIS]);
 	}
 
 
 	if (CURRENT_STATE == Activity.ANALISAR_REPROVACAO_FRANQUIA){
-
+		$("#li_decisoes").removeClass("hidden");
 		ExibicaoDecisoesInput([Activity.ANALISAR_REPROVACAO_FRANQUIA]);
 		ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_FINANCEIRO]);
 		if ($("#tipoSolic").val() == "master")
@@ -91,6 +92,7 @@ $(document).ready(function(){
 
 	if( CURRENT_STATE == Activity.ANALISAR_CONTRATO_ASSINADO )
 	{
+		$("#li_decisoes").removeClass("hidden");
 		ExibicaoDecisoesPanel([Activity.ANALISAR_CONTRATO_ASSINADO,Activity.ANALISAR_SOLICITACAO_FINANCEIRO,Activity.ANALISAR_REPROVACAO_FRANQUIA]);
 		if ($("#tipoSolic").val() == "master")
 		{
@@ -98,7 +100,7 @@ $(document).ready(function(){
 		}else{
 			ExibicaoDecisoesPanel([Activity.ANALISAR_REPROVACAO_CANAIS]);
 		}
-		ExibicaoDecisoesInput([Activity.ANALISAR_SOLICITACAO_FINANCEIRO,Activity.ANALISAR_REPROVACAO_CANAIS,Activity.ANALISAR_SOLICITACAO_CANAIS,Activity.ANALISAR_REPROVACAO_FRANQUIA,Activity.ANALISAR_CONTRATO_ASSINADO]);	
+		ExibicaoDecisoesInput([Activity.ANALISAR_CONTRATO_ASSINADO]);	
 	}
 
 	

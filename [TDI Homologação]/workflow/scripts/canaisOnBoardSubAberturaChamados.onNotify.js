@@ -27,7 +27,7 @@ function onNotify(subject, receivers, template, params){
           
             log.info("@SubAberturadeChamados template: '" + template + "'");
             //Envia e-mail
-            notifier.notify("zandro3210", template, parametros, destinatarios, "text/html");
+            notifier.notify(retornaParametrizacao("nmAdmUserid"), template, parametros, destinatarios, "text/html");
          
         } catch(e){
             log.error("@SubAberturadeChamados erro:" + e);
