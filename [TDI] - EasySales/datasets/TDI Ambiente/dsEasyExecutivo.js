@@ -1,11 +1,11 @@
-var PRD = "http://ttvprtv3app08.cp.totvs.com.br:8048";
-var HML = "http://172.24.52.10:8049";
-var SERVER = PRD;
+var PRD = "https://wscorp.totvs.com.br";
+var HML = "http://172.24.52.10:8048";
+var SERVER = HML;
 
 function createDataset(fields, constraints, sortFields) {
 	var dataset = DatasetBuilder.newDataset();
 	var email = DsEasyExecutivo.getEmail(constraints);
-	
+	email = "eder.oliveira2@totvs.com.br";
 	if(email == null) return null;
 	
 	var ears = DsEasyExecutivo.getEars(email);
