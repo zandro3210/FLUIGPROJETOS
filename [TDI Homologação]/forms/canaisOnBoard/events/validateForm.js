@@ -90,11 +90,6 @@ function validateForm(form){
 	else if(CURRENT_STATE == Activity.ANALISAR_REPROVACAO_CANAIS && form.getValue("_aprovadoCanais") == "false" ){
 		ValidateFormUtils.validate("_motivoReprovadoCanais", "Motivo da Reprovação");
 	}
-	else if(CURRENT_STATE == Activity.INFORMAR_CODIGO_UNIDADE){
-		ValidateFormUtils.validate("cdChamado", "Código do Chamado");
-		ValidateFormUtils.validate("dtSolucaoChamado", "Data de Solução do Chamado");
-		ValidateFormUtils.validate("cdCanal", "Código do Canal");
-	}
 	else if(CURRENT_STATE == Activity.INCLUIR_CLAUSULAS){
 		if(form.getValue("tpContrato") == "CAT" || form.getValue("tpContrato") == "CNT CHEF"){
 			ValidateFormUtils.validateChildSize("tblCodCliente", "Cliente");

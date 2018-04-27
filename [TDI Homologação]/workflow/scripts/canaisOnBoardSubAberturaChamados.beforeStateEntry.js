@@ -20,7 +20,7 @@ function beforeStateEntry(sequenceId) {
 		solicitacaoCRMEstrutura();
 	}
 
-	if (sequenceId == Activity.CADASTRO_FORNECEDOR && hAPI.getCardValue("criacaoCoridticket") == "" ) {
+	if (sequenceId == Activity.CADASTRO_FORNECEDOR && hAPI.getCardValue("criacaoFornecedoridticket") == "" ) {
 		solicitacaoFornecedor();
 	}
 
@@ -57,7 +57,7 @@ function solicitacaoEmailcoporativo() {
 	mensagem += "</tr>";
 	mensagem += "</table>";
 
-	var url = "<a style='color:red;' href='" + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_CHAMADOS + "&thread=1&current=" + Activity.EMAIL_CORPORATIVO  +"'>Por favor após terminar atividade clique aqui </a><br />";
+	var url = "<a style='color:red;' href='" + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_EMAIL + "&thread=1&current=" + Activity.EMAIL_CORPORATIVO  +"'>Por favor após terminar atividade clique aqui </a><br />";
 	params.push({ name: "TITULO", value: "E-mail Corporativo - Fluxo onBoard" });
 	params.push({ name: "MENSAGEM", value: mensagem });
 	params.push({ name: "URL", value: url });
@@ -89,17 +89,17 @@ function solicitacaoCodigoCRM() {
 	api += ']';
 	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
 	var mensagem = "";
-	mensagem += "Razão Social: " +  hAPI.getCardValue("razaoSocial");
-	mensagem += " CNPJ: " +  hAPI.getCardValue("nrCnpj");
-	mensagem += " Endereço Completo: " +  hAPI.getCardValue("endereco");
-	mensagem += " Cidade: " +  hAPI.getCardValue("nmMunicipio");
-	mensagem += " Estado: " +  hAPI.getCardValue("uf");
-	mensagem += " Nome Responsável: " +  hAPI.getCardValue("nome");
-	mensagem += " Telefone: " +  hAPI.getCardValue("telefone");
-	mensagem += " E-mail: " +  ( hAPI.getCardValue("tipoSolic") == "master" ?  hAPI.getCardValue("sugestaoEmail") : hAPI.getCardValue("email") );
-	mensagem += " Unidade Responsável: " +  hAPI.getCardValue("dsUnidadeResponsavel");
-	mensagem += " Código da unidade Responsável: " +  hAPI.getCardValue("cdUnidadeResponsavel");
-	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.USUARIO_CRM_VENDAS + "&thread=2&current=" + Activity.CRIACAO_COD_CRM;
+	mensagem += "Razão Social: " +  hAPI.getCardValue("razaoSocial") + "&nbsp;";
+	mensagem += " CNPJ: " +  hAPI.getCardValue("nrCnpj") + "&nbsp;";
+	mensagem += " Endereço Completo: " +  hAPI.getCardValue("endereco") + "&nbsp;";
+	mensagem += " Cidade: " +  hAPI.getCardValue("nmMunicipio") + "&nbsp;";
+	mensagem += " Estado: " +  hAPI.getCardValue("uf") + "&nbsp;";
+	mensagem += " Nome Responsável: " +  hAPI.getCardValue("nome") + "&nbsp;";
+	mensagem += " Telefone: " +  hAPI.getCardValue("telefone") + "&nbsp;";
+	mensagem += " E-mail: " +  ( hAPI.getCardValue("tipoSolic") == "master" ?  hAPI.getCardValue("sugestaoEmail") : hAPI.getCardValue("email")) + "&nbsp;";
+	mensagem += " Unidade Responsável: " +  hAPI.getCardValue("dsUnidadeResponsavel") + "&nbsp;";
+	mensagem += " Código da unidade Responsável: " +  hAPI.getCardValue("cdUnidadeResponsavel") + "&nbsp;";
+	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_EMAIL + "&thread=2&current=" + Activity.CRIACAO_COD_CRM;
 	
 	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoCortitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoCortitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoCorstatus") +'",' + api+ ',"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
 
@@ -128,7 +128,7 @@ function solicitacaoInclusaoPortal() {
 	var configuracaoFilho = {};
 	configuracaoFilho.colunas = [];
 	configuracaoFilho.colunas.push("cpfSocio");
-	configuracaoFilho.dataset = "CanaisOnBoard2";
+	configuracaoFilho.dataset = "formcanaisOnBoard";
 	configuracaoFilho.tabela = "tableQuadroSocietario";
 	configuracaoFilho.where = [];
 	configuracaoFilho.where.push({ name : "token" , value1: "" + hAPI.getCardValue("token"), value2: "" + hAPI.getCardValue("token")});
@@ -137,7 +137,7 @@ function solicitacaoInclusaoPortal() {
 	var dsCanaistableQuadroSocietario =  DatasetFactory.getDataset("dsCanaistablefilhos",[JSON.stringify(configuracaoFilho)],null ,null);
 	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
 	var mensagem = "";
-	mensagem += "Solicito a inclusão do e-mail:'" + hAPI.getCardValue("sugestaoEmail") + "'";
+	mensagem += "Solicito a inclusão do e-mail:'" + hAPI.getCardValue("sugestaoEmail") + "'" + "&nbsp;";
 //	mensagem += " CPF: '" +  dsCanaistableQuadroSocietario.getValue(0, "cpfSocio") + "'";
 	
 	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_CHAMADOS + "&thread=3&current=" + Activity.PORTAL_CLIENTE;
@@ -185,36 +185,36 @@ function solicitacaoCRMEstrutura() {
 	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
 	var mensagem = "";
 	if (hAPI.getCardValue("tipoSolicMaster") == "master" &&  hAPI.getCardValue("slVinculoMaster") == "nao" ){
-		mensagem += " Código da Unidade Responsável: " +  hAPI.getCardValue("cdUnidadeResponsavel");
-		mensagem += " Unidade Responsável: " +  hAPI.getCardValue("dsUnidadeResponsavel");
+		mensagem += " Código da Unidade Responsável: " +  hAPI.getCardValue("cdUnidadeResponsavel") + "&nbsp;";
+		mensagem += " Unidade Responsável: " +  hAPI.getCardValue("dsUnidadeResponsavel") + "&nbsp;";
 	}
 	if (  hAPI.getCardValue("tipoSolicMaster") == "franquia"   || (hAPI.getCardValue("tipoSolicMaster") == "master" &&  hAPI.getCardValue("slVinculoMaster") == "sim")){
-		mensagem += " Unidade de Venda: " +  hAPI.getCardValue("criacaoCoridUnidadeVenda");
+		mensagem += " Unidade de Venda: " +  hAPI.getCardValue("criacaoCoridUnidadeVenda") + "&nbsp;";
 	}
 
-	mensagem += " Código do Gerente: " +  hAPI.getCardValue("cdGerente");
-	mensagem += " Nome do Gerente: " +  hAPI.getCardValue("nmGerente");
-	mensagem += " Razão Social: " +  hAPI.getCardValue("razaoSocial");
-	mensagem += " CNPJ: " +  hAPI.getCardValue("nrCnpj");
-	mensagem += " Endereço Completo: " +  hAPI.getCardValue("endereco");
-	mensagem += " Cidade: " +  hAPI.getCardValue("nmMunicipio");
-	mensagem += " Estado: " +  hAPI.getCardValue("uf");
-	mensagem += " Nome Responsável: " +  hAPI.getCardValue("nome");
-	mensagem += " Telefone: " +  hAPI.getCardValue("telefone");
-	mensagem += " E-mail Partner: " +   hAPI.getCardValue("sugestaoEmail");
-    mensagem += " Tipo AGN: ";
+	mensagem += " Código do Gerente: " +  hAPI.getCardValue("cdGerente") + "&nbsp;";
+	mensagem += " Nome do Gerente: " +  hAPI.getCardValue("nmGerente") + "&nbsp;";
+	mensagem += " Razão Social: " +  hAPI.getCardValue("razaoSocial") + "&nbsp;";
+	mensagem += " CNPJ: " +  hAPI.getCardValue("nrCnpj") + "&nbsp;";
+	mensagem += " Endereço Completo: " +  hAPI.getCardValue("endereco") + "&nbsp;";
+	mensagem += " Cidade: " +  hAPI.getCardValue("nmMunicipio") + "&nbsp;";
+	mensagem += " Estado: " +  hAPI.getCardValue("uf") + "&nbsp;";
+	mensagem += " Nome Responsável: " +  hAPI.getCardValue("nome") + "&nbsp;";
+	mensagem += " Telefone: " +  hAPI.getCardValue("telefone") + "&nbsp;";
+	mensagem += " E-mail Partner: " +   hAPI.getCardValue("sugestaoEmail") + "&nbsp;";
+    mensagem += " Tipo AGN: " + "&nbsp;";
 	
 	if (hAPI.getCardValue("tipoSolicMaster") == "master" &&  hAPI.getCardValue("slVinculoMaster") == "sim" ){
-		mensagem += " Master PVF";
+		mensagem += " Master PVF" + "&nbsp;";
 	}
 	if (hAPI.getCardValue("tipoSolicMaster") == "master" &&  hAPI.getCardValue("slVinculoMaster") == "nao" ){
-		mensagem += " PVF";
+		mensagem += " PVF" + "&nbsp;";
 	}
 	if (hAPI.getCardValue("tipoSolicMaster") == "franquia"){
-		mensagem += hAPI.getCardValue("tpContrato");
+		mensagem += hAPI.getCardValue("tpContrato") + "&nbsp;";
 	}
 
-	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_CHAMADOS + "&thread=2&current=" + Activity.USUARIO_CRM_VENDAS;
+	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_CHAMADOS + "&thread=6&current=" + Activity.USUARIO_CRM_VENDAS;
 	
 	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoEstruturatitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoEstruturatitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoEstruturastatus") +'",' + api +',"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
 
@@ -257,15 +257,15 @@ function solicitacaoFornecedor() {
 	api += ']';
 	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
 	var mensagem = "";
-	mensagem += "Razão Social: " +  hAPI.getCardValue("razaoSocial");
-	mensagem += " CNPJ: " +  hAPI.getCardValue("nrCnpj");
-	mensagem += " Banco: " +  hAPI.getCardValue("banco");
-	mensagem += " Agência: " +  hAPI.getCardValue("agencia");
-	mensagem += " Conta: " +  hAPI.getCardValue("conta");
-	mensagem += " E-mail para recibimento de relatório de comissões: " +  hAPI.getCardValue("emailRecebimentoRelatrio");
-	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_CHAMADOS + "&thread=4&current=" + Activity.CADASTRO_FORNECEDOR;
+	mensagem += "Razão Social: " +  hAPI.getCardValue("razaoSocial") + "&nbsp;";
+	mensagem += " CNPJ: " +  hAPI.getCardValue("nrCnpj") + "&nbsp;";
+	mensagem += " Banco: " +  hAPI.getCardValue("banco") + "&nbsp;";
+	mensagem += " Agência: " +  hAPI.getCardValue("agencia") + "&nbsp;";
+	mensagem += " Conta: " +  hAPI.getCardValue("conta") + "&nbsp;";
+	mensagem += " E-mail para recibimento de relatório de comissões: " +  hAPI.getCardValue("emailRecebimentoRelatrio") + "&nbsp;";
+	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "?token=" + hAPI.getCardValue("token") + "&task=" + Activity.JOIN_CHAMADOS + "&thread=4&current=" + Activity.CADASTRO_FORNECEDOR ;
 	
-	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoFornecedortitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoFornecedortitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoFornecedorstatus") +'",' + api +',external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
+	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoFornecedortitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoFornecedortitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoFornecedorstatus") +'",' + api +',"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
 
 
 	var headers = [];
@@ -280,7 +280,7 @@ function solicitacaoFornecedor() {
 
 
 	var criacaoCor = Rest(url, params, null,method, headers);
-	log.info("@SubAbeturadeChamados RestPost criacaoCor.ticket.id:" + criacaoCor.ticket.id);
+	log.info("@SubAbeturadeChamados RestPost criacaoFornecedoridticket.ticket.id:" + criacaoCor.ticket.id);
 	hAPI.setCardValue("criacaoFornecedoridticket",criacaoCor.ticket.id)
 
 

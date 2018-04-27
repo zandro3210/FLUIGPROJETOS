@@ -1,0 +1,8 @@
+function enableFields(form){
+	var CURRENT_STATE = getValue("WKNumState");
+	
+	if (CURRENT_STATE == PREENCHER_QUESTIONARIO){
+		form.setEnabled("dsNmExecutivo", false);
+		form.setEnabled("proposta", false);
+	}
+}

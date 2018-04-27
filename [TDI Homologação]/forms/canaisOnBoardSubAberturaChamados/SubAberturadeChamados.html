@@ -2,73 +2,226 @@
 
 <head>
 
-	<meta charset="UTF-8">
-	<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
-	<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg"
-	 color="#111">
 	<link type="text/css" rel="stylesheet" href="/portal/resources/style-guide/css/fluig-style-guide.min.css" />
-	<link type="text/css" rel="stylesheet" href="progressbar.css" />
+	<link type="text/css" rel="stylesheet" href="custom.css" />
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="validate.js"></script>
+	<script type="text/javascript" src="jquery-maskmoney.js"></script>
+	<script type="text/javascript" src="input-mask.js"></script>
+	<script type="text/javascript" src="accounting.js"></script>
 	<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
 	<script type="text/javascript" src="activity.js" charset="utf-8"></script>
+	<script type="text/javascript" src="customApiClient.js" charset="utf-8"></script>
+	<script type="text/javascript" src="personPlugin.js" charset="utf-8"></script>
+	<script type="text/javascript" src="requiredField.js" charset="utf-8"></script>
+	<script src="jquery-csv.js"></script>
+
 	<script type="text/javascript" src="../vcXMLRPC.js"></script>
 	<script type="text/javascript" src="custom.js" charset="utf-8"></script>
-
-
-
 
 
 </head>
 
 <body translate="no">
 
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700" rel="stylesheet" type="text/css">
 
-	<form name="form" role="form">
-		<input name="tipoSolic" id="tipoSolic" type="hidden" />
-		<input name="nmMunicipio" id="nmMunicipio" type="hidden" />
-		<input name="nrCnpj" id="nrCnpj" type="hidden" />
-		<input name="endereco" id="endereco" type="hidden" />
-		<input name="razaoSocial" id="razaoSocial" type="hidden" />
-		<input name="tpContrato" id="tpContrato" type="hidden" />
-		
-		<input name="email" id="email" type="hidden" />
-		<input name="telefone" id="telefone" type="hidden" />
-		<input name="nrSolicitacao" id="nrSolicitacao" type="hidden" />
-		<input name="nrSubsolicitacao" id="nrSubsolicitacao" type="hidden" />
-		<input name="nome" id="nome" type="hidden" />
-		<input name="uf" id="uf" type="hidden" />
-		<input type="hidden" name="dsUnidadeResponsavel" id="dsUnidadeResponsavel">
-		<input name="token" id="token" type="hidden" />
-		<input name="criacaoCoridticket" id="criacaoCoridticket" type="hidden" />
-		<input name="criacaoEstruturaidticket" id="criacaoEstruturaidticket" type="hidden" />
-		<input name="criacaoFornecedoridticket" id="criacaoFornecedoridticket" type="hidden" />
-		<input name="criacaoCoridUnidadeVenda" id="criacaoCoridUnidadeVenda" type="hidden" />
-		<input name="criacaoPortalidticket" id="criacaoPortalidticket" type="hidden" />
-		<input name="cdUnidadeResponsavel" id="cdUnidadeResponsavel" type="hidden" />
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<input name="tipoSolic" id="tipoSolic" type="hidden" />
+			<input name="nmMunicipio" id="nmMunicipio" type="hidden" />
+			<input name="nrCnpj" id="nrCnpj" type="hidden" />
+			<input name="endereco" id="endereco" type="hidden" />
+			<input name="razaoSocial" id="razaoSocial" type="hidden" />
+			<input name="tpContrato" id="tpContrato" type="hidden" />
+
+			<input name="email" id="email" type="hidden" />
+			<input name="telefone" id="telefone" type="hidden" />
+			<input name="nrSolicitacao" id="nrSolicitacao" type="hidden" />
+			<input name="nrSubsolicitacao" id="nrSubsolicitacao" type="hidden" />
+			<input name="nome" id="nome" type="hidden" />
+			<input name="uf" id="uf" type="hidden" />
+			<input type="hidden" name="dsUnidadeResponsavel" id="dsUnidadeResponsavel">
+			<input name="token" id="token" type="hidden" />
 
 
-		<input name="sugestaoEmail" id="sugestaoEmail" type="hidden" />
-		<input name="banco" id="banco" type="hidden" />
-		<input name="agencia" id="agencia" type="hidden" />
-		<input name="conta" id="conta" type="hidden" />
-		<input name="emailRecebimentoRelatrio" id="emailRecebimentoRelatrio" type="hidden" />
-		<input name="filhostableQuadroSocietario" id="filhostableQuadroSocietario" type="hidden" />
 
 
-		<link href='https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
-
-		<h1>Abertura de Chamados (Acompanhamento)</h1>
+			<input name="cdUnidadeResponsavel" id="cdUnidadeResponsavel" type="hidden" />
 
 
-		
+			<input name="sugestaoEmail" id="sugestaoEmail" type="hidden" />
+			<input name="banco" id="banco" type="hidden" />
+			<input name="agencia" id="agencia" type="hidden" />
+			<input name="conta" id="conta" type="hidden" />
+			<input name="emailRecebimentoRelatrio" id="emailRecebimentoRelatrio" type="hidden" />
+			<input name="filhostableQuadroSocietario" id="filhostableQuadroSocietario" type="hidden" />
 
 
-		</div>
-	</form>
 
+			<h1>Abertura de Chamados (Acompanhamento)</h1>
+			<div class="panel panel-info" id="panelAberturaChamados">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<b>Abertura de Chamados</b>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="panel panel-info" id="panelAberturaChamados2">
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active">
+								<a href="#panelemail" aria-controls="panelemail" role="tab" data-toggle="tab" aria-expanded="false">E-mail Corporativo</a>
+							</li>
+							<li role="presentation" class="">
+								<a href="#panelcriacaocrm" aria-controls="panelcriacaocrm" role="tab" data-toggle="tab" aria-expanded="false">Criação do Código no CRM</a>
+							</li>
+							<li role="presentation" class="">
+								<a href="#panelinclusaoportal" aria-controls="panelinclusaoportal" role="tab" data-toggle="tab" aria-expanded="false">Inclusão no Portal do Cliente</a>
+							</li>
+							<li role="presentation" class="">
+								<a href="#panelestrutura" aria-controls="panelestrutura" role="tab" data-toggle="tab" aria-expanded="true">Criação Usuário no CRM e Estrutura de Vendas</a>
+							</li>
+							<li role="presentation" class="">
+								<a href="#panelfornecedor" aria-controls="panelfornecedor" role="tab" data-toggle="tab" aria-expanded="true">Cadastro de Fornecedor</a>
+							</li>
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="panelemail">
+
+								<div class="form-group row row-default">
+									<div class="col-md-2">
+										<label for="_dtemail">Data de Criação do Chamado</label>
+										<div class="input-group enable-calendar">
+											<input type="text" class="form-control" disabled="disabled" name="_dtemail" id="_dtemail" mask="00/00/0000" readonly=""
+											 maxlength="10" autocomplete="off">
+
+										</div>
+									</div>
+									<div class="col-md-2">
+										<label for="_emailcorporativo">E-mail Criado</label>
+										<input type="text" class="form-control" disabled="disabled" name="_emailcorporativo" id="_emailcorporativo">
+									</div>
+
+
+
+
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="panelcriacaocrm">
+
+								<div class="form-group row row-default">
+									<div class="col-md-2">
+										<label for="_dtcricaoCRM">Data de Criação do Chamado</label>
+										<div class="input-group enable-calendar">
+											<input type="text" class="form-control" disabled="disabled" name="_dtcricaoCRM" id="_dtcricaoCRM" mask="00/00/0000" readonly=""
+											 maxlength="10" autocomplete="off">
+
+										</div>
+									</div>
+									<div class="col-md-2">
+										<label for="_ticketcricaoCRM">Código do Ticket</label>
+										<input type="text" class="form-control" disabled="disabled" name="criacaoCoridticket" id="criacaoCoridticket">
+									</div>
+
+
+									<div class="col-md-2">
+										<label for="_ticketusuariocrm">Código de Unidade</label>
+										<input type="text" class="form-control" disabled="disabled" name="criacaoCoridUnidadeVenda" id="criacaoCoridUnidadeVenda"
+										 readonly="">
+									</div>
+
+
+
+
+								</div>
+							</div>
+
+							<div role="tabpanel" class="tab-pane" id="panelinclusaoportal">
+
+								<div class="form-group row row-default">
+									<div class="col-md-2">
+										<label for="_dtinclusaoportal">Data de Criação do Chamado</label>
+										<div class="input-group enable-calendar">
+											<input type="text" class="form-control" disabled="disabled" name="_dtinclusaoportal" id="_dtinclusaoportal" mask="00/00/0000"
+											 readonly="" maxlength="10" autocomplete="off">
+
+										</div>
+									</div>
+									<div class="col-md-2">
+										<label for="_ticketinclusaoportal">Código do Ticket</label>
+										<input type="text" class="form-control" disabled="disabled" name="criacaoPortalidticket" id="criacaoPortalidticket" readonly="">
+									</div>
+
+
+
+
+
+
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="panelestrutura">
+
+								<div class="form-group row row-default">
+									<div class="col-md-2">
+										<label for="_dtusuariocrm">Data de Criação do Chamado</label>
+										<div class="input-group enable-calendar">
+											<input type="text" class="form-control" disabled="disabled" name="_dtusuariocrm" id="_dtusuariocrm" mask="00/00/0000" readonly=""
+											 maxlength="10" autocomplete="off">
+
+										</div>
+									</div>
+									<div class="col-md-2">
+										<label for="_ticketusuariocrm">Código do Ticket</label>
+										<input type="text" class="form-control" disabled="disabled" name="criacaoEstruturaidticket" id="criacaoEstruturaidticket"
+										 readonly="">
+									</div>
+
+
+
+
+
+								</div>
+							</div>
+
+							<div role="tabpanel" class="tab-pane" id="panelfornecedor">
+
+								<div class="form-group row row-default">
+									<div class="col-md-2">
+										<label for="_dtfornecedor">Data de Criação do Chamado</label>
+										<div class="input-group enable-calendar">
+											<input type="text" class="form-control" disabled="disabled" name="_dtfornecedor" id="_dtfornecedor" mask="00/00/0000" readonly=""
+											 maxlength="10" autocomplete="off">
+
+										</div>
+									</div>
+									<div class="col-md-2">
+										<label for="_ticketfornecedor">Código do Ticket</label>
+										<input type="text" class="form-control" disabled="disabled" name="criacaoFornecedoridticket" id="criacaoFornecedoridticket"
+										 readonly="">
+									</div>
+
+
+
+
+
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+		</form>
+	</div>
 
 
 

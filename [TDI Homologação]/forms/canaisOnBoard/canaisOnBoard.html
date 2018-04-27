@@ -40,11 +40,7 @@
 			<input name="codTerritorio" id="codTerritorio" type="hidden" />
 			<input name="codMunicipio" id="codMunicipio" type="hidden" />
 			<input name="cdDocumentoModelo" id="cdDocumentoModelo" type="hidden" />
-			<input name="criacaoFornecedoridticket" id="criacaoFornecedoridticket" type="hidden" />						
-			<input name="criacaoCoridticket" id="criacaoCoridticket" type="hidden" />
-			<input name="criacaoPortalidticket" id="criacaoPortalidticket" type="hidden" />
-			<input name="criacaoEstruturaidticket" id="criacaoEstruturaidticket" type="hidden" />
-			<input name="criacaoCoridUnidadeVenda" id="criacaoCoridUnidadeVenda" type="hidden" />
+			
 			<input name="filhostableQuadroSocietario" id="filhostableQuadroSocietario" type="hidden" />
 			<div class="panel panel-info" id="FluxoOnboard">
 				<div class="panel-body">
@@ -308,9 +304,9 @@
 										<input type="text" class="form-control" name="nmFantasia" id="nmFantasia">
 									</div>
 									<div class="col-md-2">
-											<label for="sugestaoEmail">Sugestão de E-mail</label>
-											<input type="text" class="form-control" name="sugestaoEmail" id="sugestaoEmail">
-										</div>
+										<label for="sugestaoEmail">Sugestão de E-mail</label>
+										<input type="text" class="form-control" name="sugestaoEmail" id="sugestaoEmail">
+									</div>
 									<div class="col-md-2 masterpvf">
 										<label for="nrEscricaoEstadual">Inscri&ccedil;&atilde;o Estadual</label>
 										<input type="text" class="form-control" name="nrEscricaoEstadual" id="nrEscricaoEstadual">
@@ -485,34 +481,161 @@
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-info" id="panelCriaoUnidadeCrm">
-							<div class="panel-heading ">
-								<h3 class="panel-title">
-									<b>Cria&ccedil;&atilde;o de C&oacute;digo de Unidade no CRM</b>
-								</h3>
-							</div>
-							<div class="panel-body">
-								<div class="form-group row row-default">
-									<div class="col-md-4">
-										<label for="cdChamado">C&oacute;digo do Chamado</label>
-										<input type="text" class="form-control" name="cdChamado" id="cdChamado">
-									</div>
-									<div class="col-md-4">
-										<label for="dtSolucaoChamado">Data de Solu&ccedil;&atilde;o do Chamado</label>
-										<div class="input-group enable-calendar">
-											<input type="text" class="form-control" name="dtSolucaoChamado" id="dtSolucaoChamado" mask="00/00/0000">
-											<span class="input-group-addon fs-cursor-pointer">
-												<span class="fluigicon fluigicon-calendar"></span>
-											</span>
+
+						<div class="panel panel-info hidden" id="panelAberturaChamados">
+								<div class="panel-heading ">
+									<h3 class="panel-title">
+										<b>Abertura de Chamados</b>
+									</h3>
+								</div>
+								<div class="panel-body">
+									<div class="panel panel-info" id="panelAberturaChamados2">
+										<ul class="nav nav-tabs" role="tablist">
+											<li role="presentation" class="active">
+												<a href="#panelemail" aria-controls="panelemail" role="tab" data-toggle="tab" aria-expanded="false">E-mail Corporativo</a>
+											</li>
+											<li role="presentation" class="">
+												<a href="#panelcriacaocrm" aria-controls="panelcriacaocrm" role="tab" data-toggle="tab" aria-expanded="false">Criação do Código no CRM</a>
+											</li>
+											<li role="presentation" class="">
+												<a href="#panelinclusaoportal" aria-controls="panelinclusaoportal" role="tab" data-toggle="tab" aria-expanded="false">Inclusão no Portal do Cliente</a>
+											</li>
+											<li role="presentation" class="">
+												<a href="#panelusuariocrm" aria-controls="panelestrutura" role="tab" data-toggle="tab" aria-expanded="true">Criação Usuário no CRM e Estrutura de Vendas</a>
+											</li>
+											<li role="presentation" class="">
+												<a href="#panelfornecedor" aria-controls="panelfornecedor" role="tab" data-toggle="tab" aria-expanded="true">Cadastro de Fornecedor</a>
+											</li>
+										</ul>
+				
+										<!-- Tab panes -->
+										<div class="tab-content">
+											<div role="tabpanel" class="tab-pane active" id="panelemail">
+				
+												<div class="form-group row row-default">
+													<div class="col-md-2">
+														<label for="_dtemail">Data de Criação do Chamado</label>
+														<div class="input-group enable-calendar">
+															<input type="text" class="form-control" disabled="disabled" name="_dtemail" id="_dtemail" mask="00/00/0000" readonly=""
+															 maxlength="10" autocomplete="off">
+				
+														</div>
+													</div>
+													<div class="col-md-2">
+														<label for="_emailcorporativo">E-mail Criado</label>
+														<input type="text" class="form-control" disabled="disabled" name="_emailcorporativo" id="_emailcorporativo">
+													</div>
+				
+				
+				
+				
+												</div>
+											</div>
+											<div role="tabpanel" class="tab-pane" id="panelcriacaocrm">
+				
+												<div class="form-group row row-default">
+													<div class="col-md-2">
+														<label for="_dtcricaoCRM">Data de Criação do Chamado</label>
+														<div class="input-group enable-calendar">
+															<input type="text" class="form-control" disabled="disabled" name="_dtcricaoCRM" id="_dtcricaoCRM" mask="00/00/0000" readonly=""
+															 maxlength="10" autocomplete="off">
+				
+														</div>
+													</div>
+													<div class="col-md-2">
+														<label for="_ticketcricaoCRM">Código do Ticket</label>
+														<input type="text" class="form-control" disabled="disabled" name="criacaoCoridticket" id="criacaoCoridticket">
+													</div>
+				
+				
+													<div class="col-md-2">
+														<label for="_ticketusuariocrm">Código de Unidade</label>
+														<input type="text" class="form-control" disabled="disabled" name="criacaoCoridUnidadeVenda" id="criacaoCoridUnidadeVenda"
+														 readonly="">
+													</div>
+				
+				
+				
+				
+												</div>
+											</div>
+				
+											<div role="tabpanel" class="tab-pane" id="panelinclusaoportal">
+				
+												<div class="form-group row row-default">
+													<div class="col-md-2">
+														<label for="_dtinclusaoportal">Data de Criação do Chamado</label>
+														<div class="input-group enable-calendar">
+															<input type="text" class="form-control" disabled="disabled" name="_dtinclusaoportal" id="_dtinclusaoportal" mask="00/00/0000"
+															 readonly="" maxlength="10" autocomplete="off">
+				
+														</div>
+													</div>
+													<div class="col-md-2">
+														<label for="_ticketinclusaoportal">Código do Ticket</label>
+														<input type="text" class="form-control" disabled="disabled" name="criacaoPortalidticket" id="criacaoPortalidticket" readonly="">
+													</div>
+				
+				
+				
+				
+				
+				
+												</div>
+											</div>
+											<div role="tabpanel" class="tab-pane" id="panelestrutura">
+				
+												<div class="form-group row row-default">
+													<div class="col-md-2">
+														<label for="_dtusuariocrm">Data de Criação do Chamado</label>
+														<div class="input-group enable-calendar">
+															<input type="text" class="form-control" disabled="disabled" name="_dtusuariocrm" id="_dtusuariocrm" mask="00/00/0000" readonly=""
+															 maxlength="10" autocomplete="off">
+				
+														</div>
+													</div>
+													<div class="col-md-2">
+														<label for="_ticketusuariocrm">Código do Ticket</label>
+														<input type="text" class="form-control" disabled="disabled" name="criacaoEstruturaidticket" id="criacaoEstruturaidticket"
+														 readonly="">
+													</div>
+				
+				
+				
+				
+				
+												</div>
+											</div>
+				
+											<div role="tabpanel" class="tab-pane" id="panelfornecedor">
+				
+												<div class="form-group row row-default">
+													<div class="col-md-2">
+														<label for="_dtfornecedor">Data de Criação do Chamado</label>
+														<div class="input-group enable-calendar">
+															<input type="text" class="form-control" disabled="disabled" name="_dtfornecedor" id="_dtfornecedor" mask="00/00/0000" readonly=""
+															 maxlength="10" autocomplete="off">
+				
+														</div>
+													</div>
+													<div class="col-md-2">
+														<label for="_ticketfornecedor">Código do Ticket</label>
+														<input type="text" class="form-control" disabled="disabled" name="criacaoFornecedoridticket" id="criacaoFornecedoridticket"
+														 readonly="">
+													</div>
+				
+				
+				
+				
+				
+												</div>
+											</div>
+				
+				
 										</div>
-									</div>
-									<div class="col-md-4">
-										<label for="cdCanal">C&oacute;digo do Canal</label>
-										<input type="text" class="form-control" name="cdCanal" id="cdCanal">
 									</div>
 								</div>
 							</div>
-						</div>
 
 						<div class="panel panel-info" id="panelInfoCondi" style="display:none">
 
@@ -693,9 +816,9 @@
 								<div class="form-group row">
 									<div class="col-md-12">
 										<label class="radio-inline">
-											<input type="radio" name="_reprovadoContratoAssinado" disabled="disabled" id="_reprovadoContratoAssinado" value="true" >Aprovado</label>
+											<input type="radio" name="_reprovadoContratoAssinado" disabled="disabled" id="_reprovadoContratoAssinado" value="true">Aprovado</label>
 										<label class="radio-inline">
-											<input type="radio" name="_reprovadoContratoAssinado" disabled="disabled" id="_reprovadoContratoAssinado"  value="false">Reprovado</label>
+											<input type="radio" name="_reprovadoContratoAssinado" disabled="disabled" id="_reprovadoContratoAssinado" value="false">Reprovado</label>
 									</div>
 									<div class="col-md-4 hidden" id="_div_reprovadoContratoAssinado">
 										<label for="_motivoontratoAssinado">Motivo:</label>
@@ -722,7 +845,7 @@
 										<label class="radio-inline">
 											<input type="radio" name="_reprovadoFranquia" disabled="disabled" id="_reprovadoFranquia" value="true" checked="checked">Aprovado</label>
 										<label class="radio-inline">
-											<input type="radio" name="_reprovadoFranquia"  disabled="disabled" id="_reprovadoFranquia" value="false">Reprovado</label>
+											<input type="radio" name="_reprovadoFranquia" disabled="disabled" id="_reprovadoFranquia" value="false">Reprovado</label>
 									</div>
 									<div class="col-md-4 hidden" id="_divFranquiaReprovacao">
 										<label for="_motivoReprovadoFranquia">Motivo:</label>

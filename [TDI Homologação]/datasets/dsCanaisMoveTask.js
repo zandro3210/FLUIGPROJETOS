@@ -9,7 +9,7 @@ function createDataset(fields, constraints, sortFields) {
     var token;
     var task;
     var thread;
-    var current;
+    var value;
     if (constraints != null) {
         for (var i = 0; i < constraints.length; i++) {
             if (constraints[i].fieldName == "token") { 
@@ -21,8 +21,8 @@ function createDataset(fields, constraints, sortFields) {
             else if (constraints[i].fieldName == "thread") {
                 thread = constraints[i].initialValue; 
             }
-            else if (constraints[i].fieldName == "current") {
-                current = constraints[i].initialValue; 
+            else if (constraints[i].fieldName == "value") {
+                value = constraints[i].initialValue; 
             }
         }
     }
@@ -31,8 +31,8 @@ function createDataset(fields, constraints, sortFields) {
     log.error("---@dsCanaisMoveTask token:" + token);
     log.error("---@dsCanaisMoveTask task:" + task);
     log.error("---@dsCanaisMoveTask thread:" + thread);
-    log.error("---@dsCanaisMoveTask current:" + current);
- var nmAdmUserid = "ue48u8x3tea5f9fe1524055205797";
+    log.error("---@dsCanaisMoveTask value:" + value);
+    var nmAdmUserid = "ue48u8x3tea5f9fe1524055205797";
     var cst2 = DatasetFactory.createConstraint("userSecurityId", nmAdmUserid, nmAdmUserid, ConstraintType.MUST);
     var constraintsUser= new Array(cst2);
     var params = DatasetFactory.getDataset("dscanaisOnboardParametrizacao", null, constraintsUser, null);
@@ -88,18 +88,26 @@ function createDataset(fields, constraints, sortFields) {
         var attachments = servico.instantiate("com.totvs.technology.ecm.workflow.ws.ProcessAttachmentDtoArray");
         var cardData = WorkflowEngineService.getInstanceCardData(login, password, companyId, userId, processInstanceId);
 
+        if (thread == "1" && task == "62"){
+            
+
+            var _emailcorporativo = servico.instantiate("net.java.dev.jaxb.array.StringArray");
+            _emailcorporativo.getItem().add("_emailcorporativo");
+            _emailcorporativo.getItem().add(value);
+            cardData.getItem().add(_emailcorporativo);
+            log.error("---@dsCanaisMoveTask  Email Corporativo::'" + value + "'" );         
+            
+        }
+
 
         if (thread == "2" && task == "15"){
             
 
             var codUnidadeVenda = servico.instantiate("net.java.dev.jaxb.array.StringArray");
             codUnidadeVenda.getItem().add("criacaoCoridUnidadeVenda");
-            codUnidadeVenda.getItem().add(current);
+            codUnidadeVenda.getItem().add(value);
             cardData.getItem().add(codUnidadeVenda);
-            log.error("---@dsCanaisMoveTask  codUnidadeVenda:'" + current + "'" );
-
-           
-           
+            log.error("---@dsCanaisMoveTask  codUnidadeVenda:'" + value + "'" );         
             
         }
         

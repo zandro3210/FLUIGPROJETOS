@@ -63,9 +63,5 @@ function enableFields(form){
 		form.setEnabled("dtSolucaoChamado", false);
 		form.setEnabled("cdCanal", false);
 	}
-	if(CURRENT_STATE == Activity.INFORMAR_CODIGO_UNIDADE){
-		form.setEnabled("cdChamado", true);
-		form.setEnabled("dtSolucaoChamado", true);
-		form.setEnabled("cdCanal", true);
-	}
+
 }

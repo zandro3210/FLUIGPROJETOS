@@ -1,0 +1,30 @@
+function validateForm(form){
+	var CURRENT_STATE = getValue("WKNumState");
+	var errorMsg = "";
+
+	objForm = form;//variavel declarada e utilizada no validateFormUtils.js
+	
+	if(CURRENT_STATE == Activity.ZERO || CURRENT_STATE == Activity.INICIO){
+		errorMsg+= getEmptyMessage("dsNmExecutivo", "Executivo");
+		errorMsg+= getEmptyMessage("proposta", "Proposta");
+		
+		var jsonModel = stringToJson("jsonModelos", []);		
+		var groups = stringToJson("jsonGruposPerguntasSel", {});
+		var modelsSize = jsonModel.length;
+		var groupsSize = Object.keys(groups).length;
+		
+		if(modelsSize > groupsSize) errorMsg+= "Escolha uma opção por oferta";		
+	}
+	else if(CURRENT_STATE == Activity.PREENCHER_QUESTIONARIO || CURRENT_STATE == Activity.MODIFICAR){
+		errorMsg = form.getValue("errosQuestionario");
+	}
+	
+	if (errorMsg.trim() != "") throw errorMsg;
+}
+
+function stringToJson(fieldName, defaultValue){
+	var string = objForm.getValue(fieldName);
+	var json = (string == "") ? defaultValue : JSON.parse(string);
+	
+	return json;
+}

@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>canaisOnBoardSubAberturaChamados</processId>
-      <version>5</version>
+      <version>12</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>5963901</formId>
@@ -76,8 +76,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>90</positionX>
-      <positionY>240</positionY>
+      <positionX>100</positionX>
+      <positionY>250</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -127,8 +127,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>400</positionX>
-      <positionY>37</positionY>
+      <positionX>370</positionX>
+      <positionY>40</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -179,8 +179,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>400</positionX>
-      <positionY>134</positionY>
+      <positionX>370</positionX>
+      <positionY>140</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -231,8 +231,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>400</positionX>
-      <positionY>231</positionY>
+      <positionX>370</positionX>
+      <positionY>240</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -283,8 +283,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>600</positionX>
-      <positionY>130</positionY>
+      <positionX>710</positionX>
+      <positionY>40</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -335,7 +335,7 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>400</positionX>
+      <positionX>370</positionX>
       <positionY>340</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
@@ -373,7 +373,7 @@
       <formFolder>0</formFolder>
       <automatic>false</automatic>
       <positionX>230</positionX>
-      <positionY>220</positionY>
+      <positionY>230</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>3</stateType>
       <bpmnType>126</bpmnType>
@@ -398,7 +398,32 @@
       <formFolder>0</formFolder>
       <automatic>false</automatic>
       <positionX>730</positionX>
-      <positionY>220</positionY>
+      <positionY>230</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>4</stateType>
+      <bpmnType>127</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>1</version>
+        <sequence>43</sequence>
+      </processStatePK>
+      <stateName>Join Email</stateName>
+      <stateDescription>Join Email</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>false</automatic>
+      <positionX>580</positionX>
+      <positionY>30</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>4</stateType>
       <bpmnType>127</bpmnType>
@@ -436,8 +461,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>880</positionX>
-      <positionY>240</positionY>
+      <positionX>850</positionX>
+      <positionY>250</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -581,23 +606,6 @@
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
         <version>1</version>
-        <linkSequence>39</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>9</initialStateSequence>
-      <finalStateSequence>27</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>1</version>
         <linkSequence>40</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
@@ -615,12 +623,12 @@
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
         <version>1</version>
-        <linkSequence>41</linkSequence>
+        <linkSequence>42</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>11</initialStateSequence>
-      <finalStateSequence>15</finalStateSequence>
+      <initialStateSequence>15</initialStateSequence>
+      <finalStateSequence>27</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -632,12 +640,46 @@
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
         <version>1</version>
-        <linkSequence>42</linkSequence>
+        <linkSequence>44</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>15</initialStateSequence>
-      <finalStateSequence>27</finalStateSequence>
+      <initialStateSequence>11</initialStateSequence>
+      <finalStateSequence>43</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>1</version>
+        <linkSequence>45</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>9</initialStateSequence>
+      <finalStateSequence>43</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>1</version>
+        <linkSequence>46</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>43</initialStateSequence>
+      <finalStateSequence>15</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -681,7 +723,8 @@ var Activity = {&#xd;
 	PORTAL_CLIENTE: 13,&#xd;
 	USUARIO_CRM_VENDAS: 15,&#xd;
 	CADASTRO_FORNECEDOR: 23,&#xd;
-	JOIN_CHAMADOS: 27&#xd;
+	JOIN_CHAMADOS: 27,&#xd;
+	JOIN_EMAIL: 62&#xd;
 }&#xd;
 </eventDescription>
     </WorkflowProcessEvent>
@@ -779,7 +822,7 @@ function beforeStateEntry(sequenceId) {&#xd;
 		solicitacaoCRMEstrutura();&#xd;
 	}&#xd;
 &#xd;
-	if (sequenceId == Activity.CADASTRO_FORNECEDOR &amp;&amp; hAPI.getCardValue(&quot;criacaoCoridticket&quot;) == &quot;&quot; ) {&#xd;
+	if (sequenceId == Activity.CADASTRO_FORNECEDOR &amp;&amp; hAPI.getCardValue(&quot;criacaoFornecedoridticket&quot;) == &quot;&quot; ) {&#xd;
 		solicitacaoFornecedor();&#xd;
 	}&#xd;
 &#xd;
@@ -816,7 +859,7 @@ function solicitacaoEmailcoporativo() {&#xd;
 	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
 	mensagem += &quot;&lt;/table&gt;&quot;;&#xd;
 &#xd;
-	var url = &quot;&lt;a style=&apos;color:red;&apos; href=&apos;&quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=1&amp;current=&quot; + Activity.EMAIL_CORPORATIVO  +&quot;&apos;&gt;Por favor após terminar atividade clique aqui &lt;/a&gt;&lt;br /&gt;&quot;;&#xd;
+	var url = &quot;&lt;a style=&apos;color:red;&apos; href=&apos;&quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_EMAIL + &quot;&amp;thread=1&amp;current=&quot; + Activity.EMAIL_CORPORATIVO  +&quot;&apos;&gt;Por favor após terminar atividade clique aqui &lt;/a&gt;&lt;br /&gt;&quot;;&#xd;
 	params.push({ name: &quot;TITULO&quot;, value: &quot;E-mail Corporativo - Fluxo onBoard&quot; });&#xd;
 	params.push({ name: &quot;MENSAGEM&quot;, value: mensagem });&#xd;
 	params.push({ name: &quot;URL&quot;, value: url });&#xd;
@@ -848,17 +891,17 @@ function solicitacaoCodigoCRM() {&#xd;
 	api += &apos;]&apos;;&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
-	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;);&#xd;
-	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;);&#xd;
-	mensagem += &quot; Endereço Completo: &quot; +  hAPI.getCardValue(&quot;endereco&quot;);&#xd;
-	mensagem += &quot; Cidade: &quot; +  hAPI.getCardValue(&quot;nmMunicipio&quot;);&#xd;
-	mensagem += &quot; Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;);&#xd;
-	mensagem += &quot; Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;);&#xd;
-	mensagem += &quot; Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;);&#xd;
-	mensagem += &quot; E-mail: &quot; +  ( hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot; ?  hAPI.getCardValue(&quot;sugestaoEmail&quot;) : hAPI.getCardValue(&quot;email&quot;) );&#xd;
-	mensagem += &quot; Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;);&#xd;
-	mensagem += &quot; Código da unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;);&#xd;
-	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.USUARIO_CRM_VENDAS + &quot;&amp;thread=2&amp;current=&quot; + Activity.CRIACAO_COD_CRM;&#xd;
+	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Endereço Completo: &quot; +  hAPI.getCardValue(&quot;endereco&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Cidade: &quot; +  hAPI.getCardValue(&quot;nmMunicipio&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; E-mail: &quot; +  ( hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot; ?  hAPI.getCardValue(&quot;sugestaoEmail&quot;) : hAPI.getCardValue(&quot;email&quot;)) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Código da unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_EMAIL + &quot;&amp;thread=2&amp;current=&quot; + Activity.CRIACAO_COD_CRM;&#xd;
 	&#xd;
 	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCorstatus&quot;) +&apos;&quot;,&apos; + api+ &apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
 &#xd;
@@ -887,7 +930,7 @@ function solicitacaoInclusaoPortal() {&#xd;
 	var configuracaoFilho = {};&#xd;
 	configuracaoFilho.colunas = [];&#xd;
 	configuracaoFilho.colunas.push(&quot;cpfSocio&quot;);&#xd;
-	configuracaoFilho.dataset = &quot;CanaisOnBoard2&quot;;&#xd;
+	configuracaoFilho.dataset = &quot;formcanaisOnBoard&quot;;&#xd;
 	configuracaoFilho.tabela = &quot;tableQuadroSocietario&quot;;&#xd;
 	configuracaoFilho.where = [];&#xd;
 	configuracaoFilho.where.push({ name : &quot;token&quot; , value1: &quot;&quot; + hAPI.getCardValue(&quot;token&quot;), value2: &quot;&quot; + hAPI.getCardValue(&quot;token&quot;)});&#xd;
@@ -896,7 +939,7 @@ function solicitacaoInclusaoPortal() {&#xd;
 	var dsCanaistableQuadroSocietario =  DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;,[JSON.stringify(configuracaoFilho)],null ,null);&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
-	mensagem += &quot;Solicito a inclusão do e-mail:&apos;&quot; + hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&apos;&quot;;&#xd;
+	mensagem += &quot;Solicito a inclusão do e-mail:&apos;&quot; + hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&apos;&quot; + &quot;&amp;nbsp;&quot;;&#xd;
 //	mensagem += &quot; CPF: &apos;&quot; +  dsCanaistableQuadroSocietario.getValue(0, &quot;cpfSocio&quot;) + &quot;&apos;&quot;;&#xd;
 	&#xd;
 	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=3&amp;current=&quot; + Activity.PORTAL_CLIENTE;&#xd;
@@ -944,36 +987,36 @@ function solicitacaoCRMEstrutura() {&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
 	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;nao&quot; ){&#xd;
-		mensagem += &quot; Código da Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;);&#xd;
-		mensagem += &quot; Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;);&#xd;
+		mensagem += &quot; Código da Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+		mensagem += &quot; Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
 	}&#xd;
 	if (  hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;franquia&quot;   || (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;sim&quot;)){&#xd;
-		mensagem += &quot; Unidade de Venda: &quot; +  hAPI.getCardValue(&quot;criacaoCoridUnidadeVenda&quot;);&#xd;
+		mensagem += &quot; Unidade de Venda: &quot; +  hAPI.getCardValue(&quot;criacaoCoridUnidadeVenda&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
 	}&#xd;
 &#xd;
-	mensagem += &quot; Código do Gerente: &quot; +  hAPI.getCardValue(&quot;cdGerente&quot;);&#xd;
-	mensagem += &quot; Nome do Gerente: &quot; +  hAPI.getCardValue(&quot;nmGerente&quot;);&#xd;
-	mensagem += &quot; Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;);&#xd;
-	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;);&#xd;
-	mensagem += &quot; Endereço Completo: &quot; +  hAPI.getCardValue(&quot;endereco&quot;);&#xd;
-	mensagem += &quot; Cidade: &quot; +  hAPI.getCardValue(&quot;nmMunicipio&quot;);&#xd;
-	mensagem += &quot; Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;);&#xd;
-	mensagem += &quot; Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;);&#xd;
-	mensagem += &quot; Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;);&#xd;
-	mensagem += &quot; E-mail Partner: &quot; +   hAPI.getCardValue(&quot;sugestaoEmail&quot;);&#xd;
-    mensagem += &quot; Tipo AGN: &quot;;&#xd;
+	mensagem += &quot; Código do Gerente: &quot; +  hAPI.getCardValue(&quot;cdGerente&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Nome do Gerente: &quot; +  hAPI.getCardValue(&quot;nmGerente&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Endereço Completo: &quot; +  hAPI.getCardValue(&quot;endereco&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Cidade: &quot; +  hAPI.getCardValue(&quot;nmMunicipio&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; E-mail Partner: &quot; +   hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+    mensagem += &quot; Tipo AGN: &quot; + &quot;&amp;nbsp;&quot;;&#xd;
 	&#xd;
 	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;sim&quot; ){&#xd;
-		mensagem += &quot; Master PVF&quot;;&#xd;
+		mensagem += &quot; Master PVF&quot; + &quot;&amp;nbsp;&quot;;&#xd;
 	}&#xd;
 	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;nao&quot; ){&#xd;
-		mensagem += &quot; PVF&quot;;&#xd;
+		mensagem += &quot; PVF&quot; + &quot;&amp;nbsp;&quot;;&#xd;
 	}&#xd;
 	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;franquia&quot;){&#xd;
-		mensagem += hAPI.getCardValue(&quot;tpContrato&quot;);&#xd;
+		mensagem += hAPI.getCardValue(&quot;tpContrato&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
 	}&#xd;
 &#xd;
-	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=2&amp;current=&quot; + Activity.USUARIO_CRM_VENDAS;&#xd;
+	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=6&amp;current=&quot; + Activity.USUARIO_CRM_VENDAS;&#xd;
 	&#xd;
 	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturastatus&quot;) +&apos;&quot;,&apos; + api +&apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
 &#xd;
@@ -1016,15 +1059,15 @@ function solicitacaoFornecedor() {&#xd;
 	api += &apos;]&apos;;&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
-	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;);&#xd;
-	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;);&#xd;
-	mensagem += &quot; Banco: &quot; +  hAPI.getCardValue(&quot;banco&quot;);&#xd;
-	mensagem += &quot; Agência: &quot; +  hAPI.getCardValue(&quot;agencia&quot;);&#xd;
-	mensagem += &quot; Conta: &quot; +  hAPI.getCardValue(&quot;conta&quot;);&#xd;
-	mensagem += &quot; E-mail para recibimento de relatório de comissões: &quot; +  hAPI.getCardValue(&quot;emailRecebimentoRelatrio&quot;);&#xd;
-	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=4&amp;current=&quot; + Activity.CADASTRO_FORNECEDOR;&#xd;
+	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Banco: &quot; +  hAPI.getCardValue(&quot;banco&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Agência: &quot; +  hAPI.getCardValue(&quot;agencia&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Conta: &quot; +  hAPI.getCardValue(&quot;conta&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; E-mail para recibimento de relatório de comissões: &quot; +  hAPI.getCardValue(&quot;emailRecebimentoRelatrio&quot;) + &quot;&amp;nbsp;&quot;;&#xd;
+	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;?token=&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;&amp;task=&quot; + Activity.JOIN_CHAMADOS + &quot;&amp;thread=4&amp;current=&quot; + Activity.CADASTRO_FORNECEDOR ;&#xd;
 	&#xd;
-	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedorstatus&quot;) +&apos;&quot;,&apos; + api +&apos;,external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedorstatus&quot;) +&apos;&quot;,&apos; + api +&apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
 &#xd;
 &#xd;
 	var headers = [];&#xd;
@@ -1039,7 +1082,7 @@ function solicitacaoFornecedor() {&#xd;
 &#xd;
 &#xd;
 	var criacaoCor = Rest(url, params, null,method, headers);&#xd;
-	log.info(&quot;@SubAbeturadeChamados RestPost criacaoCor.ticket.id:&quot; + criacaoCor.ticket.id);&#xd;
+	log.info(&quot;@SubAbeturadeChamados RestPost criacaoFornecedoridticket.ticket.id:&quot; + criacaoCor.ticket.id);&#xd;
 	hAPI.setCardValue(&quot;criacaoFornecedoridticket&quot;,criacaoCor.ticket.id)&#xd;
 &#xd;
 &#xd;
@@ -1179,40 +1222,40 @@ function retornaTokenAccesstoken(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>5</version>
+        <version>12</version>
         <linkSequence>29</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>260</positionX>
-      <positionY>72</positionY>
+      <positionY>74</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>5</version>
+        <version>12</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>260</positionX>
-      <positionY>169</positionY>
+      <positionY>174</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>5</version>
+        <version>12</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>260</positionX>
-      <positionY>373</positionY>
+      <positionY>374</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>5</version>
+        <version>12</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1223,45 +1266,34 @@ function retornaTokenAccesstoken(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>5</version>
-        <linkSequence>39</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>670</positionX>
-      <positionY>72</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>5</version>
-        <linkSequence>39</linkSequence>
-        <bendSequence>2</bendSequence>
-      </processLinkBendPK>
-      <positionX>759</positionX>
-      <positionY>72</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>5</version>
-        <linkSequence>41</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>506</positionX>
-      <positionY>173</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>5</version>
+        <version>12</version>
         <linkSequence>42</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>759</positionX>
+      <positionY>110</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>12</version>
+        <linkSequence>42</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>759</positionX>
       <positionY>169</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>12</version>
+        <linkSequence>44</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>610</positionX>
+      <positionY>175</positionY>
     </ProcessLinkBend>
   </list>
   <list/>

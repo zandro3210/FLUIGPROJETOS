@@ -1,0 +1,78 @@
+var objForm; //Esta variavel deve ser iniciada na funcao validateForm com o valor do parametro form.
+/**
+ * Retorna uma mensagem de erro caso o campo esteja vazio.
+ * 
+ * @param fieldName: Nome do campo.
+ * @param label: Label do campo.
+ * @returns String.
+ */
+function getEmptyMessage(fieldName, label){
+ if(isEmpty(fieldName)) return getErrorMessage(label);
+ return "";
+}
+/**
+ * Executa o getEmptyMessage caso a condicao seja atendida.
+ * 
+ * @param fieldNameCondition: Nome do campo condicional.
+ * @param valueCondition: Valor que o campo condicional deve ter para rodar o getEmptyMessage.
+ * @param fieldName: Nome do campo.
+ * @param label: Label do campo.
+ * @returns String.
+ */
+function getEmptyConditionalMessage(fieldNameCondition, valueCondition, fieldName, label){
+ if(!isEmpty(fieldNameCondition) && objForm.getValue(fieldNameCondition) == valueCondition){
+  return getEmptyMessage(fieldName, label);
+ }
+  
+ return "";
+}
+/**
+ * Retorna uma mensagem de erro caso nenhuma opcao foi marcada em um grupo de checkbox.
+ * 
+ * @param fieldNameArray: Array com o nome dos checkbox que pertencem ao grupo.
+ * @param label: Label do campo.
+ * @returns String.
+ */
+function getNoneOptionMessage(fieldNameArray, label){
+ for(var i=0; i<fieldNameArray.length; i++){
+  var name = fieldNameArray[i];
+  if(!isEmpty(name)) return "";
+ }
+  
+ return getErrorMessage(label);
+}
+/**
+ * Executa o getNoneOptionMessage caso a condicao seja atendida.
+ * 
+ * @param fieldNameCondition: Nome do campo condicional.
+ * @param valueCondition: Valor que o campo condicional deve ter para rodar o getNoneOptionMessage.
+ * @param fieldName: Nome do campo.
+ * @param label: Label do campo.
+ * @returns String.
+ */
+function getNoneOptionConditionalMessage(fieldNameCondition, valueCondition, fieldNameArray, label){
+ if(!isEmpty(fieldNameCondition) && objForm.getValue(fieldNameCondition) == valueCondition){
+  return getNoneOptionMessage(fieldNameArray, label);
+ }
+  
+ return "";
+}
+/**
+ * Retorna a mensagem de erro.
+ * 
+ * @param fieldName.
+ * @returns String.
+ */
+function getErrorMessage(fieldName){
+ return "É necessário preencher o campo "+fieldName+"!<br/>";
+}
+/**
+ * Retorna se o campo esta vazio ou nao.
+ * 
+ * @param fieldName: Nome do campo.
+ * @returns boolean.
+ */
+function isEmpty(fieldName){
+ if(objForm.getValue(fieldName) == null) return true;
+ else return objForm.getValue(fieldName).trim().isEmpty();
+}

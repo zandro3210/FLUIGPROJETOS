@@ -51,8 +51,7 @@ $(document).ready(function(){
 	else 
 		CustomForm.disableChild('panelQuadroSocietario');
 	
-	if(CURRENT_STATE != Activity.INFORMAR_CODIGO_UNIDADE && CURRENT_STATE != Activity.AGUARDAR_ENCERRAMENTO_CHAMADOS) 
-		$('#panelCriaoUnidadeCrm').toggle();
+
 
 
 
@@ -103,7 +102,17 @@ $(document).ready(function(){
 		ExibicaoDecisoesInput([Activity.ANALISAR_CONTRATO_ASSINADO]);	
 	}
 
+	if (CURRENT_STATE == Activity.ANALISAR_REPROVACAO_CANAIS 
+		|| CURRENT_STATE == Activity.DISPONIBILIZACAO_TREINAMENTOS 
+		|| CURRENT_STATE == Activity.CADASTRO_ERP_ORACLE 
+		|| CURRENT_STATE == Activity.GERACAO_SHOWROOM 
+		|| CURRENT_STATE == Activity.CADASTRO_MARKETPLACE 
 	
+	){
+		$("#panelAberturaChamados").removeClass("hidden");
+	
+	
+	}
 
 	if(CURRENT_STATE == Activity.INCLUIR_CLAUSULAS){
 		$('#panelInfoCondi').show();
@@ -192,6 +201,10 @@ function changeView2(){
 		
 	}
 }
+
+
+
+
 
 function changeView(){
 	var tpSolic = $("input[name='tipoSolic']:checked").val();

@@ -81,6 +81,10 @@
                                                     <input class="mdl-textfield__input" type="text" id="cdUnidadeVenda">
                                                     <label class="mdl-textfield__label" for="cdUnidadeVenda">Codigo de Unidade de Venda</label>
                                                 </div>
+                                                <div id="div_EmailCorporativo" class="input-field col s6 hide">
+                                                    <input class="mdl-textfield__input" type="email" id="cdEmailCorporativo">
+                                                    <label class="mdl-textfield__label" for="cdEmailCorporativo">E-mail Corporativo Criado</label>
+                                                </div>
                                                 <div class="input-field col s6">
 
                                                     <div class="switch">
@@ -169,6 +173,9 @@ var Activity = {
             if (thread == 2 && current == 11){
                    $("#div_criacaoCor").removeClass("hide");
             }
+            if (current == 9 && thread == 1 ){
+               $("#div_EmailCorporativo").removeClass("hide");
+            }
             if (current == 11 ){
                 $("#titulo").text("Criação de código de unidade no CRM");
             }
@@ -233,12 +240,20 @@ var Activity = {
                 tomandoDecisao();
         });
         function fValidar(){
-            if (thread == 2 &&  current == 11){
+            if (thread == 2 &&  current == Activity.CRIACAO_COD_CRM){
                 if ($("#cdUnidadeVenda").val().length == 0 && $("#div_criacaoCor").hasClass("hide") == false){
                     toastr.error('Por favor preencha o código de unidade de venda')
                     return false;
                 }
                  
+            }
+            if (thread == 1 && current == Activity.EMAIL_CORPORATIVO){
+                  if ($("#cdEmailCorporativo").val().length == 0 && $("#div_EmailCorporativo").hasClass("hide") == false){
+                    toastr.error('Por favor preencha o e-mail corporativo cadastrado')
+                    return false;
+                }
+            
+            
             }
             
             return true;
@@ -247,8 +262,10 @@ var Activity = {
 
             var param_gen = "";
            if (thread == 2 && $("#div_criacaoCor").hasClass("hide") == false)
-                param_gen = ",param," + $("#cdUnidadeVenda").val()
-         
+                param_gen = ",value," + $("#cdUnidadeVenda").val()
+          if (thread == 1 && current == Activity.EMAIL_CORPORATIVO){
+                param_gen = ",value," + $("#cdEmailCorporativo").val()
+          }
 
             var url = "api/public/ecm/dataset/search";
             var data = {
