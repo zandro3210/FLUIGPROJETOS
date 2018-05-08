@@ -88,7 +88,7 @@ function createDataset(fields, constraints, sortFields) {
         var attachments = servico.instantiate("com.totvs.technology.ecm.workflow.ws.ProcessAttachmentDtoArray");
         var cardData = WorkflowEngineService.getInstanceCardData(login, password, companyId, userId, processInstanceId);
 
-        if (thread == "1" && task == "62"){
+        if (thread == "1" && task == "43"){
             
 
             var _emailcorporativo = servico.instantiate("net.java.dev.jaxb.array.StringArray");
@@ -100,7 +100,7 @@ function createDataset(fields, constraints, sortFields) {
         }
 
 
-        if (thread == "2" && task == "15"){
+        if (thread == "2" && task == "43"){
             
 
             var codUnidadeVenda = servico.instantiate("net.java.dev.jaxb.array.StringArray");
@@ -140,6 +140,7 @@ function createDataset(fields, constraints, sortFields) {
     }
     catch (err) {
         log.error("@dsCanaisMoveTask error:'" + err + "'");
+        throw "Falha:'" + err + "'  "
     }
     return dataset;
 } function onMobileSync(user) {

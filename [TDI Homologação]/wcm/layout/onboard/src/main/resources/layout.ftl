@@ -151,11 +151,12 @@
 
     <script>
         var url_string = window.location.href; //window.location.href
+        var x = (url_string.indexOf("/p/") >= 0 ? 1:0);
         var url = new URL(url_string);
-        var token = url.searchParams.get("token");
-        var task = url.searchParams.get("task");
-        var thread = url.searchParams.get("thread");
-         var current = url.searchParams.get("current");
+        var token = url.pathname.split("/")[ x + 4];
+        var task = url.pathname.split("/")[ x + 5];
+        var thread = url.pathname.split("/")[ x + 6];
+         var current = url.pathname.split("/")[ x + 7];
         $( document ).ready(function() {
            configuracao();
         });

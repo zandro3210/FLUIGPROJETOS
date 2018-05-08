@@ -7,7 +7,7 @@ function createDataset(fields, constraints, sortFields) {
 	var email = DsEasyExecutivo.getEmail(constraints);
 	
 	if(email == null) return null;
-	
+	email = "eder.oliveira2@totvs.com.br";
 	var ears = DsEasyExecutivo.getEars(email);
 		
 	dataset.addColumn("codigo");
