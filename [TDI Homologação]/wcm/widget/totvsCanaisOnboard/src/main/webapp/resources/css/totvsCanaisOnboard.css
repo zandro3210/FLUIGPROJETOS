@@ -1,0 +1,117 @@
+.page{ width: 720px; height: 1000px;}
+.page .header{ text-align: center; }
+.page .header hr, .page .footer hr{ width: 400px; }
+.page .footer{ text-align: center; }
+.page_template{ display: none; }
+
+.enclosure {border:1px dashed black}	 
+
+.container-content{
+	width: 745px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+body{
+	overflow:hidden !important;
+}
+
+.img-logo{
+	background-image: url("/totvsCanaisOnboard/resources/images/head_background.gif") !important;
+	background-repeat: no-repeat !important;
+}
+
+.text-white{
+	color: #fff !important !important;
+}
+
+.required::after{
+	content: '*' !important;
+	color: red !important;
+}
+
+input[type=file]{
+	width: 100% !important;
+	height: 33px !important;
+}
+
+.super-margin{
+	margin-top: 1000px !important;
+}
+
+.h1-contract{
+    color: #7e7d7d !important;
+    font-family: Calibri !important;
+    font-size: 14pt !important;
+    text-align: center !important;     
+    font-weight: bold !important;               
+}
+
+.h2-contract{
+    font-family: Calibri !important;
+    font-size: 10pt !important;
+    text-align: center !important;      
+    font-weight: bold !important;                 
+}
+
+.indent{
+    padding-left: 40pt !important;   
+}
+
+.indent-sign-name{
+    left: 300pt !important;
+    position: absolute !important;
+}
+
+.indent-sign-name-2{
+    left: 170pt !important;
+    position: absolute !important;
+}
+
+.indent-sign-name-3{
+    left: 340pt !important;
+    position: absolute !important;
+}
+
+.indent-sign-under{
+    border-bottom: 1px solid !important;
+    width:200px !important;
+    padding-top:20px;
+    position: absolute !important;
+}
+
+.page-main{
+	color: #000000 !important;
+    padding-top: 1.5cm !important;
+    padding-right: 1.5cm !important;
+    padding-left: 1.5cm !important;
+    width: 21cm !important;
+}
+
+.new-paragraph{
+    text-indent: 40pt !important;
+}
+
+.p-contract{
+    font-family: Calibri !important;                
+    text-align: justify !important;
+    
+}
+
+.version{
+    font-size: 10pt !important;
+}
+
+.table th{     
+ 	color: #000000 !important;
+	font-family: Calibri !important;
+	text-align:center !important;
+	font-size:12px !important;
+	font-weight: bold !important;
+}
+
+.table td{
+	font-family: Calibri !important;
+	text-align:center !important;
+	font-size:12px !important;
+}
