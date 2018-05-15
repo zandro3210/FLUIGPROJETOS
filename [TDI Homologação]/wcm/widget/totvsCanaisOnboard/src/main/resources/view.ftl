@@ -1,3 +1,4 @@
+
 <div id="CanaisOnboard_${instanceId}" class="super-widget wcm-widget-class fluig-style-guide" data-params="CanaisOnboard.instance({'mode':'view'})">
 	<div class="container-fluid">
 		<input type="hidden" id="nrSolicitacaoOld" />
@@ -505,94 +506,267 @@
 	
 	<script type="text/template" class="template_contrato_pvf_totvs">	
 		{{#itens}}
-		        <p class="p-contract">De um lado,</p>
-		        <p class="p-contract new-paragraph"><b>{{razaoSocial}}</b>, pessoa jur&iacute;dica de direito privado, Franquia TOTVS, com sede na <b>{{endereco}}</b> na cidade <b>{{nmMunicipio}}</b>, no Estado de <b>{{uf}}</b>, CEP <b>{{cep}}</b>, inscrita no CNPJ/MF sob o n&deg; <b>{{nrCnpj}}</b> e com Inscri&ccedil;&atilde;o Estadual nº <b>{{nrEscricaoEstadual}}</b>, doravante denominada <b>PVF</b> ou <b>Ponto de Vendas Fly01</b>,
-		       
-		        <p class="p-contract">E de outro lado,</p>
-		        <p class="p-contract new-paragraph"><b>TOTVS S.A.</b>, pessoa jur&iacute;dica de direito privado, com sede na Avenida Braz Leme, Jardim S&atilde;o Bento, S&atilde;o Paulo/SP, inscrita no CNPJ/MF sob o n&deg; <b>53.113.791/0001-22</b> e com inscri&ccedil;&atilde;o Estadual nº 111.010.945.111, doravante denominada <b>TOTVS</b>, </p>
-		       
-		        <p class="p-contract new-paragraph">Resolvem, por comum acordo, celebrar o <b>Contrato de Ponto de Vendas Fly01</b>, doravante denominado simplesmente <b>Contrato</b>, que se reger&aacute; pelas cl&aacute;usulas, defini&ccedil;&otilde;es e condi&ccedil;&otilde;es dispostas a seguir, bem como pelos Anexos abaixo e pela legisla&ccedil;&atilde;o aplic&aacute;vel.</p>
-		        
-		        <p class="p-contract">DEFININDO QUE:</p>
-		        <p class="p-contract indent">
-		            S&atilde;o partes integrantes do presente <b>Contrato</b>:</br>
-		            <b>Anexo PVF</b>: Cl&aacute;usulas Padr&atilde;o de um Ponto de Vendas Fly01</br>
-		            <b>Anexo A</b>: Produtos e Servi&ccedil;os</br>
-		            <b>Anexo B</b>: Aspectos Financeiros</br>
-		            <b>Anexo C</b>: Manual Operacional PVF Padr&atilde;o</br>
-		            <b>Anexo D</b>: Pacto Anticorrup&ccedil;&atilde;o
-		        </p>
-		        
-		        <h2 class="h2-contract">CL&Aacute;USULA A</br>DOS ANEXOS: PVF, A, B, C e D</h2>
-		        <p class="p-contract new-paragraph">Fica aqui definido que os Anexos: PVF, A, B, C e D registrados no <b>8º Oficial de Registro de T&iacute;tulos e Documentos e Civil de Pessoa Jur&iacute;dica da Capital</b>, protocolizados e registrados respctivamente sob o nº <b>1.414.204</b>, n&atilde;o ser&atilde;o rubricados e assinados individualmente. As partes, de comum acordo, aceitam, de forma irrevog&aacute;vel e irrestrita, que a assinatura &uacute;nica do <b>Contrato</b> garante a plena aceita&ccedil;&atilde;o dos referidos Anexos.</p>
-		       
-		        <p class="p-contract new-paragraph">Os termos, frases e express&otilde;es do <b>Contrato</b> tem os significados definidos na Cl&aacute;usula 1 do Anexo PVF.</p>
-		        
-		        <p class="p-contract new-paragraph">As partes concordam que o Manual Operacional PVF Padr&atilde;o, doravante denominado simplesmente <b>MPVF</b>, &eacute; elaborado e mantido pela <b>TOTVS</b> e dispensam a anexa&ccedil;&atilde;o do mesmo bem como a rubrica de suas p&aacute;ginas. O <b>PVF</b> reconhece e aceita que os documentos contidos no <b>MPVF</b> s&atilde;o v&aacute;lidos at&eacute; a data de validade que constam das suas capas. A <b>TOTVS</b> reserva-se o direito de substituir esses documentos ao final do seu prazo de validade, ou ainda, antes disso, a fim de aperfei&ccedil;o&aacute;-los, atualiz&aacute;-los e atender as necessidades de mercado.</p>		        
-	      			 
-		       	<h2 class="h2-contract">CL&Aacute;USULA B</br>DA COMUNICA&Ccedil;&Atilde;O</h2>
-		        <p class="p-contract new-paragraph">Para todos os efeitos de direito, quaisquer avisos, comunica&ccedil;&otilde;es e notifica&ccedil;&atilde;es referentes ao Contrato e seus Anexos somente ser&atilde;o considerados entregues nos endere&ccedil;os a seguir anunciados:</p>		        		       
-		        	    
-				 <div>	
-			      	<p class="p-contract" style="width:50%;float:left;padding:0 !important;"><b>TOTVS S.A.<br>	
-			       							 Aos cuidados do Departamento Jur&iacute;dico<br>	
-			       							 Av. Braz Leme, 1000, Jd. S&atilde;o Bento - S&atilde;o Paulo - SP</br>	
-	        						 		 CEP 02511-000 | TEL (011) 2099-7000</b></p>
-	    
-	    			 <p class="p-contract" style="padding:0 !important;"><b>{{razaoSocial}}<br>	
-			       					    Aos cuidados de DEFINIR<br>	
-		       							{{endereco}} - {{nmMunicipio}} - {{uf}}<br>	
-	        							CEP {{cep}} | TEL {{nrTelefone}}</b></p>	
-	        	</div>	       
-		        	   
-		      	<h2 class="h2-contract">CL&Aacute;USULA C</br>DO PORTF&Oacute;LIO e TERRITORIEDADE</h2>
-		      	<p class="p-contract new-paragraph">Fica acordado entre a <b>TOTVS</b> e o <b>PVF</b> que este est&aacute; autorizada a atuar, em car&aacute;ter n&atilde;o exclusivo, com os Produtos e/ou Servi&ccedil;os listados na Tabela de Pre&ccedil;os para o mercado de <b>Microempresas</b> em Territ&oacute;rio Nacional, ou seja, em otdo e qualquer munic&iacute;pio do Brasil, desde que cumpra os requisitos e obriga&ccedil;&otilde;es do <b>Contrato.</b></p>
-		      	
-		      	<p class="p-contract new-paragraph">Fica estabelecido desde j&aacute; que a atua&ccedil;&otilde;o do <b>PVF</b> em cada Segmento/Produto/Servi&ccedil;o dispon&iacute;vel na Tabela de Pre&ccedil;os e no Anexo A para o mercado de <b>Microempresas</b>, est&aacute; condicionada ao cumprimento dos requisitos do <b>Programa TOTVS de Habilita&ccedil;&otilde;o, Certifica&ccedil;&otilde;o e Homologa&ccedil;&otilde;o</b> por Segmento/Produto/Servi&ccedil;o.</p>
-		      	
-		      	<p class="p-contract new-paragraph">Esta Cl&aacute;usula C tem validade somente em conjunto com o “Planejamento e Compromisso Anual de Metas do <b>PVF</b>”, definido na Cl&aacute;usula 8 do Anexo <b>PVF</b>, acordado e assinado entre as partes anualmente.
-	      
-		       	<h2 class="h2-contract">CL&Aacute;USULA D</br>N&Atilde;O EXCLUSIVIDADE</h2>
-		       	
-		        <p class="p-contract new-paragraph">O <b>PVF</b> n&atilde;o ter&atilde;o qualquer esp&eacute;cie de exclusividade na execu&ccedil;&atilde;o do objeto contratual, seja em rela&ccedil;&atilde;o: à comercializa&ccedil;&atilde;o de Produtos e/ou Servi&ccedil;os e à presta&ccedil;&atilde;o de Servi&ccedil;os dispostos no <b>Anexo A</b>, ao <b>Territ&oacute;rio</b> de atua&ccedil;&atilde;o, ao atendimento de empresas que n&atilde;o estejam cadastradas nos sistemas internos TOTVS ou que estejam em desacordo com as regras e condi&ccedil;&otilde;es de gest&atilde;o do CRM.</p>
+		      <p class="p-contract">De um lado,</p>
+        <p class="p-contract new-paragraph">
+            <b>{{razaoSocial}}</b>, pessoa jur&iacute;dica de direito privado, com sede na
+            <b>{{endereco}}</b> na cidade
+            <b>{{nmMunicipio}}</b>, no Estado de
+            <b>{{uf}}</b>, inscrita no CNPJ sob o n&deg;
+            <b>{{nrCnpj}}</b>, neste ato representada de seus atos constitutivos, doravante denominada
+            <b>PVF</b> ou
+            <b>Ponto de Vendas Fly01</b>,
 
-				<p class="p-contract new-paragraph">A <b>TOTVS</b> poder&aacute;, a qualquer tempo, credenciar outros <b>Pontos de Vendas</b>, consultores, revendedores e/ou outros Canais de Venda para atua&ccedil;&atilde;o dentro e/ou fora do Territ&oacute;rio, bem como exercer atividades comerciais, sem que tal fato implique em descumprimento do presente <b>Contrato</b>.</p>
-		        
-		        <p class="p-contract new-paragraph">O <b>PVF</b> est&aacute; ciente e ratifica que o objeto desde Contrato &eacute; de car&aacute;ter n&atilde;o exclusivo e que, tem-se como prerrogativa que em sua opera&ccedil;&atilde;o, o <b>PVF</b> poder&aacute;, a seu exclusivo crit&eacute;rio, atuar com portf&oacute;lios concorrentes e/ou complementares aos dispostos no Anexo A, isentando a <b>TOTVS</b> de toda e qualquer responsabilidade sobre a sua opera&ccedil;&atilde;o, conforme Cl&aacute;usula 11 do Anexo <b>PVF</b>.</p>
-		        
-		        <h2 class="h2-contract">CL&Aacute;USULA E</br>DAS INFORMA&Ccedil;&Otidel;ES E CONDI&Ccedil;&Otidel;ES ESPEC&Iacute;FICAS</h2>
-		        <p class="p-contract new-paragraph">Abaixo est&atilde;o listadas as informa&ccedil;&otilde;es e condi&ccedil;&otilde;es espec&iacute;ficas do <b>Contrato</b>:</p>
-		        
-		     	<p class="p-contract new-paragraph"><b>(i)</b> O plano inicial de neg&oacute;cios e as metas iniciais do <b>PVF</b> dever&atilde;o ser formalizados em seu primeiro "Planejamento e Compromisso Anual de Metas do <b>PVF</b>", tendo este, excepcionalmente, validade da data de assinatura deste <b>Contrato</b> at&eacute; o encerramento do presente ano calend&aacute;rio;</p>
-		     	
-		     	<p class="p-contract new-paragraph"><b>(ii)</b> CONDI&Ccedil;&Atilde;O ESPEC&Iacute;FICA 01;</p>
-		     	
-		     	<p class="p-contract new-paragraph">N&atilde;o existem outras condi&ccedil;&otilde;es espec&iacute;ficas.</p>		     
-	     	 
-		       	<h2 class="h2-contract">CL&Aacute;USULA F</br>DO FORO</h2>
-		        <p class="p-contract new-paragraph">Fica de comum acordo eleito o foro da Comarca de S&atilde;o Paulo – SP, para dirimir quaisquer d&uacute;vidas ou controv&eacute;rsias oriundas deste instrumento, respondendo a parte culpada, ou perdedora, pelas despesas, custas processuais e honor&aacute;rios advocat&iacute;cios sucumbenciais que a parte inocente ou vencedora despender para resguardo de seus direitos.</p>
-		        
-		     	<p class="p-contract new-paragraph">E, por estarem justas e acordadas, as partes firmam o presente <b>Contrato</b> em 02 (duas) vias de igual teor e para que produzam um s&oacute; efeito, juntamente com as 02 (duas) testemunhas abaixo nomeadas.</p>
-		     	</br>
-		     	<p class="p-contract">S&atilde;o Paulo, {{dia}} de {{mes}} de {{ano}}.</p>		  
-		     	</br>
-		     	
-		     	<p class="p-contract"><b>TOTVS S.A.<span class="indent-sign-name">{{razaoSocial}}</span></b></p>	
-		     	</br>
-		     	<p class="p-contract"><span class="indent-sign-under"></span><span class="indent-sign-name indent-sign-under"></span></br>
-		     						  <b>Nome</b>:<span class="indent-sign-name"><b>Nome</b>:</span></p>      	
-				</br>
-		     	<p class="p-contract"><span class="indent-sign-under"></span><span class="indent-sign-name indent-sign-under"></span></br>
-		     						  <b>Nome</b>:<span class="indent-sign-name"><b>Nome</b>:</span></p>      	      
-				</br>
-		     
-		     	<p class="p-contract"><b>TESTEMUNHAS:</b></p>	
-		     	</br>
-		     	<p class="p-contract"><span class="indent-sign-under"></span><span class="indent-sign-name indent-sign-under"></span></br>
-		     						  <b>Nome</b>:<span class="indent-sign-name"><b>Nome</b>:</span></br>
-		     						  <b>RG</b>:<span class="indent-sign-name"><b>RG</b>:</span></br>
-		     						  <b>CPF</b>:<span class="indent-sign-name"><b>CPF</b>:</span></p>   		     	   		     	   		     						  							  				  	
-	       	</div>
+            <p class="p-contract">E de outro lado,</p>
+            <p class="p-contract new-paragraph">
+                <b>TOTVS S.A.</b>, pessoa jur&iacute;dica de direito privado, com sede na Avenida Braz Leme, 1.000, Casa Verde,
+                CEP 02511-000, São Paulo/SP, inscrita no CNPJ sob o nº 53.113.791/0001-22, neste ato representada na forma
+                de seu Estatuto Social, doravante denominada
+                <b>TOTVS</b>, e</p>
+
+
+            <p class="p-contract new-paragraph">
+                <b>BEMATECH HARDWARE LDTA.</b>, pessoa jurídica de direito privado com sede na Rua Francisco Munõz Madrid 625,
+                módulos 402, 403, Roseira, CEP 83070-152, São José dos Pinhais/PR, inscrita no CNPJ sob o nº 27.101.611/0001-82,
+                neste ato representada na forma de seu Contrato Social, doravante denominada
+                <b>BEMATECH,</b>
+            </p>
+
+            <p class="p-contract new-paragraph">Resolvem, por comum acordo, celebrar o
+                <b>Contrato de Ponto de Vendas Fly01</b>, doravante denominado simplesmente
+                <b>Contrato</b>, que se reger&aacute; pelas cl&aacute;usulas, defini&ccedil;&otilde;es e condi&ccedil;&otilde;es
+                dispostas a seguir, bem como pelos Anexos abaixo e pela legisla&ccedil;&atilde;o aplic&aacute;vel.</p>
+
+            <p class="p-contract">DEFININDO QUE:</p>
+            <p class="p-contract indent">
+                S&atilde;o partes integrantes do presente
+                <b>Contrato</b>:</br>
+                <b>Anexo PVF</b>: Cl&aacute;usulas Padr&atilde;o de um Ponto de Vendas Fly01</br>
+                <b>Anexo A</b>: Produtos e Servi&ccedil;os</br>
+                <b>Anexo B</b>: Aspectos Financeiros</br>
+                <b>Anexo C</b>: Manual Operacional PVF Padr&atilde;o</br>
+                <b>Anexo D</b>: Pacto Anticorrup&ccedil;&atilde;o
+            </p>
+
+            <h2 class="h2-contract">CL&Aacute;USULA A</br>DOS ANEXOS: PVF, A, B, C e D</h2>
+            <p class="p-contract new-paragraph">Fica aqui definido que os Anexos: PVF, A, B, C e D registrados no
+                <b>9&ordm; Oficial de Registro de T&iacute;tulos e Documentos Civil de Pessoa Jur&iacute;dica da Capital</b>,
+                protocolizados e registrados sob o n&ordm;
+                <b>1.316.478</b>, n&atilde;o ser&atilde;o rubricados e assinados individualmente. As Partes, de comum acordo,
+                aceitam, de forma irrevog&aacute;vel e irrestrita, que a assinatura &uacute;nica do
+                <b>Contrato</b> garante a plena aceita&ccedil;&atilde;o dos referidos Anexos.</p>
+
+            <p class="p-contract new-paragraph">Os termos, frases e express&otilde;es do
+                <b>Contrato</b> tem os significados definidos na Cl&aacute;usula 1 do Anexo PVF.</p>
+
+            <p class="p-contract new-paragraph">As Partes concordam que o Manual Operacional PVF Padr&atilde;o, doravante denominado simplesmente
+                <b>MPVF</b>, &eacute; elaborado e mantido pela
+                <b>TOTVS</b> e dispensa a anexa&ccedil;&atilde;o do mesmo bem como a rubrica de suas p&aacute;ginas. O
+                <b>PVF</b> reconhece e aceita que os documentos contidos no
+                <b>MPVF</b> s&atilde;o v&aacute;lidos at&eacute; a data de validade que constam das suas capas. A
+                <b>TOTVS</b> reserva-se o direito de substituir o
+                <b>MPVF</b> ao final do seu prazo de validade, ou ainda, antes disso, a fim de aperfei&ccedil;o&aacute;-los,
+                atualiz&aacute;-los e atender &agrave;s necessidades de mercado.</p>
+
+            <h2 class="h2-contract">CL&Aacute;USULA B</br>DA COMUNICA&Ccedil;&Atilde;O</h2>
+            <p class="p-contract new-paragraph">Para todos os efeitos de direito, quaisquer avisos, comunica&ccedil;&otilde;es e notifica&ccedil;&otilde;es referentes
+                ao
+                <b>Contrato</b> e seus Anexos somente ser&atilde;o considerados entregues nos endere&ccedil;os a seguir anunciados:</p>
+
+            <div>
+                <p class="p-contract" style="width:50%;float:left;padding:0 !important;">
+                    <b>TOTVS S.A.
+                        <br> Aos cuidados do Departamento Jur&iacute;dico
+                        <br> Av. Braz Leme, 1000, Jd. S&atilde;o Bento - S&atilde;o Paulo - SP</br>
+                        CEP 02511-000 | TEL (011) 2099-7000</b>
+                </p>
+
+                <p class="p-contract" style="padding:0 !important;">
+                    <b>{{razaoSocial}}
+                        <br> Aos cuidados de DEFINIR
+                        <br> {{endereco}} - {{nmMunicipio}} - {{uf}}
+                        <br> CEP {{cep}} | TEL {{nrTelefone}}</b>
+                </p>
+
+                <p class="p-contract" style="padding:0 !important;">
+                    <b>
+                        <br> BEMATECH HARDWARE LTDA.
+                        <br> Aos cuidados do Departamento Jur&iacute;dico
+                        <br> Rua Francisco Mun&otilde;z Madrid 625, m&oacute;dulos 402 e 403
+                        <br> S&atilde;o Jos&eacute; dos Pinhais &ndash; PR
+                        <br> CEP 83070-152| TEL (041) 3351-2800</b>
+                </p>
+            </div>
+
+            <h2 class="h2-contract">CL&Aacute;USULA C</br>DO PORTF&Oacute;LIO e TERRITORIEDADE</h2>
+            <p class="p-contract new-paragraph">Fica acordado entre as Partes que o
+                <b>PVF</b> est&aacute; autorizado a atuar, em car&aacute;ter n&atilde;o exclusivo, nos Produtos e/ou Servi&ccedil;os
+                listados na Tabela de Pre&ccedil;os para o mercado de
+                <b>Microempresas</b> em Territ&oacute;rio Nacional, ou seja, em todo e qualquer munic&iacute;pio do Brasil,
+                desde que cumpra os requisitos e obriga&ccedil;&otilde;es do
+                <b>Contrato</b>. </p>
+
+            <p class="p-contract new-paragraph">Fica estabelecido desde j&aacute; que a atua&ccedil;&atilde;o do
+                <b>PVF</b> em cada Segmento/Produto/Servi&ccedil;o dispon&iacute;vel na Tabela de Pre&ccedil;os e no Anexo A
+                para o mercado de
+                <b>Microempresas</b> est&aacute; condicionada ao cumprimento com os requisitos do
+                <b>Programa TOTVS de Habilita&ccedil;&atilde;o, Certifica&ccedil;&atilde;o e Homologa&ccedil;&atilde;o</b> e
+                demais documentos previstos nos Anexos PVF, A e B, conforme Segmento/Produto/Servi&ccedil;o.</p>
+
+            <p class="p-contract new-paragraph">Esta Cl&aacute;usula C tem validade somente em conjunto com o &ldquo;Planejamento e Compromisso Anual de Metas
+                do PVF&rdquo;, definido na Cl&aacute;usula 8 do Anexo PVF, acordado e assinado entre as Partes anualmente.</p>
+
+            <h2 class="h2-contract">CL&Aacute;USULA D</br>N&Atilde;O EXCLUSIVIDADE</h2>
+
+            <p class="p-contract new-paragraph">O
+                <b>PVF</b> n&atilde;o ter&aacute; qualquer esp&eacute;cie de exclusividade na execu&ccedil;&atilde;o do objeto
+                contratual, seja em rela&ccedil;&atilde;o: &agrave; comercializa&ccedil;&atilde;o de Produtos e/ou Servi&ccedil;os
+                e &agrave; presta&ccedil;&atilde;o de Servi&ccedil;os dispostos no
+                <b>Anexo A</b>, ao
+                <b>Territ&oacute;rio</b> de atua&ccedil;&atilde;o, ao atendimento de empresas que n&atilde;o estejam cadastradas
+                nos sistemas internos
+                <b>TOTVS</b> ou que estejam em desacordo com as regras e condi&ccedil;&otilde;es de gest&atilde;o do CRM.</p>
+
+            <p class="p-contract new-paragraph">A
+                <b>TOTVS</b> e a
+                <b>BEMATECH</b> poder&atilde;o, a qualquer tempo, credenciar outros
+                <b>Pontos de Vendas</b>, consultores, revendedores e/ou outros Canais de Venda para atua&ccedil;&atilde;o dentro
+                e/ou fora do Territ&oacute;rio, bem como exercer atividades comerciais, sem que tal fato implique em descumprimento
+                do presente
+                <b>Contrato</b>.</p>
+
+            <p class="p-contract new-paragraph">O
+                <b>PVF</b> est&aacute; ciente e ratifica que o objeto deste
+                <b>Contrato</b> &eacute; de car&aacute;ter n&atilde;o exclusivo e que, tem-se como prerrogativa que em sua opera&ccedil;&atilde;o
+                o
+                <b>PVF</b> poder&aacute;, a seu exclusivo crit&eacute;rio, atuar com portf&oacute;lios concorrentes e/ou complementares
+                aos dispostos no Anexo A, isentando a
+                <b>TOTVS</b> e a
+                <b>BEMATECH</b> de toda e qualquer responsabilidade sobre a sua opera&ccedil;&atilde;o, conforme Cl&aacute;usula
+                11 do Anexo PVF.</p>
+
+            <h2 class="h2-contract">CL&Aacute;USULA E</br>DAS INFORMA&Ccedil;&Otilde;ES E CONDI&Ccedil;&Otilde;ES ESPEC&Iacute;FICAS</h2>
+            <p class="p-contract new-paragraph">Abaixo est&atilde;o listadas as informa&ccedil;&otilde;es e condi&ccedil;&otilde;es espec&iacute;ficas do
+                <b>Contrato</b>:</p>
+
+            <p class="p-contract new-paragraph">
+                <b>(i)</b> O plano inicial de neg&oacute;cios e as metas iniciais do
+                <b>PVF</b> dever&atilde;o ser formalizados em seu primeiro "Planejamento e Compromisso Anual de Metas do
+                <b>PVF</b>", tendo este, excepcionalmente, validade da data de assinatura deste
+                <b>Contrato</b> at&eacute; o encerramento do presente ano calend&aacute;rio;</p>
+
+            <p class="p-contract new-paragraph">
+                <b>(ii)</b> Fica acordado entre as Partes que este Contrato entra em vigor a partir de
+                <b>16/04/2018</b> e que, portanto, todas as condi&ccedil;&otilde;es aqui previstas passam a produzir efeitos
+                &uacute;nica e exclusivamente ap&oacute;s a data ora formalizada;</p>
+
+            <p class="p-contract new-paragraph">
+                <b>(iii)</b> CONDI&Ccedil;&Atilde;O ESPEC&Iacute;FICA 03;</p>
+
+            <p class="p-contract new-paragraph">N&atilde;o existem outras condi&ccedil;&otilde;es espec&iacute;ficas.</p>
+
+            <h2 class="h2-contract">CL&Aacute;USULA F</br>CONDI&Ccedil;&Otilde;ES GERAIS</h2>
+            <p class="p-contract new-paragraph">O presente Contrato constitui todo o entendimento e acordo entre as Partes, substituindo integralmente todas
+                as garantias, condi&ccedil;&otilde;es, promessas, declara&ccedil;&otilde;es, contratos e acordos anteriores,
+                verbais ou escritos, sobre o objeto deste Contrato. As Partes declaram n&atilde;o existir quaisquer pend&ecirc;ncias,
+                d&iacute;vidas ou obriga&ccedil;&otilde;es exig&iacute;veis entre si e por terceiros at&eacute; a data de
+                celebra&ccedil;&atilde;o deste instrumento, pelo que outorgam, uma &agrave; outra, a mais ampla, plena, geral,
+                irrevog&aacute;vel e irretrat&aacute;vel quita&ccedil;&atilde;o, para nada mais exigirem entre si, a qualquer
+                tempo, sob qualquer t&iacute;tulo ou pretexto, em ju&iacute;zo ou fora dele, sobre qualquer aven&ccedil;a
+                anterior a este Contrato.</p>
+
+            <p class="p-contract new-paragraph">Fica de comum acordo eleito o foro da Comarca de S&atilde;o Paulo &ndash; SP, para dirimir quaisquer d&uacute;vidas
+                ou controv&eacute;rsias oriundas deste instrumento, respondendo a Parte culpada, ou perdedora, pelas despesas,
+                custas processuais e honor&aacute;rios advocat&iacute;cios sucumbenciais que a Parte inocente ou vencedora
+                despender para resguardo de seus direitos.</p>
+
+            <p class="p-contract new-paragraph">E, por estarem justas e acordadas, as Partes firmam o presente Contrato em 03 (tr&ecirc;s) vias de igual teor
+                e para que produzam um s&oacute; efeito, juntamente com as 02 (duas) testemunhas abaixo nomeadas. </p>
+
+
+            </br>
+            <p class="p-contract">S&atilde;o Paulo, {{dia}} de {{mes}} de {{ano}}.</p>
+            </br>
+            <span class="p-contract" style="width:50%;float:left;padding:0 !important;">
+                <p class="p-contract">
+                    <b>TOTVS S.A.</b>
+                </p>
+                </br>
+                <p class="p-contract">
+                    <span class="indent-sign-under"></span>
+
+                    </br>
+                    <b>Nome</b>:</p>
+                </br>
+                <p class="p-contract">
+                    <span class="indent-sign-under"></span>
+                    </br>
+                    <p class="p-contract">
+                        <b>Nome</b>:</p>
+            </span>
+            </br>
+
+
+
+
+            <span class="p-contract" style="width:50%;float:left;padding:0 !important;">
+                <p class="p-contract">
+                    <b>PVF</b>
+                </p>
+                </br>
+                <p class="p-contract">
+                    <span class="indent-sign-under"></span>
+
+                    </br>
+                    <b>Nome</b>:</p>
+                </br>
+                <p class="p-contract">
+                    <span class="indent-sign-under"></span>
+                    </br>
+                    <p class="p-contract">
+                        <b>Nome</b>:</p>
+            </span>
+            </p>
+
+            <span class="p-contract" style="">
+                <p class="p-contract">
+                    <b>BEMATECH HARDWARE LTDA..</b>
+                </p>
+                </br>
+                <p class="p-contract">
+                    <span class="indent-sign-under"></span>
+
+                    </br>
+                    <b>Nome</b>:</p>
+                </br>
+                <p class="p-contract">
+                    <span class="indent-sign-under"></span>
+                    </br>
+                    <p class="p-contract">
+                        <b>Nome</b>:</p>
+            </span>
+
+            <p class="p-contract">
+                <b>TESTEMUNHAS:</b>
+            </p>
+            </br>
+            <p class="p-contract">
+                <span class="indent-sign-under"></span>
+                <span class="indent-sign-name indent-sign-under"></span>
+                </br>
+                <b>Nome</b>:
+                <span class="indent-sign-name">
+                    <b>Nome</b>:</span>
+                </br>
+                <b>RG</b>:
+                <span class="indent-sign-name">
+                    <b>RG</b>:</span>
+                </br>
+                <b>CPF</b>:
+                <span class="indent-sign-name">
+                    <b>CPF</b>:</span>
+            </p>
+
+
 		{{/itens}}		               			
 	</script>
 	

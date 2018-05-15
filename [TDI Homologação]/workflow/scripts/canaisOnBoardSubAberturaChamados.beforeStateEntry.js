@@ -203,7 +203,7 @@ function solicitacaoCRMEstrutura() {
 	mensagem += " Estado: " +  hAPI.getCardValue("uf") + "\\r";
 	mensagem += " Nome Responsável: " +  hAPI.getCardValue("nome") + "\\r";
 	mensagem += " Telefone: " +  hAPI.getCardValue("telefone") + "\\r";
-	mensagem += " E-mail Partner: " +   hAPI.getCardValue("sugestaoEmail") + "\\r";
+	mensagem += " E-mail Partner: " +   hAPI.getCardValue("_emailcorporativo") + "\\r";
     mensagem += " Tipo AGN: " + "\\r";
 	
 	if (hAPI.getCardValue("tipoSolicMaster") == "master" &&  hAPI.getCardValue("slVinculoMaster") == "sim" ){

@@ -1,12 +1,13 @@
 //Variaveis utilizadas pelo ajaxUtils.
 //devfluigcp-01
-var TOKEN_PUBLIC = 'f92ccf38-1313-437b-a495-4c448834397e';
-var TOKEN_SECRET = '3fbec321-62b6-4c20-acac-550c52c9d18bc28d38f1-1408-4a0a-96d3-51e24891c4c9';
+var TOKEN_PUBLIC = 'f232bd45-782b-468f-b2ab-b520b8091811';
+var TOKEN_SECRET = '1a1b05d1-768a-4dfa-a5dc-decee8c91bd244ec5e41-839f-42d0-a680-247988d8ad37';
 //10.80.129.52
 //var TOKEN_PUBLIC = '958837b8-edee-471e-acf5-5f7e5e5c7ec8';
 //var TOKEN_SECRET = 'c570cb5c-4c08-4c53-99d6-2bbd023f12a4e6ed057d-6f14-4a5c-9372-2d10976ff5e6';
-var CONSUMER_PUBLIC = 'onboardpostapp';
-var CONSUMER_SECRET = 'onboardpostapp@123';
+var CONSUMER_PUBLIC = 'homofluxoonboard';
+var CONSUMER_SECRET = '123';
+
 
 var AjaxUtils = new function ajaxUtils(){
 	/**

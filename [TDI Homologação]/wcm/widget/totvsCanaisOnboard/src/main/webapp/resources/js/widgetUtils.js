@@ -7,7 +7,7 @@ function widgetUtils(objInstance){
 	this.objInstance = objInstance;
 	
 	this.sendToUploadArea = function(file, isOauth, callback,instance){
-    	var url = WCMAPI.getServerURL()+'/ecm/upload';
+    	var url =  window.location.origin +'/ecm/upload';
     	var form = new FormData();
     	form.append('fileUpload', file);
     	AjaxUtils.request(url, 'POST', form, isOauth, callback,instance);

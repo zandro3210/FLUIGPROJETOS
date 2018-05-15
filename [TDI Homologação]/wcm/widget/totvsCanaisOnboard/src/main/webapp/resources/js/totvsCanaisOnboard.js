@@ -5,6 +5,7 @@ var CanaisOnboard = SuperWidget.extend({
 	formValues: null,
 	myLoadingSend: FLUIGC.loading(window),
 	page: 1,
+	empresa : 0,
 	/* Inicio da execucao do script da widget. */
 	init: function() {
 		this.widgetUtils = new widgetUtils(this);
@@ -37,7 +38,7 @@ var CanaisOnboard = SuperWidget.extend({
     	    	loading.show();
     	    	constraints.push(this.createConstraint("nrSolicitacao",params.id));
     	    	constraints.push(this.createConstraint("token",params.tkn));	    		    	
-    	    	
+    	   
     	    	this.getDataset("formcanaisOnBoard",fields,constraints).done(function(result){
     	    		if(result.values.length > 0){
     	    			$("#cdSolicitante").val(result.values[0].cdSolicitante);
@@ -54,7 +55,7 @@ var CanaisOnboard = SuperWidget.extend({
     	}    	
     },    
     getDataset: function(datasetName, fields, constratins, order) {
-        var url = WCMAPI.getServerURL();
+        var url = window.location.origin;
         var d = $.Deferred();
         var token = retornaToken();
         var oauth = retornaOauth(); 
@@ -121,7 +122,6 @@ var CanaisOnboard = SuperWidget.extend({
 			
 	    	var fields = [];	    	
 	    	var constraints = [];
-	    	constraints.push(that.createConstraint("nrSolicitacao",solic));
 	    	constraints.push(that.createConstraint("token",token));	    		    	
 	    	
 	    	that.getDataset("formcanaisOnBoard",fields,constraints).done(function(result){
@@ -356,7 +356,7 @@ var CanaisOnboard = SuperWidget.extend({
     	console.log("file:"+instance.file);
     	try{
     		//WsUtils.saveAndSendTask('erick.moraes@totvs.com.br', 'Totvs@123', WCMAPI.organizationId, "291335840",$('#nrSolicitacao').val(), 51, instance.file.name,instance.saveAndSendTaskResponse,instance);
-    		WsUtils.saveAndSendTask('erick.moraes@totvs.com.br', 'Totvs@123', WCMAPI.organizationId, $('#cdSolicitante').val(), $('#nrSolicitacao').val(), 51, instance.file.name,instance.saveAndSendTaskResponse,instance);
+    		WsUtils.saveAndSendTask('eder.oliveira2.totvs.com.br.10097', 'Totvs@123', WCMAPI.organizationId, $('#cdSolicitante').val(), $('#nrSolicitacao').val(), 51, instance.file.name,instance.saveAndSendTaskResponse,instance);
     	}catch(e){
 			FLUIGC.toast({
     			title: '',
@@ -390,16 +390,14 @@ var CanaisOnboard = SuperWidget.extend({
     	
     },
     getUrlParams: function(){
-    	if(document.URL.indexOf('?') < 0) return null;
-    	
+		var url_string = window.location.href; //window.location.href
+		var x = (url_string.indexOf("/p/") >= 0 ? 1:0);
+		var url = new URL(url_string);
+		empresa = url.pathname.split("/")[ x + 3]
     	var params = {};
-    	var slices = document.URL.split('?')[1].split('&');
-    	
-    	for(var i=0; i<slices.length; i++){
-    		var param = slices[i].split('=');
-    		params[param[0]] = param[1];
-    	}
-    	
+    	params.view = url.pathname.split("/")[ x + 4];
+		params.id = url.pathname.split("/")[ x + 5];
+		params.tkn = url.pathname.split("/")[ x + 6];
     	return params;
     }
 });
@@ -422,8 +420,8 @@ String.prototype.capitalize = function() {
 
 function retornaToken(){
     var token = {
-		  'public': 'f07376a7-2ed5-437d-9d15-ebb63d2309f0',
-          'secret': '77228a31-552a-4b15-98ca-ad1809d3fdac3b822aa0-8075-43f6-9596-3efbfde43b67'
+		  'public': TOKEN_PUBLIC,
+          'secret': TOKEN_SECRET
     };
     
     return token;
@@ -431,8 +429,8 @@ function retornaToken(){
 function retornaOauth(){
     var oauth = OAuth({
         consumer: {
-        	 'public': 'onboarapppost',
-             'secret': 'onboarapppost@123'
+        	 'public': CONSUMER_PUBLIC,
+             'secret': CONSUMER_SECRET
         },
         signature_method: 'HMAC-SHA1'
     });

@@ -21,8 +21,8 @@ function handleCapillarity(action,idSpreadSheet,idItem,idTerritory,idMunicipio){
 	var state = hAPI.getCardValue("uf");
 	var city = encodeURI(idMunicipio);
 	
-	//var urlWithParams = "http://172.24.52.10:8048/TrataMunicipio?Item_Planilha=";
-	var urlWithParams = "https://wscorp.totvs.com.br/TrataMunicipio?Item_Planilha=";
+	var urlWithParams = "http://172.24.52.10:8048/TrataMunicipio?Item_Planilha=";
+	//var urlWithParams = "https://wscorp.totvs.com.br/TrataMunicipio?Item_Planilha=";
 	
 	urlWithParams += '{'+
 						'"'+action+'":'+

@@ -1,6 +1,6 @@
 var PRD = "https://wscorp.totvs.com.br";
 var HML = "http://172.24.52.10:8048";
-var SERVER = PRD;
+var SERVER = HML;
 
 function createDataset(fields, constraints, sortFields) {
 	var dataset = DatasetBuilder.newDataset();
