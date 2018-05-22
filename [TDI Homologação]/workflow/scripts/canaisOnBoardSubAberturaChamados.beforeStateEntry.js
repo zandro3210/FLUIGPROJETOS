@@ -64,6 +64,7 @@ function solicitacaoEmailcoporativo() {
 
 	var receivers = [];
 	receivers.push(retornaParametrizacao("emailCoremail"));
+    receivers.push(hAPI.getCardValue("dsEmailSolicitante"));
 	log.info("@SubAbeturadeChamados  beforeStateEntry onNotify() ");
 	onNotify(subject, receivers, template, params, "text/html");
 	hAPI.setCardValue("_dtemail",retornaDataAtual());
@@ -103,7 +104,7 @@ function solicitacaoCodigoCRM() {
 	mensagem += " Código da unidade Responsável: " +  hAPI.getCardValue("cdUnidadeResponsavel") + "\\r ";
 	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "/" + hAPI.getCardValue("token") + "/" + Activity.JOIN_EMAIL + "/2/" + Activity.CRIACAO_COD_CRM;
 	
-	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoCortitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoCortitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoCorstatus") +'",' + api+ ',"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
+	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoCortitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoCortitulo") + ' '  + mensagem + '  "}, "collaborators": ["' + hAPI.getCardValue("dsEmailSolicitante") +'"],"priority":"' + retornaParametrizacao("criacaoCorstatus") +'",' + api+ ',"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
 
 
 	var headers = [];
@@ -144,7 +145,7 @@ function solicitacaoInclusaoPortal() {
 	
 	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "/" + hAPI.getCardValue("token") + "/" + Activity.JOIN_CHAMADOS + "/3/" + Activity.PORTAL_CLIENTE;
 	
-	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoPortaltitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoPortaltitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoPortalstatus") +'","external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
+	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoPortaltitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoPortaltitulo") + ' '  + mensagem + '  "},"collaborators": ["' + hAPI.getCardValue("dsEmailSolicitante") +'"],"priority":"' + retornaParametrizacao("criacaoPortalstatus") +'","external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
 
 	var access_token =	retornaTokenAccesstoken();
 	var headers = [];
@@ -218,7 +219,7 @@ function solicitacaoCRMEstrutura() {
 
 	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "/" + hAPI.getCardValue("token") + "/" + Activity.JOIN_CHAMADOS + "/6/" + Activity.USUARIO_CRM_VENDAS;
 	
-	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoEstruturatitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoEstruturatitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoEstruturastatus") +'",' + api +',"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
+	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoEstruturatitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoEstruturatitulo") + ' '  + mensagem + '  "},"collaborators": ["' + hAPI.getCardValue("dsEmailSolicitante") +'"],"priority":"' + retornaParametrizacao("criacaoEstruturastatus") +'",' + api +',"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
 
 
 	var headers = [];
@@ -267,7 +268,7 @@ function solicitacaoFornecedor() {
 	mensagem += " E-mail para recibimento de relatório de comissões: " +  hAPI.getCardValue("emailRecebimentoRelatrio") + "\\r";
 	mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "/" + hAPI.getCardValue("token") + "/" + Activity.JOIN_CHAMADOS + "/4/" + Activity.CADASTRO_FORNECEDOR ;
 	
-	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoFornecedortitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoFornecedortitulo") + ' '  + mensagem + '  "},"priority":"' + retornaParametrizacao("criacaoFornecedorstatus") +'",' + api +',"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
+	var params = '{"ticket":{"subject":"' + retornaParametrizacao("criacaoFornecedortitulo") +'","comment":{"body":"' + retornaParametrizacao("criacaoFornecedortitulo") + ' '  + mensagem + '  "},"collaborators": ["' + hAPI.getCardValue("dsEmailSolicitante") +'"],"priority":"' + retornaParametrizacao("criacaoFornecedorstatus") +'",' + api +',"external_id":"' + hAPI.getCardValue("nrSubsolicitacao") +'"}}';
 
 
 	var headers = [];

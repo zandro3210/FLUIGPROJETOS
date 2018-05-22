@@ -79,7 +79,7 @@ $(document).ready(function(){
 	if (CURRENT_STATE == Activity.ANALISAR_REPROVACAO_FRANQUIA){
 		$("#li_decisoes").removeClass("hidden");
 		ExibicaoDecisoesInput([Activity.ANALISAR_REPROVACAO_FRANQUIA]);
-		ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_FINANCEIRO]);
+		ExibicaoDecisoesPanel([Activity.ANALISAR_REPROVACAO_FRANQUIA,Activity.ANALISAR_SOLICITACAO_FINANCEIRO]);
 		if ($("#tipoSolic").val() == "master")
 		{
 			ExibicaoDecisoesPanel([Activity.ANALISAR_SOLICITACAO_CANAIS]);

@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>canaisOnBoardSubAberturaChamados</processId>
-      <version>21</version>
+      <version>22</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>5963901</formId>
@@ -866,6 +866,7 @@ function solicitacaoEmailcoporativo() {&#xd;
 &#xd;
 	var receivers = [];&#xd;
 	receivers.push(retornaParametrizacao(&quot;emailCoremail&quot;));&#xd;
+    receivers.push(hAPI.getCardValue(&quot;dsEmailSolicitante&quot;));&#xd;
 	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry onNotify() &quot;);&#xd;
 	onNotify(subject, receivers, template, params, &quot;text/html&quot;);&#xd;
 	hAPI.setCardValue(&quot;_dtemail&quot;,retornaDataAtual());&#xd;
@@ -905,7 +906,7 @@ function solicitacaoCodigoCRM() {&#xd;
 	mensagem += &quot; Código da unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;) + &quot;\\r &quot;;&#xd;
 	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;/&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;/&quot; + Activity.JOIN_EMAIL + &quot;/2/&quot; + Activity.CRIACAO_COD_CRM;&#xd;
 	&#xd;
-	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCorstatus&quot;) +&apos;&quot;,&apos; + api+ &apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;}, &quot;collaborators&quot;: [&quot;&apos; + hAPI.getCardValue(&quot;dsEmailSolicitante&quot;) +&apos;&quot;],&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCorstatus&quot;) +&apos;&quot;,&apos; + api+ &apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
 &#xd;
 &#xd;
 	var headers = [];&#xd;
@@ -946,7 +947,7 @@ function solicitacaoInclusaoPortal() {&#xd;
 	&#xd;
 	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;/&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;/&quot; + Activity.JOIN_CHAMADOS + &quot;/3/&quot; + Activity.PORTAL_CLIENTE;&#xd;
 	&#xd;
-	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortalstatus&quot;) +&apos;&quot;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;collaborators&quot;: [&quot;&apos; + hAPI.getCardValue(&quot;dsEmailSolicitante&quot;) +&apos;&quot;],&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortalstatus&quot;) +&apos;&quot;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
 &#xd;
 	var access_token =	retornaTokenAccesstoken();&#xd;
 	var headers = [];&#xd;
@@ -1005,7 +1006,7 @@ function solicitacaoCRMEstrutura() {&#xd;
 	mensagem += &quot; Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;) + &quot;\\r&quot;;&#xd;
 	mensagem += &quot; Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;) + &quot;\\r&quot;;&#xd;
 	mensagem += &quot; Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; E-mail Partner: &quot; +   hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; E-mail Partner: &quot; +   hAPI.getCardValue(&quot;_emailcorporativo&quot;) + &quot;\\r&quot;;&#xd;
     mensagem += &quot; Tipo AGN: &quot; + &quot;\\r&quot;;&#xd;
 	&#xd;
 	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;sim&quot; ){&#xd;
@@ -1020,7 +1021,7 @@ function solicitacaoCRMEstrutura() {&#xd;
 &#xd;
 	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;/&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;/&quot; + Activity.JOIN_CHAMADOS + &quot;/6/&quot; + Activity.USUARIO_CRM_VENDAS;&#xd;
 	&#xd;
-	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturastatus&quot;) +&apos;&quot;,&apos; + api +&apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;collaborators&quot;: [&quot;&apos; + hAPI.getCardValue(&quot;dsEmailSolicitante&quot;) +&apos;&quot;],&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturastatus&quot;) +&apos;&quot;,&apos; + api +&apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
 &#xd;
 &#xd;
 	var headers = [];&#xd;
@@ -1069,7 +1070,7 @@ function solicitacaoFornecedor() {&#xd;
 	mensagem += &quot; E-mail para recibimento de relatório de comissões: &quot; +  hAPI.getCardValue(&quot;emailRecebimentoRelatrio&quot;) + &quot;\\r&quot;;&#xd;
 	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;/&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;/&quot; + Activity.JOIN_CHAMADOS + &quot;/4/&quot; + Activity.CADASTRO_FORNECEDOR ;&#xd;
 	&#xd;
-	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedorstatus&quot;) +&apos;&quot;,&apos; + api +&apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;collaborators&quot;: [&quot;&apos; + hAPI.getCardValue(&quot;dsEmailSolicitante&quot;) +&apos;&quot;],&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedorstatus&quot;) +&apos;&quot;,&apos; + api +&apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
 &#xd;
 &#xd;
 	var headers = [];&#xd;
@@ -1241,7 +1242,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>21</version>
+        <version>22</version>
         <linkSequence>29</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1252,7 +1253,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>21</version>
+        <version>22</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1263,7 +1264,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>21</version>
+        <version>22</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1274,7 +1275,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>21</version>
+        <version>22</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1285,7 +1286,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>21</version>
+        <version>22</version>
         <linkSequence>42</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1296,7 +1297,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>21</version>
+        <version>22</version>
         <linkSequence>42</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1307,7 +1308,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>21</version>
+        <version>22</version>
         <linkSequence>44</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
