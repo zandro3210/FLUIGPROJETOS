@@ -5,7 +5,7 @@ var SERVER = HML;
 function createDataset(fields, constraints, sortFields) {
 	var dataset = DatasetBuilder.newDataset();
 	var email = DsEasyExecutivo.getEmail(constraints);
-
+	email = "eder.oliveira2@totvs.com.br";
 	if(email == null) return null;
 	
 	var ears = DsEasyExecutivo.getEars(email);
