@@ -1,6 +1,6 @@
 function servicetask8(attempt, message) {
 	log.info('Start servicetask8 servicetask8 ');
-	var isOk = "true";
+	var isOk = verifyCnpj();
 	
 	hAPI.setCardValue("cnpjOk", isOk);
 	log.info('@servicetask8  isOk:  '+isOk);

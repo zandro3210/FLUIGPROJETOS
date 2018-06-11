@@ -771,208 +771,6 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <sequence>132</sequence>
-      </processStatePK>
-      <stateName>Cadastro no ERP Oracle</stateName>
-      <stateDescription>Cadastro no ERP Oracle</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>2260</positionX>
-      <positionY>370</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>133</sequence>
-      </processStatePK>
-      <stateName>Geração de ordem de vendas para compra de showroom</stateName>
-      <stateDescription>Geração de ordem de vendas para compra de showroom</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>2430</positionX>
-      <positionY>350</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>134</sequence>
-      </processStatePK>
-      <stateName>Cadastro  no Market Place</stateName>
-      <stateDescription>Cadastro  no Market Place</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>2580</positionX>
-      <positionY>370</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>144</sequence>
-      </processStatePK>
-      <stateName>Disponibilização de Treinamentos</stateName>
-      <stateDescription>Disponibilização de Treinamentos</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Papel</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;CanaisOnboardGestor&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>2100</positionX>
-      <positionY>522</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
         <sequence>24</sequence>
       </processStatePK>
       <stateName>Intermediário</stateName>
@@ -1411,56 +1209,6 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <sequence>130</sequence>
-      </processStatePK>
-      <stateName>Vende Bemach?</stateName>
-      <stateDescription>Vende Bemach?</stateDescription>
-      <joint>false</joint>
-      <initialState>false</initialState>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <automatic>true</automatic>
-      <positionX>2280</positionX>
-      <positionY>160</positionY>
-      <inhibitTransfer>false</inhibitTransfer>
-      <stateType>1</stateType>
-      <bpmnType>120</bpmnType>
-      <signalId>0</signalId>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <sequence>131</sequence>
-      </processStatePK>
-      <stateName>Tipo de Canal?</stateName>
-      <stateDescription>Tipo de Canal?</stateDescription>
-      <joint>false</joint>
-      <initialState>false</initialState>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <automatic>true</automatic>
-      <positionX>2190</positionX>
-      <positionY>170</positionY>
-      <inhibitTransfer>false</inhibitTransfer>
-      <stateType>1</stateType>
-      <bpmnType>120</bpmnType>
-      <signalId>0</signalId>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
         <sequence>178</sequence>
       </processStatePK>
       <stateName>Aprovado?</stateName>
@@ -1557,8 +1305,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>1884</positionX>
-      <positionY>423</positionY>
+      <positionX>2200</positionX>
+      <positionY>200</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -1765,50 +1513,6 @@
       </conditionProcessStatePK>
       <condition>(hAPI.getCardValue(&quot;_aprovadoSCanais&quot;) == &quot;true&quot;)</condition>
       <destinationSequenceId>98</destinationSequenceId>
-    </ConditionProcessState>
-    <ConditionProcessState>
-      <conditionProcessStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <expressionOrder>1</expressionOrder>
-        <version>90</version>
-        <sequence>130</sequence>
-      </conditionProcessStatePK>
-      <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
-      <destinationSequenceId>132</destinationSequenceId>
-    </ConditionProcessState>
-    <ConditionProcessState>
-      <conditionProcessStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <expressionOrder>2</expressionOrder>
-        <version>90</version>
-        <sequence>130</sequence>
-      </conditionProcessStatePK>
-      <condition>true</condition>
-      <destinationSequenceId>144</destinationSequenceId>
-    </ConditionProcessState>
-    <ConditionProcessState>
-      <conditionProcessStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <expressionOrder>1</expressionOrder>
-        <version>90</version>
-        <sequence>131</sequence>
-      </conditionProcessStatePK>
-      <condition>(hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)</condition>
-      <destinationSequenceId>144</destinationSequenceId>
-    </ConditionProcessState>
-    <ConditionProcessState>
-      <conditionProcessStatePK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <expressionOrder>2</expressionOrder>
-        <version>90</version>
-        <sequence>131</sequence>
-      </conditionProcessStatePK>
-      <condition>true</condition>
-      <destinationSequenceId>130</destinationSequenceId>
     </ConditionProcessState>
     <ConditionProcessState>
       <conditionProcessStatePK>
@@ -2400,159 +2104,6 @@
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>1</version>
-        <linkSequence>135</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>131</initialStateSequence>
-      <finalStateSequence>130</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>136</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>130</initialStateSequence>
-      <finalStateSequence>132</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>137</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>132</initialStateSequence>
-      <finalStateSequence>133</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>138</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>133</initialStateSequence>
-      <finalStateSequence>134</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>143</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>128</initialStateSequence>
-      <finalStateSequence>131</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>145</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>134</initialStateSequence>
-      <finalStateSequence>144</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>146</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>131</initialStateSequence>
-      <finalStateSequence>144</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>147</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>130</initialStateSequence>
-      <finalStateSequence>144</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
-        <linkSequence>177</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>144</initialStateSequence>
-      <finalStateSequence>67</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>1</version>
         <linkSequence>180</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
@@ -2610,6 +2161,23 @@
       <returnPermited>false</returnPermited>
       <initialStateSequence>58</initialStateSequence>
       <finalStateSequence>128</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>canaisOnboard</processId>
+        <version>1</version>
+        <linkSequence>186</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>128</initialStateSequence>
+      <finalStateSequence>67</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -3510,72 +3078,6 @@ function verifyCnpj(){&#xd;
         <companyId>1</companyId>
         <processId>canaisOnboard</processId>
         <version>90</version>
-        <linkSequence>145</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>2632</positionX>
-      <positionY>561</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>90</version>
-        <linkSequence>146</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>2214</positionX>
-      <positionY>278</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>90</version>
-        <linkSequence>146</linkSequence>
-        <bendSequence>2</bendSequence>
-      </processLinkBendPK>
-      <positionX>2153</positionX>
-      <positionY>278</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>90</version>
-        <linkSequence>147</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>2305</positionX>
-      <positionY>276</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>90</version>
-        <linkSequence>147</linkSequence>
-        <bendSequence>2</bendSequence>
-      </processLinkBendPK>
-      <positionX>2304</positionX>
-      <positionY>314</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>90</version>
-        <linkSequence>147</linkSequence>
-        <bendSequence>3</bendSequence>
-      </processLinkBendPK>
-      <positionX>2152</positionX>
-      <positionY>314</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnboard</processId>
-        <version>90</version>
         <linkSequence>180</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -3649,6 +3151,7 @@ function verifyCnpj(){&#xd;
       <sequence>8</sequence>
       <attempts>0</attempts>
       <sucessFullMessage></sucessFullMessage>
+      <serviceName></serviceName>
       <frequency>1</frequency>
       <frequencyType>0</frequencyType>
     </ProcessStateService>
@@ -3670,6 +3173,7 @@ function verifyCnpj(){&#xd;
       <sequence>78</sequence>
       <attempts>0</attempts>
       <sucessFullMessage></sucessFullMessage>
+      <serviceName></serviceName>
       <frequency>1</frequency>
       <frequencyType>0</frequencyType>
     </ProcessStateService>

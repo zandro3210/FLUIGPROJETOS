@@ -1,5 +1,5 @@
 var PRD = "";
-var HML = "http://172.16.93.222:8091";
+var HML = "http://172.24.52.14:8091";
 var SERVER = HML;
 
 function servicetask99(attempt, message){

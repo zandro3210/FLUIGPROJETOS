@@ -7,15 +7,15 @@
 		<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
 		<script src='/resources/js/mustache/mustache-min.js'></script>
-		<script type="text/javascript" src="../vcXMLRPC.js"></script>
+		<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
 	    <script type="text/javascript" src="temp.js"></script>
 	    <script type="text/javascript" src="formDao.js"></script>
 	    <script type="text/javascript" src="formView.js"></script>
 	    <script type="text/javascript" src="formZoom.js"></script>
 	    <script type="text/javascript" src="activity.js"></script>
 	    <script type="text/javascript" src="requiredField.js"></script>
-	    
-   
+		<script type="text/javascript" src="underscore.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     	<style>
 		    .disabledTab{
 			    pointer-events: none;
@@ -24,6 +24,24 @@
 			    .text-right { text-align: left !important; }
 			}
 			#logo{float: left}
+
+			.fluig-style-guide .btn-primary:active, .fluig-style-guide .btn-primary.active, .fluig-style-guide .open>.dropdown-toggle.btn-primary {
+				background-color: #31708f!important;
+
+			}
+			.panel-body .btn.active::before {
+				font-family: fontAwesome;
+				content: "\f00c\00a0";
+			}
+			.panel-body .btn::before {
+			font-family: fontAwesome;
+			content: "\f111";
+			}
+			label[disabled="disabled"] input{
+				 position: absolute; 
+				 clip: rect(0,0,0,0); 
+				 pointer-events: none; 
+			}
 		</style>
     
 	    <script>
@@ -47,6 +65,7 @@
 				<input type="hidden" id="jsonGruposPerguntas" name="jsonGruposPerguntas">
 				<input type="hidden" id="jsonGruposPerguntasSel" name="jsonGruposPerguntasSel">
 				<input type="hidden" id="jsonRespostas" name="jsonRespostas">
+				<input type="hidden" id="jsonViewRespostas" name="jsonViewRespostas">
 				<input type="hidden" id="jsonPerguntas" name="jsonPerguntas">
 				<input type="hidden" id="emailUsuario" name="emailUsuario">
 				<input type="hidden" id="nrSolicitacao" name="nrSolicitacao">
@@ -259,6 +278,23 @@
 				</div>
 			</form>
 		</div>
+		<script id="tplCollapse" type="text/mustache">
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+					<h4 class="panel-title">
+					  <strong><a data-toggle="collapse" data-parent="#accordion" href="#{{templateindex}}">
+					  {{name}}</a></strong>
+					</h4>
+				  </div>
+				  <div id="{{templateindex}}" class="panel-collapse collapse in {{name}}">
+					
+					
+					</div>
+				  </div>
+				</div>
+			  </div>
+		</script>
 		<script id="tplModel" type="text/mustache">
 			{{#models}}
 			<div class="panel-group">
@@ -274,14 +310,16 @@
 			{{/models}}
 		</script>
 		<script id="tplAsksGroup" type="text/mustache">
+			<div class="btn-group" data-toggle="buttons">
 			{{#asksGroups}}
-			<div class="form-group row">  
-				<label class="col-md-6 col-sm-6 col-xs-6 control-label text-right">{{nome}}</label>
-				<div class="col-md-6 col-sm-6 col-xs-6">
-					<input name="switch_{{model.codigo}}" id="askGroup_{{codigo}}" type="radio" class="form-radio-offer" value="{{nome}}"/>							
-				</div>
-			</div>
+		
+				<label class="btn btn-primary asksGroups">
+					<input name="switch_{{model.codigo}}" id="askGroup_{{codigo}}" type="radio" class="form-radio-offer" value="{{nome}}"/>	{{nome}}						
+				</label>
+				<div style="padding:6px" class="row"></div>
+		
 			{{/asksGroups}}
+			</div>
 		</script>
 		<script id="tplAsks" type="text/mustache">
 			{{#asks}}

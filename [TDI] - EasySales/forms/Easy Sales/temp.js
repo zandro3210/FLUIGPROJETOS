@@ -4,11 +4,26 @@ $(document).ready(function(){
 	FormView.setMandatoryFields();
 	if(CURRENT_STATE != Activity.ZERO && CURRENT_STATE != Activity.INICIO) FormViewOffer.loadModelsTab();
 	
-	$(document).on('click', '.checkDad', checkDad);	
-});
 
+	
+});
+$(document).on( "click", ".checkDad", function() {
+	debugger;
+	checkDad(this);
+	loadJsonResposta();
+  });
 function checkDad(element){
-	element = (element.nodeName == undefined) ? this : element;
+	element = (element.nodeName == undefined) ? element.currentTarget : element;
+
+	if (element.value == 1){
+		$("[data-dad='" + element.getAttribute("data-id") +"']").addClass('ask-required');
+		$("[data-dad='" + element.getAttribute("data-id") +"']").parent("div").parent("div").removeClass('hidden');	
+	}else{
+		$("[data-dad='" + element.getAttribute("data-id") +"']").removeClass('ask-required');
+		$("[data-dad='" + element.getAttribute("data-id") +"']").parent("div").parent("div").addClass('hidden');		
+	}
+
+	/* element = (element.nodeName == undefined) ? this : element;
 	var questions = JSON.parse($('#jsonPerguntas').val());
 	
 	for(var i=0; i<questions.length; i++){	
@@ -35,7 +50,7 @@ function checkDad(element){
 				$('#row_'+askCodigo).addClass('hidden');			
 			}			
 		}		
-	}
+	}*/
 }
 
 var filterOptions = {};
@@ -53,56 +68,58 @@ function setFilterZoom(){
 }
 
 var beforeSendValidate = function(numState, nextState){
-	var obj = [];
-	
+		
 	if(numState == Activity.PREENCHER_QUESTIONARIO){
-		//$('#liAlcance a').trigger('click');
-				
-		$('[name*="ask_"]').each(function(){
-			if(this.name != undefined){				
-				if(this.type == 'radio'){					
-					if($('input[name="'+this.name+'"]').is(':checked')){						
-						obj.push({name: this.name, value: $('input[name='+this.name+']:checked').val()});					
-					}					
-				}				
-				else if($(this).hasClass('field-filter')){
-					var filterId = this.id.replace('___','.').split('ask_')[1];
-					var filterQ = JSON.parse($('#jsonPerguntas').val());
-					var map = {};
-					var finalValue = [];
-					for(var fi=0; fi<filterQ.length; fi++){
-						var current = filterQ[fi];
-						if(current.codigo == filterId){
-							var filterMap = current.opcoes.split(';');
-							for(var fj=0; fj<filterMap.length; fj++){
-								var curMap = filterMap[fj];
-								var parts = curMap.split('=');
-								map[parts[1]] = parts[0];
-							}							
-						}
-					}
-					
-					var values = this.value.split(',');
-					for(var fi=0; fi<values.length; fi++){
-						finalValue.push(map[values[fi]]);
-					}
-					obj.push({name: this.name, value: finalValue.join(';')})	
-				}
-				else{					
-					obj.push({name: this.name, value: this.value})					
-				}				
-			}	
-			$('#jsonRespostas').val(JSON.stringify(obj));
-		});
+		loadJsonResposta();
 	}
 	
-	var errors = CustomValidate.validate(numState);
-	
+	var errors = CustomValidate.validate(numState);	
 	$('#errosQuestionario').val(errors);	
 	
 	return true;
 }
 
+
+function loadJsonResposta(){
+	var obj = [];
+	$('[name*="ask_"]').each(function(){
+		if(this.name != undefined){				
+			if(this.type == 'radio'){					
+				if($('input[name="'+this.name+'"]').is(':checked')){						
+					obj.push({name: this.name, value: $('input[name='+this.name+']:checked').val()});					
+				}					
+			}				
+			else if($(this).hasClass('field-filter')){
+				var filterId = this.id.replace('___','.').split('ask_')[1];
+				var filterQ = JSON.parse($('#jsonPerguntas').val());
+				var map = {};
+				var finalValue = [];
+				for(var fi=0; fi<filterQ.length; fi++){
+					var current = filterQ[fi];
+					if(current.codigo == filterId){
+						var filterMap = current.opcoes.split(';');
+						for(var fj=0; fj<filterMap.length; fj++){
+							var curMap = filterMap[fj];
+							var parts = curMap.split('=');
+							map[parts[1]] = parts[0];
+						}							
+					}
+				}
+				
+				var values = this.value.split(',');
+				for(var fi=0; fi<values.length; fi++){
+					finalValue.push(map[values[fi]]);
+				}
+				obj.push({name: this.name, value: finalValue.join(';')})	
+			}
+			else{					
+				obj.push({name: this.name, value: this.value})					
+			}				
+		}	
+		$('#jsonRespostas').val(JSON.stringify(obj));
+	});
+
+}
 var CustomValidate = {
 	validate: function(numState){
 		var errors = new HashSet();

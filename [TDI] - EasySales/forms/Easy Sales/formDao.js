@@ -35,12 +35,12 @@ var FormDaoOffer = {
 	getAksGroupsValue: function(){
 		return JSON.parse($('#jsonGruposPerguntasSel').val());
 	},
-	setAksGroupsValue: function(){		
+	setAksGroupsValue: function(input){		
 		var $input = $('#jsonGruposPerguntasSel');
 		//var $switch = $(this).find('input'); 
-		var $switch = $(this);
+		var $switch = input;
 		var obj = ($input.val() == '') ? {} : JSON.parse($input.val());
-		obj[$switch.attr('name')] = $switch.val();
+		obj[$switch.getAttribute("name")] = $switch.value;
 		
 		$('#jsonGruposPerguntasSel').val(JSON.stringify(obj));
 		//$switch.trigger('click');

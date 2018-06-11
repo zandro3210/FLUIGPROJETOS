@@ -89,7 +89,7 @@ function solicitacaoCodigoCRM() {
 	}
 	api = api.substring(0,api.length-1);
 	api += ']';
-	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
+	var url = SERVER_ZENDESK + "/api/zendesk/2.0.0/tickets";
 	var mensagem = "";
 	mensagem += "Razão Social: " +  hAPI.getCardValue("razaoSocial") + "\\r ";
 	mensagem += " CNPJ: " +  hAPI.getCardValue("nrCnpj") + "\\r ";
@@ -137,7 +137,7 @@ function solicitacaoInclusaoPortal() {
 
 	
 	var dsCanaistableQuadroSocietario =  DatasetFactory.getDataset("dsCanaistablefilhos",[JSON.stringify(configuracaoFilho)],null ,null);
-	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
+	var url = SERVER_ZENDESK + "/api/zendesk/2.0.0/tickets";
 	var mensagem = "";
 	mensagem += "\\rSolicito a inclusão do e-mail:'" + hAPI.getCardValue("sugestaoEmail") + "'" + "\\r";
 	//mensagem += " CPF: '" +  dsCanaistableQuadroSocietario.getValue(0, "cpfSocio") + "'";
@@ -184,7 +184,7 @@ function solicitacaoCRMEstrutura() {
 	}
 	api = api.substring(0,api.length-1);
 	api += ']';
-	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
+	var url = SERVER_ZENDESK + "/api/zendesk/2.0.0/tickets";
 	var mensagem = "";
 	if (hAPI.getCardValue("tipoSolicMaster") == "master" &&  hAPI.getCardValue("slVinculoMaster") == "nao" ){
 		mensagem += " Código da Unidade Responsável: " +  hAPI.getCardValue("cdUnidadeResponsavel") + "\\r";
@@ -257,7 +257,7 @@ function solicitacaoFornecedor() {
 	}
 	api = api.substring(0,api.length-1);
 	api += ']';
-	var url = SERVER_ZENDESK + "/api/zendesk/1.0/tickets";
+	var url = SERVER_ZENDESK + "/api/zendesk/2.0.0/tickets";
 	var mensagem = "";
 	mensagem += "Razão Social: " +  hAPI.getCardValue("razaoSocial") + "\\r";
 	mensagem += " CNPJ: " +  hAPI.getCardValue("nrCnpj") + "\\r";

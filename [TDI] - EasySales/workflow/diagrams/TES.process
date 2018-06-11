@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:al="http://eclipse.org/graphiti/mm/algorithms" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" xmlns:pi="http://eclipse.org/graphiti/mm/pictograms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
-  <pi:Diagram diagramTypeId="BPMNdiagram" gridUnit="10" name="TES" pictogramLinks="/0/@children.0/@link /0/@children.0/@children.1/@link /0/@children.0/@children.0/@link /0/@children.1/@link /0/@children.2/@link /0/@children.3/@link /0/@children.4/@link /0/@children.5/@link /0/@children.6/@link /0/@children.7/@link /0/@children.8/@link /0/@children.9/@link /0/@children.10/@link /0/@connections.0/@link /0/@connections.1/@link /0/@connections.2/@link /0/@connections.3/@link /0/@connections.4/@link /0/@connections.5/@link /0/@connections.6/@link /0/@connections.7/@link /0/@connections.8/@link /0/@connections.9/@link" snapToGrid="true" version="0.14.0" visible="true">
+  <pi:Diagram diagramTypeId="BPMNdiagram" gridUnit="10" name="TES" pictogramLinks="/0/@children.0/@link /0/@children.0/@children.1/@link /0/@children.0/@children.0/@link /0/@children.1/@link /0/@children.2/@link /0/@children.3/@link /0/@children.4/@link /0/@children.5/@link /0/@children.6/@link /0/@children.7/@link /0/@children.8/@link /0/@children.9/@link /0/@connections.0/@link /0/@connections.1/@link /0/@connections.2/@link /0/@connections.3/@link /0/@connections.4/@link /0/@connections.5/@link /0/@connections.6/@link /0/@connections.7/@link" snapToGrid="true" version="0.14.0" visible="true">
     <graphicsAlgorithm background="/0/@styles.7/@renderingStyle/@adaptedGradientColoredAreas/@adaptedGradientColoredAreas.0/@gradientColor.2/@end/@color" foreground="/0/@colors.0" height="1000" lineWidth="1" transparency="0.0" width="1000" xsi:type="al:Rectangle"/>
     <children active="true" visible="true" xsi:type="pi:ContainerShape">
       <graphicsAlgorithm background="/0/@styles.7/@renderingStyle/@adaptedGradientColoredAreas/@adaptedGradientColoredAreas.0/@gradientColor.2/@end/@color" foreground="/0/@colors.3" height="255" lineWidth="1" style="/0/@styles.0" transparency="0.0" width="669" x="42" xsi:type="al:Rectangle" y="16"/>
@@ -42,7 +42,7 @@
         <graphicsAlgorithmChildren height="35" lineWidth="1" style="/0/@styles.7" transparency="0.0" width="35" xsi:type="al:Ellipse"/>
       </graphicsAlgorithm>
       <link businessObjects="startevent1"/>
-      <anchors incomingConnections="/0/@connections.1 /0/@connections.9" outgoingConnections="/0/@connections.0" xsi:type="pi:ChopboxAnchor"/>
+      <anchors incomingConnections="/0/@connections.1 /0/@connections.7" outgoingConnections="/0/@connections.0" xsi:type="pi:ChopboxAnchor"/>
       <anchors active="true" referencedGraphicsAlgorithm="/0/@children.1/@graphicsAlgorithm/@graphicsAlgorithmChildren.0" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
@@ -52,7 +52,7 @@
         <graphicsAlgorithmChildren height="35" lineWidth="3" style="/0/@styles.8" transparency="0.0" width="35" xsi:type="al:Ellipse"/>
       </graphicsAlgorithm>
       <link businessObjects="endterminate72"/>
-      <anchors incomingConnections="/0/@connections.3" xsi:type="pi:ChopboxAnchor"/>
+      <anchors incomingConnections="/0/@connections.2" xsi:type="pi:ChopboxAnchor"/>
       <anchors active="true" referencedGraphicsAlgorithm="/0/@children.2/@graphicsAlgorithm/@graphicsAlgorithmChildren.0" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
@@ -65,7 +65,7 @@
     <children active="true" visible="true" xsi:type="pi:ContainerShape">
       <graphicsAlgorithm filled="false" height="70" lineVisible="false" lineWidth="1" transparency="0.0" width="106" x="170" xsi:type="al:Rectangle" y="174"/>
       <link businessObjects="servicetask74"/>
-      <anchors incomingConnections="/0/@connections.0" outgoingConnections="/0/@connections.7" xsi:type="pi:ChopboxAnchor"/>
+      <anchors incomingConnections="/0/@connections.0" outgoingConnections="/0/@connections.5" xsi:type="pi:ChopboxAnchor"/>
       <anchors active="true" referencedGraphicsAlgorithm="/0/@children.3/@graphicsAlgorithm" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
@@ -82,7 +82,7 @@
     <children active="true" visible="true" xsi:type="pi:ContainerShape">
       <graphicsAlgorithm filled="false" height="70" lineVisible="false" lineWidth="1" transparency="0.0" width="106" x="490" xsi:type="al:Rectangle" y="46"/>
       <link businessObjects="servicetask76"/>
-      <anchors incomingConnections="/0/@connections.2 /0/@connections.4" outgoingConnections="/0/@connections.3" xsi:type="pi:ChopboxAnchor"/>
+      <anchors incomingConnections="/0/@connections.3" outgoingConnections="/0/@connections.2" xsi:type="pi:ChopboxAnchor"/>
       <anchors active="true" referencedGraphicsAlgorithm="/0/@children.4/@graphicsAlgorithm" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
@@ -97,27 +97,10 @@
       </children>
     </children>
     <children active="true" visible="true" xsi:type="pi:ContainerShape">
-      <graphicsAlgorithm filled="false" height="56" lineVisible="false" lineWidth="1" transparency="0.0" width="106" x="490" xsi:type="al:Rectangle" y="181"/>
-      <link businessObjects="usertask82"/>
-      <anchors incomingConnections="/0/@connections.5" outgoingConnections="/0/@connections.2" xsi:type="pi:ChopboxAnchor"/>
-      <anchors active="true" referencedGraphicsAlgorithm="/0/@children.5/@graphicsAlgorithm" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
-        <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
-      </anchors>
-      <children visible="true">
-        <graphicsAlgorithm cornerHeight="5" cornerWidth="5" height="56" lineWidth="1" style="/0/@styles.13" transparency="0.0" width="106" xsi:type="al:RoundedRectangle"/>
-      </children>
-      <children visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.1" height="46" horizontalAlignment="ALIGNMENT_CENTER" lineVisible="true" lineWidth="1" style="/0/@styles.14" transparency="0.0" value="Modificar" width="96" x="5" xsi:type="al:MultiText" y="5"/>
-      </children>
-      <children visible="true">
-        <graphicsAlgorithm height="16" id="com.totvs.tds.ecm.designer.task.user" lineWidth="1" proportional="false" stretchH="false" stretchV="false" transparency="0.0" width="16" x="5" xsi:type="al:Image" y="5"/>
-      </children>
-    </children>
-    <children active="true" visible="true" xsi:type="pi:ContainerShape">
       <graphicsAlgorithm filled="false" height="84" lineVisible="false" lineWidth="1" transparency="0.0" width="106" x="340" xsi:type="al:Rectangle" y="39"/>
       <link businessObjects="usertask83"/>
-      <anchors incomingConnections="/0/@connections.6 /0/@connections.8" outgoingConnections="/0/@connections.4 /0/@connections.5" xsi:type="pi:ChopboxAnchor"/>
-      <anchors active="true" referencedGraphicsAlgorithm="/0/@children.6/@graphicsAlgorithm" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
+      <anchors incomingConnections="/0/@connections.4 /0/@connections.6" outgoingConnections="/0/@connections.3" xsi:type="pi:ChopboxAnchor"/>
+      <anchors active="true" referencedGraphicsAlgorithm="/0/@children.5/@graphicsAlgorithm" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
       <children visible="true">
@@ -135,8 +118,8 @@
         <graphicsAlgorithmChildren height="30" lineWidth="1" style="/0/@styles.17" transparency="0.0" width="30" xsi:type="al:Ellipse"/>
       </graphicsAlgorithm>
       <link businessObjects="intermediateerror87"/>
-      <anchors outgoingConnections="/0/@connections.6" xsi:type="pi:ChopboxAnchor"/>
-      <anchors active="true" referencedGraphicsAlgorithm="/0/@children.7/@graphicsAlgorithm/@graphicsAlgorithmChildren.0" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
+      <anchors outgoingConnections="/0/@connections.4" xsi:type="pi:ChopboxAnchor"/>
+      <anchors active="true" referencedGraphicsAlgorithm="/0/@children.6/@graphicsAlgorithm/@graphicsAlgorithmChildren.0" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
       <children visible="true">
@@ -156,7 +139,7 @@
       </graphicsAlgorithm>
       <link businessObjects="intermediateerror89"/>
       <anchors outgoingConnections="/0/@connections.1" xsi:type="pi:ChopboxAnchor"/>
-      <anchors active="true" referencedGraphicsAlgorithm="/0/@children.8/@graphicsAlgorithm/@graphicsAlgorithmChildren.0" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
+      <anchors active="true" referencedGraphicsAlgorithm="/0/@children.7/@graphicsAlgorithm/@graphicsAlgorithmChildren.0" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
       <children visible="true">
@@ -173,8 +156,8 @@
     <children active="true" visible="true" xsi:type="pi:ContainerShape">
       <graphicsAlgorithm filled="false" height="70" lineVisible="false" lineWidth="1" transparency="0.0" width="106" x="340" xsi:type="al:Rectangle" y="174"/>
       <link businessObjects="servicetask99"/>
-      <anchors incomingConnections="/0/@connections.7" outgoingConnections="/0/@connections.8" xsi:type="pi:ChopboxAnchor"/>
-      <anchors active="true" referencedGraphicsAlgorithm="/0/@children.9/@graphicsAlgorithm" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
+      <anchors incomingConnections="/0/@connections.5" outgoingConnections="/0/@connections.6" xsi:type="pi:ChopboxAnchor"/>
+      <anchors active="true" referencedGraphicsAlgorithm="/0/@children.8/@graphicsAlgorithm" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
       <children visible="true">
@@ -192,8 +175,8 @@
         <graphicsAlgorithmChildren height="30" lineWidth="1" style="/0/@styles.21" transparency="0.0" width="30" xsi:type="al:Ellipse"/>
       </graphicsAlgorithm>
       <link businessObjects="intermediateerror102"/>
-      <anchors outgoingConnections="/0/@connections.9" xsi:type="pi:ChopboxAnchor"/>
-      <anchors active="true" referencedGraphicsAlgorithm="/0/@children.10/@graphicsAlgorithm/@graphicsAlgorithmChildren.0" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
+      <anchors outgoingConnections="/0/@connections.7" xsi:type="pi:ChopboxAnchor"/>
+      <anchors active="true" referencedGraphicsAlgorithm="/0/@children.9/@graphicsAlgorithm/@graphicsAlgorithmChildren.0" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
       <children visible="true">
@@ -1316,7 +1299,7 @@
         </graphicsAlgorithm>
       </connectionDecorators>
     </connections>
-    <connections active="true" end="/0/@children.1/@anchors.0" start="/0/@children.8/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
+    <connections active="true" end="/0/@children.1/@anchors.0" start="/0/@children.7/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow90"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
@@ -1333,21 +1316,6 @@
       <bendpoints x="127" y="209"/>
       <bendpoints x="127" y="80"/>
     </connections>
-    <connections active="true" end="/0/@children.4/@anchors.0" start="/0/@children.5/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
-      <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
-      <link businessObjects="flow94"/>
-      <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.25" transparency="0.0" value="" x="10" xsi:type="al:Text"/>
-      </connectionDecorators>
-      <connectionDecorators location="1.0" locationRelative="true" visible="true">
-        <graphicsAlgorithm background="/0/@colors.3" filled="true" foreground="/0/@colors.3" lineWidth="1" style="/0/@styles.23" transparency="0.0" xsi:type="al:Polygon">
-          <points after="3" before="3" x="-10" y="-5"/>
-          <points/>
-          <points after="3" before="3" x="-10" y="5"/>
-          <points after="3" before="3" x="-8"/>
-        </graphicsAlgorithm>
-      </connectionDecorators>
-    </connections>
     <connections active="true" end="/0/@children.2/@anchors.0" start="/0/@children.4/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow95"/>
@@ -1363,7 +1331,7 @@
         </graphicsAlgorithm>
       </connectionDecorators>
     </connections>
-    <connections active="true" end="/0/@children.4/@anchors.0" start="/0/@children.6/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
+    <connections active="true" end="/0/@children.4/@anchors.0" start="/0/@children.5/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow96"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
@@ -1380,21 +1348,6 @@
     </connections>
     <connections active="true" end="/0/@children.5/@anchors.0" start="/0/@children.6/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
-      <link businessObjects="flow97"/>
-      <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.28" transparency="0.0" value="" x="10" xsi:type="al:Text"/>
-      </connectionDecorators>
-      <connectionDecorators location="1.0" locationRelative="true" visible="true">
-        <graphicsAlgorithm background="/0/@colors.3" filled="true" foreground="/0/@colors.3" lineWidth="1" style="/0/@styles.23" transparency="0.0" xsi:type="al:Polygon">
-          <points after="3" before="3" x="-10" y="-5"/>
-          <points/>
-          <points after="3" before="3" x="-10" y="5"/>
-          <points after="3" before="3" x="-8"/>
-        </graphicsAlgorithm>
-      </connectionDecorators>
-    </connections>
-    <connections active="true" end="/0/@children.6/@anchors.0" start="/0/@children.7/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
-      <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow98"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
         <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.29" transparency="0.0" value="" x="10" xsi:type="al:Text"/>
@@ -1410,7 +1363,7 @@
       <bendpoints x="544" y="20"/>
       <bendpoints x="394" y="20"/>
     </connections>
-    <connections active="true" end="/0/@children.9/@anchors.0" start="/0/@children.3/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
+    <connections active="true" end="/0/@children.8/@anchors.0" start="/0/@children.3/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow100"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
@@ -1425,7 +1378,7 @@
         </graphicsAlgorithm>
       </connectionDecorators>
     </connections>
-    <connections active="true" end="/0/@children.6/@anchors.0" start="/0/@children.9/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
+    <connections active="true" end="/0/@children.5/@anchors.0" start="/0/@children.8/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow101"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
@@ -1440,7 +1393,7 @@
         </graphicsAlgorithm>
       </connectionDecorators>
     </connections>
-    <connections active="true" end="/0/@children.1/@anchors.0" start="/0/@children.10/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
+    <connections active="true" end="/0/@children.1/@anchors.0" start="/0/@children.9/@anchors.0" visible="true" xsi:type="pi:FreeFormConnection">
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow103"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
@@ -1476,21 +1429,18 @@
   <bpmn2:BpmnSwimLane cores="adc9ac" id="bpmnswimlane3" name="EAR"/>
   <bpmn2:BpmnStartEvent emAtrasoNotificarGestorFrequencia="1.0" emAtrasoNotificarGestorTolerancia="1.0" emAtrasoNotificarRequisitanteFrequencia="1.0" emAtrasoNotificarRequisitanteTolerancia="1.0" emAtrasoNotificarResponsavel="false" esforcoCalculo="0" esforcoPrevisto="1.0" expediente="Default" extendedFields="&lt;list/&gt;" id="startevent1" incoming="flow90 flow103" name="Iniciar Proceso" noticeExpirationAuthorityTime="1.0" noticeExpirationManagerTime="1.0" noticeExpirationRequisitionerTime="1.0" notificaResponsavel="true" outgoing="flow75" selecionaColaboradores="1" signalId="0" type="10"/>
   <bpmn2:BpmnEndEvent extendedFields="&lt;list/&gt;" id="endterminate72" incoming="flow95" name="Termina&#231;&#227;o imediata de processo" signalId="0" type="68"/>
-  <bpmn2:BpmnTask attachedEvents="intermediateerror89" authNotify="true" esforcoCalculo="0" executionAttempts="0" executionSucessfulMessage="Integra&#231;&#227;o executada com sucesso" executionType="1" expediente="" extendedFields="&lt;list/&gt;" frequency="0" id="servicetask74" incoming="flow75" loopType="0" managerMechanism="" name="Enviar dados do EAR" outgoing="flow100" scriptFileName="TES.servicetask74.js" selecionaColaboradores="1" serviceName="" type="82"/>
-  <bpmn2:BpmnTask attachedEvents="intermediateerror87" authNotify="true" esforcoCalculo="0" executionAttempts="0" executionType="1" expediente="" extendedFields="&lt;list/&gt;" frequency="0" id="servicetask76" incoming="flow94 flow96" loopType="0" name="Enviar dados da Proposta" outgoing="flow95" scriptFileName="TES.servicetask76.js" selecionaColaboradores="1" serviceName="" type="82"/>
-  <bpmn2:BpmnTask emAtrasoNotificarResponsavel="false" esforcoCalculo="0" executionAttempts="0" expediente="" extendedFields="&lt;list/&gt;" frequency="0" id="usertask82" incoming="flow97" loopType="0" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerPoolRole&gt;&#10;  &lt;roleId&gt;TES-PMO&lt;/roleId&gt;&#10;  &lt;mechanismName&gt;Pool Papel&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerPoolRole&gt;" managerMechanism="Pool Papel" name="Modificar" outgoing="flow94" selecionaColaboradores="1" type="81"/>
-  <bpmn2:BpmnTask emAtrasoNotificarResponsavel="false" esforcoCalculo="0" executionAttempts="0" expediente="Default" extendedFields="&lt;list/&gt;" frequency="0" id="usertask83" incoming="flow98 flow101" loopType="0" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerExecutorMechanism&gt;&#10;  &lt;idNode&gt;startevent1&lt;/idNode&gt;&#10;  &lt;returns&gt;1&lt;/returns&gt;&#10;  &lt;mechanismName&gt;Executor Atividade&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerExecutorMechanism&gt;" managerMechanism="Executor Atividade" name="Preencher question&#225;rio TES (EAR)" outgoing="flow96 flow97" selecionaColaboradores="1" type="81"/>
+  <bpmn2:BpmnTask attachedEvents="intermediateerror89" authNotify="true" emAtrasoNotificarResponsavel="false" emAtrasoNotificarResponsavelFrequencia="0.0" emAtrasoNotificarResponsavelTolerancia="0.0" esforcoCalculo="0" executionAttempts="0" executionSucessfulMessage="Integra&#231;&#227;o executada com sucesso" executionType="1" expediente="" extendedFields="&lt;list/&gt;" frequency="0" id="servicetask74" incoming="flow75" loopType="0" name="Enviar dados do EAR" outgoing="flow100" scriptFileName="TES.servicetask74.js" selecionaColaboradores="1" serviceName="" type="82"/>
+  <bpmn2:BpmnTask attachedEvents="intermediateerror87" authNotify="true" esforcoCalculo="0" executionAttempts="0" executionType="1" expediente="" extendedFields="&lt;list/&gt;" frequency="0" id="servicetask76" incoming="flow96" loopType="0" name="Enviar dados da Proposta" outgoing="flow95" scriptFileName="TES.servicetask76.js" selecionaColaboradores="1" serviceName="" type="82"/>
+  <bpmn2:BpmnTask emAtrasoNotificarResponsavel="false" esforcoCalculo="0" executionAttempts="0" expediente="Default" extendedFields="&lt;list/&gt;" frequency="0" id="usertask83" incoming="flow98 flow101" loopType="0" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerExecutorMechanism&gt;&#10;  &lt;idNode&gt;startevent1&lt;/idNode&gt;&#10;  &lt;returns&gt;1&lt;/returns&gt;&#10;  &lt;mechanismName&gt;Executor Atividade&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerExecutorMechanism&gt;" managerMechanism="Executor Atividade" name="Preencher question&#225;rio TES (EAR)" outgoing="flow96" selecionaColaboradores="1" type="81"/>
   <bpmn2:BpmnIntermediateEvent extendedFields="&lt;list/&gt;" id="intermediateerror87" linkId="servicetask76" name="Intermedi&#225;rio" outgoing="flow98" parentTask="servicetask76" sequenceAttached="76" signalId="0" type="43"/>
   <bpmn2:BpmnIntermediateEvent extendedFields="&lt;list/&gt;" id="intermediateerror89" linkId="servicetask74" name="Intermedi&#225;rio" outgoing="flow90" parentTask="servicetask74" sequenceAttached="74" signalId="0" type="43"/>
   <bpmn2:BpmnTask attachedEvents="intermediateerror102" authNotify="true" esforcoCalculo="0" executionAttempts="0" executionType="1" expediente="" extendedFields="&lt;list/&gt;" frequency="0" id="servicetask99" incoming="flow100" loopType="0" name="Enviar dados do cliente" outgoing="flow101" scriptFileName="TES.servicetask99.js" selecionaColaboradores="1" serviceName="" type="82"/>
   <bpmn2:BpmnIntermediateEvent extendedFields="&lt;list/&gt;" id="intermediateerror102" linkId="servicetask99" name="Intermedi&#225;rio" outgoing="flow103" parentTask="servicetask99" sequenceAttached="99" signalId="0" type="43"/>
-  <bpmn2:BpmnProcess author="" cardIndex="5963941" category="Easy Sales " controlsAttachmentsSecurity="true" expedient="Default" extendedFields="&lt;list/&gt;" formSource="server" id="TES" instruction="Una vez informados los datos de la oportunidad y del cliente / prospecto enviar para la actividad Seleccionar Ofertas. &#13;&#10;El proceso retornar&#225; para el EAR que inici&#243; la solicitud." managerAssignmentController="&lt;org.eclipse.bpmn2.impl.AssignmentControllerRole&gt;&#10;  &lt;roleId&gt;TES-EAR&lt;/roleId&gt;&#10;  &lt;mechanismName&gt;Papel&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerRole&gt;" managerMechanism="Papel" mobileReady="true" name="Totvs Easy Sales" processAttachmentSecurity="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.ECMProcessAttachmentSecurityImpl&gt;&#10;    &lt;companyId&gt;0&lt;/companyId&gt;&#10;    &lt;version&gt;0&lt;/version&gt;&#10;    &lt;sequence&gt;1&lt;/sequence&gt;&#10;    &lt;engineAllocationId&gt;Todos os Usu&#225;rios&lt;/engineAllocationId&gt;&#10;    &lt;accessLevel&gt;PRME&lt;/accessLevel&gt;&#10;    &lt;editionMode&gt;false&lt;/editionMode&gt;&#10;  &lt;/org.eclipse.bpmn2.ECMProcessAttachmentSecurityImpl&gt;&#10;&lt;/list&gt;" publicProcess="true" serverId="TDI Ambiente" uniquecardversion="true" version="14" volume="Default"/>
+  <bpmn2:BpmnProcess author="" cardIndex="5963941" category="Easy Sales " controlsAttachmentsSecurity="true" expedient="Default" extendedFields="&lt;list/&gt;" formSource="server" id="TES" instruction="Una vez informados los datos de la oportunidad y del cliente / prospecto enviar para la actividad Seleccionar Ofertas. &#13;&#10;El proceso retornar&#225; para el EAR que inici&#243; la solicitud." managerAssignmentController="&lt;org.eclipse.bpmn2.impl.AssignmentControllerRole&gt;&#10;  &lt;roleId&gt;TES-EAR&lt;/roleId&gt;&#10;  &lt;mechanismName&gt;Papel&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerRole&gt;" managerMechanism="Papel" mobileReady="true" name="Totvs Easy Sales" processAttachmentSecurity="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.ECMProcessAttachmentSecurityImpl&gt;&#10;    &lt;companyId&gt;0&lt;/companyId&gt;&#10;    &lt;version&gt;0&lt;/version&gt;&#10;    &lt;sequence&gt;1&lt;/sequence&gt;&#10;    &lt;engineAllocationId&gt;Todos os Usu&#225;rios&lt;/engineAllocationId&gt;&#10;    &lt;accessLevel&gt;PRME&lt;/accessLevel&gt;&#10;    &lt;editionMode&gt;false&lt;/editionMode&gt;&#10;  &lt;/org.eclipse.bpmn2.ECMProcessAttachmentSecurityImpl&gt;&#10;&lt;/list&gt;" publicProcess="true" serverId="TDI Ambiente" uniquecardversion="true" version="20" volume="Default"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow75" name="" sourceRef="startevent1" targetRef="servicetask74"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow90" name="" sourceRef="intermediateerror89" targetRef="startevent1"/>
-  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow94" name="" sourceRef="usertask82" targetRef="servicetask76"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow95" name="" sourceRef="servicetask76" targetRef="endterminate72"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow96" name="" sourceRef="usertask83" targetRef="servicetask76"/>
-  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow97" name="" sourceRef="usertask83" targetRef="usertask82"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow98" name="" sourceRef="intermediateerror87" targetRef="usertask83"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow100" name="" sourceRef="servicetask74" targetRef="servicetask99"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow101" name="" sourceRef="servicetask99" targetRef="usertask83"/>

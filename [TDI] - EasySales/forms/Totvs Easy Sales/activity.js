@@ -1,7 +1,0 @@
-var Activity = {
-	ZERO: 0,
-	INICIO: 1,
-	PREENCHER_QUESTIONARIO: 83,
-	MODIFICAR: 82,
-	FIM: 72
-}

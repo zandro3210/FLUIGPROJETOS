@@ -30,7 +30,7 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Totvs Easy Sales</processId>
-      <version>14</version>
+      <version>20</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>5963941</formId>
@@ -112,13 +112,12 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyAuthorityDelay>false</notifyAuthorityDelay>
       <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>0</frequenceAuthorityTime>
       <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
       <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
       <transferAttachments>false</transferAttachments>
@@ -198,58 +197,6 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
       <destinationStates/>
       <digitalSignature>false</digitalSignature>
       <executionType>1</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>TES</processId>
-        <version>1</version>
-        <sequence>82</sequence>
-      </processStatePK>
-      <stateName>Modificar</stateName>
-      <stateDescription>Modificar</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Pool Papel</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;TES-PMO&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>false</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>490</positionX>
-      <positionY>181</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>81</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
     </ProcessState>
     <ProcessState>
       <processStatePK>
@@ -583,23 +530,6 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
         <companyId>1</companyId>
         <processId>TES</processId>
         <version>1</version>
-        <linkSequence>94</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>82</initialStateSequence>
-      <finalStateSequence>76</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>TES</processId>
-        <version>1</version>
         <linkSequence>95</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
@@ -623,23 +553,6 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
       <returnPermited>false</returnPermited>
       <initialStateSequence>83</initialStateSequence>
       <finalStateSequence>76</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>TES</processId>
-        <version>1</version>
-        <linkSequence>97</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>83</initialStateSequence>
-      <finalStateSequence>82</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -939,7 +852,7 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
         <version>1</version>
       </workflowProcessEventPK>
       <eventDescription>var PRD = &quot;&quot;;&#xd;
-var HML = &quot;http://172.16.93.222:8091&quot;;&#xd;
+var HML = &quot;http://172.24.52.14:8091&quot;;&#xd;
 var SERVER = HML;&#xd;
 &#xd;
 function servicetask99(attempt, message){&#xd;
@@ -1203,7 +1116,7 @@ var CustomServiceTaskProposal = {&#xd;
         <version>1</version>
       </workflowProcessEventPK>
       <eventDescription>var PRD = &quot;&quot;;&#xd;
-var HML = &quot;http://172.16.93.222:8091&quot;;&#xd;
+var HML = &quot;http://172.24.52.14:8091&quot;;&#xd;
 var SERVER = HML;&#xd;
 &#xd;
 function servicetask74(attempt, message){&#xd;
@@ -1343,7 +1256,7 @@ var CustomServiceTaskEar = {&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>90</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1354,7 +1267,7 @@ var CustomServiceTaskEar = {&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>90</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1365,7 +1278,7 @@ var CustomServiceTaskEar = {&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>98</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1376,7 +1289,7 @@ var CustomServiceTaskEar = {&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>98</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1387,7 +1300,7 @@ var CustomServiceTaskEar = {&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>103</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1398,7 +1311,7 @@ var CustomServiceTaskEar = {&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>14</version>
+        <version>20</version>
         <linkSequence>103</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
