@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>canaisOnBoardSubAberturaChamados</processId>
-      <version>27</version>
+      <version>30</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>5963901</formId>
@@ -713,7 +713,7 @@
 var HML = &quot;http://devfluigcp-01.cp.totvs.com.br/&quot;;&#xd;
 var SERVER = HML;&#xd;
 &#xd;
-var PRD_ZENDESK = &quot;https://apimprod.totvs.com.br&quot;;&#xd;
+var PRD_ZENDESK = &quot;https://apimanager.totvs.com/&quot;;&#xd;
 var HML_ZENDESK = &quot;https://apimanager-homolog.totvs.com&quot;;&#xd;
 var SERVER_ZENDESK = PRD_ZENDESK;&#xd;
 var Activity = {&#xd;
@@ -891,7 +891,7 @@ function solicitacaoCodigoCRM() {&#xd;
 	}&#xd;
 	api = api.substring(0,api.length-1);&#xd;
 	api += &apos;]&apos;;&#xd;
-	var url = SERVER_ZENDESK + &quot;/api/zendesk/2.0.0/tickets&quot;;&#xd;
+	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
 	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;\\r &quot;;&#xd;
 	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;\\r &quot;;&#xd;
@@ -939,7 +939,7 @@ function solicitacaoInclusaoPortal() {&#xd;
 &#xd;
 	&#xd;
 	var dsCanaistableQuadroSocietario =  DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;,[JSON.stringify(configuracaoFilho)],null ,null);&#xd;
-	var url = SERVER_ZENDESK + &quot;/api/zendesk/2.0.0/tickets&quot;;&#xd;
+	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
 	mensagem += &quot;\\rSolicito a inclusão do e-mail:&apos;&quot; + hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&apos;&quot; + &quot;\\r&quot;;&#xd;
 	//mensagem += &quot; CPF: &apos;&quot; +  dsCanaistableQuadroSocietario.getValue(0, &quot;cpfSocio&quot;) + &quot;&apos;&quot;;&#xd;
@@ -986,7 +986,7 @@ function solicitacaoCRMEstrutura() {&#xd;
 	}&#xd;
 	api = api.substring(0,api.length-1);&#xd;
 	api += &apos;]&apos;;&#xd;
-	var url = SERVER_ZENDESK + &quot;/api/zendesk/2.0.0/tickets&quot;;&#xd;
+	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
 	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;nao&quot; ){&#xd;
 		mensagem += &quot; Código da Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;) + &quot;\\r&quot;;&#xd;
@@ -1059,7 +1059,7 @@ function solicitacaoFornecedor() {&#xd;
 	}&#xd;
 	api = api.substring(0,api.length-1);&#xd;
 	api += &apos;]&apos;;&#xd;
-	var url = SERVER_ZENDESK + &quot;/api/zendesk/2.0.0/tickets&quot;;&#xd;
+	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
 	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;\\r&quot;;&#xd;
 	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;\\r&quot;;&#xd;
@@ -1241,7 +1241,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>27</version>
+        <version>30</version>
         <linkSequence>29</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1252,7 +1252,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>27</version>
+        <version>30</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1263,7 +1263,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>27</version>
+        <version>30</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1274,7 +1274,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>27</version>
+        <version>30</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1285,7 +1285,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>27</version>
+        <version>30</version>
         <linkSequence>42</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1296,7 +1296,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>27</version>
+        <version>30</version>
         <linkSequence>42</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1307,7 +1307,7 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>27</version>
+        <version>30</version>
         <linkSequence>44</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>

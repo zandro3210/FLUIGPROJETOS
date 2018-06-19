@@ -114,7 +114,7 @@ var FormViewOffer = {
 	setAsksGroups: function (asksGroups) {
 		var template = $('#tplAsksGroup').html();
 		var html = Mustache.to_html(template, asksGroups);
-		$('#model_' + asksGroups.model.codigo).addClass("col-md-offset-5");
+		$('#model_' + asksGroups.model.codigo).addClass("col-md-offset-5 col-xs-offset-5 col-sm-offset-5 ");
 		$('#model_' + asksGroups.model.codigo).html(html);
 	},
 	loadModelsTab: function () {
@@ -149,12 +149,12 @@ var FormViewOffer = {
 			groupsCode.push($input.attr('id'));
 		}
 
-		if (CURRENT_STATE == Activity.PREENCHER_QUESTIONARIO || CURRENT_STATE == Activity.MODIFICAR || CURRENT_STATE == Activity.FIM) {
+		if (CURRENT_STATE == Activity.PREENCHER_QUESTIONARIO || Activity.RELATORIO || CURRENT_STATE == Activity.MODIFICAR || CURRENT_STATE == Activity.FIM) {
 			FormViewAsks.setAsksTab(groupsCode, models);
 			$("#esOfertas .asksGroups").attr("disabled", true);
 			$("div[data-toggle='buttons']").removeAttr("data-toggle");
 
-			
+
 		}
 	}
 };
@@ -167,9 +167,9 @@ var FormViewAsks = {
 			var defaultValue = '';
 			var askCodigo = ask.codigo;
 			askCodigo = askCodigo.replace(".", "___");
-			debugger;
-			$("div.panel-collapse."+ ask.modulo).append(temp);
-			
+
+			$("div.panel-collapse." + ask.modulo).append(temp);
+
 
 			if (ask.tp == 5) {
 				var filterOpcoes = ask.opcoes.split(';');
@@ -238,7 +238,7 @@ var FormViewAsks = {
 	},
 	setAsksTab: function (switchs, models) {
 		var defs = [];
-
+		var defaultmodulo = "Diversos";
 		for (var i = 0; i < switchs.length; i++) {
 			var switc = switchs[i];
 			var code = switc.split('askGroup_')[1];
@@ -254,6 +254,16 @@ var FormViewAsks = {
 				ask["tp"] = ask.tipo;
 				defs.push(ask);
 
+
+				if (ask.pai.length > 0)
+					ask.modulo = asks.find(x => x.codigo == ask.pai).modulo;
+
+				if (ask.modulo.trim() == "") {
+					ask.modulo = defaultmodulo;
+					ask.nomemodulo = defaultmodulo;
+				}
+
+
 				if (ask.tipo == "1") {
 					var options = ask.opcoes.split(';');
 					ask.tipo = '';
@@ -261,41 +271,56 @@ var FormViewAsks = {
 
 						var option = options[k];
 						//	ask.tipo+= '<input name="ask_'+askCodigo+'" class="checkDad '+requiredClass+'" id="ask_'+askCodigo+'_'+option.split('=')[0]+'" type="radio" value="'+option.split('=')[0]+'"/>&nbsp;'+option.split('=')[1]+'&nbsp;';
-						ask.tipo += "<input data-id='" + ask.codigo +"' data-dad='" + ask.pai + "' name='ask_" + askCodigo + "' class='checkDad " + requiredClass + "' id='ask_" + askCodigo + "_" + option.split('=')[0] + "' type='radio' value='" + option.split('=')[0] + "'/>&nbsp;" + option.split('=')[1] + "&nbsp;";
+						ask.tipo += "<input data-id='" + ask.codigo + "' data-dad='" + ask.pai + "' name='ask_" + askCodigo + "' class='checkDad " + requiredClass + "' id='ask_" + askCodigo + "_" + option.split('=')[0] + "' type='radio' value='" + option.split('=')[0] + "'/>&nbsp;" + option.split('=')[1] + "&nbsp;";
 
 					}
 				}
 				else if (ask.tipo == "2") {
 					// ask.tipo = '<select name="ask_'+askCodigo+'" class="checkDad form-control '+requiredClass+'" id="ask_'+askCodigo+'">';
-					ask.tipo = "<select name='ask_" + askCodigo + "' class='checkDad form-control " + requiredClass + "' id='ask_" + askCodigo + "'>";
+					ask.tipo = "<select data-id='" + ask.codigo + "' data-dad='" + ask.pai + "' name='ask_" + askCodigo + "' class='checkDad form-control " + requiredClass + "' id='ask_" + askCodigo + "'>";
 					var options = ask.opcoes.split(';');
 					for (var k = 0; k < options.length; k++) {
 						var option = options[k];
 						//ask.tipo+= '<option name="ask_'+askCodigo+'" class="checkDad" id="ask_'+askCodigo+'" value="'+option.split('=')[0]+'">'+option.split('=')[1]+'</option>';
-						ask.tipo += "<option data-id='" + ask.codigo +"' data-dad='" + ask.pai + "' name='ask_" + askCodigo + "' class='checkDad' id='ask_" + askCodigo + "' value='" + option.split('=')[0] + "'>" + option.split('=')[1] + "</option>";
+						ask.tipo += "<option  name='ask_" + askCodigo + "' class='checkDad' id='ask_" + askCodigo + "' value='" + option.split('=')[0] + "'>" + option.split('=')[1] + "</option>";
 
 					}
 					ask.tipo += '</select>';
 				}
 				else if (ask.tipo == "3") {
 					// ask.tipo = '<input name="ask_'+askCodigo+'" class="checkDad form-control input-number '+requiredClass+'" id="ask_'+askCodigo+'" type="text" mask="000000000000000"/>';
-					ask.tipo = "<input data-id='" + ask.codigo +"' data-dad='" + ask.pai + "' name='ask_" + askCodigo + "' class='checkDad form-control input-number " + requiredClass + "' id='ask_" + askCodigo + "' type='text' mask='000000000000000'/>";
+					ask.tipo = "<input data-id='" + ask.codigo + "' data-dad='" + ask.pai + "' name='ask_" + askCodigo + "' class='checkDad form-control input-number " + requiredClass + "' id='ask_" + askCodigo + "' type='text' mask='000000000000000'/>";
 				}
 				else if (ask.tipo == "4") {
 					// ask.tipo = '<textarea name="ask_'+ask.codigo+'" class="checkDad form-control '+requiredClass+'" id="ask_'+askCodigo+'"></textarea>';
-					ask.tipo = "<textarea data-id='" + ask.codigo +"' data-dad='" + ask.pai + "'  name='ask_" + ask.codigo + "' class='checkDad form-control " + requiredClass + "' id='ask_" + askCodigo + " ></textarea>";
+					ask.tipo = "<textarea data-id='" + ask.codigo + "' data-dad='" + ask.pai + "'  name='ask_" + ask.codigo + "' class='checkDad form-control " + requiredClass + "' id='ask_" + askCodigo + " ></textarea>";
 				}
 				else if (ask.tipo == "5") {
 					//ask.tipo = '<input name="ask_'+askCodigo+'" id="ask_'+askCodigo+'" type="text"/><input name="ask_'+askCodigo+'_filter" class="checkDad" id="ask_'+askCodigo+'_filter" type="text" class="form-control"/>';
-					ask.tipo = "<input data-id='" + ask.codigo +"' data-dad='" + ask.pai + "' name='ask_" + askCodigo + "' class='checkDad field-filter form-control " + requiredClass + "' id='ask_" + askCodigo + "'  type='text'/>";
+					ask.tipo = "<input data-id='" + ask.codigo + "' data-dad='" + ask.pai + "' name='ask_" + askCodigo + "' class='checkDad field-filter form-control " + requiredClass + "' id='ask_" + askCodigo + "'  type='text'/>";
+				}else if (ask.tipo == "6") {
+					var options = ask.opcoes.split(';');
+					ask.tipo = '';
+					for (var k = 0; k < options.length; k++) {
+
+						var option = options[k];
+						//	ask.tipo+= '<input name="ask_'+askCodigo+'" class="checkDad '+requiredClass+'" id="ask_'+askCodigo+'_'+option.split('=')[0]+'" type="radio" value="'+option.split('=')[0]+'"/>&nbsp;'+option.split('=')[1]+'&nbsp;';
+						ask.tipo += "<input data-id='" + ask.codigo + "' data-dad='" + ask.pai + "' name='ask_" + askCodigo + "' class='checkDad checkIf " + requiredClass + "' id='ask_" + askCodigo + "_" + option.split('=')[0] + "' type='radio' value='" + option.split('=')[0] + "'/>&nbsp;" + option.split('=')[1] + "&nbsp;";
+
+					}
 				}
 				asksArray.push(ask);
 			}
-			$('#jsonPerguntas').val(JSON.stringify(defs));
+			defs = 	$.each(defs, function(index, x){
+				   x.obs =  x.obs.replace(/\”/g, "'").replace(/\"/g, "'");  
+				   
+				   return x;
+			   });
+			$('#jsonPerguntas').val(JSON.stringify(defs).replace(/\\n/g, ""));
 			var panel = '<div class="panel-group"><div class="panel panel-info"><div class="panel-heading"><h4 class="panel-title">' + models[i].descmod + '</h4></div><div class="panel panel-default"><div class="panel-body" id="panel_' + models[i].codigo + '"></div></div></div>';
 			$('#conteudo').html(panel);
 			var $panel = $('#panel_' + models[i].codigo);
-			
+
 			this.formatGroup(asksArray, $panel);
 			this.setAsks(asksArray, $panel);
 			this.loadAskResposta();
@@ -306,47 +331,63 @@ var FormViewAsks = {
 		//}
 	},
 	formatGroup: function (defs, panelFather) {
-		debugger;
 		var groupedData = _.groupBy(defs, function (x) { return x.modulo });
 		var template = $('#tplCollapse').html();
 		var html = "";
 		var i = 0;
 		for (var name in groupedData) {
 			var panel = template;
-			panel = panel.replace("{{templateindex}}",panelFather[0].id + '_' + i);
-			panel = panel.replace("{{templateindex}}",panelFather[0].id + '_' + i);
-			panel = panel.replace("{{name}}",name);
-			panel = panel.replace("{{name}}",name);
+			panel = panel.replace("{{templateindex}}", panelFather[0].id + '_' + i);
+			panel = panel.replace("{{templateindex}}", panelFather[0].id + '_' + i);
+			panel = panel.replace("{{name}}", name);
+			panel = panel.replace("{{modulonome}}", groupedData[name][0].nomemodulo);
 			i++;
 			html += panel;
-		
+
 		}
 		$('#conteudo').html(html);
 
 
-	},loadAskResposta: function(){
+	}, loadAskResposta: function () {
 
-		var answers = JSON.parse($('#jsonRespostas').val());
-
+		if ($('#jsonRespostas').val().length > 0) {
+			var answers = JSON.parse($('#jsonRespostas').val());
 			for (var i = 0; i < answers.length; i++) {
-
 				var answer = answers[i];
 				var inputType = $('input[name=' + answer.name + ']').attr('type');
 
 				if (inputType == 'radio' && answer.value != undefined) {
-
 					var id = answer.name + "_" + answer.value;
-
 					$("#" + id).attr('checked', 'checked');
+				}
+				else if ($('input[name=' + answer.name + ']').hasClass('field-filter')) {
+					var auxValues = answer.value.split(';');
+					
 
-				} else {
+					for (name in filterOptions[answer.name + "_filter"]) {
+						
 
-					$('[name="' + answer.name + '"]').val(answer.value);
+						if ( auxValues.find(x => x == filterOptions[answer.name + "_filter"][name] )) {
+
+							autocompleteInstance[answer.name].add({ description: name });
+						}
+					}
 
 				}
-
+				else {
+					$('[name="' + answer.name + '"]').not('option').val(answer.value);
+				}
 			}
-	
+
+			// habilitar DIV's		
+			$.each( $(".checkDad[data-dad=''][type='radio']:checked"), function( key, x ) {
+				if (x.value == "1"){				
+					$("[data-dad=" + 	this.getAttribute('data-id') + "]").parent().parent().removeClass("hidden");
+				}else{
+					$("[data-dad=" + 	this.getAttribute('data-id') + "]").parent().parent().addClass("hidden");
+				}
+			});
+		}
 	}
 };
 

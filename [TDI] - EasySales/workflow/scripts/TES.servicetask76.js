@@ -92,6 +92,7 @@ var CustomServiceTaskProposal = {
 	getAskParams: function(code){
 		code = code.replace("___",".");
 		var aux = hAPI.getCardValue("jsonPerguntas");
+		log.info("@CustomServiceTaskProposal/getAskParams diz: aux = "+aux);
 		var asks = JSON.parse(aux.replaceAll("&quot;","'"));
 		log.info("@CustomServiceTaskProposal/getAskParams diz: code = "+code);
 		for(var i=0; i<asks.length; i++){

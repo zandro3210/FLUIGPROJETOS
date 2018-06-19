@@ -2,9 +2,9 @@ var PRD = "https://wscorp.totvs.com.br";
 var HML = "http://spon010113223:8080/";
 var SERVER = HML;
 
-var PRD_ZENDESK = "https://wscorp.totvs.com.br";
+var PRD_ZENDESK = "https://apimanager.totvs.com";
 var HML_ZENDESK = "https://apimanager-homolog.totvs.com";
-var SERVER_ZENDESK = HML_ZENDESK;
+var SERVER_ZENDESK = PRD_ZENDESK;
 var Activity = {
 	ZERO: 4,
 	EMAIL_CORPORATIVO: 9,

@@ -30,7 +30,7 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Totvs Easy Sales</processId>
-      <version>20</version>
+      <version>41</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>5963941</formId>
@@ -155,19 +155,20 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
         <version>1</version>
         <sequence>76</sequence>
       </processStatePK>
-      <stateName>Enviar dados da Proposta</stateName>
-      <stateDescription>Enviar dados da Proposta</stateDescription>
+      <stateName>Criação do orçamento PMS e Otimização de Proposta</stateName>
+      <stateDescription>Criação do orçamento PMS e Otimização de Proposta</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyAuthorityDelay>false</notifyAuthorityDelay>
       <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>0</frequenceAuthorityTime>
       <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
       <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
       <transferAttachments>false</transferAttachments>
@@ -177,7 +178,7 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>490</positionX>
-      <positionY>46</positionY>
+      <positionY>35</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -305,6 +306,108 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
         <companyId>1</companyId>
         <processId>TES</processId>
         <version>1</version>
+        <sequence>104</sequence>
+      </processStatePK>
+      <stateName>Relatório</stateName>
+      <stateDescription>Relatório</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;1&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>false</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>640</positionX>
+      <positionY>63</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId>Default</periodId>
+      <stateType>0</stateType>
+      <bpmnType>81</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>TES</processId>
+        <version>1</version>
+        <sequence>106</sequence>
+      </processStatePK>
+      <stateName>Enviar dados do questionário</stateName>
+      <stateDescription>Enviar dados do questionário</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>false</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>0</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>800</positionX>
+      <positionY>30</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>82</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>1</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>TES</processId>
+        <version>1</version>
         <sequence>87</sequence>
       </processStatePK>
       <stateName>Intermediário</stateName>
@@ -330,7 +433,7 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>530</positionX>
-      <positionY>32</positionY>
+      <positionY>21</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -446,6 +549,53 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
         <companyId>1</companyId>
         <processId>TES</processId>
         <version>1</version>
+        <sequence>108</sequence>
+      </processStatePK>
+      <stateName>Intermediário</stateName>
+      <stateDescription>Intermediário</stateDescription>
+      <instruction>Evento intermediário do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>1</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>840</positionX>
+      <positionY>15</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>43</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <parentSequence>106</parentSequence>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>TES</processId>
+        <version>1</version>
         <sequence>72</sequence>
       </processStatePK>
       <stateName>Terminação imediata de processo</stateName>
@@ -470,8 +620,8 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>640</positionX>
-      <positionY>63</positionY>
+      <positionX>980</positionX>
+      <positionY>73</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -519,23 +669,6 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
       <returnPermited>false</returnPermited>
       <initialStateSequence>89</initialStateSequence>
       <finalStateSequence>1</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>TES</processId>
-        <version>1</version>
-        <linkSequence>95</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>76</initialStateSequence>
-      <finalStateSequence>72</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -621,6 +754,74 @@ El proceso retornará para el EAR que inició la solicitud.</instruction>
       <returnPermited>false</returnPermited>
       <initialStateSequence>102</initialStateSequence>
       <finalStateSequence>1</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>TES</processId>
+        <version>1</version>
+        <linkSequence>105</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>76</initialStateSequence>
+      <finalStateSequence>104</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>TES</processId>
+        <version>1</version>
+        <linkSequence>107</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>104</initialStateSequence>
+      <finalStateSequence>106</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>TES</processId>
+        <version>1</version>
+        <linkSequence>109</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>108</initialStateSequence>
+      <finalStateSequence>104</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>TES</processId>
+        <version>1</version>
+        <linkSequence>110</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>106</initialStateSequence>
+      <finalStateSequence>72</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -1035,6 +1236,7 @@ var CustomServiceTaskProposal = {&#xd;
 	getAskParams: function(code){&#xd;
 		code = code.replace(&quot;___&quot;,&quot;.&quot;);&#xd;
 		var aux = hAPI.getCardValue(&quot;jsonPerguntas&quot;);&#xd;
+		log.info(&quot;@CustomServiceTaskProposal/getAskParams diz: aux = &quot;+aux);&#xd;
 		var asks = JSON.parse(aux.replaceAll(&quot;&amp;quot;&quot;,&quot;&apos;&quot;));&#xd;
 		log.info(&quot;@CustomServiceTaskProposal/getAskParams diz: code = &quot;+code);&#xd;
 		for(var i=0; i&lt;asks.length; i++){&#xd;
@@ -1107,6 +1309,117 @@ var CustomServiceTaskProposal = {&#xd;
 		}&#xd;
 	}	&#xd;
 }</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>servicetask106</eventId>
+        <processId>TES</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>var PRD = &quot;&quot;;
+var HML = &quot;http://172.24.52.14:8091&quot;;
+var SERVER = HML;
+
+
+var PROD_CRM = &quot;&quot;;
+var HML_CRM = &quot;http://172.24.52.10:8048&quot;;
+var SERVER_CRM = HML_CRM;
+
+function servicetask106(attempt, message) {
+
+        log.info(&quot;@servicetask106 diz: inicio&quot;);
+        var proposta = hAPI.getCardValue(&quot;proposta&quot;);
+        log.info(&quot;@servicetask106 diz idproposta&quot; + proposta);
+	  
+		
+		// Recuperar JSON da proposta já otimizada
+		var url = SERVER+&quot;/rest/WSGETPROPOSTA?Proposta=&quot; + proposta;
+		var c1 = DatasetFactory.createConstraint(&quot;url&quot;, url, url, ConstraintType.MUST);
+	    var constraints = [c1];
+	    var dataset = DatasetFactory.getDataset(&quot;dsGenericGetRestNoAuth&quot;, null, constraints, null);
+		var data = dataset.getValue(0, &quot;response&quot;);
+		log.info(&quot;@servicetask106 diz: data&quot; + data);
+		hAPI.setCardValue(&quot;jsonDatawsgetproposta&quot;,data);
+
+		// Enviar JSON da proposta otimziada para TOTVS12 CRM
+		CustomServiceTaskCustomer106.sendCustomer(data);
+
+
+}
+    
+	var CustomServiceTaskCustomer106 = {
+	
+		sendCustomer: function(data){
+			var url = SERVER_CRM+&quot;/WSRPT12RETORC&quot;;
+			return this.restRequest(url, data);
+		},
+	
+		restRequest: function(url, parameters){
+			var connection = this.createConnection(url, parameters);
+			var response = this.readResponse(connection);
+				
+			return response;
+		},
+
+		createConnection: function(url, parameters){
+			try {
+				log.info(&quot;@CustomServiceTaskCustomer/createConnection diz: url = &quot;+url);
+				log.info(&quot;@CustomServiceTaskCustomer/createConnection diz: parameters = &quot;+parameters);
+				var urlObj = new java.net.URL(url);
+				var conn = urlObj.openConnection();
+				var output; 
+				
+				conn.setRequestMethod(&quot;PUT&quot;);
+				conn.setDoOutput(true);
+				
+				output = new java.io.DataOutputStream(conn.getOutputStream());
+				
+				output.writeBytes(parameters);
+				output.flush();
+				output.close();
+	
+				return conn;
+			} catch (e) {
+				log.error(&quot;@CustomServiceTaskCustomer/createConnection diz: Erro ao criar conexao: &quot;+e);
+				throw &quot;Fluig não conseguiu se comunicar com Easy Sales. Detalhes: &quot;+e;
+			}
+		},
+		/**
+		 * Captura o retorno enviado pelo rest.
+		 * @param connection: Objeto de conexao com o servico rest.
+		 * @returns String.
+		 */
+		readResponse: function(connection){
+			try {
+				var responseCode = connection.getResponseCode();
+				log.info(&quot;@CustomServiceTaskCustomer/readResponse diz: responseCode = &quot;+responseCode);
+				var inputStream = connection.getInputStream();
+				var inputStreamReader = new java.io.InputStreamReader(inputStream);
+				var input = new java.io.BufferedReader(inputStreamReader);
+				var response = new java.lang.StringBuffer();
+				var inputLine;			
+				
+				while ((inputLine = input.readLine()) != null) {
+					response.append(inputLine);
+				}
+				
+				input.close();
+				
+				if(responseCode != 200 &amp;&amp; responseCode != 201){
+					log.error(&quot;@CustomServiceTaskCustomer/readResponse diz: Erro ao efetuar a chamada REST&quot;);
+					log.error(&quot;@CustomServiceTaskCustomer/readResponse diz: &quot;+response.toString());
+					throw &quot;Um erro inesperado ocorreu. Detalhes: &quot;+response.toString();
+				}
+	
+				return response.toString();
+			} catch (e) {
+				log.error(&quot;@CustomServiceTaskCustomer/readResponse diz: Erro ao ler resposta&quot;);
+				log.error(&quot;@CustomServiceTaskCustomer/readResponse diz: &quot;+e);
+				throw &quot;Fluig não entendeu o que Easy Sales respondeu. Detalhes: &quot;+e;
+			}
+		}
+	}</eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
@@ -1202,8 +1515,8 @@ var CustomServiceTaskEar = {&#xd;
   <list>
     <SwimLane>
       <color>FFFFFF</color>
-      <height>255</height>
-      <width>669</width>
+      <height>295</height>
+      <width>999</width>
       <positionX>42</positionX>
       <positionY>16</positionY>
       <stateName>Totvs Easy Sales</stateName>
@@ -1218,8 +1531,8 @@ var CustomServiceTaskEar = {&#xd;
     </SwimLane>
     <SwimLane>
       <color>d6e0d0</color>
-      <height>127</height>
-      <width>639</width>
+      <height>147</height>
+      <width>969</width>
       <positionX>72</positionX>
       <positionY>16</positionY>
       <stateName>PMO</stateName>
@@ -1234,10 +1547,10 @@ var CustomServiceTaskEar = {&#xd;
     </SwimLane>
     <SwimLane>
       <color>adc9ac</color>
-      <height>128</height>
-      <width>639</width>
+      <height>148</height>
+      <width>969</width>
       <positionX>72</positionX>
-      <positionY>143</positionY>
+      <positionY>163</positionY>
       <stateName>EAR</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
@@ -1256,7 +1569,7 @@ var CustomServiceTaskEar = {&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>20</version>
+        <version>41</version>
         <linkSequence>90</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1267,7 +1580,7 @@ var CustomServiceTaskEar = {&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>20</version>
+        <version>41</version>
         <linkSequence>90</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1278,7 +1591,7 @@ var CustomServiceTaskEar = {&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>20</version>
+        <version>41</version>
         <linkSequence>98</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1289,7 +1602,7 @@ var CustomServiceTaskEar = {&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>20</version>
+        <version>41</version>
         <linkSequence>98</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1300,7 +1613,7 @@ var CustomServiceTaskEar = {&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>20</version>
+        <version>41</version>
         <linkSequence>103</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1311,12 +1624,34 @@ var CustomServiceTaskEar = {&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>20</version>
+        <version>41</version>
         <linkSequence>103</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
       <positionX>125</positionX>
       <positionY>80</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>TES</processId>
+        <version>41</version>
+        <linkSequence>109</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>851</positionX>
+      <positionY>19</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>TES</processId>
+        <version>41</version>
+        <linkSequence>109</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>693</positionX>
+      <positionY>19</positionY>
     </ProcessLinkBend>
   </list>
   <list/>
@@ -1340,7 +1675,7 @@ var CustomServiceTaskEar = {&#xd;
       <version>1</version>
       <sequence>76</sequence>
       <attempts>0</attempts>
-      <sucessFullMessage></sucessFullMessage>
+      <sucessFullMessage>Integração executada com sucesso</sucessFullMessage>
       <serviceName></serviceName>
       <frequency>1</frequency>
       <frequencyType>0</frequencyType>
@@ -1352,6 +1687,17 @@ var CustomServiceTaskEar = {&#xd;
       <sequence>99</sequence>
       <attempts>0</attempts>
       <sucessFullMessage></sucessFullMessage>
+      <serviceName></serviceName>
+      <frequency>1</frequency>
+      <frequencyType>0</frequencyType>
+    </ProcessStateService>
+    <ProcessStateService>
+      <companyId>1</companyId>
+      <processId>TES</processId>
+      <version>1</version>
+      <sequence>106</sequence>
+      <attempts>0</attempts>
+      <sucessFullMessage>Integração executada com sucesso</sucessFullMessage>
       <serviceName></serviceName>
       <frequency>1</frequency>
       <frequencyType>0</frequencyType>

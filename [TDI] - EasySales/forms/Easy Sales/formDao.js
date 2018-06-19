@@ -47,41 +47,55 @@ var FormDaoOffer = {
 	}
 }
 
-var FormDaoAsk = {
-	getAsksOfDataset: function(groupId){
-		var constraints = [DatasetFactory.createConstraint('grupo', groupId, '', ConstraintType.MUST)];
-		var dataset = DatasetFactory.getDataset('dsEasyPergunta', null, constraints, null);
-		//return dataset.values;
-		return this.sortAsksByLevel(dataset.values);
-	},
-	sortAsksByLevel: function(datasetValues){
-		var levels = [];
-		var values = {};
-		var sorted = [];
-		var levelsFloat = [];
-		
-		for(var i=0; i<datasetValues.length; i++){
-			var row = datasetValues[i];
-			var level = row.nivel;
-			
-			levels.push(level);
-			values[level] = row;
-		}
-		
-		$(levels).each(function(){
-			levelsFloat.push(parseFloat(this));
-		});
-		
-		//levels.sort(function(a, b){ return a.localeCompare(b)}); 
-		levelsFloat.sort(function(a, b){return a-b});
-		levels = levelsFloat;
-		
-		for(var i=0; i<levels.length; i++){
-			var level = levels[i];
-			var value = values[level];
-			sorted.push(value);
-		}
-		
-		return sorted;
-	}
+var  FormDaoAsk = {
+    getAsksOfDataset: function(groupId){
+        var constraints = [DatasetFactory.createConstraint('grupo', groupId, '', ConstraintType.MUST)];
+        var dataset = DatasetFactory.getDataset('dsEasyQuestions', null, constraints, null);
+        //return dataset.values;
+        return this.sortAsksByLevel(this.groupAksByCodigo(dataset.values));
+    },
+    groupAksByCodigo: function(olddataset){
+        var dataset = [];
+        var groupedData = _.groupBy(olddataset, function (x) { return x.codigo });
+
+        for (var cod in groupedData) {          
+            var aux = olddataset.find( x => x.codigo == cod);
+            for (i = 1; i < olddataset.filter( x => x.codigo == cod).length; i++) {
+            aux.opcoes += ";" + olddataset.filter( x => x.codigo == cod)[i].opcoes;     
+            }
+            dataset.push(aux);
+            
+        }
+        return dataset;
+    },
+    sortAsksByLevel: function(datasetValues){
+        var levels = [];
+        var values = {};
+        var sorted = [];
+        var levelsFloat = [];
+        
+        for(var i=0; i<datasetValues.length; i++){
+            var row = datasetValues[i];
+            var level = row.nivel;
+            
+            levels.push(level);
+            values[level] = row;
+        }
+        
+        $(levels).each(function(){
+            levelsFloat.push(parseFloat(this));
+        });
+        
+        //levels.sort(function(a, b){ return a.localeCompare(b)});
+        levelsFloat.sort(function(a, b){return a-b});
+        levels = levelsFloat;
+        
+        for(var i=0; i<levels.length; i++){
+            var level = levels[i];
+            var value = values[level];
+            sorted.push(value);
+        }
+        
+        return sorted;
+    }
 }
