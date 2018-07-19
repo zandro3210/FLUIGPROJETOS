@@ -3,9 +3,65 @@ var FormView = {
 	scopesField: {},
 	binding: function () {
 		if ($('#dsNmExecutivo').val() == '') FormZoom.setFilterZoomEar();
-		//$(document).on('click', '.bootstrap-switch', FormDaoOffer.setAksGroupsValue);		
+		//$(document).on('click', '.bootstrap-switch', FormDaoOffer.setAksGroupsValue);	
+
+		$(document).on('click', '#finishAsk:not([disabled])', function () {
+			var errors = CustomValidate.validate(Activity.PREENCHER_QUESTIONARIO);
+			$('#errosQuestionario').val(errors);
+
+			if ($('#errosQuestionario').val().length > 0) {
+
+				window.FLUIGC.toast({
+					title: 'Falha ao tentar finalizar questionário',
+					message: $('#errosQuestionario').val(),
+					type: 'danger'
+				});
+
+			} else {
+				$("#conteudo :input").attr("disabled", true);
+				$("#lblfinishAsk").attr("disabled", true).addClass("active");
+				$("#finishAsk").attr("disabled", true);
+				$("#flagAskFinish").val(true);
+				$("#esOfertas .asksGroups").attr("disabled", true);
+				$("div[data-toggle='buttons']").removeAttr("data-toggle");
+				window["proposta"].disable(true);
+				window["dsNmExecutivo"].disable(true);
+				window.FLUIGC.toast({
+					title: 'Questionário Finalizado!',
+					message: "",
+					type: 'success'
+				});
+
+			var result = FormAPI.postPropostal();
+				if (result[0].sendProposal.indexOf("A proposta já está integrada") != -1){
+					window.FLUIGC.toast({
+						title: 'Falha ao tentar otimizar proposta',
+						message: "A proposta já está integrada",
+						type: 'danger'
+					});
+				}else{
+
+					$("#liRelatorio").show();
+					$('a[href="#esRelatorio"]').trigger('click');
+					$("#jsonGrafico").val(result[0].graph);
+					setTimeout(function () {
+						FormViewReport.loadGraph();
+					}, 1000);
+				}
+	
+			}
+
+		});
+
 		$(document).on('click', 'div.panel .btn-primary:not([disabled])', function () {
+
+			$("#liAlcance").show();
 			FormDaoOffer.setAksGroupsValue(this.control);
+			var models = FormDaoOffer.getModelsOfField();
+			FormViewAsks.setAsksTab([this.firstElementChild.id], models);
+			$('a[href="#esAlcance"]').trigger('click');
+			//	$("#esOfertas .asksGroups").attr("disabled", true);
+			//	$("div[data-toggle='buttons']").removeAttr("data-toggle");
 		});
 		$(document).on('click', '.panel-heading', function () {
 			$(this).parent().find('.panel-body').toggle();
@@ -22,10 +78,46 @@ var FormView = {
 		});
 	},
 	enableTabs: function () {
-		if (CURRENT_STATE == Activity.ZERO || CURRENT_STATE == Activity.INICIO) {
-			$('#liOfertas').hide();
+		$('#liAlcance').hide();
+		$('#liOfertas').hide();
+		$('#liRelatorio').hide();
+
+		if ($("#dsNmExecutivo").val() != "" && $("#proposta").val() != "") {
+			$('#liOfertas').show();
+			$('a[href="#liOfertas"]').trigger('click');
+			FormViewOffer.loadModelsTab();
+		}
+
+
+		if ($("#jsonGruposPerguntasSel").val() != "") {
+			$('#liAlcance').show();
+			$('a[href="#liAlcance"]').trigger('click');
+		}
+
+		if ($("#flagAskFinish").val() == "true") {
+			$("#conteudo :input").attr("disabled", true);
+			$("#lblfinishAsk").attr("disabled", true).addClass("active");
+			$("#finishAsk").attr("disabled", true);
+			$("#esOfertas .asksGroups").attr("disabled", true);
+			$("div[data-toggle='buttons']").removeAttr("data-toggle");
+			window["proposta"].disable(true);
+			window["dsNmExecutivo"].disable(true);
+			
+		}
+
+		if ($("#jsonGrafico").val() != "" ){
+			$('#liRelatorio').show();
+			$('a[href="#liRelatorio"]').trigger('click');
+		}
+		/* if (CURRENT_STATE == Activity.ZERO || CURRENT_STATE == Activity.INICIO) {
+		
 			$('#liAlcance').hide();
 		}
+		$('#liRelatorio').hide();
+		if (CURRENT_STATE == Activity.RELATORIO || CURRENT_STATE == Activity.FIM) {
+			$('#liRelatorio').show();
+		}
+		*/
 	},
 	setMandatoryFields: function () {
 		RequiredField.enableStyle();
@@ -114,7 +206,7 @@ var FormViewOffer = {
 	setAsksGroups: function (asksGroups) {
 		var template = $('#tplAsksGroup').html();
 		var html = Mustache.to_html(template, asksGroups);
-		$('#model_' + asksGroups.model.codigo).addClass("col-md-offset-5 col-xs-offset-5 col-sm-offset-5 ");
+		$('#model_' + asksGroups.model.codigo).addClass("col-md-offset-5 col-sm-offset-5 ");
 		$('#model_' + asksGroups.model.codigo).html(html);
 	},
 	loadModelsTab: function () {
@@ -151,14 +243,315 @@ var FormViewOffer = {
 
 		if (CURRENT_STATE == Activity.PREENCHER_QUESTIONARIO || Activity.RELATORIO || CURRENT_STATE == Activity.MODIFICAR || CURRENT_STATE == Activity.FIM) {
 			FormViewAsks.setAsksTab(groupsCode, models);
-			$("#esOfertas .asksGroups").attr("disabled", true);
-			$("div[data-toggle='buttons']").removeAttr("data-toggle");
+			//$("#esOfertas .asksGroups").attr("disabled", true);
+			//$("div[data-toggle='buttons']").removeAttr("data-toggle");
 
 
 		}
 	}
 };
 
+var FormViewReport = {
+	loadTable: function () {
+		var objeto = jQuery.parseJSON($("#jsonGrafico").val());
+		if (objeto == "" || objeto == "undefined") {
+			var result = $.get(SERVER + "/rest/WSGETREPORT?Proposta=" + $("#proposta").val());
+			if (result.status == 200)
+				$("#jsonGrafico").val(result.responseText);
+			objeto = result.responseText;
+		}
+		var dataset = [];
+
+
+		$.each(objeto.PERGUNTAS, function (key, x) {
+			var jsonAsks = [];
+			jsonAsks.push(x.Pergunta);
+			jsonAsks.push(x.Descricao);
+			jsonAsks.push(x["EDT Pai"]);
+			jsonAsks.push(x.Tarefa);
+			dataset.push(jsonAsks);
+		});
+
+
+		$('#tableAks').DataTable({
+			"paging": true,
+			"searching": true,
+			"data": dataset,
+			"aaSorting": [],
+			"columns": [
+				{ title: "Pergunta" },
+				{ title: "Descrição" },
+				{ title: "Edt Pai" },
+				{ title: "Tarefa" }
+			],
+			"dom": 'Bfrtip',
+			"lengthMenu": [
+				[10, 25, 50, -1],
+				['10 linhas', '25 linhas', '50 linhas', 'Todos']
+			],
+			"buttons": [
+				{ extend: 'copy', className: 'hidden-xs hidden-sm', text: "Copiar" },
+				{ extend: 'excel', className: 'hidden-xs hidden-sm', text: "Excel" },
+				{ extend: 'csv', className: 'hidden-xs hidden-sm', text: "Csv" },
+				{ extend: 'pdf', className: 'hidden-xs hidden-sm', text: "PDF" },
+				{ extend: 'pageLength', className: '', text: "Linhas" },
+			],
+			"language": {
+				"sEmptyTable": "Nenhum registro encontrado",
+				"sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+				"sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+				"sInfoFiltered": "(Filtrados de _MAX_ registros)",
+				"sInfoPostFix": "",
+				"sInfoThousands": ".",
+				"sLengthMenu": "_MENU_ resultados por página",
+				"sLoadingRecords": "Carregando...",
+				"sProcessing": "Processando...",
+				"sZeroRecords": "Nenhum registro encontrado",
+				"sSearch": "Pesquisar",
+				"oPaginate": {
+					"sNext": "Próximo",
+					"sPrevious": "Anterior",
+					"sFirst": "Primeiro",
+					"sLast": "Último"
+				},
+				"oAria": {
+					"sSortAscending": ": Ordenar colunas de forma ascendente",
+					"sSortDescending": ": Ordenar colunas de forma descendente"
+				}
+			}
+
+		});
+
+
+
+
+		dataset = [];
+		$.each(objeto.ORCAMENTO, function (key, x) {
+			var jsonBudget = [];
+			jsonBudget.push(x.Descricao);
+			jsonBudget.push(x["Modelo Origem"]);
+			jsonBudget.push(x["Horas Original"]);
+			jsonBudget.push(x["Modelo Otimizado"]);
+			jsonBudget.push(x["Horas Otimizado"]);
+			jsonBudget.push(parseInt(parseInt(x["Horas Otimizado"]) - x["Horas Original"]));
+			jsonBudget.push(typeof x.Nivel == "undefined" ? "" : x.Nivel);
+			dataset.push(jsonBudget);
+		});
+
+		$("#tableBudget").append('<tfoot><tr><th></th><th></th><th></th><th></th><th></th><th></th></tr></tfoot>');
+		$('#tableBudget').DataTable({
+			"paging": true,
+			"searching": true,
+			"data": dataset,
+			"aaSorting": [],
+			"aoColumnDefs": [{
+				"aTargets": [2, 4],
+				"fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+					if (oData[6] != "") {
+						$(nTd).addClass('father');
+					}
+				}
+			}],
+			"initComplete": function (settings, json) {
+				this.api().columns('.sum').every(function () {
+					var column = this;
+					var sum = 0;
+					$.each(column.nodes().to$().not('.father'), function (index, value) {
+						sum += parseInt(value.innerText);
+					});
+
+
+					$(column.footer()).html('Total: ' + sum);
+				});
+			},
+			"columns": [
+				{ title: "Descrição" },
+				{ title: "Modelo Origem" },
+				{ title: "Horas Original", className: "sum" },
+				{ title: "Modelo Otimizado" },
+				{ title: "Horas Otimizada", className: "sum" },
+				{ title: "Horas Resultado", className: "sum" }
+			],
+			"dom": 'Bfrtip',
+			"lengthMenu": [
+				[10, 25, 50, -1],
+				['10 linhas', '25 linhas', '50 linhas', 'Todos']
+			],
+			"buttons": [
+				{ extend: 'copy', className: 'hidden-xs hidden-sm', text: "Copiar" },
+				{ extend: 'excel', className: 'hidden-xs hidden-sm', text: "Excel" },
+				{ extend: 'csv', className: 'hidden-xs hidden-sm', text: "Csv" },
+				{ extend: 'pdf', className: 'hidden-xs hidden-sm', text: "PDF" },
+				{ extend: 'pageLength', className: '', text: "Linhas" },
+			],
+			"createdRow": function (row, data, index) {
+				if (data[5] > 0) {
+					$('td', row).eq(5).addClass('rowUp');
+				} else {
+					$('td', row).eq(5).addClass('rowDown');
+				}
+			},
+			"language": {
+				"sEmptyTable": "Nenhum registro encontrado",
+				"sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+				"sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+				"sInfoFiltered": "(Filtrados de _MAX_ registros)",
+				"sInfoPostFix": "",
+				"sInfoThousands": ".",
+				"sLengthMenu": "_MENU_ resultados por página",
+				"sLoadingRecords": "Carregando...",
+				"sProcessing": "Processando...",
+				"sZeroRecords": "Nenhum registro encontrado",
+				"sSearch": "Pesquisar",
+				"oPaginate": {
+					"sNext": "Próximo",
+					"sPrevious": "Anterior",
+					"sFirst": "Primeiro",
+					"sLast": "Último"
+				},
+				"oAria": {
+					"sSortAscending": ": Ordenar colunas de forma ascendente",
+					"sSortDescending": ": Ordenar colunas de forma descendente"
+				}
+			}
+
+		});
+
+
+
+
+		if (objeto.ACELERADORES.length > 0) {
+
+
+			dataset = [];
+			$.each(objeto.ACELERADORES, function (key, x) {
+				var jsonAccelerator = [];
+				jsonAccelerator.push(x.Pergunta);
+				jsonAccelerator.push(x["Tipo Acelerador"]);
+				jsonAccelerator.push(x.Acelerador);
+				jsonAccelerator.push(x.Descricao);
+				dataset.push(jsonAccelerator);
+			});
+
+
+			$('#tableAccelerators').DataTable({
+				"paging": true,
+				"searching": true,
+				"data": dataset,
+				"aaSorting": [],
+				"columns": [
+					{ title: "Pergunta" },
+					{ title: "Tipo Acelerador" },
+					{ title: "Acelerador" },
+					{ title: "Descrição" }
+				],
+				"dom": 'Bfrtip',
+				"lengthMenu": [
+					[10, 25, 50, -1],
+					['10 linhas', '25 linhas', '50 linhas', 'Todos']
+				],
+				"buttons": [
+					{ extend: 'copy', className: 'hidden-xs hidden-sm', text: "Copiar" },
+					{ extend: 'excel', className: 'hidden-xs hidden-sm', text: "Excel" },
+					{ extend: 'csv', className: 'hidden-xs hidden-sm', text: "Csv" },
+					{ extend: 'pdf', className: 'hidden-xs hidden-sm', text: "PDF" },
+					{ extend: 'pageLength', className: '', text: "Linhas" },
+				],
+				"language": {
+					"sEmptyTable": "Nenhum registro encontrado",
+					"sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+					"sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+					"sInfoFiltered": "(Filtrados de _MAX_ registros)",
+					"sInfoPostFix": "",
+					"sInfoThousands": ".",
+					"sLengthMenu": "_MENU_ resultados por página",
+					"sLoadingRecords": "Carregando...",
+					"sProcessing": "Processando...",
+					"sZeroRecords": "Nenhum registro encontrado",
+					"sSearch": "Pesquisar",
+					"oPaginate": {
+						"sNext": "Próximo",
+						"sPrevious": "Anterior",
+						"sFirst": "Primeiro",
+						"sLast": "Último"
+					},
+					"oAria": {
+						"sSortAscending": ": Ordenar colunas de forma ascendente",
+						"sSortDescending": ": Ordenar colunas de forma descendente"
+					}
+				}
+
+			});
+		}
+	},
+	loadGraph: function () {
+		var data = jQuery.parseJSON($("#jsonGrafico").val());
+		var modelos = [];
+		var arrayHorasOriginal = [];
+		var arrayHorasOtimizada = [];
+		$.each(data.ORCAMENTO, function (key, x) {
+			modelos.push(x.Descricao);
+			arrayHorasOriginal.push(x["Horas Original"]);
+			arrayHorasOtimizada.push(x["Horas Otimizado"]);
+		});
+
+		$("#DoughnutGraph").removeAttr("_echarts_instance_");
+		var dom = document.getElementById("DoughnutGraph");
+		var myChart = echarts.init(dom);
+		var app = {};
+		option = null;
+		app.title = 'Gráfico de otimização';
+
+		option = {
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'shadow'
+				}
+			},
+			legend: {
+				data: ['Normal', 'Otimizado']
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			xAxis: [
+				{
+					type: 'category',
+					data: modelos
+				}
+			],
+			yAxis: [
+				{
+					type: 'value'
+				}
+			],
+			series: [
+				{
+					name: 'Normal',
+					type: 'bar',
+					data: arrayHorasOriginal,
+					color: '#696a6c'
+				},
+				{
+					name: 'Otimizado',
+					type: 'bar',
+					stack: '广告',
+					data: arrayHorasOtimizada,
+					color: '#2f6b89'
+				},
+
+			]
+		};
+
+		if (option && typeof option === "object") {
+			myChart.setOption(option, true);
+		}
+	}
+}
 var FormViewAsks = {
 	setAsks: function (asks, $panel) {
 		for (var j = 0; j < asks.length; j++) {
@@ -200,18 +593,18 @@ var FormViewAsks = {
 			}
 		}
 
-		if (CURRENT_STATE == Activity.MODIFICAR || CURRENT_STATE == Activity.FIM) {
+		if (CURRENT_STATE == Activity.MODIFICAR || CURRENT_STATE == Activity.FIM || CURRENT_STATE == Activity.RELATORIO) {
 
 			this.loadAskResposta();
+		}
+		//SE ATIVIDADE FIM DISABILITA TODOSO S INPUTS
+		if (CURRENT_STATE == Activity.FIM || CURRENT_STATE == Activity.RELATORIO) {
 
-			//SE ATIVIDADE FIM DISABILITA TODOSO S INPUTS
-			if (CURRENT_STATE == Activity.FIM) {
-
-				$("#conteudo :input").attr("disabled", true);
-
-			}
+			$("#conteudo :input").attr("disabled", true);
 
 		}
+
+
 	},
 	getTemp: function (ask) {
 		//SE TIVER PAI E FOR DO TIPO
@@ -230,10 +623,16 @@ var FormViewAsks = {
 			}
 		}
 		var askCodigo = ask.codigo;
+
 		askCodigo = askCodigo.replace(".", "___");
-		var temp = '<div class="form-group row ' + ask.modulo + ' ' + classHidden + '" id="row_' + askCodigo + '" ><label class="col-md-6 col-sm-6 col-xs-12 control-label text-right" title="' + ask.obs + '">' + $.trim(ask.nivel) + ' - ' + $.trim(ask.nome) + '</label>';
-		temp += '<div class="col-md-6 col-sm-6 col-xs-12" title="' + ask.obs + '">' + ask.tipo + '</div></div>';
-		return temp;
+		var template = $('#tplAsks').html();
+		template = template.replace("{{tipo}}", ask.tipo);
+		template = template.replace("{{classHidden}}", classHidden);
+		template = template.replace(/\{{askCodigo}}/g, askCodigo)
+		template = template.replace("{{nome}}", $.trim(ask.nivel) + ' - ' + $.trim(ask.nome));
+		template = template.replace("{{help}}", ($.trim(ask.obs).length == 0 ? "" : "data-toggle=\"tooltip\" data-placement=\"top\" title=\"" + ask.obs + "\""));
+
+		return template;
 
 	},
 	setAsksTab: function (switchs, models) {
@@ -265,7 +664,7 @@ var FormViewAsks = {
 
 
 				if (ask.tipo == "1") {
-					var options = ask.opcoes.split(';');
+					var options = ask.opcoes.split(';').sort();
 					ask.tipo = '';
 					for (var k = 0; k < options.length; k++) {
 
@@ -298,7 +697,7 @@ var FormViewAsks = {
 				else if (ask.tipo == "5") {
 					//ask.tipo = '<input name="ask_'+askCodigo+'" id="ask_'+askCodigo+'" type="text"/><input name="ask_'+askCodigo+'_filter" class="checkDad" id="ask_'+askCodigo+'_filter" type="text" class="form-control"/>';
 					ask.tipo = "<input data-id='" + ask.codigo + "' data-dad='" + ask.pai + "' name='ask_" + askCodigo + "' class='checkDad field-filter form-control " + requiredClass + "' id='ask_" + askCodigo + "'  type='text'/>";
-				}else if (ask.tipo == "6") {
+				} else if (ask.tipo == "6") {
 					var options = ask.opcoes.split(';');
 					ask.tipo = '';
 					for (var k = 0; k < options.length; k++) {
@@ -311,12 +710,14 @@ var FormViewAsks = {
 				}
 				asksArray.push(ask);
 			}
-			defs = 	$.each(defs, function(index, x){
-				   x.obs =  x.obs.replace(/\”/g, "'").replace(/\"/g, "'");  
-				   
-				   return x;
-			   });
+			defs = $.each(defs, function (index, x) {
+				x.obs = x.obs.replace(/\”/g, "'").replace(/\"/g, "'");
+
+				return x;
+			});
 			$('#jsonPerguntas').val(JSON.stringify(defs).replace(/\\n/g, ""));
+
+
 			var panel = '<div class="panel-group"><div class="panel panel-info"><div class="panel-heading"><h4 class="panel-title">' + models[i].descmod + '</h4></div><div class="panel panel-default"><div class="panel-body" id="panel_' + models[i].codigo + '"></div></div></div>';
 			$('#conteudo').html(panel);
 			var $panel = $('#panel_' + models[i].codigo);
@@ -348,7 +749,8 @@ var FormViewAsks = {
 		$('#conteudo').html(html);
 
 
-	}, loadAskResposta: function () {
+	},
+	loadAskResposta: function () {
 
 		if ($('#jsonRespostas').val().length > 0) {
 			var answers = JSON.parse($('#jsonRespostas').val());
@@ -362,12 +764,12 @@ var FormViewAsks = {
 				}
 				else if ($('input[name=' + answer.name + ']').hasClass('field-filter')) {
 					var auxValues = answer.value.split(';');
-					
+
 
 					for (name in filterOptions[answer.name + "_filter"]) {
-						
 
-						if ( auxValues.find(x => x == filterOptions[answer.name + "_filter"][name] )) {
+
+						if (auxValues.find(x => x == filterOptions[answer.name + "_filter"][name])) {
 
 							autocompleteInstance[answer.name].add({ description: name });
 						}
@@ -380,11 +782,11 @@ var FormViewAsks = {
 			}
 
 			// habilitar DIV's		
-			$.each( $(".checkDad[data-dad=''][type='radio']:checked"), function( key, x ) {
-				if (x.value == "1"){				
-					$("[data-dad=" + 	this.getAttribute('data-id') + "]").parent().parent().removeClass("hidden");
-				}else{
-					$("[data-dad=" + 	this.getAttribute('data-id') + "]").parent().parent().addClass("hidden");
+			$.each($(".checkDad[data-dad=''][type='radio']:checked"), function (key, x) {
+				if (x.value == "1") {
+					$("[data-dad=" + this.getAttribute('data-id') + "]").closest('.row_ask').removeClass("hidden");
+				} else {
+					$("[data-dad=" + this.getAttribute('data-id') + "]").closest('.row_ask').addClass("hidden");
 				}
 			});
 		}

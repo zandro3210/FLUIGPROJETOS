@@ -1,0 +1,94 @@
+function displayFields(form, customHTML){
+	var CURRENT_STATE = getValue("WKNumState");
+	
+	DisplayFieldsUtils.start(form, customHTML);
+	
+	if (CURRENT_STATE == Activity.ZERO || CURRENT_STATE == Activity.INICIO) {
+		DisplayFieldsUtils.setUserInfo(null, "nomeUsuario", "emailUsuario");
+	}
+		
+	var numAtividade = parseInt(getValue("WKNumState"));
+	form.setValue('numAtividade', numAtividade);
+
+	form.setValue('txtSimLabel', i18n.translate('sim'));
+	form.setValue('txtNaoLabel', i18n.translate('nao'));
+	form.setValue('txtErroLabel', i18n.translate('erro'));
+	form.setValue('txtMsgNoPropLabel', i18n.translate('erro_sem_propostas'));
+	form.setValue('txtMsgMtaPergLabel', i18n.translate('erro_muitas_perguntas'));
+	form.setValue('txtMsgNoPergsLabel', i18n.translate('erro_sem_perguntas'));
+	form.setValue('txtObsLabel', i18n.translate('observacoes'));
+	
+	var matColaborador = getValue("WKUser");
+	
+	if (numAtividade == 17){
+    	var c1 = DatasetFactory.createConstraint("colleaguePK.colleagueId", matColaborador, matColaborador, ConstraintType.MUST);
+		var constraints = new Array(c1);
+		var colleagueMap = DatasetFactory.getDataset("colleague", null, constraints, null);
+    	var idPaisAnterior = form.getValue('esPais');
+    	
+    	form.setValue('idPaisAnterior', idPaisAnterior);
+    	form.setValue('emailEAR', colleagueMap.getValue(0,"mail"));
+    }
+    
+    // Actividades realizadas por el Ejecutivo de Atención y Relación
+    if (numAtividade == 32 || numAtividade == 46 || numAtividade == 53 || numAtividade == 55){
+    	var c1 = DatasetFactory.createConstraint("colleaguePK.colleagueId", matColaborador, matColaborador, ConstraintType.MUST);
+		var constraints = new Array(c1);
+		var colleagueMap = DatasetFactory.getDataset("colleague", null, constraints, null);
+    	
+    	form.setValue('emailEAR', colleagueMap.getValue(0,"mail"));
+    }
+    
+    // Actividades realizadas por el Arquietcto de Soluciones
+    if (numAtividade == 19 || numAtividade == 30 || numAtividade == 40 || numAtividade == 42 || numAtividade == 44){
+    	var c1 = DatasetFactory.createConstraint("colleaguePK.colleagueId", matColaborador, matColaborador, ConstraintType.MUST);
+		var constraints = new Array(c1);
+		var colleagueMap = DatasetFactory.getDataset("colleague", null, constraints, null);
+    	
+    	form.setValue('emailARQ', colleagueMap.getValue(0,"mail"));
+    	
+
+    	log.info("************ numActividad 19, 30, 40, 42, 44  display fields ************");
+    	log.info("************ esPais: " + form.getValue('esPais') );
+    }
+    
+    // Preparar DEMO con base en formulario TES
+    /* nesta atividade, o Fluig ja integrou as perguntas com o Protheus
+	 * Deve "informar" ao formulario, para nao haver problemas
+	 */
+    if( numAtividade == 24 ) {
+    	var numProc = parseInt(getValue("WKNumProces"));
+    	form.setValue('propValidadaProtheus', numProc);
+    	var idProp = form.getValue('idPropuesta');
+    	form.setValue('idPropuestaStd', idProp);
+    	form.setValue('idPropuesta', numProc);
+    	form.setValue('nmPropuesta', form.getValue("esNomeCliente") + " USER: " + form.getValue("nomeUsuario") );  	
+    }	
+    
+    customHTML.append("<script> var CURRENT_STATE = "+getValue("WKNumState")+";</script>"); 
+}
+
+var DisplayFieldsUtils = {
+	objForm: null,
+	start: function(form, customHtml){
+		this.objForm = form;
+		
+		customHtml.append("<script> var CURRENT_STATE = "+getValue("WKNumState")+";</script>");
+		form.setShowDisabledFields(true);
+		form.setHidePrintLink(true);
+	},
+	/** Armazena no formulario os dados do usuario autenticado. */
+	setUserInfo: function(codeField, nameField, emailField) {
+		user = fluigAPI.getUserService().getCurrent();
+		if(codeField != null) this.objForm.setValue(codeField, user.getCode());
+		if(nameField != null) this.objForm.setValue(nameField, user.getFullName());
+		if(emailField != null) this.objForm.setValue(emailField, user.getEmail());
+	},
+	/** Armazena no formulario a data atual. */
+	setToday: function(dateField) {
+		var formatter = new java.text.SimpleDateFormat("dd/MM/yyyy");
+		var date = new java.util.Date();
+
+		this.objForm.setValue(dateField, formatter.format(date));
+	}
+}

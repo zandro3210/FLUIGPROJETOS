@@ -4,7 +4,7 @@ var FormDaoProposal = {
 		constraints.push(DatasetFactory.createConstraint('entidade', entity, '', ConstraintType.MUST));
         var dataset = DatasetFactory.getDataset('dsEasyCliente', null, constraints, null);
         return dataset.values[0];
-	},
+    },
 /*	getAsksGroupField: function(asksGroups){
 		return JSON.parse($('#jsonGruposPerguntas').val());
 	},*/		

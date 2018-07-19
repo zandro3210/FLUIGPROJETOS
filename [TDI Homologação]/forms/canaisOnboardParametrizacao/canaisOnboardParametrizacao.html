@@ -117,9 +117,9 @@
 													<label for="basicApimanagerlogin">Username</label>
 													<input type="text" class="form-control" id="basicApimanagerlogin" name="basicApimanagerlogin" />
 												</div>
-												
+
 											</div>
-											<div class="form-group row"> 
+											<div class="form-group row">
 												<div class="col-md-4">
 													<label for="basicApimanagerpassword">Password</label>
 													<input type="text" class="form-control" id="basicApimanagerpassword" name="basicApimanagerpassword" />
@@ -142,9 +142,9 @@
 													<label for="basicApizendesklogin">Username</label>
 													<input type="text" class="form-control" id="basicApizendesklogin" name="basicApizendesklogin" />
 												</div>
-												
+
 											</div>
-											<div class="form-group row"> 
+											<div class="form-group row">
 												<div class="col-md-4">
 													<label for="basicApizendeskpassword">Password</label>
 													<input type="text" class="form-control" id="basicApizendeskpassword" name="basicApizendeskpassword" />
@@ -236,7 +236,7 @@
 									<div class="panel panel-info panel-default">
 										<div class="panel-heading ">
 											<h3 class="panel-title">
-												<b>Criação do Código de unidade no CRM </b>
+												<b>Criação do Código de unidade de Vendas </b>
 											</h3>
 										</div>
 
@@ -244,7 +244,7 @@
 
 
 											<div class="form-group row">
-												
+
 
 												<div class="col-md-3">
 													<label for="criacaoCortitulo">Título do Ticket:</label>
@@ -265,304 +265,528 @@
 											<div class="form-group row">
 												<div class="col-md-9">
 													<label for="criacaoCordescricao">Descrição do Ticket:</label>
-													<textarea rows="4" id="criacaoCordescricao" name="criacaoCordescricao" class="form-control" ></textarea>
+													<textarea rows="4" id="criacaoCordescricao" name="criacaoCordescricao" class="form-control"></textarea>
 
 												</div>
 
 											</div>
+
 											<div class="form-group row">
+												<div class="col-md-3">
+													<label for="criacaoCorgroupid">Group ID:</label>
+													<input type="number" class="form-control" id="criacaoCorgroupid" name="criacaoCorgroupid"></input>
+												</div>
+
+												<div class="col-md-3">
+													<label for="criacaoCorticket_form_id">Formulário ID:</label>
+													<input type="number" class="form-control" id="criacaoCorticket_form_id" name="criacaoCorticket_form_id"></input>
+												</div>
+
+												<div class="col-md-3">
+													<label for="criacaoCorbrand">Marca:</label>
+													<input type="number" class="form-control" id="criacaoCorbrand" name="criacaoCorbrand"></input>
+												</div>
+
+											</div>
+
+
+
+											<div class="form-group row">
+												<label class="col-md-12" for="tablecriacaoCor">Parâmetros da API</label>
 												<div class="col-md-12">
-													<label for="tablecriacaoCor">Parâmetros da API</label>
-													<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoCor" id="tablecriacaoCor"
-													nodeletebutton="false" addbuttonclass="btn btn-primary">
-													   <thead>
-														   <tr>
-															   <td>
-																   <b>Descrição</b>
-															   </td>
-															   <td>
-																   <b>ID Zendesk</b>
-															   </td>
-															   <td>
-																<b>VALUE Zendesk</b>
-															</td>
-														   </tr>
-													   </thead>
-													   <tbody>
-														   <tr>
-															   <td>
-																   <input type="text" class="form-control" name="tablecriacaoCordescricao" id="tablecriacaoCordescricao">
-															   </td>
-															   <td>
-																   <input type="text" class="form-control" name="tablecriacaoCoridzendesk" id="tablecriacaoCoridzendesk" >
-															   </td>
-															   <td>
-																<input type="text" class="form-control" name="tablecriacaoCorvaluezendesk" id="tablecriacaoCorvaluezendesk" >
-															</td>
-															</td>
-														   </tr>
-													   </tbody>
-												   </table>
+													<label>Custom Fields e Fields</label>
+													<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoCor" id="tablecriacaoCor" nodeletebutton="false"
+													 addbuttonclass="btn btn-primary">
+														<thead>
+															<tr>
+																<td>
+																	<b>Descrição</b>
+																</td>
+																<td>
+																	<b>Parâmetro</b>
+																</td>
+																<td>
+																	<b>ID Zendesk</b>
+																</td>
+																<td>
+																	<b>VALUE Zendesk</b>
+																</td>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>
+																	<input type="text" class="form-control" name="tablecriacaoCordescricao" id="tablecriacaoCordescricao">
+																</td>
+																<td>
+																	<select id="tablecriacaoCortipo" name="tablecriacaoCortipo" class="form-control">
+																		<option value="custom_fields">Custom Fields</option>
+																		<option value="fields">Fields</option>
+																	</select>
+																</td>
+																<td>
+																	<input type="text" class="form-control" name="tablecriacaoCoridzendesk" id="tablecriacaoCoridzendesk">
+																</td>
+																<td>
+																	<input type="text" class="form-control" name="tablecriacaoCorvaluezendesk" id="tablecriacaoCorvaluezendesk">
+																</td>
 
+															</tr>
+														</tbody>
+													</table>
 												</div>
-
-											</div>
-										
-
-										</div>
-									</div>
-									<div class="panel panel-info panel-default">
-										<div class="panel-heading ">
-											<h3 class="panel-title">
-												<b>Inclusão no portal do cliente (Somente PVF e Master PVF) </b>
-											</h3>
-										</div>
-
-										<div class="panel-body">
-
-
-											<div class="form-group row">
-												
-
-												<div class="col-md-3">
-													<label for="criacaoCortitulo">Título do Ticket:</label>
-													<input class="form-control" id="criacaoPortaltitulo" name="criacaoPortaltitulo"></input>
-												</div>
-
-												<div class="col-md-3">
-													<label for="criacaoCorstatus">Status</label>
-													<select class="form-control" id="criacaoPortalstatus" name="criacaoPortalstatus">
-														<option value="normal">Normal</option>
-														<option value="high">High</option>
-														<option value="urgent">Urgent</option>
-														<option value="low">low</option>
-													</select>
-												</div>
-
-											</div>
-											<div class="form-group row">
-												<div class="col-md-9">
-													<label for="criacaoPortaldescricao">Descrição do Ticket:</label>
-													
-													<textarea rows="4" id="criacaoPortaldescricao" name="criacaoPortaldescricao" class="form-control" ></textarea>
-
-												</div>
-
-											</div>
-
-											<div class="form-group row">
 												<div class="col-md-12">
-													<label for="tablecriacaoPortal">Parâmetros da API</label>
-													<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoPortal" id="tablecriacaoPortal"
-													nodeletebutton="false" addbuttonclass="btn btn-primary">
-													   <thead>
-														   <tr>
-															   <td>
-																   <b>Descrição</b>
-															   </td>
-															   <td>
-																   <b>ID Zendesk</b>
-															   </td>
-															   <td>
-																<b>VALUE Zendesk</b>
-															</td>
-														   </tr>
-													   </thead>
-													   <tbody>
-														   <tr>
-															   <td>
-																   <input type="text" class="form-control" name="tablecriacaoPortaldescricao" id="tablecriacaoPortaldescricao">
-															   </td>
-															   <td>
-																   <input type="text" class="form-control" name="tablecriacaoPortalidzendesk" id="tablecriacaoPortalidzendesk" >
-															   </td>
-															   <td>
-																<input type="text" class="form-control" name="tablecriacaoPortalvaluezendesk" id="tablecriacaoPortalvaluezendesk" >
-															</td>
-															</td>
-														   </tr>
-													   </tbody>
-												   </table>
+													<label>TAGS</label>
+													<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoCorTags" id="tablecriacaoCorTags" nodeletebutton="false"
+													 addbuttonclass="btn btn-primary">
+														<thead>
+															<tr>
+																<td>
+																	<b>Descrição</b>
+																</td>
 
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>
+																	<input type="text" class="form-control" name="tablecriacaoCorTagsdesc" id="tablecriacaoCorTagsdesc">
+																</td>
+
+
+															</tr>
+														</tbody>
+													</table>
 												</div>
 
 											</div>
 
 										</div>
-									</div>
-									<div class="panel panel-info panel-default">
-										<div class="panel-heading ">
-											<h3 class="panel-title">
-												<b>Criação de Usuário CRM e Estrutura de vendas vendas </b>
-											</h3>
-										</div>
-
-										<div class="panel-body">
-
-
-											<div class="form-group row">
-												
-												<div class="col-md-3">
-													<label for="criacaoCortitulo">Título do Ticket:</label>
-													<input class="form-control" id="criacaoEstruturatitulo" name="criacaoEstruturatitulo"></input>
-												</div>
-
-												<div class="col-md-3">
-													<label for="criacaoCorstatus">Status</label>
-													<select class="form-control" id="criacaoEstruturastatus" name="criacaoEstruturastatus">
-														<option value="normal">Normal</option>
-														<option value="high">High</option>
-														<option value="urgent">Urgent</option>
-														<option value="low">low</option>
-													</select>
-												</div>
-
-											</div>
-											<div class="form-group row">
-												<div class="col-md-9">
-													<label for="criacaoEstruturdescricao">Descrição do Ticket:</label>
-												
-													<textarea rows="4" id="criacaoEstruturadescricao" name="criacaoEstruturadescricao" class="form-control" ></textarea>
-
-												</div>
-
-											</div>
-
-											<div class="form-group row">
-												<div class="col-md-12">
-													<label for="tablecriacaoEstrutura">Parâmetros da API</label>
-													<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoEstrutura" id="tablecriacaoEstrutura"
-													nodeletebutton="false" addbuttonclass="btn btn-primary">
-													   <thead>
-														   <tr>
-															   <td>
-																   <b>Descrição</b>
-															   </td>
-															   <td>
-																   <b>ID Zendesk</b>
-															   </td>
-															   <td>
-																<b>VALUE Zendesk</b>
-															</td>
-														   </tr>
-													   </thead>
-													   <tbody>
-														   <tr>
-															   <td>
-																   <input type="text" class="form-control" name="tablecriacaoEstdescricao" id="tablecriacaoEstdescricao">
-															   </td>
-															   <td>
-																   <input type="text" class="form-control" name="tablecriacaoEstidzendesk" id="tablecriacaoEstidzendesk" >
-															   </td>
-															   <td>
-																<input type="text" class="form-control" name="tablecriacaoEstvaluezendesk" id="tablecriacaoEstvaluezendesk" >
-															</td>
-															</td>
-														   </tr>
-													   </tbody>
-												   </table>
-
-												</div>
-
-											</div>	
 
 
 
 
-										</div>
-									</div>
-									<div class="panel panel-info panel-default">
-										<div class="panel-heading ">
-											<h3 class="panel-title">
-												<b>Cadastro de Fornecedor </b>
-											</h3>
-										</div>
-
-										<div class="panel-body">
-
-
-											<div class="form-group row">
-											
-												<div class="col-md-3">
-													<label for="criacaoCortitulo">Título do Ticket:</label>
-													<input class="form-control" id="criacaoFornecedortitulo" name="criacaoFornecedortitulo"></input>
-												</div>
-
-												<div class="col-md-3">
-													<label for="criacaoCorstatus">Status</label>
-													<select class="form-control" id="criacaoFornecedorstatus" name="criacaoFornecedorstatus">
-														<option value="normal">Normal</option>
-														<option value="high">High</option>
-														<option value="urgent">Urgent</option>
-														<option value="low">low</option>
-													</select>
-												</div>
-
-											</div>
-											<div class="form-group row">
-												<div class="col-md-9">
-													<label for="criacaoFornecedordescricao">Descrição do Ticket:</label>
-												
-													<textarea rows="4" id="criacaoFornecedordescricao" name="criacaoFornecedordescricao" class="form-control" ></textarea>
-
-												</div>
-
-											</div>
-											<div class="form-group row">
-												<div class="col-md-12">
-													<label for="tablecriacaoFornecedor">Parâmetros da API</label>
-													<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoFornecedor" id="tablecriacaoFornecedor"
-													nodeletebutton="false" addbuttonclass="btn btn-primary">
-													   <thead>
-														   <tr>
-															   <td>
-																   <b>Descrição</b>
-															   </td>
-															   <td>
-																   <b>ID Zendesk</b>
-															   </td>
-															   <td>
-																<b>VALUE Zendesk</b>
-															</td>
-														   </tr>
-													   </thead>
-													   <tbody>
-														   <tr>
-															   <td>
-																   <input type="text" class="form-control" name="tablecriacaoFordescricao" id="tablecriacaoFordescricao">
-															   </td>
-															   <td>
-																   <input type="text" class="form-control" name="tablecriacaoForidzendesk" id="tablecriacaoForidzendesk" >
-															   </td>
-															   <td>
-																<input type="text" class="form-control" name="tablecriacaoForvaluezendesk" id="tablecriacaoForvaluezendesk" >
-															</td>
-															</td>
-														   </tr>
-													   </tbody>
-												   </table>
-
-												</div>
-
-											</div>	
-
-
-										</div>
 									</div>
 								</div>
+								<div class="panel panel-info panel-default">
+									<div class="panel-heading ">
+										<h3 class="panel-title">
+											<b>Inclusão no portal do cliente (Somente PVF e Master PVF) </b>
+										</h3>
+									</div>
+
+									<div class="panel-body">
 
 
+										<div class="form-group row">
+
+
+											<div class="col-md-3">
+												<label for="criacaoCortitulo">Título do Ticket:</label>
+												<input class="form-control" id="criacaoPortaltitulo" name="criacaoPortaltitulo"></input>
+											</div>
+
+											<div class="col-md-3">
+												<label for="criacaoCorstatus">Status</label>
+												<select class="form-control" id="criacaoPortalstatus" name="criacaoPortalstatus">
+													<option value="normal">Normal</option>
+													<option value="high">High</option>
+													<option value="urgent">Urgent</option>
+													<option value="low">low</option>
+												</select>
+											</div>
+
+										</div>
+										<div class="form-group row">
+											<div class="col-md-9">
+												<label for="criacaoPortaldescricao">Descrição do Ticket:</label>
+
+												<textarea rows="4" id="criacaoPortaldescricao" name="criacaoPortaldescricao" class="form-control"></textarea>
+
+											</div>
+
+										</div>
+
+										<div class="form-group row">
+											<div class="col-md-3">
+												<label for="criacaoPortalgroupid">Group ID:</label>
+												<input type="number" class="form-control" id="criacaoPortalgroupid" name="criacaoPortalgroupid"></input>
+											</div>
+
+											<div class="col-md-3">
+												<label for="criacaoPortalticket_form_id">Formulário ID:</label>
+												<input type="number" class="form-control" id="criacaoPortalticket_form_id" name="criacaoPortalticket_form_id"></input>
+											</div>
+
+											<div class="col-md-3">
+												<label for="criacaoPortalticketbrand">Marca:</label>
+												<input type="number" class="form-control" id="criacaoPortalticketbrand" name="criacaoPortalticketbrand"></input>
+											</div>
+
+										</div>
+
+										<div class="form-group row">
+											<label class="col-md-12" for="tablecriacaoCor">Parâmetros da API</label>
+											<div class="col-md-12">
+												<label>Custom Fields e Fields</label>
+												<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoPortal" id="tablecriacaoPortal" nodeletebutton="false"
+												 addbuttonclass="btn btn-primary">
+													<thead>
+														<tr>
+															<td>
+																<b>Descrição</b>
+															</td>
+															<td>
+																<b>Parâmetro</b>
+															</td>
+															<td>
+																<b>ID Zendesk</b>
+															</td>
+															<td>
+																<b>VALUE Zendesk</b>
+															</td>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<input type="text" class="form-control" name="tablecriacaoPortaldescricao" id="tablecriacaoPortaldescricao">
+															</td>
+															<td>
+																<select id="tablecriacaoPortaltipo" name="tablecriacaoPortaltipo" class="form-control">
+																	<option value="custom_fields">Custom Fields</option>
+																	<option value="fields">Fields</option>
+																</select>
+															</td>
+															<td>
+																<input type="text" class="form-control" name="tablecriacaoPortalidzendesk" id="tablecriacaoPortalidzendesk">
+															</td>
+															<td>
+																<input type="text" class="form-control" name="tablecriacaoPortalvaluezendesk" id="tablecriacaoPortalvaluezendesk">
+															</td>
+
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="col-md-12">
+												<label>TAGS</label>
+												<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoPortalTags" id="tablecriacaoPortalTags"
+												 nodeletebutton="false" addbuttonclass="btn btn-primary">
+													<thead>
+														<tr>
+															<td>
+																<b>Descrição</b>
+															</td>
+
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<input type="text" class="form-control" name="tbcriacaoPortalTagsdesc" id="tbcriacaoPortalTagsdesc">
+															</td>
+
+
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+								<div class="panel panel-info panel-default">
+									<div class="panel-heading ">
+										<h3 class="panel-title">
+											<b>Criação de Usuário CRM e Estrutura de vendas vendas </b>
+										</h3>
+									</div>
+
+									<div class="panel-body">
+
+
+										<div class="form-group row">
+
+											<div class="col-md-3">
+												<label for="criacaoCortitulo">Título do Ticket:</label>
+												<input class="form-control" id="criacaoEstruturatitulo" name="criacaoEstruturatitulo"></input>
+											</div>
+
+											<div class="col-md-3">
+												<label for="criacaoCorstatus">Status</label>
+												<select class="form-control" id="criacaoEstruturastatus" name="criacaoEstruturastatus">
+													<option value="normal">Normal</option>
+													<option value="high">High</option>
+													<option value="urgent">Urgent</option>
+													<option value="low">low</option>
+												</select>
+											</div>
+
+										</div>
+										<div class="form-group row">
+											<div class="col-md-9">
+												<label for="criacaoEstruturdescricao">Descrição do Ticket:</label>
+
+												<textarea rows="4" id="criacaoEstruturadescricao" name="criacaoEstruturadescricao" class="form-control"></textarea>
+
+											</div>
+
+										</div>
+										<div class="form-group row">
+											<div class="col-md-3">
+												<label for="criacaoEstruturagroupid">Group ID:</label>
+												<input type="number" class="form-control" id="criacaoEstruturagroupid" name="criacaoEstruturagroupid"></input>
+											</div>
+
+											<div class="col-md-3">
+												<label for="criacaoEstruturaticket_form_id">Formulário ID:</label>
+												<input type="number" class="form-control" id="criacaoEstruturaticket_form_id" name="criacaoEstruturaticket_form_id"></input>
+											</div>
+
+											<div class="col-md-3">
+												<label for="criacaoEstruturabrand">Marca:</label>
+												<input type="number" class="form-control" id="criacaoEstruturabrand" name="criacaoEstruturabrand"></input>
+											</div>
+
+										</div>
+
+
+										<div class="form-group row">
+											<label class="col-md-12" for="tablecriacaoEstrutura">Parâmetros da API</label>
+											<div class="col-md-12">
+												<label>Custom Fields e Fields</label>
+												<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoEstrutura" id="tablecriacaoEstrutura"
+												 nodeletebutton="false" addbuttonclass="btn btn-primary">
+													<thead>
+														<tr>
+															<td>
+																<b>Descrição</b>
+															</td>
+															<td>
+																<b>Parâmetro</b>
+															</td>
+															<td>
+																<b>ID Zendesk</b>
+															</td>
+															<td>
+																<b>VALUE Zendesk</b>
+															</td>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<input type="text" class="form-control" name="tablecriacaoEstdescricao" id="tablecriacaoEstdescricao">
+															</td>
+															<td>
+																<select id="tablecriacaoEsttipo" name="tablecriacaoEsttipo" class="form-control">
+																	<option value="custom_fields">Custom Fields</option>
+																	<option value="fields">Fields</option>
+																</select>
+															</td>
+															<td>
+																<input type="text" class="form-control" name="tablecriacaoEstidzendesk" id="tablecriacaoEstidzendesk">
+															</td>
+															<td>
+																<input type="text" class="form-control" name="tablecriacaoEstvaluezendesk" id="tablecriacaoEstvaluezendesk">
+															</td>
+
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="col-md-12">
+												<label>TAGS</label>
+												<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoEstTags" id="tablecriacaoEstTags" nodeletebutton="false"
+												 addbuttonclass="btn btn-primary">
+													<thead>
+														<tr>
+															<td>
+																<b>Descrição</b>
+															</td>
+
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<input type="text" class="form-control" name="tablecriacaoEstTagsdesc" id="tablecriacaoEstTagsdesc">
+															</td>
+
+
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+										</div>
+
+
+
+
+
+
+
+									</div>
+								</div>
+								<div class="panel panel-info panel-default">
+									<div class="panel-heading ">
+										<h3 class="panel-title">
+											<b>Cadastro de Fornecedor </b>
+										</h3>
+									</div>
+
+									<div class="panel-body">
+
+
+										<div class="form-group row">
+
+											<div class="col-md-3">
+												<label for="criacaoCortitulo">Título do Ticket:</label>
+												<input class="form-control" id="criacaoFornecedortitulo" name="criacaoFornecedortitulo"></input>
+											</div>
+
+											<div class="col-md-3">
+												<label for="criacaoCorstatus">Status</label>
+												<select class="form-control" id="criacaoFornecedorstatus" name="criacaoFornecedorstatus">
+													<option value="normal">Normal</option>
+													<option value="high">High</option>
+													<option value="urgent">Urgent</option>
+													<option value="low">low</option>
+												</select>
+											</div>
+
+										</div>
+										<div class="form-group row">
+											<div class="col-md-9">
+												<label for="criacaoFornecedordescricao">Descrição do Ticket:</label>
+
+												<textarea rows="4" id="criacaoFornecedordescricao" name="criacaoFornecedordescricao" class="form-control"></textarea>
+
+											</div>
+
+										</div>
+
+
+										<div class="form-group row">
+											<div class="col-md-3">
+												<label for="criacaoFornecedorgroupid">Group ID:</label>
+												<input type="number" class="form-control" id="criacaoFornecedorgroupid" name="criacaoFornecedorgroupid"></input>
+											</div>
+
+											<div class="col-md-3">
+												<label for="criacaoForticket_form_id">Formulário ID:</label>
+												<input type="number" class="form-control" id="criacaoForticket_form_id" name="criacaoForticket_form_id"></input>
+											</div>
+
+											<div class="col-md-3">
+												<label for="criacaoFornecedorbrand">Marca:</label>
+												<input type="number" class="form-control" id="criacaoFornecedorbrand" name="criacaoFornecedorbrand"></input>
+											</div>
+
+										</div>
+
+
+
+										<div class="form-group row">
+
+											<label class="col-md-12" for="tablecriacaoFornecedor">Parâmetros da API</label>
+											<div class="col-md-12">
+												<label>Custom Fields e Fields</label>
+												<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoFornecedor" id="tablecriacaoFornecedor"
+												 nodeletebutton="false" addbuttonclass="btn btn-primary">
+													<thead>
+														<tr>
+															<td>
+																<b>Descrição</b>
+															</td>
+															<td>
+																<b>Parâmetro</b>
+															</td>
+															<td>
+																<b>ID Zendesk</b>
+															</td>
+															<td>
+																<b>VALUE Zendesk</b>
+															</td>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<input type="text" class="form-control" name="tablecriacaoFordescricao" id="tablecriacaoFordescricao">
+															</td>
+															<td>
+																<select id="tablecriacaoFortipo" name="tablecriacaoFortipo" class="form-control">
+																	<option value="custom_fields">Custom Fields</option>
+																	<option value="fields">Fields</option>
+																</select>
+															</td>
+															<td>
+																<input type="text" class="form-control" name="tablecriacaoForidzendesk" id="tablecriacaoForidzendesk">
+															</td>
+															<td>
+																<input type="text" class="form-control" name="tablecriacaoForvaluezendesk" id="tablecriacaoForvaluezendesk">
+															</td>
+
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="col-md-12">
+												<label>TAGS</label>
+												<table border="0" class="table table-striped table-bordered" tablename="tablecriacaoFornecedorTags" id="tablecriacaoFornecedorTags"
+												 nodeletebutton="false" addbuttonclass="btn btn-primary">
+													<thead>
+														<tr>
+															<td>
+																<b>Descrição</b>
+															</td>
+
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<input type="text" class="form-control" name="tablecriacaoFornecedorTagsdesc" id="tablecriacaoFornecedorTagsdesc">
+															</td>
+
+
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+										</div>
+
+
+
+
+
+
+
+
+
+
+
+									</div>
+								</div>
 							</div>
 
 
-
 						</div>
+
+
+
 					</div>
 				</div>
-
-
-
 			</div>
+
+
+
+	</div>
 
 	</div>
 

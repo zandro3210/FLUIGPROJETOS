@@ -1,0 +1,40 @@
+.fc-widget-header{
+	background-color: #58595b;
+    color: white !important;
+    border-color: #58595b;
+}
+
+.fc-event-container{
+	cursor: pointer !important;
+}
+
+.fc-widget-header a{
+    color: white !important;
+}
+
+.btn-warning{
+	background-color: #ec971f !important;
+}
+
+.btn-info{
+	background-color: #5bc0de !important;
+}
+
+.btn-success{
+	background-color: #5cb85c !important;
+}
+
+.btn-danger{
+	background-color: #0d69b7 !important;
+	border-color: #0d69b7 !important;
+}
+
+.tipo{
+	font-weight: bold;
+	padding-top: 1em;
+}
+
+
+#admin .form-group{
+	margin-left:1em;
+}

@@ -2,118 +2,31 @@ $(document).ready(function () {
 	FormView.binding();
 	FormView.enableTabs();
 	FormView.setMandatoryFields();
-	loadDataTable();
+	try {window.parent.document.querySelectorAll('li [data-save=""]')[1].addEventListener("click", loadJsonResposta);}catch(err) {	}
 	if (CURRENT_STATE != Activity.ZERO && CURRENT_STATE != Activity.INICIO) { FormViewOffer.loadModelsTab(); }
-
+	if (CURRENT_STATE == Activity.PREENCHER_QUESTIONARIO) { setInterval(function(){ loadJsonResposta(); }, 1000);}
+	if (CURRENT_STATE == Activity.RELATORIO || CURRENT_STATE == Activity.FIM) { FormViewReport.loadTable();   }
 });
 
 $(document).on("click", "[href='#rlGrafico'][aria-expanded='true']", function () {
 
 	setTimeout(function () {
-		loadGraph();
+		FormViewReport.loadGraph();
 	}, 1000);
 });
-function loadDataTable() {
 
 
-	$('.table').DataTable({
-		dom: 'Bfrtip',
-		buttons: [
-			'copyHtml5',
-			'excelHtml5',
-			'csvHtml5',
-			'pdfHtml5'
-		],
-		language: {
-			"sEmptyTable": "Nenhum registro encontrado",
-			"sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
-			"sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
-			"sInfoFiltered": "(Filtrados de _MAX_ registros)",
-			"sInfoPostFix": "",
-			"sInfoThousands": ".",
-			"sLengthMenu": "_MENU_ resultados por página",
-			"sLoadingRecords": "Carregando...",
-			"sProcessing": "Processando...",
-			"sZeroRecords": "Nenhum registro encontrado",
-			"sSearch": "Pesquisar",
-			"oPaginate": {
-				"sNext": "Próximo",
-				"sPrevious": "Anterior",
-				"sFirst": "Primeiro",
-				"sLast": "Último"
-			},
-			"oAria": {
-				"sSortAscending": ": Ordenar colunas de forma ascendente",
-				"sSortDescending": ": Ordenar colunas de forma descendente"
-			}
-		}
-	});
-
-
-}
-function loadGraph() {
-	$("#DoughnutGraph").removeAttr("_echarts_instance_");
-	var dom = document.getElementById("DoughnutGraph");
-	var myChart = echarts.init(dom);
-	var app = {};
-	option = null;
-	app.title = 'Gráfico de otimização';
-
-	option = {
-		tooltip: {
-			trigger: 'axis',
-			axisPointer: {
-				type: 'shadow'
-			}
-		},
-		legend: {
-			data: ['Normal', 'Otimizado']
-		},
-		grid: {
-			left: '3%',
-			right: '4%',
-			bottom: '3%',
-			containLabel: true
-		},
-		xAxis: [
-			{
-				type: 'category',
-				data: ['T 2600056', 'T 2600055', 'T 2600054']
-			}
-		],
-		yAxis: [
-			{
-				type: 'value'
-			}
-		],
-		series: [
-			{
-				name: 'Normal',
-				type: 'bar',
-				data: [189, 190, 200],
-				color: '#696a6c'
-			},
-			{
-				name: 'Otimizado',
-				type: 'bar',
-				stack: '广告',
-				data: [177, 168, 9],
-				color: '#2f6b89'
-			},
-
-		]
-	};
-
-	if (option && typeof option === "object") {
-		myChart.setOption(option, true);
-	}
-
-}
 $(document).on("click", ".checkDad", function () {
-	debugger;
 	checkDad(this);
 	loadJsonResposta();
 });
+$(document).on("change", ".checkDad", function () {
+	checkDad(this);
+	loadJsonResposta();
+});
+
+
+
 function checkDad(element) {
 	element = (element.nodeName == undefined) ? element.currentTarget : element;
 
@@ -224,9 +137,9 @@ function loadJsonResposta() {
 				obj.push({ name: this.name, value: this.value })
 			}
 		}
-		$('#jsonRespostas').val(JSON.stringify(obj));
+	
 	});
-
+	$('#jsonRespostas').val(JSON.stringify(obj));
 }
 var CustomValidate = {
 	validate: function (numState) {
@@ -266,7 +179,7 @@ var CustomValidate = {
 		return error;
 	},
 	getLabel: function ($element) {
-		var label = $element.parent().parent().children('label').first().text();
+		var label = $element.parent().parent().parent().parent().children('.panel-heading').text();
 		return label;
 	},
 	isEmpty: function ($element) {
@@ -348,3 +261,4 @@ var HashSet = function () {
 		return array;
 	}
 }
+

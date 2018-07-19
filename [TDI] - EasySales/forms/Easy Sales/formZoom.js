@@ -11,6 +11,7 @@ var FormZoom = {
 		reloadZoomFilterValues('proposta', filters);
 		
 		FormViewProposal.setEar(selectedItem);
+		FormAPI.postEar();
 	},
 	callbackZoomProposal: function(selectedItem){
 		var customer = FormDaoProposal.getCustomer(selectedItem.codigo, selectedItem.entidade);
@@ -20,8 +21,9 @@ var FormZoom = {
 		FormDaoOffer.setModelsField(models);
 		FormViewProposal.setProposal(selectedItem);
 		FormViewProposal.setCustomer(customer);
-		FormViewOffer.setModels({models: models});
 		
+		FormViewOffer.setModels({models: models});
+			FormAPI.postClient();
 		for(var i=0; i<models.length; i++){
 			var modelId = models[i].modori;
 			var asksGroups = FormDaoOffer.getAsksGroupsOfDataset(modelId);
@@ -33,6 +35,7 @@ var FormZoom = {
 		
 		FormDaoOffer.setAsksGroupField(asksGroupField);
 		FLUIGC.switcher.init('.form-switch');
+	
 	},
 	/** O codigo do modelo por padrao possui espaco. Esta funcao gera uma propriedade codigo sem espacos. **/
 	normalizeModels: function(models){

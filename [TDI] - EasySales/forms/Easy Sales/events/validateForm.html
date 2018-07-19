@@ -4,20 +4,37 @@ function validateForm(form){
 
 	objForm = form;//variavel declarada e utilizada no validateFormUtils.js
 	
-	if(CURRENT_STATE == Activity.ZERO || CURRENT_STATE == Activity.INICIO){
-		errorMsg+= getEmptyMessage("dsNmExecutivo", "Executivo");
-		errorMsg+= getEmptyMessage("proposta", "Proposta");
+	if(CURRENT_STATE == Activity.PREENCHER_QUESTIONARIO){
 		
-		var jsonModel = stringToJson("jsonModelos", []);		
-		var groups = stringToJson("jsonGruposPerguntasSel", {});
-		var modelsSize = jsonModel.length;
-		var groupsSize = Object.keys(groups).length;
+	
+		if (form.getValue("liRelatorio") == ""){			
+			errorMsg+= "Para enviar os dados do questionário é necessário finalizar o mesmo";
+		}
+
+		/*	if (form.getValue("dsNmExecutivo") != "" && form.getValue("Proposta") == ""){
+			
+			errorMsg+= getEmptyMessage("proposta", "Proposta");
+		}
+		if (form.getValue("flagAsksGroups") == "true"){
+				
+			var jsonModel = stringToJson("jsonModelos", []);		
+			var groups = stringToJson("jsonGruposPerguntasSel", {});
+			var modelsSize = jsonModel.length;
+			var groupsSize = Object.keys(groups).length;
+			
+			if(modelsSize > groupsSize) errorMsg+= "Nenhum questionário foi selecionado na aba Seleção de Questionário.";	
+		}
+
+		if (form.getValue("flagAsksGroups") != ""){
+			errorMsg = form.getValue("errosQuestionario");
+		}
+
 		
-		if(modelsSize > groupsSize) errorMsg+= "Escolha uma opção por oferta";		
+		*/
+
+			
 	}
-	else if(CURRENT_STATE == Activity.PREENCHER_QUESTIONARIO || CURRENT_STATE == Activity.MODIFICAR){
-		errorMsg = form.getValue("errosQuestionario");
-	}
+
 	
 	if (errorMsg.trim() != "") throw errorMsg;
 }

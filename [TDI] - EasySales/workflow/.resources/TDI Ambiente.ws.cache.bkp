@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_121" class="java.beans.XMLDecoder">
+<java version="1.8.0_161" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
    <string>volume</string>
@@ -11,189 +11,27 @@
   </void>
   <void method="put">
    <string>expediente</string>
-   <array class="java.lang.String" length="1">
+   <array class="java.lang.String" length="5">
     <void index="0">
+     <string>24/7 - testes e implantacoes janela</string>
+    </void>
+    <void index="1">
+     <string>Comercial</string>
+    </void>
+    <void index="2">
      <string>Default</string>
+    </void>
+    <void index="3">
+     <string>horacorrida</string>
+    </void>
+    <void index="4">
+     <string>Zendesk</string>
     </void>
    </array>
   </void>
   <void method="put">
-   <string>mecanismoPapel</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>admin</string>
-      </void>
-      <void property="roleId">
-       <string>admin</string>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>TES-PMO</string>
-      </void>
-      <void property="roleId">
-       <string>TES-PMO</string>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>TES-EAR</string>
-      </void>
-      <void property="roleId">
-       <string>TES-EAR</string>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>TES-ARQ</string>
-      </void>
-      <void property="roleId">
-       <string>TES-ARQ</string>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>MPN_gestao_de_canais</string>
-      </void>
-      <void property="roleId">
-       <string>MPN_gestao_de_canais</string>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>MPN_financeiro</string>
-      </void>
-      <void property="roleId">
-       <string>MPN_financeiro</string>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>MPN_universidade</string>
-      </void>
-      <void property="roleId">
-       <string>MPN_universidade</string>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>MPN_contratos_bematech</string>
-      </void>
-      <void property="roleId">
-       <string>MPN_contratos_bematech</string>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>MPN_comissoes</string>
-      </void>
-      <void property="roleId">
-       <string>MPN_comissoes</string>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>MPN_executivo</string>
-      </void>
-      <void property="roleId">
-       <string>MPN_executivo</string>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>Canais Onboard Gestor</string>
-      </void>
-      <void property="roleId">
-       <string>Canais_Onboard_Gestor</string>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>Canais_Onboard_Solicitante</string>
-      </void>
-      <void property="roleId">
-       <string>Canais_Onboard_Solicitante</string>
-      </void>
-     </object>
-    </void>
-    <void method="add">
-     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
-      <void property="companyId">
-       <long>1</long>
-      </void>
-      <void property="roleDescription">
-       <string>Canais_Onboard_Financeiro</string>
-      </void>
-      <void property="roleId">
-       <string>Canais_Onboard_Financeiro</string>
-      </void>
-     </object>
-    </void>
-   </object>
-  </void>
-  <void method="put">
    <string>mecanismo</string>
-   <array class="[Ljava.lang.Object;" length="9">
+   <array class="[Ljava.lang.Object;" length="10">
     <void index="0">
      <array class="java.lang.Object" length="2">
       <void index="0">
@@ -227,6 +65,16 @@
     <void index="3">
      <array class="java.lang.Object" length="2">
       <void index="0">
+       <string>FEC_loopInstrutor</string>
+      </void>
+      <void index="1">
+       <string>FEC_loopInstrutor</string>
+      </void>
+     </array>
+    </void>
+    <void index="4">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
        <string>Atribuição por Grupo</string>
       </void>
       <void index="1">
@@ -234,7 +82,7 @@
       </void>
      </array>
     </void>
-    <void index="4">
+    <void index="5">
      <array class="java.lang.Object" length="2">
       <void index="0">
        <string>Atribuição por Grupos do Colaborador</string>
@@ -244,7 +92,7 @@
       </void>
      </array>
     </void>
-    <void index="5">
+    <void index="6">
      <array class="java.lang.Object" length="2">
       <void index="0">
        <string>Atribuição por Papel</string>
@@ -254,7 +102,7 @@
       </void>
      </array>
     </void>
-    <void index="6">
+    <void index="7">
      <array class="java.lang.Object" length="2">
       <void index="0">
        <string>Atribuição para um Grupo</string>
@@ -264,7 +112,7 @@
       </void>
      </array>
     </void>
-    <void index="7">
+    <void index="8">
      <array class="java.lang.Object" length="2">
       <void index="0">
        <string>Atribuição para um Papel</string>
@@ -274,7 +122,7 @@
       </void>
      </array>
     </void>
-    <void index="8">
+    <void index="9">
      <array class="java.lang.Object" length="2">
       <void index="0">
        <string>Atribuição por Usuário</string>

@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>canaisOnBoardSubAberturaChamados</processId>
-      <version>30</version>
+      <version>48</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>5963901</formId>
@@ -127,8 +127,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>370</positionX>
-      <positionY>40</positionY>
+      <positionX>630</positionX>
+      <positionY>220</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -156,8 +156,8 @@
         <version>1</version>
         <sequence>11</sequence>
       </processStatePK>
-      <stateName>Criação COD no CRM</stateName>
-      <stateDescription>Criação COD no CRM</stateDescription>
+      <stateName>Cadastro de Unidade de Vendas</stateName>
+      <stateDescription>Cadastro de Unidade de Vendas</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -231,8 +231,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>370</positionX>
-      <positionY>240</positionY>
+      <positionX>940</positionX>
+      <positionY>330</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -260,8 +260,8 @@
         <version>1</version>
         <sequence>15</sequence>
       </processStatePK>
-      <stateName>Usuário CRM e EST. Vendas</stateName>
-      <stateDescription>Usuário CRM e EST. Vendas</stateDescription>
+      <stateName>Cadastro de Vendedor e Estrutura de Vendas</stateName>
+      <stateDescription>Cadastro de Vendedor e Estrutura de Vendas</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -283,8 +283,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>710</positionX>
-      <positionY>40</positionY>
+      <positionX>940</positionX>
+      <positionY>120</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -387,17 +387,17 @@
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
         <version>1</version>
-        <sequence>27</sequence>
+        <sequence>43</sequence>
       </processStatePK>
-      <stateName>Join</stateName>
-      <stateDescription>Join</stateDescription>
+      <stateName>Join Email</stateName>
+      <stateDescription>Join Email</stateDescription>
       <joint>false</joint>
       <initialState>false</initialState>
       <transferAttachments>false</transferAttachments>
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <automatic>false</automatic>
-      <positionX>730</positionX>
+      <positionX>520</positionX>
       <positionY>230</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>4</stateType>
@@ -412,18 +412,43 @@
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
         <version>1</version>
-        <sequence>43</sequence>
+        <sequence>49</sequence>
       </processStatePK>
-      <stateName>Join Email</stateName>
-      <stateDescription>Join Email</stateDescription>
+      <stateName>Parelelo</stateName>
+      <stateDescription>Parelelo</stateDescription>
       <joint>false</joint>
       <initialState>false</initialState>
       <transferAttachments>false</transferAttachments>
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <automatic>false</automatic>
-      <positionX>580</positionX>
-      <positionY>30</positionY>
+      <positionX>780</positionX>
+      <positionY>220</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>3</stateType>
+      <bpmnType>126</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>1</version>
+        <sequence>53</sequence>
+      </processStatePK>
+      <stateName>Join Final</stateName>
+      <stateDescription>Join Final</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>false</automatic>
+      <positionX>1100</positionX>
+      <positionY>220</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>4</stateType>
       <bpmnType>127</bpmnType>
@@ -461,8 +486,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>850</positionX>
-      <positionY>250</positionY>
+      <positionX>1220</positionX>
+      <positionY>240</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -487,63 +512,12 @@
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
         <version>1</version>
-        <linkSequence>28</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>27</initialStateSequence>
-      <finalStateSequence>21</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>1</version>
-        <linkSequence>29</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>26</initialStateSequence>
-      <finalStateSequence>9</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>1</version>
         <linkSequence>30</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
       <initialStateSequence>26</initialStateSequence>
       <finalStateSequence>11</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>1</version>
-        <linkSequence>31</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>26</initialStateSequence>
-      <finalStateSequence>13</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -589,57 +563,6 @@
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
         <version>1</version>
-        <linkSequence>35</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>23</initialStateSequence>
-      <finalStateSequence>27</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>1</version>
-        <linkSequence>40</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>13</initialStateSequence>
-      <finalStateSequence>27</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>1</version>
-        <linkSequence>42</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>15</initialStateSequence>
-      <finalStateSequence>27</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>1</version>
         <linkSequence>44</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
@@ -657,11 +580,11 @@
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
         <version>1</version>
-        <linkSequence>45</linkSequence>
+        <linkSequence>47</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>9</initialStateSequence>
+      <initialStateSequence>23</initialStateSequence>
       <finalStateSequence>43</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -674,12 +597,114 @@
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
         <version>1</version>
-        <linkSequence>46</linkSequence>
+        <linkSequence>48</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
       <initialStateSequence>43</initialStateSequence>
+      <finalStateSequence>9</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>1</version>
+        <linkSequence>50</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>9</initialStateSequence>
+      <finalStateSequence>49</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>1</version>
+        <linkSequence>51</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>49</initialStateSequence>
       <finalStateSequence>15</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>1</version>
+        <linkSequence>52</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>49</initialStateSequence>
+      <finalStateSequence>13</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>1</version>
+        <linkSequence>54</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>15</initialStateSequence>
+      <finalStateSequence>53</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>1</version>
+        <linkSequence>55</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>13</initialStateSequence>
+      <finalStateSequence>53</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>1</version>
+        <linkSequence>56</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>53</initialStateSequence>
+      <finalStateSequence>21</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -804,76 +829,185 @@ function retornaParametrizacao(param){&#xd;
 &#xd;
 function beforeStateEntry(sequenceId) {&#xd;
 	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry sequenceId: &quot; + sequenceId);&#xd;
-	log.error(&quot;@SubAberturadeChamados  hAPI.getActualThread:&apos;&quot; + hAPI.getActualThread(&quot;7143&quot;, getValue(&quot;WKNumProces&quot;), 15) + &quot;&apos;&quot; );&#xd;
+	log.error(&quot;@SubAberturadeChamados  hAPI.getActualThread:&apos;&quot; + hAPI.getActualThread(&quot;7143&quot;, getValue(&quot;WKNumProces&quot;), 15) + &quot;&apos;&quot;);&#xd;
 	if (sequenceId == Activity.EMAIL_CORPORATIVO) {&#xd;
-		solicitacaoEmailcoporativo();&#xd;
+		ZendeskTools.solicitacaoEmailcoporativo();&#xd;
 	}&#xd;
 &#xd;
-	log.error(&quot;@SubAberturadeChamados  criacaoCoridticket&apos;&quot; + 	hAPI.getCardValue(&quot;criacaoCoridticket&quot;)+ &quot;&apos;&quot; );&#xd;
+	log.error(&quot;@SubAberturadeChamados  criacaoCoridticket&apos;&quot; + hAPI.getCardValue(&quot;criacaoCoridticket&quot;) + &quot;&apos;&quot;);&#xd;
 	if (sequenceId == Activity.CRIACAO_COD_CRM &amp;&amp; hAPI.getCardValue(&quot;criacaoCoridticket&quot;) == &quot;&quot;) {&#xd;
-		solicitacaoCodigoCRM();&#xd;
+		//solicitacaoCodigoCRM();&#xd;
 	}&#xd;
 &#xd;
-	if (sequenceId == Activity.PORTAL_CLIENTE  &amp;&amp; hAPI.getCardValue(&quot;criacaoPortalidticket&quot;) == &quot;&quot; ) {&#xd;
-		solicitacaoInclusaoPortal();&#xd;
+	if (sequenceId == Activity.PORTAL_CLIENTE &amp;&amp; hAPI.getCardValue(&quot;criacaoPortalidticket&quot;) == &quot;&quot;) {&#xd;
+		ZendeskTools.inclusaoPortal();&#xd;
 	}&#xd;
 &#xd;
 	if (sequenceId == Activity.USUARIO_CRM_VENDAS &amp;&amp; hAPI.getCardValue(&quot;criacaoEstruturaidticket&quot;) == &quot;&quot;) {&#xd;
-		solicitacaoCRMEstrutura();&#xd;
+		//solicitacaoCRMEstrutura();&#xd;
 	}&#xd;
 &#xd;
-	if (sequenceId == Activity.CADASTRO_FORNECEDOR &amp;&amp; hAPI.getCardValue(&quot;criacaoFornecedoridticket&quot;) == &quot;&quot; ) {&#xd;
-		solicitacaoFornecedor();&#xd;
+	if (sequenceId == Activity.CADASTRO_FORNECEDOR &amp;&amp; hAPI.getCardValue(&quot;criacaoFornecedoridticket&quot;) == &quot;&quot;) {&#xd;
+		//solicitacaoFornecedor();&#xd;
 	}&#xd;
 &#xd;
 }&#xd;
 &#xd;
-function solicitacaoEmailcoporativo() {&#xd;
-	var subject = retornaParametrizacao(&quot;emailCortitulo&quot;);&#xd;
-	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry subject: &apos;&quot; + subject + &quot;&apos;&quot;);&#xd;
-	var template = &quot;abertura_de_chamados&quot;;&#xd;
-	var params = [];&#xd;
+var ZendeskTools = {&#xd;
 &#xd;
-	var mensagem = &quot;&quot;;&#xd;
-	if (hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)&#xd;
-		mensagem += retornaParametrizacao(&quot;emailCormaster&quot;);&#xd;
-	else&#xd;
-		mensagem += retornaParametrizacao(&quot;emailCorfranquia&quot;);&#xd;
+	inclusaoPortal: function () {&#xd;
 &#xd;
-	mensagem += &quot;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;th&gt;Campos&lt;th/&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;th&gt;Valores&lt;th/&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;td&gt;Razão Social&lt;/td&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;td&gt;&quot; + hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;&lt;/td&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;td&gt;CNPJ&lt;/td&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;td&gt;&quot; + hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;&lt;/td&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;td&gt;Sugestão de E-mail&lt;/td&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;td&gt;&quot; + hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&lt;/td&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
-	mensagem += &quot;&lt;/table&gt;&quot;;&#xd;
+		var configuracaoFilho = {};&#xd;
+		configuracaoFilho.colunas = [];&#xd;
+		configuracaoFilho.colunas.push(&quot;cpfSocio&quot;);&#xd;
+		configuracaoFilho.dataset = &quot;formcanaisOnBoard&quot;;&#xd;
+		configuracaoFilho.tabela = &quot;tableQuadroSocietario&quot;;&#xd;
+		configuracaoFilho.where = [];&#xd;
+		configuracaoFilho.where.push({ name: &quot;token&quot;, value1: &quot;&quot; + hAPI.getCardValue(&quot;token&quot;), value2: &quot;&quot; + hAPI.getCardValue(&quot;token&quot;) });&#xd;
 &#xd;
-	var url = &quot;&lt;a style=&apos;color:red;&apos; href=&apos;&quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;/&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;/&quot; + Activity.JOIN_EMAIL + &quot;/1/&quot; + Activity.EMAIL_CORPORATIVO  +&quot;&apos;&gt;Por favor após terminar atividade clique aqui &lt;/a&gt;&lt;br /&gt;&quot;;&#xd;
-	params.push({ name: &quot;TITULO&quot;, value: &quot;E-mail Corporativo - Fluxo onBoard&quot; });&#xd;
-	params.push({ name: &quot;MENSAGEM&quot;, value: mensagem });&#xd;
-	params.push({ name: &quot;URL&quot;, value: url });&#xd;
+		var dsCanaistableQuadroSocietario = DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;, [JSON.stringify(configuracaoFilho)], null, null);&#xd;
 &#xd;
-	var receivers = [];&#xd;
-	receivers.push(retornaParametrizacao(&quot;emailCoremail&quot;));&#xd;
-	log.info(&quot;@SubAbeturadeChamados  beforeStateEntry onNotify() &quot;);&#xd;
-	onNotify(subject, receivers, template, params, &quot;text/html&quot;);&#xd;
-	hAPI.setCardValue(&quot;_dtemail&quot;,retornaDataAtual());&#xd;
+		var mensagem = &quot;\rSolicito a inclusão do e-mail:&apos;&quot; + hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&apos;&quot; + &quot;\r&quot;;&#xd;
+		//mensagem += &quot; CPF: &apos;&quot; +  dsCanaistableQuadroSocietario.getValue(0, &quot;cpfSocio&quot;) + &quot;&apos;&quot;;&#xd;
+		mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;/&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;/&quot; + Activity.JOIN_CHAMADOS + &quot;/3/&quot; + Activity.PORTAL_CLIENTE;&#xd;
 	&#xd;
-}&#xd;
+		var ticket = {};&#xd;
+		ticket.subject = &quot;&quot; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;);&#xd;
+		ticket.comment = { body: &quot;&quot; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) + &quot;  &quot; + mensagem };&#xd;
+		ticket.priority = &quot;&quot; +retornaParametrizacao(&quot;criacaoPortalstatus&quot;);&#xd;
+		ticket.external_id = &quot;&quot; +hAPI.getCardValue(&quot;nrSubsolicitacao&quot;);&#xd;
+		ticket.group_id =  &quot;&quot; +retornaParametrizacao(&quot;criacaoPortalgroupid&quot;);&#xd;
+		ticket.ticket_form_id = &quot;&quot; + retornaParametrizacao(&quot;criacaoPortalticket_form_id&quot;);&#xd;
+		ticket.brand_id = &quot;&quot; + retornaParametrizacao(&quot;criacaoPortalticketbrand&quot;);&#xd;
+		ticket.tags = [];&#xd;
+		ticket.custom_fields = [];&#xd;
+		ticket.fields = [];&#xd;
+	&#xd;
+		// Tags&#xd;
+		var configuracaoFilho = {};&#xd;
+		configuracaoFilho.colunas = [];&#xd;
+		configuracaoFilho.colunas.push(&quot;tbcriacaoPortalTagsdesc&quot;);&#xd;
+		configuracaoFilho.dataset = &quot;dscanaisOnboardParametrizacao&quot;;&#xd;
+		configuracaoFilho.tabela = &quot;tablecriacaoPortalTags&quot;;&#xd;
+		configuracaoFilho.where = [];&#xd;
+&#xd;
+		var tablecriacaoCor = DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;, [JSON.stringify(configuracaoFilho)], null, null);&#xd;
+		for (var i = 0; i &lt; tablecriacaoCor.rowsCount; i++) {&#xd;
+			ticket.tags.push(&quot;&quot;+tablecriacaoCor.getValue(i, configuracaoFilho.colunas[0]));&#xd;
+		}&#xd;
+&#xd;
+		// Custom Field e Fields&#xd;
+&#xd;
+		var configuracaoFilho = {};&#xd;
+		configuracaoFilho.colunas = [];&#xd;
+		configuracaoFilho.colunas.push(&quot;tablecriacaoPortaldescricao&quot;);&#xd;
+		configuracaoFilho.colunas.push(&quot;tablecriacaoPortaltipo&quot;);&#xd;
+		configuracaoFilho.colunas.push(&quot;tablecriacaoPortalidzendesk&quot;);&#xd;
+		configuracaoFilho.colunas.push(&quot;tablecriacaoPortalvaluezendesk&quot;);&#xd;
+		configuracaoFilho.dataset = &quot;dscanaisOnboardParametrizacao&quot;;&#xd;
+		configuracaoFilho.tabela = &quot;tablecriacaoPortal&quot;;&#xd;
+		configuracaoFilho.where = [];&#xd;
+&#xd;
+		var tablecriacaoCor = DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;, [JSON.stringify(configuracaoFilho)], null, null);&#xd;
+&#xd;
+		for (var i = 0; i &lt; tablecriacaoCor.rowsCount; i++) {&#xd;
+			ticket[&quot;&quot; +tablecriacaoCor.getValue(i, configuracaoFilho.colunas[1]) ].push({ id: &quot;&quot; + tablecriacaoCor.getValue(i, configuracaoFilho.colunas[2]), value: &quot;&quot; + tablecriacaoCor.getValue(i, configuracaoFilho.colunas[3]) });&#xd;
+		}&#xd;
+&#xd;
+		var data = {};&#xd;
+		data.ticket = ticket;&#xd;
+&#xd;
+		var result = this.criarTicket(data);&#xd;
+		log.info(&quot;@SubAbeturadeChamados RestPost result.ticket.id:&quot; + result.ticket.id);&#xd;
+		hAPI.setCardValue(&quot;criacaoPortalidticket&quot;, result.ticket.id)&#xd;
+		hAPI.setCardValue(&quot;_dtinclusaoportal&quot;, retornaDataAtual());&#xd;
+	},	&#xd;
+	solicitacaoEmailcoporativo: function () {&#xd;
+		var subject = retornaParametrizacao(&quot;emailCortitulo&quot;);&#xd;
+		log.info(&quot;@SubAbeturadeChamados  beforeStateEntry subject: &apos;&quot; + subject + &quot;&apos;&quot;);&#xd;
+		var template = &quot;abertura_de_chamados&quot;;&#xd;
+		var params = [];&#xd;
+	&#xd;
+		var mensagem = &quot;&quot;;&#xd;
+		if (hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot;)&#xd;
+			mensagem += retornaParametrizacao(&quot;emailCormaster&quot;);&#xd;
+		else&#xd;
+			mensagem += retornaParametrizacao(&quot;emailCorfranquia&quot;);&#xd;
+	&#xd;
+		mensagem += &quot;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;th&gt;Campos&lt;th/&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;th&gt;Valores&lt;th/&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;td&gt;Razão Social&lt;/td&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;td&gt;&quot; + hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;&lt;/td&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;td&gt;CNPJ&lt;/td&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;td&gt;&quot; + hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;&lt;/td&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;tr&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;td&gt;Sugestão de E-mail&lt;/td&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;td&gt;&quot; + hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&lt;/td&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;/tr&gt;&quot;;&#xd;
+		mensagem += &quot;&lt;/table&gt;&quot;;&#xd;
+	&#xd;
+		var url = &quot;&lt;a style=&apos;color:red;&apos; href=&apos;&quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;/&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;/&quot; + Activity.JOIN_EMAIL + &quot;/1/&quot; + Activity.EMAIL_CORPORATIVO + &quot;&apos;&gt;Por favor após terminar atividade clique aqui &lt;/a&gt;&lt;br /&gt;&quot;;&#xd;
+		params.push({ name: &quot;TITULO&quot;, value: &quot;E-mail Corporativo - Fluxo onBoard&quot; });&#xd;
+		params.push({ name: &quot;MENSAGEM&quot;, value: mensagem });&#xd;
+		params.push({ name: &quot;URL&quot;, value: url });&#xd;
+	&#xd;
+		var receivers = [];&#xd;
+		receivers.push(retornaParametrizacao(&quot;emailCoremail&quot;));&#xd;
+		log.info(&quot;@SubAbeturadeChamados  beforeStateEntry onNotify() &quot;);&#xd;
+		onNotify(subject, receivers, template, params, &quot;text/html&quot;);&#xd;
+		hAPI.setCardValue(&quot;_dtemail&quot;, retornaDataAtual());&#xd;
+	},&#xd;
+	criarTicket: function (data) {&#xd;
+		var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
+		var access_token = this.retornaTokenAccesstoken();&#xd;
+		var headers = [];&#xd;
+		var method = &quot;POST&quot;;&#xd;
+		var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;) + &quot;:&quot; + retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
+		var bytes = authString.getBytes();&#xd;
+		authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
+		headers.push({ name: &quot;Content-Type&quot;, key: &quot;application/json&quot; });&#xd;
+		headers.push({ name: &quot;charset&quot;, key: &quot;utf-8&quot; });&#xd;
+		headers.push({ name: &quot;Authorization-zendesk&quot;, key: &quot;Basic &quot; + authEnc });&#xd;
+		headers.push({ name: &quot;Authorization&quot;, key: &quot;Bearer &quot; + access_token });&#xd;
+&#xd;
+		return Rest(url, JSON.stringify(data), null, method, headers);&#xd;
+		&#xd;
+	}, retornaTokenAccesstoken: function () {&#xd;
+		var url = SERVER_ZENDESK + &quot;/api/token&quot;;&#xd;
+		var params = &quot;grant_type=client_credentials&quot;;&#xd;
+		var headers = [];&#xd;
+		var method = &quot;POST&quot;;&#xd;
+		var authString = new java.lang.String(retornaParametrizacao(&quot;basicApimanagerlogin&quot;) + &quot;:&quot; + retornaParametrizacao(&quot;basicApimanagerpassword&quot;));&#xd;
+		log.info(&quot;@SubAbeturadeChamados retornaParametrizacao(&apos;basicApimanagerlogin&apos;):&quot; + retornaParametrizacao(&quot;basicApimanagerlogin&quot;));&#xd;
+		log.info(&quot;@SubAbeturadeChamados retornaParametrizacao(&apos;basicApimanagerpassword&apos;):&quot; + retornaParametrizacao(&quot;basicApimanagerpassword&quot;));&#xd;
+		var bytes = authString.getBytes();&#xd;
+		authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
+		headers.push({ name: &quot;Content-Type&quot;, key: &quot;application/x-www-form-urlencoded&quot; });&#xd;
+		headers.push({ name: &quot;charset&quot;, key: &quot;utf-8&quot; });&#xd;
+		headers.push({ name: &quot;Accept&quot;, key: &quot;*/*&quot; });&#xd;
+		headers.push({ name: &quot;Authorization&quot;, key: &quot;Basic &quot; + authEnc });&#xd;
+&#xd;
+&#xd;
+		var token = Rest(url, params, null, method, headers);&#xd;
+&#xd;
+		log.info(&quot;@SubAbeturadeChamados RestPost token.access_token:&quot; + token.access_token);&#xd;
+&#xd;
+		return token.access_token;&#xd;
+	}&#xd;
+};&#xd;
+&#xd;
+&#xd;
+&#xd;
 function solicitacaoCodigoCRM() {&#xd;
 &#xd;
-	var access_token =	retornaTokenAccesstoken();&#xd;
+	var access_token = ZendeskTools.retornaTokenAccesstoken();&#xd;
 	var configuracaoFilho = {};&#xd;
 	configuracaoFilho.colunas = [];&#xd;
 	configuracaoFilho.colunas.push(&quot;tablecriacaoCordescricao&quot;);&#xd;
@@ -883,93 +1017,53 @@ function solicitacaoCodigoCRM() {&#xd;
 	configuracaoFilho.tabela = &quot;tablecriacaoCor&quot;;&#xd;
 	configuracaoFilho.where = [];&#xd;
 &#xd;
-	var tablecriacaoCor = DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;,[JSON.stringify(configuracaoFilho)],null ,null);&#xd;
+	var tablecriacaoCor = DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;, [JSON.stringify(configuracaoFilho)], null, null);&#xd;
 &#xd;
 	var api = &apos;&quot;custom_fields&quot;:[&apos;;&#xd;
 	for (var i = 0; i &lt; tablecriacaoCor.rowsCount; i++) {&#xd;
 		api += &apos;{ &quot;id&quot;: &quot;&apos; + tablecriacaoCor.getValue(i, configuracaoFilho.colunas[1]) + &apos;&quot;, &quot;value&quot; : &quot;&apos; + tablecriacaoCor.getValue(i, configuracaoFilho.colunas[2]) + &apos;&quot;},&apos;;&#xd;
 	}&#xd;
-	api = api.substring(0,api.length-1);&#xd;
+	api = api.substring(0, api.length - 1);&#xd;
 	api += &apos;]&apos;;&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
-	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;\\r &quot;;&#xd;
-	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;\\r &quot;;&#xd;
-	mensagem += &quot; Endereço Completo: &quot; +  hAPI.getCardValue(&quot;endereco&quot;) + &quot;\\r &quot;;&#xd;
-	mensagem += &quot; Cidade: &quot; +  hAPI.getCardValue(&quot;nmMunicipio&quot;) + &quot;\\r &quot;;&#xd;
-	mensagem += &quot; Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;) + &quot;\\r &quot;;&#xd;
-	mensagem += &quot; Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;) + &quot;\\r &quot;;&#xd;
-	mensagem += &quot; Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;) + &quot;\\r &quot;;&#xd;
-	mensagem += &quot; E-mail: &quot; +  ( hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot; ?  hAPI.getCardValue(&quot;sugestaoEmail&quot;) : hAPI.getCardValue(&quot;email&quot;)) + &quot;\\r &quot;;&#xd;
-	mensagem += &quot; Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;) + &quot;\\r &quot;;&#xd;
-	mensagem += &quot; Código da unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;) + &quot;\\r &quot;;&#xd;
+	mensagem += &quot;Razão Social: &quot; + hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;\\r &quot;;&#xd;
+	mensagem += &quot; CNPJ: &quot; + hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;\\r &quot;;&#xd;
+	mensagem += &quot; Endereço Completo: &quot; + hAPI.getCardValue(&quot;endereco&quot;) + &quot;\\r &quot;;&#xd;
+	mensagem += &quot; Cidade: &quot; + hAPI.getCardValue(&quot;nmMunicipio&quot;) + &quot;\\r &quot;;&#xd;
+	mensagem += &quot; Estado: &quot; + hAPI.getCardValue(&quot;uf&quot;) + &quot;\\r &quot;;&#xd;
+	mensagem += &quot; Nome Responsável: &quot; + hAPI.getCardValue(&quot;nome&quot;) + &quot;\\r &quot;;&#xd;
+	mensagem += &quot; Telefone: &quot; + hAPI.getCardValue(&quot;telefone&quot;) + &quot;\\r &quot;;&#xd;
+	mensagem += &quot; E-mail: &quot; + (hAPI.getCardValue(&quot;tipoSolic&quot;) == &quot;master&quot; ? hAPI.getCardValue(&quot;sugestaoEmail&quot;) : hAPI.getCardValue(&quot;email&quot;)) + &quot;\\r &quot;;&#xd;
+	mensagem += &quot; Unidade Responsável: &quot; + hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;) + &quot;\\r &quot;;&#xd;
+	mensagem += &quot; Código da unidade Responsável: &quot; + hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;) + &quot;\\r &quot;;&#xd;
 	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;/&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;/&quot; + Activity.JOIN_EMAIL + &quot;/2/&quot; + Activity.CRIACAO_COD_CRM;&#xd;
-	&#xd;
-	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCorstatus&quot;) +&apos;&quot;,&apos; + api+ &apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
+&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) + &apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCortitulo&quot;) + &apos; &apos; + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoCorstatus&quot;) + &apos;&quot;,&apos; + api + &apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) + &apos;&quot;}}&apos;;&#xd;
 &#xd;
 &#xd;
 	var headers = [];&#xd;
 	var method = &quot;POST&quot;;&#xd;
-	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;) + &quot;:&quot; + retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
 	var bytes = authString.getBytes();&#xd;
 	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
-	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
-	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
-	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
-	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + access_token});&#xd;
+	headers.push({ name: &quot;Content-Type&quot;, key: &quot;application/json&quot; });&#xd;
+	headers.push({ name: &quot;charset&quot;, key: &quot;utf-8&quot; });&#xd;
+	headers.push({ name: &quot;Authorization-zendesk&quot;, key: &quot;Basic &quot; + authEnc });&#xd;
+	headers.push({ name: &quot;Authorization&quot;, key: &quot;Bearer &quot; + access_token });&#xd;
 &#xd;
 &#xd;
-	var criacaoCor = Rest(url, params, null,method, headers);&#xd;
+	var criacaoCor = Rest(url, params, null, method, headers);&#xd;
 	log.info(&quot;@SubAbeturadeChamados RestPost criacaoCor.ticket.id:&quot; + criacaoCor.ticket.id);&#xd;
-	hAPI.setCardValue(&quot;criacaoCoridticket&quot;,criacaoCor.ticket.id)&#xd;
-	hAPI.setCardValue(&quot;_dtcricaoCRM&quot;,retornaDataAtual());&#xd;
+	hAPI.setCardValue(&quot;criacaoCoridticket&quot;, criacaoCor.ticket.id)&#xd;
+	hAPI.setCardValue(&quot;_dtcricaoCRM&quot;, retornaDataAtual());&#xd;
 &#xd;
 &#xd;
 }&#xd;
-function solicitacaoInclusaoPortal() {&#xd;
 &#xd;
-	&#xd;
-	var configuracaoFilho = {};&#xd;
-	configuracaoFilho.colunas = [];&#xd;
-	configuracaoFilho.colunas.push(&quot;cpfSocio&quot;);&#xd;
-	configuracaoFilho.dataset = &quot;formcanaisOnBoard&quot;;&#xd;
-	configuracaoFilho.tabela = &quot;tableQuadroSocietario&quot;;&#xd;
-	configuracaoFilho.where = [];&#xd;
-	configuracaoFilho.where.push({ name : &quot;token&quot; , value1: &quot;&quot; + hAPI.getCardValue(&quot;token&quot;), value2: &quot;&quot; + hAPI.getCardValue(&quot;token&quot;)});&#xd;
-&#xd;
-	&#xd;
-	var dsCanaistableQuadroSocietario =  DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;,[JSON.stringify(configuracaoFilho)],null ,null);&#xd;
-	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
-	var mensagem = &quot;&quot;;&#xd;
-	mensagem += &quot;\\rSolicito a inclusão do e-mail:&apos;&quot; + hAPI.getCardValue(&quot;sugestaoEmail&quot;) + &quot;&apos;&quot; + &quot;\\r&quot;;&#xd;
-	//mensagem += &quot; CPF: &apos;&quot; +  dsCanaistableQuadroSocietario.getValue(0, &quot;cpfSocio&quot;) + &quot;&apos;&quot;;&#xd;
-	&#xd;
-	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;/&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;/&quot; + Activity.JOIN_CHAMADOS + &quot;/3/&quot; + Activity.PORTAL_CLIENTE;&#xd;
-	&#xd;
-	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortaltitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoPortalstatus&quot;) +&apos;&quot;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
-&#xd;
-	var access_token =	retornaTokenAccesstoken();&#xd;
-	var headers = [];&#xd;
-	var method = &quot;POST&quot;;&#xd;
-	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
-	var bytes = authString.getBytes();&#xd;
-	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
-	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
-	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
-	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
-	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + access_token});&#xd;
-&#xd;
-&#xd;
-	var criacaoCor = Rest(url, params, null,method, headers);&#xd;
-	log.info(&quot;@SubAbeturadeChamados RestPost criacaoCor.ticket.id:&quot; + criacaoCor.ticket.id);&#xd;
-	hAPI.setCardValue(&quot;criacaoPortalidticket&quot;,criacaoCor.ticket.id)&#xd;
-	hAPI.setCardValue(&quot;_dtinclusaoportal&quot;,retornaDataAtual());&#xd;
-&#xd;
-&#xd;
-}&#xd;
 function solicitacaoCRMEstrutura() {&#xd;
 &#xd;
-	var access_token =	retornaTokenAccesstoken();&#xd;
+	var access_token = ZendeskTools.retornaTokenAccesstoken();&#xd;
 	var configuracaoFilho = {};&#xd;
 	configuracaoFilho.colunas = [];&#xd;
 	configuracaoFilho.colunas.push(&quot;tablecriacaoEstdescricao&quot;);&#xd;
@@ -978,71 +1072,71 @@ function solicitacaoCRMEstrutura() {&#xd;
 	configuracaoFilho.dataset = &quot;dscanaisOnboardParametrizacao&quot;;&#xd;
 	configuracaoFilho.tabela = &quot;tablecriacaoEstrutura&quot;;&#xd;
 	configuracaoFilho.where = [];&#xd;
-	&#xd;
-	var tablecriacaoEstrutura = DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;,[JSON.stringify(configuracaoFilho)],null ,null);&#xd;
+&#xd;
+	var tablecriacaoEstrutura = DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;, [JSON.stringify(configuracaoFilho)], null, null);&#xd;
 	var api = &apos;&quot;custom_fields&quot;:[&apos;;&#xd;
 	for (var i = 0; i &lt; tablecriacaoEstrutura.rowsCount; i++) {&#xd;
 		api += &apos;{ &quot;id&quot;: &quot;&apos; + tablecriacaoEstrutura.getValue(i, configuracaoFilho.colunas[1]) + &apos;&quot;, &quot;value&quot; : &quot;&apos; + tablecriacaoEstrutura.getValue(i, configuracaoFilho.colunas[2]) + &apos;&quot;},&apos;;&#xd;
 	}&#xd;
-	api = api.substring(0,api.length-1);&#xd;
+	api = api.substring(0, api.length - 1);&#xd;
 	api += &apos;]&apos;;&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
-	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;nao&quot; ){&#xd;
-		mensagem += &quot; Código da Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;) + &quot;\\r&quot;;&#xd;
-		mensagem += &quot; Unidade Responsável: &quot; +  hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;) + &quot;\\r&quot;;&#xd;
+	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp; hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;nao&quot;) {&#xd;
+		mensagem += &quot; Código da Unidade Responsável: &quot; + hAPI.getCardValue(&quot;cdUnidadeResponsavel&quot;) + &quot;\\r&quot;;&#xd;
+		mensagem += &quot; Unidade Responsável: &quot; + hAPI.getCardValue(&quot;dsUnidadeResponsavel&quot;) + &quot;\\r&quot;;&#xd;
 	}&#xd;
-	if (  hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;franquia&quot;   || (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;sim&quot;)){&#xd;
-		mensagem += &quot; Unidade de Venda: &quot; +  hAPI.getCardValue(&quot;criacaoCoridUnidadeVenda&quot;) + &quot;\\r&quot;;&#xd;
+	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;franquia&quot; || (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp; hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;sim&quot;)) {&#xd;
+		mensagem += &quot; Unidade de Venda: &quot; + hAPI.getCardValue(&quot;criacaoCoridUnidadeVenda&quot;) + &quot;\\r&quot;;&#xd;
 	}&#xd;
 &#xd;
-	mensagem += &quot; Código do Gerente: &quot; +  hAPI.getCardValue(&quot;cdGerente&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; Nome do Gerente: &quot; +  hAPI.getCardValue(&quot;nmGerente&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; Endereço Completo: &quot; +  hAPI.getCardValue(&quot;endereco&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; Cidade: &quot; +  hAPI.getCardValue(&quot;nmMunicipio&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; Estado: &quot; +  hAPI.getCardValue(&quot;uf&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; Nome Responsável: &quot; +  hAPI.getCardValue(&quot;nome&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; Telefone: &quot; +  hAPI.getCardValue(&quot;telefone&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; E-mail Partner: &quot; +   hAPI.getCardValue(&quot;_emailcorporativo&quot;) + &quot;\\r&quot;;&#xd;
-    mensagem += &quot; Tipo AGN: &quot; + &quot;\\r&quot;;&#xd;
-	&#xd;
-	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;sim&quot; ){&#xd;
+	mensagem += &quot; Código do Gerente: &quot; + hAPI.getCardValue(&quot;cdGerente&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; Nome do Gerente: &quot; + hAPI.getCardValue(&quot;nmGerente&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; Razão Social: &quot; + hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; CNPJ: &quot; + hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; Endereço Completo: &quot; + hAPI.getCardValue(&quot;endereco&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; Cidade: &quot; + hAPI.getCardValue(&quot;nmMunicipio&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; Estado: &quot; + hAPI.getCardValue(&quot;uf&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; Nome Responsável: &quot; + hAPI.getCardValue(&quot;nome&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; Telefone: &quot; + hAPI.getCardValue(&quot;telefone&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; E-mail Partner: &quot; + hAPI.getCardValue(&quot;_emailcorporativo&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; Tipo AGN: &quot; + &quot;\\r&quot;;&#xd;
+&#xd;
+	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp; hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;sim&quot;) {&#xd;
 		mensagem += &quot; Master PVF&quot; + &quot;\\r&quot;;&#xd;
 	}&#xd;
-	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp;  hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;nao&quot; ){&#xd;
+	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;master&quot; &amp;&amp; hAPI.getCardValue(&quot;slVinculoMaster&quot;) == &quot;nao&quot;) {&#xd;
 		mensagem += &quot; PVF&quot; + &quot;\\r&quot;;&#xd;
 	}&#xd;
-	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;franquia&quot;){&#xd;
+	if (hAPI.getCardValue(&quot;tipoSolicMaster&quot;) == &quot;franquia&quot;) {&#xd;
 		mensagem += hAPI.getCardValue(&quot;tpContrato&quot;) + &quot;\\r&quot;;&#xd;
 	}&#xd;
 &#xd;
 	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;/&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;/&quot; + Activity.JOIN_CHAMADOS + &quot;/6/&quot; + Activity.USUARIO_CRM_VENDAS;&#xd;
-	&#xd;
-	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturastatus&quot;) +&apos;&quot;,&apos; + api +&apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
+&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) + &apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturatitulo&quot;) + &apos; &apos; + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoEstruturastatus&quot;) + &apos;&quot;,&apos; + api + &apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) + &apos;&quot;}}&apos;;&#xd;
 &#xd;
 &#xd;
 	var headers = [];&#xd;
 	var method = &quot;POST&quot;;&#xd;
-	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;) + &quot;:&quot; + retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
 	var bytes = authString.getBytes();&#xd;
 	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
-	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
-	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
-	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
-	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + access_token});&#xd;
+	headers.push({ name: &quot;Content-Type&quot;, key: &quot;application/json&quot; });&#xd;
+	headers.push({ name: &quot;charset&quot;, key: &quot;utf-8&quot; });&#xd;
+	headers.push({ name: &quot;Authorization-zendesk&quot;, key: &quot;Basic &quot; + authEnc });&#xd;
+	headers.push({ name: &quot;Authorization&quot;, key: &quot;Bearer &quot; + access_token });&#xd;
 &#xd;
 &#xd;
-	var criacaoCor = Rest(url, params, null,method, headers);&#xd;
+	var criacaoCor = Rest(url, params, null, method, headers);&#xd;
 	log.info(&quot;@SubAbeturadeChamados RestPost criacaoCor.ticket.id:&quot; + criacaoCor.ticket.id);&#xd;
-	hAPI.setCardValue(&quot;criacaoEstruturaidticket&quot;,criacaoCor.ticket.id)&#xd;
-	hAPI.setCardValue(&quot;_dtusuariocrm&quot;,retornaDataAtual());&#xd;
+	hAPI.setCardValue(&quot;criacaoEstruturaidticket&quot;, criacaoCor.ticket.id)&#xd;
+	hAPI.setCardValue(&quot;_dtusuariocrm&quot;, retornaDataAtual());&#xd;
 &#xd;
 }&#xd;
 function solicitacaoFornecedor() {&#xd;
 &#xd;
-	var access_token =	retornaTokenAccesstoken();&#xd;
+	var access_token = ZendeskTools.retornaTokenAccesstoken();&#xd;
 	var configuracaoFilho = {};&#xd;
 	configuracaoFilho.colunas = [];&#xd;
 	configuracaoFilho.colunas.push(&quot;tablecriacaoFordescricao&quot;);&#xd;
@@ -1051,134 +1145,112 @@ function solicitacaoFornecedor() {&#xd;
 	configuracaoFilho.dataset = &quot;dscanaisOnboardParametrizacao&quot;;&#xd;
 	configuracaoFilho.tabela = &quot;tablecriacaoFornecedor&quot;;&#xd;
 	configuracaoFilho.where = [];&#xd;
-	&#xd;
-	var tablecriacaoFornecedor =  DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;,[JSON.stringify(configuracaoFilho)],null ,null);&#xd;
+&#xd;
+	var tablecriacaoFornecedor = DatasetFactory.getDataset(&quot;dsCanaistablefilhos&quot;, [JSON.stringify(configuracaoFilho)], null, null);&#xd;
 	var api = &apos;&quot;custom_fields&quot;:[&apos;;&#xd;
 	for (var i = 0; i &lt; tablecriacaoFornecedor.rowsCount; i++) {&#xd;
 		api += &apos;{ &quot;id&quot;: &quot;&apos; + tablecriacaoFornecedor.getValue(i, configuracaoFilho.colunas[1]) + &apos;&quot;, &quot;value&quot; : &quot;&apos; + tablecriacaoFornecedor.getValue(i, configuracaoFilho.colunas[2]) + &apos;&quot;},&apos;;&#xd;
 	}&#xd;
-	api = api.substring(0,api.length-1);&#xd;
+	api = api.substring(0, api.length - 1);&#xd;
 	api += &apos;]&apos;;&#xd;
 	var url = SERVER_ZENDESK + &quot;/api/zendesk/1.0/tickets&quot;;&#xd;
 	var mensagem = &quot;&quot;;&#xd;
-	mensagem += &quot;Razão Social: &quot; +  hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; CNPJ: &quot; +  hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; Banco: &quot; +  hAPI.getCardValue(&quot;banco&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; Agência: &quot; +  hAPI.getCardValue(&quot;agencia&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; Conta: &quot; +  hAPI.getCardValue(&quot;conta&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; E-mail para recibimento de relatório de comissões: &quot; +  hAPI.getCardValue(&quot;emailRecebimentoRelatrio&quot;) + &quot;\\r&quot;;&#xd;
-	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;/&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;/&quot; + Activity.JOIN_CHAMADOS + &quot;/4/&quot; + Activity.CADASTRO_FORNECEDOR ;&#xd;
-	&#xd;
-	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) +&apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) + &apos; &apos;  + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedorstatus&quot;) +&apos;&quot;,&apos; + api +&apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) +&apos;&quot;}}&apos;;&#xd;
+	mensagem += &quot;Razão Social: &quot; + hAPI.getCardValue(&quot;razaoSocial&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; CNPJ: &quot; + hAPI.getCardValue(&quot;nrCnpj&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; Banco: &quot; + hAPI.getCardValue(&quot;banco&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; Agência: &quot; + hAPI.getCardValue(&quot;agencia&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; Conta: &quot; + hAPI.getCardValue(&quot;conta&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; E-mail para recibimento de relatório de comissões: &quot; + hAPI.getCardValue(&quot;emailRecebimentoRelatrio&quot;) + &quot;\\r&quot;;&#xd;
+	mensagem += &quot; Por favor após terminar atividade clique aqui: &quot; + retornaParametrizacao(&quot;nmUrl&quot;) + &quot;/&quot; + hAPI.getCardValue(&quot;token&quot;) + &quot;/&quot; + Activity.JOIN_CHAMADOS + &quot;/4/&quot; + Activity.CADASTRO_FORNECEDOR;&#xd;
+&#xd;
+	var params = &apos;{&quot;ticket&quot;:{&quot;subject&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) + &apos;&quot;,&quot;comment&quot;:{&quot;body&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedortitulo&quot;) + &apos; &apos; + mensagem + &apos;  &quot;},&quot;priority&quot;:&quot;&apos; + retornaParametrizacao(&quot;criacaoFornecedorstatus&quot;) + &apos;&quot;,&apos; + api + &apos;,&quot;external_id&quot;:&quot;&apos; + hAPI.getCardValue(&quot;nrSubsolicitacao&quot;) + &apos;&quot;}}&apos;;&#xd;
 &#xd;
 &#xd;
 	var headers = [];&#xd;
 	var method = &quot;POST&quot;;&#xd;
-	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
+	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApizendesklogin&quot;) + &quot;:&quot; + retornaParametrizacao(&quot;basicApizendeskpassword&quot;));&#xd;
 	var bytes = authString.getBytes();&#xd;
 	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
-	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/json&quot;});&#xd;
-	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
-	headers.push({ name: &quot;Authorization-zendesk&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
-	headers.push({ name: &quot;Authorization&quot;, key : &quot;Bearer &quot; + access_token});&#xd;
+	headers.push({ name: &quot;Content-Type&quot;, key: &quot;application/json&quot; });&#xd;
+	headers.push({ name: &quot;charset&quot;, key: &quot;utf-8&quot; });&#xd;
+	headers.push({ name: &quot;Authorization-zendesk&quot;, key: &quot;Basic &quot; + authEnc });&#xd;
+	headers.push({ name: &quot;Authorization&quot;, key: &quot;Bearer &quot; + access_token });&#xd;
 &#xd;
 &#xd;
-	var criacaoCor = Rest(url, params, null,method, headers);&#xd;
+	var criacaoCor = Rest(url, params, null, method, headers);&#xd;
 	log.info(&quot;@SubAbeturadeChamados RestPost criacaoFornecedoridticket.ticket.id:&quot; + criacaoCor.ticket.id);&#xd;
-	hAPI.setCardValue(&quot;criacaoFornecedoridticket&quot;,criacaoCor.ticket.id)&#xd;
-	hAPI.setCardValue(&quot;_dtfornecedor&quot;,retornaDataAtual());&#xd;
+	hAPI.setCardValue(&quot;criacaoFornecedoridticket&quot;, criacaoCor.ticket.id)&#xd;
+	hAPI.setCardValue(&quot;_dtfornecedor&quot;, retornaDataAtual());&#xd;
 &#xd;
 }&#xd;
 &#xd;
 &#xd;
 function Rest(url, params, login, method, headers) {&#xd;
-		try {&#xd;
+	try {&#xd;
 &#xd;
 &#xd;
 &#xd;
 &#xd;
-			log.info(&quot;@SubAbeturadeChamados RestPost url:&quot; + url);&#xd;
-			var wurl =  new java.net.URL(url);&#xd;
-		&#xd;
-			var conn = wurl.openConnection();&#xd;
+		log.info(&quot;@SubAbeturadeChamados RestPost url:&quot; + url);&#xd;
+		var wurl = new java.net.URL(url);&#xd;
 &#xd;
-			&#xd;
-			if (method == &quot;POST&quot;)&#xd;
-			    conn.setDoOutput(true);&#xd;
-&#xd;
-			conn.setRequestMethod(method);&#xd;
-			log.info(&quot;@SubAbeturadeChamados RestPost method:&quot; + method);&#xd;
-			conn.setInstanceFollowRedirects(false);&#xd;
-&#xd;
-			for (i = 0; i &lt; headers.length; i++) { &#xd;
-				log.info(&quot;@SubAbeturadeChamados RestPost headers[i].name:&apos;&quot; + headers[i].name + &quot;&apos; headers[i].key:&apos;&quot; + headers[i].key + &quot;&apos;&quot;);&#xd;
-				conn.setRequestProperty( headers[i].name, headers[i].key);&#xd;
-			}&#xd;
-					&#xd;
-			if (method == &quot;POST&quot;){&#xd;
-				conn.setUseCaches(false);&#xd;
-				var writer = new java.io.OutputStreamWriter(conn.getOutputStream());&#xd;
-				log.info(&quot;@SubAbeturadeChamados RestPost conn.getOutputStream():&apos;&quot; + conn.getOutputStream()+&quot;&apos;&quot;);&#xd;
-			}&#xd;
-			&#xd;
-&#xd;
-			if (params){&#xd;
-				writer.write(params);&#xd;
-				log.info(&quot;@SubAbeturadeChamados RestPost params:&apos;&quot; + params +&quot;&apos;&quot;);&#xd;
-				writer.flush();&#xd;
-			}&#xd;
-		&#xd;
-		&#xd;
-			log.info(&quot;@SubAbeturadeChamados RestPost conn.getResponseCode():&apos;&quot; + conn.getResponseCode()+&quot;&apos;&quot;);&#xd;
-			var line;&#xd;
-			log.info(&quot;@SubAbeturadeChamados RestPost conn.getInputStream():&apos;&quot; + conn.getInputStream()+&quot;&apos;&quot;);&#xd;
-			var reader = new java.io.BufferedReader(new java.io.InputStreamReader(conn.getInputStream()));&#xd;
-			log.info(&quot;@SubAbeturadeChamados RestPost reader:&apos;&quot; + reader+&quot;&apos;&quot;);&#xd;
-&#xd;
-			var response = new java.lang.StringBuffer();&#xd;
-&#xd;
-			while ((line = reader.readLine()) != null) {&#xd;
-				log.info(&quot;@SubAbeturadeChamados RestPost line:&apos;&quot; + line+&quot;&apos;&quot;);&#xd;
-				response.append(line);&#xd;
-			}&#xd;
-			if (method == &quot;POST&quot;)&#xd;
-				writer.close();&#xd;
-&#xd;
-			reader.close();&#xd;
-&#xd;
-			return JSON.parse(response);&#xd;
+		var conn = wurl.openConnection();&#xd;
 &#xd;
 &#xd;
+		if (method == &quot;POST&quot;)&#xd;
+			conn.setDoOutput(true);&#xd;
 &#xd;
-		&#xd;
-		} catch (e) {&#xd;
-			log.error(&quot;@SubAbeturadeChamados RestPost erro: &quot; + e);&#xd;
-			return e;&#xd;
+		conn.setRequestMethod(method);&#xd;
+		log.info(&quot;@SubAbeturadeChamados RestPost method:&quot; + method);&#xd;
+		conn.setInstanceFollowRedirects(false);&#xd;
+&#xd;
+		for (i = 0; i &lt; headers.length; i++) {&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost headers[i].name:&apos;&quot; + headers[i].name + &quot;&apos; headers[i].key:&apos;&quot; + headers[i].key + &quot;&apos;&quot;);&#xd;
+			conn.setRequestProperty(headers[i].name, headers[i].key);&#xd;
 		}&#xd;
-			&#xd;
 &#xd;
-}&#xd;
-function retornaTokenAccesstoken(){&#xd;
-	var url = SERVER_ZENDESK + &quot;/api/token&quot;;&#xd;
-	var params = &quot;grant_type=client_credentials&quot;;&#xd;
-	var headers = [];&#xd;
-	var method = &quot;POST&quot;;&#xd;
-	var authString = new java.lang.String(retornaParametrizacao(&quot;basicApimanagerlogin&quot;)+&quot;:&quot;+retornaParametrizacao(&quot;basicApimanagerpassword&quot;));&#xd;
-	log.info(&quot;@SubAbeturadeChamados retornaParametrizacao(&apos;basicApimanagerlogin&apos;):&quot; + retornaParametrizacao(&quot;basicApimanagerlogin&quot;));&#xd;
-	log.info(&quot;@SubAbeturadeChamados retornaParametrizacao(&apos;basicApimanagerpassword&apos;):&quot; + retornaParametrizacao(&quot;basicApimanagerpassword&quot;));&#xd;
-	var bytes = authString.getBytes();&#xd;
-	authEnc = new java.util.Base64.getEncoder().encodeToString(bytes);&#xd;
-	headers.push({ name: &quot;Content-Type&quot;, key : &quot;application/x-www-form-urlencoded&quot;});&#xd;
-	headers.push({ name: &quot;charset&quot;, key : &quot;utf-8&quot;});&#xd;
-	headers.push({ name: &quot;Accept&quot;, key : &quot;*/*&quot;});&#xd;
-	headers.push({ name: &quot;Authorization&quot;, key : &quot;Basic &quot; + authEnc});&#xd;
+		if (method == &quot;POST&quot;) {&#xd;
+			conn.setUseCaches(false);&#xd;
+			var writer = new java.io.OutputStreamWriter(conn.getOutputStream());&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost conn.getOutputStream():&apos;&quot; + conn.getOutputStream() + &quot;&apos;&quot;);&#xd;
+		}&#xd;
 &#xd;
 &#xd;
-	var token = Rest(url, params, null, method, headers);&#xd;
+		if (params) {&#xd;
+			writer.write(params);&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost params:&apos;&quot; + params + &quot;&apos;&quot;);&#xd;
+			writer.flush();&#xd;
+		}&#xd;
 &#xd;
-	log.info(&quot;@SubAbeturadeChamados RestPost token.access_token:&quot; + token.access_token);&#xd;
 &#xd;
-	return token.access_token;&#xd;
+		log.info(&quot;@SubAbeturadeChamados RestPost conn.getResponseCode():&apos;&quot; + conn.getResponseCode() + &quot;&apos;&quot;);&#xd;
+		var line;&#xd;
+		log.info(&quot;@SubAbeturadeChamados RestPost conn.getInputStream():&apos;&quot; + conn.getInputStream() + &quot;&apos;&quot;);&#xd;
+		var reader = new java.io.BufferedReader(new java.io.InputStreamReader(conn.getInputStream()));&#xd;
+		log.info(&quot;@SubAbeturadeChamados RestPost reader:&apos;&quot; + reader + &quot;&apos;&quot;);&#xd;
+&#xd;
+		var response = new java.lang.StringBuffer();&#xd;
+&#xd;
+		while ((line = reader.readLine()) != null) {&#xd;
+			log.info(&quot;@SubAbeturadeChamados RestPost line:&apos;&quot; + line + &quot;&apos;&quot;);&#xd;
+			response.append(line);&#xd;
+		}&#xd;
+		if (method == &quot;POST&quot;)&#xd;
+			writer.close();&#xd;
+&#xd;
+		reader.close();&#xd;
+&#xd;
+		return JSON.parse(response);&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+	} catch (e) {&#xd;
+		log.error(&quot;@SubAbeturadeChamados RestPost erro: &quot; + e);&#xd;
+		return e;&#xd;
+	}&#xd;
+&#xd;
+&#xd;
 }&#xd;
 &#xd;
 function retornaDataAtual(){&#xd;
@@ -1203,8 +1275,8 @@ function retornaDataAtual(){&#xd;
   <list>
     <SwimLane>
       <color>FFFFFF</color>
-      <height>571</height>
-      <width>961</width>
+      <height>461</height>
+      <width>1311</width>
       <positionX>10</positionX>
       <positionY>10</positionY>
       <stateName>Abertura de Chamados</stateName>
@@ -1219,8 +1291,8 @@ function retornaDataAtual(){&#xd;
     </SwimLane>
     <SwimLane>
       <color>008080</color>
-      <height>571</height>
-      <width>931</width>
+      <height>461</height>
+      <width>1281</width>
       <positionX>40</positionX>
       <positionY>10</positionY>
       <stateName></stateName>
@@ -1241,29 +1313,18 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>30</version>
-        <linkSequence>29</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>260</positionX>
-      <positionY>74</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>30</version>
+        <version>48</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>260</positionX>
-      <positionY>174</positionY>
+      <positionY>181</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>30</version>
+        <version>48</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1274,45 +1335,78 @@ function retornaDataAtual(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>30</version>
-        <linkSequence>35</linkSequence>
+        <version>48</version>
+        <linkSequence>44</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>759</positionX>
-      <positionY>375</positionY>
+      <positionX>550</positionX>
+      <positionY>181</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>30</version>
-        <linkSequence>42</linkSequence>
+        <version>48</version>
+        <linkSequence>47</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>759</positionX>
-      <positionY>110</positionY>
+      <positionX>549</positionX>
+      <positionY>374</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>30</version>
-        <linkSequence>42</linkSequence>
-        <bendSequence>2</bendSequence>
+        <version>48</version>
+        <linkSequence>48</linkSequence>
+        <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>759</positionX>
+      <positionX>580</positionX>
+      <positionY>260</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>48</version>
+        <linkSequence>51</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>808</positionX>
       <positionY>169</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>canaisOnBoardSubAberturaChamados</processId>
-        <version>30</version>
-        <linkSequence>44</linkSequence>
+        <version>48</version>
+        <linkSequence>52</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>610</positionX>
-      <positionY>175</positionY>
+      <positionX>808</positionX>
+      <positionY>364</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>48</version>
+        <linkSequence>54</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>1129</positionX>
+      <positionY>168</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>canaisOnBoardSubAberturaChamados</processId>
+        <version>48</version>
+        <linkSequence>55</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>1129</positionX>
+      <positionY>364</positionY>
     </ProcessLinkBend>
   </list>
   <list/>
