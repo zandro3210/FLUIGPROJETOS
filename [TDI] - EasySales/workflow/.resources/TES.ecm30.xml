@@ -31,7 +31,7 @@ O processo retornará ao ESN que iniciou a solicitação.</instruction>
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Totvs Easy Sales</processId>
-      <version>62</version>
+      <version>72</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>5963941</formId>
@@ -78,8 +78,8 @@ O processo retornará ao ESN que iniciou a solicitação.</instruction>
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>210</positionX>
-      <positionY>78</positionY>
+      <positionX>240</positionX>
+      <positionY>95</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>60</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -113,6 +113,7 @@ O processo retornará ao ESN que iniciou a solicitação.</instruction>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>false</notifyAuthorityDelay>
@@ -127,8 +128,8 @@ O processo retornará ao ESN que iniciou a solicitação.</instruction>
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>350</positionX>
-      <positionY>54</positionY>
+      <positionX>340</positionX>
+      <positionY>160</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -148,6 +149,58 @@ O processo retornará ao ESN que iniciou a solicitação.</instruction>
       <destinationStates/>
       <digitalSignature>false</digitalSignature>
       <executionType>1</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>TES</processId>
+        <version>1</version>
+        <sequence>121</sequence>
+      </processStatePK>
+      <stateName>Corrigir questionário</stateName>
+      <stateDescription>Corrigir questionário</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;1&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>340</positionX>
+      <positionY>30</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
     </ProcessState>
     <ProcessState>
       <processStatePK>
@@ -178,8 +231,8 @@ O processo retornará ao ESN que iniciou a solicitação.</instruction>
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>390</positionX>
-      <positionY>39</positionY>
+      <positionX>380</positionX>
+      <positionY>145</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -226,7 +279,7 @@ O processo retornará ao ESN que iniciou a solicitação.</instruction>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>520</positionX>
-      <positionY>78</positionY>
+      <positionY>94</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -349,12 +402,29 @@ O processo retornará ao ESN que iniciou a solicitação.</instruction>
         <companyId>1</companyId>
         <processId>TES</processId>
         <version>1</version>
-        <linkSequence>120</linkSequence>
+        <linkSequence>122</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
       <initialStateSequence>108</initialStateSequence>
-      <finalStateSequence>1</finalStateSequence>
+      <finalStateSequence>121</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>TES</processId>
+        <version>1</version>
+        <linkSequence>123</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>121</initialStateSequence>
+      <finalStateSequence>106</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -390,219 +460,36 @@ O processo retornará ao ESN que iniciou a solicitação.</instruction>
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
         <companyId>1</companyId>
-        <eventId>beforeTaskSave</eventId>
-        <processId>TES</processId>
-        <version>1</version>
-      </workflowProcessEventPK>
-      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#xd;
-/*	var numProcesso = getValue(&quot;WKNumProces&quot;);&#xd;
-	var numAtividade = getValue(&quot;WKNumState&quot;);&#xd;
-	&#xd;
-	hAPI.setCardValue(&quot;numAtivAnter&quot;, &quot;&quot;);&#xd;
-	&#xd;
-	if( numAtividade == 19 &amp;&amp; nextSequenceId == 17 ){&#xd;
-		hAPI.setCardValue(&quot;numAtivAnter&quot;, numAtividade);&#xd;
-		log.info(&quot;************ NumAtivAnter ************&quot; + hAPI.getCardValue(&quot;numAtivAnter&quot;));&#xd;
-	}&#xd;
-&#xd;
-	log.info(&quot;************ beforTaskSave ************&quot;);&#xd;
-	log.info(&quot;************ numProcesso: &quot; + numProcesso);&#xd;
-	log.info(&quot;************ numAtividade: &quot; + numAtividade);&#xd;
-	log.info(&quot;************ nextSequenceId: &quot; + nextSequenceId);&#xd;
-		&#xd;
-	try {&#xd;
-		var TOTAL_PERGUNTAS = 120; // Ao atualiza este item deve-se atualiza o script&#xd;
-		var cDelimitador = &quot;|&quot;;&#xd;
-		&#xd;
-		log.info(&quot;     ****** Total de Perguntas: &quot; + TOTAL_PERGUNTAS);&#xd;
-		&#xd;
-		/* Atividades em que ha integracao com Protheus:&#xd;
-		 * &#xd;
-		 * 19 (se a proxima for 24), 40, 42, 44&#xd;
-		 * &#xd;
-		 * Atividades em que nao ha integracao com Protheus:&#xd;
-		 * &#xd;
-		 * 0, 1, 17, 19 (se a proxima for 17), 26, 30, 32, 46, 49, 53, 55&#xd;
-		 * &#xd;
-		 *&#xd;
-		&#xd;
-		var primeiraIntegracao = false;&#xd;
-&#xd;
-		if( numAtividade == 19 &amp;&amp; nextSequenceId == 24 ){&#xd;
-			primeiraIntegracao = true;&#xd;
-		}&#xd;
-		&#xd;
-		if( ( numAtividade == 40 || numAtividade == 42 || numAtividade == 44 ) || ( primeiraIntegracao  ) ) {&#xd;
-			&#xd;
-			log.info(&quot;************ integracao protheus ************&quot;);&#xd;
-			&#xd;
-			var servInstance = ServiceManager.getServiceInstance(&quot;WSTESPROPOSAL&quot;);&#xd;
-			var serviceHelper = servInstance.getBean();&#xd;
-			log.info(&quot;     ******* criou bean do servico *******     &quot;);&#xd;
-&#xd;
-			var tesProposal = serviceHelper.instantiate(&quot;br.com.microsiga.webservices.tesservices.WSTESPROPOSAL&quot;);&#xd;
-			var tesProposalSoap = tesProposal.getWSTESPROPOSALSOAP();&#xd;
-			log.info(&quot;     ******* criou servico *******     &quot;);&#xd;
-&#xd;
-			log.info(&quot;     ******* monta header *******     &quot;);&#xd;
-&#xd;
-			// var eaiZAA_PAIS = hAPI.getCardValue(&quot;esPais&quot;);&#xd;
-			var eaiZAA_PAIS = hAPI.getCardValue(&quot;idPaisAnterior&quot;);&#xd;
-			log.info(&quot;     ******* ZAA_PAIS: &quot; + eaiZAA_PAIS);&#xd;
-			// log.info(&quot;     ******* idPaisAnterior: &quot; + hAPI.getCardValue(&quot;idPaisAnterior&quot;));&#xd;
-			// log.info(&quot;     ******* paisTemp: &quot; + hAPI.getCardValue(&quot;paisTemp&quot;));&#xd;
-	&#xd;
-			var eaiZAA_CODPRJ = numProcesso;&#xd;
-			log.info(&quot;     ******* ZAA_CODPRJ: &quot; + eaiZAA_CODPRJ);&#xd;
-			&#xd;
-			var eaiZAA_DESC = hAPI.getCardValue(&quot;esNomeCliente&quot;) + &quot; USER: &quot; + hAPI.getCardValue(&quot;nomeUsuario&quot;);&#xd;
-			eaiZAA_DESC.replace(cDelimitador, &quot;&quot;);&#xd;
-			log.info(&quot;     ******* ZAA_DESC: &quot; + eaiZAA_DESC);&#xd;
-			&#xd;
-			var eaiZAA_PROPUE = hAPI.getCardValue(&quot;idPropuesta&quot;);&#xd;
-			log.info(&quot;     ******* ZAA_PROPUE: &quot; + eaiZAA_PROPUE);&#xd;
-&#xd;
-			var customEMAIL = hAPI.getCardValue(&quot;emailUsuario&quot;);&#xd;
-			log.info(&quot;     ******* customEMAIL: &quot; + customEMAIL);&#xd;
-			&#xd;
-			var earEMAIL = hAPI.getCardValue(&quot;emailEAR&quot;);&#xd;
-			log.info(&quot;     ******* EMAIL EAR: &quot; + earEMAIL);&#xd;
-			&#xd;
-			var arqEMAIL = hAPI.getCardValue(&quot;emailARQ&quot;);&#xd;
-			log.info(&quot;     ******* EMAIL ARQ: &quot; + arqEMAIL);&#xd;
-			&#xd;
-			log.info(&quot;     ******* monta itens *******     &quot;);&#xd;
-&#xd;
-			var eaiZAI_CODPRG = &quot;&quot;;&#xd;
-			var eaiZAI_RESPUE = &quot;&quot;;&#xd;
-			var eaiZAI_OBS = &quot;&quot;;&#xd;
-			&#xd;
-			var itemAux = &quot;&quot;;&#xd;
-			&#xd;
-			for(var k = 0; k &lt; TOTAL_PERGUNTAS; k++) {&#xd;
-				var wresCode = &quot;resCode&quot;;&#xd;
-	  			wresCode = wresCode + k;&#xd;
-&#xd;
-	  			var wresResp = &quot;resContenido&quot;;&#xd;
-	  			wresResp = wresResp + k;&#xd;
-	  			&#xd;
-	  			var wresTipo = &quot;resTipo&quot;;&#xd;
-	  			wresTipo = wresTipo + k;&#xd;
-	  			&#xd;
-	  			var resCode = hAPI.getCardValue(wresCode);&#xd;
-	  			var resResp = hAPI.getCardValue(wresResp);&#xd;
-	  			var resTipo = hAPI.getCardValue(wresTipo);&#xd;
-				&#xd;
-	  			if( resCode == null || resCode == &quot;&quot; ) {&#xd;
-	  				continue;&#xd;
-	  			}&#xd;
-	  			&#xd;
-				eaiZAI_RESPUE = &quot;&quot;;&#xd;
-				eaiZAI_OBS = &quot;&quot;;&#xd;
-				&#xd;
-				// TIPO CHECKBOX O SWITCH&#xd;
-	  			if(resTipo == &quot;0&quot; &amp;&amp; resResp == &quot;true&quot;){&#xd;
-	  				eaiZAI_RESPUE = &quot;1&quot;;&#xd;
-	  			}&#xd;
-	  			if(resTipo == &quot;0&quot; &amp;&amp; resResp == &quot;false&quot;){&#xd;
-	  				eaiZAI_RESPUE = &quot;2&quot;;&#xd;
-	  			}&#xd;
-	  			&#xd;
-	  			// TIPO RADIO&#xd;
-	  			if(resTipo == &quot;1&quot;){&#xd;
-	  				eaiZAI_RESPUE = resResp;&#xd;
-	  			}&#xd;
-	  			&#xd;
-	  			// TIPO MEMO&#xd;
-	  			if(resTipo == &quot;3&quot;){&#xd;
-	  				eaiZAI_OBS = resResp;&#xd;
-	  				log.info(&quot;     ******* antes del replace  *******     &quot; + &quot; K &quot; + k + &quot; &quot; + eaiZAI_OBS);&#xd;
-	  				eaiZAI_OBS.replace(cDelimitador,&quot;&quot;);&#xd;
-	  				log.info(&quot;     ******* despues del replace  *******     &quot; + &quot; K &quot; + k + &quot; &quot; + eaiZAI_OBS);&#xd;
-	  			}&#xd;
-	  			&#xd;
-	  			&#xd;
-	  			// eaiZAI_OBS.replace(cDelimitador,&quot;&quot;);&#xd;
-	  			&#xd;
-	  			&#xd;
-	  			&#xd;
-	  			// Nos campos vazios, insere um espaco&#xd;
-				if( resCode == &quot;&quot; ) { resCode = &quot; &quot;; }&#xd;
-				if( eaiZAI_RESPUE == &quot;&quot; ) { eaiZAI_RESPUE = &quot; &quot;; }&#xd;
-				if( eaiZAI_OBS == &quot;&quot; ) { eaiZAI_OBS = &quot; &quot;; }&#xd;
-				&#xd;
-	  			var item = resCode + cDelimitador + eaiZAI_RESPUE + cDelimitador + eaiZAI_OBS + &quot;)#(&quot;; // )#(: Indica fim de linha ao servi?o&#xd;
-	  			&#xd;
-	  			itemAux = itemAux + item;&#xd;
-			}	&#xd;
-			&#xd;
-			// Nos campos varios, insere um espaco&#xd;
-			if( eaiZAA_PAIS == &quot;&quot; ) { eaiZAA_PAIS = &quot; &quot;; }&#xd;
-			if( eaiZAA_CODPRJ == &quot;&quot; ) { eaiZAA_CODPRJ = &quot; &quot;; }&#xd;
-			if( eaiZAA_DESC == &quot;&quot; ) { eaiZAA_DESC = &quot; &quot;; }&#xd;
-			if( eaiZAA_PROPUE == &quot;&quot; ) { eaiZAA_PROPUE = &quot; &quot;; }&#xd;
-			if( earEMAIL == &quot;&quot; ) { earEMAIL = &quot; &quot;; }&#xd;
-			if( arqEMAIL == &quot;&quot; ) { arqEMAIL = &quot; &quot;; }&#xd;
-			&#xd;
-			var id = &quot;XXYYZZ&quot;;&#xd;
-			&#xd;
-			var operation = &quot;4&quot;; // 3 incluir / 4 alterar&#xd;
-			if( primeiraIntegracao ){&#xd;
-				log.info(&quot;     ******* primeira vez *******     &quot;);&#xd;
-				operation = &quot;3&quot;; // 3 incluir / 4 alterar&#xd;
-			}&#xd;
-			&#xd;
-			var headerdef = &quot;ZAA_PAIS&quot; + cDelimitador + &quot;ZAA_CODPRJ&quot; + cDelimitador + &quot;ZAA_DESC&quot; + cDelimitador + &quot;ZAA_PROPUE&quot; + cDelimitador + &quot;CUSTOM_EMAIL&quot; + cDelimitador + &quot;EMAIL_EAR&quot; + cDelimitador + &quot;EMAIL_ARQ&quot;;&#xd;
-			&#xd;
-			var headercont = eaiZAA_PAIS + cDelimitador + eaiZAA_CODPRJ + cDelimitador + eaiZAA_DESC + cDelimitador + eaiZAA_PROPUE + cDelimitador + customEMAIL + cDelimitador + earEMAIL + cDelimitador + arqEMAIL;&#xd;
-&#xd;
-			var itemdef = &quot;ZAI_CODPRG&quot; + cDelimitador + &quot;ZAI_RESPUE&quot; + cDelimitador + &quot;ZAI_OBS&quot;;&#xd;
-			var itemcont = itemAux;&#xd;
-&#xd;
-			log.info(&quot;     ******* Final: &quot;);&#xd;
-			log.info(&quot;     ******* ID: &quot; + id);&#xd;
-			log.info(&quot;     ******* OPERATION: &quot; + operation);&#xd;
-			log.info(&quot;     ******* HEADERDEF: &quot; + headerdef);&#xd;
-			log.info(&quot;     ******* HEADERCONT: &quot; + headercont);&#xd;
-			log.info(&quot;     ******* ITEMDEF: &quot; + itemdef);&#xd;
-			log.info(&quot;     ******* ITEMCONT: &quot; + itemcont);&#xd;
-			&#xd;
-			log.info(&quot;     ******* envia! *******     &quot;);&#xd;
-			&#xd;
-			tesProposalSoap.writeprop(id, operation, headerdef, headercont, itemdef, itemcont);&#xd;
-			&#xd;
-			log.info(&quot;     ******* fim! *******     &quot;);&#xd;
-		}	&#xd;
-	} catch(e) {&#xd;
-		log.info(&quot; ***** ERROR BTS: &quot; + e);&#xd;
-	}*/&#xd;
-}</eventDescription>
-    </WorkflowProcessEvent>
-    <WorkflowProcessEvent>
-      <workflowProcessEventPK>
-        <companyId>1</companyId>
         <eventId>servicetask106</eventId>
         <processId>TES</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>var PRD = &quot;https://187.94.57.182&quot;;
-var HML = &quot;http://172.24.52.14:8091&quot;;
-var SERVER = HML;
+      <eventDescription>function servicetask106(attempt, message) {
 
+	
+			
+		if (hAPI.getCardValue(&quot;proposta&quot;) == null || hAPI.getCardValue(&quot;proposta&quot;) == &quot;&quot;){
+			throw &quot;Proposta é um campo obrigatório&quot;;
+		}
 
-var PROD_CRM = &quot;http://wscorpcrmmobile.totvs.com.br&quot;;
-var HML_CRM = &quot;http://172.24.52.10:8048&quot;;
-var SERVER_CRM = HML_CRM;
+		if (hAPI.getCardValue(&quot;dsNmExecutivo&quot;) == null || hAPI.getCardValue(&quot;dsNmExecutivo&quot;) == &quot;&quot;){
+			throw &quot;Executivo é um campo obrigatório&quot;;
+		}
 
-function servicetask106(attempt, message) {
-
+		if (hAPI.getCardValue(&quot;jsonGruposPerguntasSel&quot;) == null || hAPI.getCardValue(&quot;jsonGruposPerguntasSel&quot;) == &quot;&quot;){
+			throw &quot;Selecionar um questionário é obrigatório&quot;;
+		}
+		if (hAPI.getCardValue(&quot;flagAskFinish&quot;) != &quot;true&quot;){
+			throw &quot;Questionário não foi finalizado corretamente \r&quot; + hAPI.getCardValue(&quot;errosQuestionario&quot;);
+		}
+		
         log.info(&quot;@servicetask106 diz: inicio&quot;);
         var proposta = hAPI.getCardValue(&quot;proposta&quot;);
         log.info(&quot;@servicetask106 diz idproposta&quot; + proposta); 
 		var data = hAPI.getCardValue(&quot;jsonDatawsgetproposta&quot;);
 		// Recuperar JSON da proposta já otimizada
 		if ( data == &quot;&quot;){
-			var url = SERVER+&quot;/rest/WSGETPROPOSTA?Proposta=&quot; + proposta;
+			var url = Tools.getParams().easysales +&quot;/rest/WSGETPROPOSTA?Proposta=&quot; + proposta;
 			var c1 = DatasetFactory.createConstraint(&quot;url&quot;, url, url, ConstraintType.MUST);
 			var constraints = [c1];
 			var dataset = DatasetFactory.getDataset(&quot;dsGenericGetRestNoAuth&quot;, null, constraints, null);
@@ -616,11 +503,22 @@ function servicetask106(attempt, message) {
 
 
 }
-    
+var Tools = {
+	getParams :function(){
+
+		var dataset = DatasetFactory.getDataset(&quot;dsEasySalesParametrizacao&quot;, null, null, null);
+		var object = {};
+
+		object.crm = dataset.getValue(0, &quot;SERVER_CRM&quot;);
+		object.easysales = dataset.getValue(0, &quot;SERVER_EASY&quot;);
+		return object;
+	}
+}
+
 	var CustomServiceTaskCustomer106 = {
 	
 		sendCustomer: function(data){
-			var url = SERVER_CRM+&quot;/WSRPT12RETORC&quot;;
+			var url = hAPI.getCardValue(&quot;SERVER_MOBILECRM&quot;) +&quot;/WSRPT12RETORC&quot;;
 			return this.restRequest(url, data);
 		},
 	
@@ -695,10 +593,10 @@ function servicetask106(attempt, message) {
   <list>
     <SwimLane>
       <color>FFFFFF</color>
-      <height>155</height>
+      <height>254</height>
       <width>1349</width>
-      <positionX>42</positionX>
-      <positionY>16</positionY>
+      <positionX>40</positionX>
+      <positionY>0</positionY>
       <stateName>Totvs Easy Sales</stateName>
       <type>1</type>
       <parentSequence>0</parentSequence>
@@ -711,10 +609,10 @@ function servicetask106(attempt, message) {
     </SwimLane>
     <SwimLane>
       <color>d6e0d0</color>
-      <height>155</height>
+      <height>254</height>
       <width>1319</width>
-      <positionX>72</positionX>
-      <positionY>16</positionY>
+      <positionX>70</positionX>
+      <positionY>0</positionY>
       <stateName>PMO</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
@@ -733,23 +631,23 @@ function servicetask106(attempt, message) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>62</version>
-        <linkSequence>120</linkSequence>
+        <version>72</version>
+        <linkSequence>110</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>404</positionX>
-      <positionY>29</positionY>
+      <positionX>537</positionX>
+      <positionY>202</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TES</processId>
-        <version>62</version>
-        <linkSequence>120</linkSequence>
-        <bendSequence>2</bendSequence>
+        <version>72</version>
+        <linkSequence>119</linkSequence>
+        <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>227</positionX>
-      <positionY>29</positionY>
+      <positionX>257</positionX>
+      <positionY>203</positionY>
     </ProcessLinkBend>
   </list>
   <list/>

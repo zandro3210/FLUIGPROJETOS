@@ -1,7 +1,8 @@
 var FormDaoProposal = {
 	getCustomer: function(customerlId, entity){
 		var constraints = [DatasetFactory.createConstraint('codigo', customerlId, '', ConstraintType.MUST)];
-		constraints.push(DatasetFactory.createConstraint('entidade', entity, '', ConstraintType.MUST));
+        constraints.push(DatasetFactory.createConstraint('entidade', entity, '', ConstraintType.MUST));
+        constraints.push(DatasetFactory.createConstraint('server', entity, '', ConstraintType.MUST));
         var dataset = DatasetFactory.getDataset('dsEasyCliente', null, constraints, null);
         return dataset.values[0];
 	},

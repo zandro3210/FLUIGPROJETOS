@@ -4,8 +4,7 @@ $(document).ready(function () {
 	FormView.setMandatoryFields();
 	try {window.parent.document.querySelectorAll('li [data-save=""]')[1].addEventListener("click", loadJsonResposta);}catch(err) {	}
 	if (CURRENT_STATE != Activity.ZERO && CURRENT_STATE != Activity.INICIO) { FormViewOffer.loadModelsTab(); }
-	if (CURRENT_STATE == Activity.PREENCHER_QUESTIONARIO) { setInterval(function(){ loadJsonResposta(); }, 1000);}
-	if (CURRENT_STATE == Activity.RELATORIO || CURRENT_STATE == Activity.FIM) { FormViewReport.loadTable();   }
+	
 });
 
 $(document).on("click", "[href='#rlGrafico'][aria-expanded='true']", function () {

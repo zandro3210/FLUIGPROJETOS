@@ -1,21 +1,29 @@
-var PRD = "https://187.94.57.182";
-var HML = "http://172.24.52.14:8091";
-var SERVER = HML;
-
-
-var PROD_CRM = "http://wscorpcrmmobile.totvs.com.br";
-var HML_CRM = "http://172.24.52.10:8048";
-var SERVER_CRM = HML_CRM;
-
 function servicetask106(attempt, message) {
 
+	
+			
+		if (hAPI.getCardValue("proposta") == null || hAPI.getCardValue("proposta") == ""){
+			throw "Proposta é um campo obrigatório";
+		}
+
+		if (hAPI.getCardValue("dsNmExecutivo") == null || hAPI.getCardValue("dsNmExecutivo") == ""){
+			throw "Executivo é um campo obrigatório";
+		}
+
+		if (hAPI.getCardValue("jsonGruposPerguntasSel") == null || hAPI.getCardValue("jsonGruposPerguntasSel") == ""){
+			throw "Selecionar um questionário é obrigatório";
+		}
+		if (hAPI.getCardValue("flagAskFinish") != "true"){
+			throw "Questionário não foi finalizado corretamente \r" + hAPI.getCardValue("errosQuestionario");
+		}
+		
         log.info("@servicetask106 diz: inicio");
         var proposta = hAPI.getCardValue("proposta");
         log.info("@servicetask106 diz idproposta" + proposta); 
 		var data = hAPI.getCardValue("jsonDatawsgetproposta");
 		// Recuperar JSON da proposta já otimizada
 		if ( data == ""){
-			var url = SERVER+"/rest/WSGETPROPOSTA?Proposta=" + proposta;
+			var url = Tools.getParams().easysales +"/rest/WSGETPROPOSTA?Proposta=" + proposta;
 			var c1 = DatasetFactory.createConstraint("url", url, url, ConstraintType.MUST);
 			var constraints = [c1];
 			var dataset = DatasetFactory.getDataset("dsGenericGetRestNoAuth", null, constraints, null);
@@ -29,11 +37,22 @@ function servicetask106(attempt, message) {
 
 
 }
-    
+var Tools = {
+	getParams :function(){
+
+		var dataset = DatasetFactory.getDataset("dsEasySalesParametrizacao", null, null, null);
+		var object = {};
+
+		object.crm = dataset.getValue(0, "SERVER_CRM");
+		object.easysales = dataset.getValue(0, "SERVER_EASY");
+		return object;
+	}
+}
+
 	var CustomServiceTaskCustomer106 = {
 	
 		sendCustomer: function(data){
-			var url = SERVER_CRM+"/WSRPT12RETORC";
+			var url = hAPI.getCardValue("SERVER_MOBILECRM") +"/WSRPT12RETORC";
 			return this.restRequest(url, data);
 		},
 	

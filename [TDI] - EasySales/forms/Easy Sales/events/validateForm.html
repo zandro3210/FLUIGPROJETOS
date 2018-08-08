@@ -1,10 +1,26 @@
 function validateForm(form){
+
+
+	
 	var CURRENT_STATE = getValue("WKNumState");
 	var errorMsg = "";
 
 	objForm = form;//variavel declarada e utilizada no validateFormUtils.js
 	
-	if(CURRENT_STATE == Activity.PREENCHER_QUESTIONARIO){
+
+
+	if (form.getValue("flagAsksGroups") == "true"){
+				
+		var jsonModel = stringToJson("jsonModelos", []);		
+		var groups = stringToJson("jsonGruposPerguntasSel", {});
+		var modelsSize = jsonModel.length;
+		var groupsSize = Object.keys(groups).length;
+		
+		if(modelsSize > groupsSize) errorMsg+= "Nenhum questionário foi selecionado na aba Seleção de Questionário.";	
+	}
+
+
+	if(CURRENT_STATE == Activity.ENVIAR_DADOS_DO_QUESTIONARIO){
 		
 	
 		if (form.getValue("liRelatorio") == ""){			
@@ -25,9 +41,6 @@ function validateForm(form){
 			if(modelsSize > groupsSize) errorMsg+= "Nenhum questionário foi selecionado na aba Seleção de Questionário.";	
 		}
 
-		if (form.getValue("flagAsksGroups") != ""){
-			errorMsg = form.getValue("errosQuestionario");
-		}
 
 		
 		*/

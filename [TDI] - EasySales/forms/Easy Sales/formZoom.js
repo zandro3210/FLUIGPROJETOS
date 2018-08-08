@@ -3,14 +3,15 @@ var FormZoom = {
 	filterValues: '',
 	setFilterZoomEar: function(){
 		this.fieldZoomName = 'dsNmExecutivo';
-		this.filterValues = 'email,'+$('#emailUsuario').val();
+		this.filterValues = 'email,' + $('#emailUsuario').val();
 		setFilterZoom();
 	},
 	callbackZoomEar: function(selectedItem){
-		var filters = 'ear,'+selectedItem.codigo;			
+		var filters = 'ear,' + selectedItem.codigo;
 		reloadZoomFilterValues('proposta', filters);
 		
 		FormViewProposal.setEar(selectedItem);
+		FormDaoFavorite.getFavorite();
 		FormAPI.postEar();
 	},
 	callbackZoomProposal: function(selectedItem){

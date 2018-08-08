@@ -1,29 +1,14 @@
+var FlagQuestionSave = false;
 $(document).ready(function () {
+
+	setTimeout(function () {
 	FormView.binding();
 	FormView.enableTabs();
 	FormView.setMandatoryFields();
-	try {window.parent.document.querySelectorAll('li [data-save=""]')[1].addEventListener("click", loadJsonResposta);}catch(err) {	}
-	if (CURRENT_STATE != Activity.ZERO && CURRENT_STATE != Activity.INICIO) { FormViewOffer.loadModelsTab(); }
-	if (CURRENT_STATE == Activity.PREENCHER_QUESTIONARIO) { setInterval(function(){ loadJsonResposta(); }, 1000);}
-	if (CURRENT_STATE == Activity.RELATORIO || CURRENT_STATE == Activity.FIM) { FormViewReport.loadTable();   }
+	FormView.Mask();
+	}, 1000)
 });
 
-$(document).on("click", "[href='#rlGrafico'][aria-expanded='true']", function () {
-
-	setTimeout(function () {
-		FormViewReport.loadGraph();
-	}, 1000);
-});
-
-
-$(document).on("click", ".checkDad", function () {
-	checkDad(this);
-	loadJsonResposta();
-});
-$(document).on("change", ".checkDad", function () {
-	checkDad(this);
-	loadJsonResposta();
-});
 
 
 
@@ -65,6 +50,15 @@ function checkDad(element) {
 					$('#' + idInput).trigger('click');
 				}
 
+				if (quest.tp == "5"){
+					autocompleteInstance["ask_" + askCodigo].removeAll();
+				}else{
+		
+					$("#ask_" + askCodigo).val("");
+				}
+				
+
+
 				$('[name="ask_' + askCodigo + '"]').removeClass('ask-required');
 				$('#row_' + askCodigo).addClass('hidden');
 			}
@@ -82,6 +76,22 @@ function setSelectedZoomItem(selectedItem) {
 		case 'proposta': FormZoom.callbackZoomProposal(selectedItem); break;
 	}
 }
+function removedZoomItem(removedItem) { 
+
+		if ($("#proposta").val() == null && removedItem.inputId ==  'proposta'){
+			FormView.clearForm();
+			$('a[href="#esProspecto"]').trigger('click');
+			$("#jsonRespostas").val("");
+		}	
+		if ($("#dsNmExecutivo").val() == null && removedItem.inputId ==  'dsNmExecutivo'){
+			FormView.clearForm();
+			FormDaoFavorite.closeStar();
+			window["proposta"].clear();
+			$('a[href="#esProspecto"]').trigger('click');
+			$("#jsonRespostas").val("");
+		}
+}
+
 
 function setFilterZoom() {
 	    if (window['data-zoom_' + FormZoom.fieldZoomName] == undefined) setTimeout(setFilterZoom, 1000);
@@ -90,27 +100,34 @@ function setFilterZoom() {
 
 var beforeSendValidate = function (numState, nextState) {
 
-	if (numState == Activity.PREENCHER_QUESTIONARIO) {
-		loadJsonResposta();
-	}
 
-	var errors = CustomValidate.validate(numState);
-	$('#errosQuestionario').val(errors);
+		var errors = CustomValidate.validate(numState);
+		$('#errosQuestionario').val(errors);
+	
+		if (numState == Activity.ENVIAR_DADOS_DO_QUESTIONARIO && form.getValue("flagAskFinish") == "false"){
+		 errorMsg = form.getValue("errosQuestionario");
+		 return false;
+		}
 
 	return true;
 }
 
 
 function loadJsonResposta() {
+	if (FlagQuestionSave){
+
+	
 	var obj = [];
 	$('[name*="ask_"]').each(function () {
 		if (this.name != undefined) {
 			if (this.type == 'radio') {
-				if ($('input[name="' + this.name + '"]').is(':checked')) {
-					obj.push({ name: this.name, value: $('input[name=' + this.name + ']:checked').val() });
+				if (this.checked ) {
+					obj.push({ name: this.name, value: this.value  });
+
+				
 				}
 			}
-			else if ($(this).hasClass('field-filter')) {
+			else if (this.classList.contains("field-filter")) {
 				var filterId = this.id.replace('___', '.').split('ask_')[1];
 				var filterQ = JSON.parse($('#jsonPerguntas').val());
 				var map = {};
@@ -140,12 +157,15 @@ function loadJsonResposta() {
 	
 	});
 	$('#jsonRespostas').val(JSON.stringify(obj));
+
+
+}
 }
 var CustomValidate = {
 	validate: function (numState) {
 		var errors = new HashSet();
 
-		if (numState == Activity.PREENCHER_QUESTIONARIO || numState == Activity.MODIFICAR) {
+		if (numState ==  Activity.ENVIAR_DADOS_DO_QUESTIONARIO) {
 			var that = this;
 			//$('[name*="ask_"]').each(function(){
 			$('.ask-required').each(function () {

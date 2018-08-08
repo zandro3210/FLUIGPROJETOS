@@ -1,7 +1,3 @@
-var PRD = "https://wscorp.totvs.com.br";
-var HML = "http://172.24.52.10:8048";
-var SERVER = HML;
-
 function createDataset(fields, constraints, sortFields) {
 	var dataset = DatasetBuilder.newDataset();
 	var email = DsEasyExecutivo.getEmail(constraints);
@@ -49,7 +45,7 @@ var DsEasyExecutivo = {
 	},
 	/** Retorna uma lista com os ears. **/
 	getEars: function(email){
-		var urlWithParams = SERVER+"/rest/WSRGT12ESN/"+email;
+		var urlWithParams = Tools.getParams().crm +"/rest/WSRGT12ESN/"+email;
 		var ears = this.callDatasetRest(urlWithParams);
 		//var ears = {"EXECUTIVOS":[{"codigo": "T99001","nome": "EAR TESTE","codunidade": "TSE999","unidade": "TOTVS NAO ENCONTRADA - META A DISTRIBUIR","GAR":[{"codigo": "T99002","nome": "GAR TESTE","codunidade": "TSE999","unidade": "TOTVS NAO ENCONTRADA - META A DISTRIBUIR"}],"DAR":[{"codigo": "T99992","nome": "DAR - TESTE","codunidade": "TSE999","unidade": "TOTVS NAO ENCONTRADA - META A DISTRIBUIR"},{"codigo": "T99992","nome": "DAR - TESTE","codunidade": "TSE999","unidade": "TOTVS NAO ENCONTRADA - META A DISTRIBUIR"}],"GO":[]}]};
 				
@@ -67,3 +63,15 @@ var DsEasyExecutivo = {
 	    return JSON.parse(string);
 	}
 };
+
+var Tools = {
+	getParams :function(){
+
+		var dataset = DatasetFactory.getDataset("dsEasySalesParametrizacao", null, null, null);
+		var object = {};
+
+		object.crm = dataset.getValue(0, "SERVER_CRM");
+		object.easysales = dataset.getValue(0, "SERVER_EASY");
+		return object;
+	}
+}

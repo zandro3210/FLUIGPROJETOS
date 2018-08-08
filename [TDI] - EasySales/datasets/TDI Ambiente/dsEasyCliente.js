@@ -1,10 +1,6 @@
-var PRD = "https://wscorp.totvs.com.br/";
-var HML = "http://172.24.52.10:8048";
-var SERVER = HML;
-
 function createDataset(fields, constraints, sortFields) {
 	var dataset = DatasetBuilder.newDataset();
-	var constraintNames = ["codigo","entidade"];
+	var constraintNames = ["codigo","entidade","server"];
 	var map = ConstraintUtils.getConstraintsValue(constraints, constraintNames);
 	
 	if(map.get("codigo") == null){
@@ -15,7 +11,10 @@ function createDataset(fields, constraints, sortFields) {
 		log.error("@dsEasyCliente/createDataset diz: Constraint entidade deve ser informada!");
 		return null;
 	}
-	
+	if(map.get("server") == null){
+		log.error("@dsEasyCliente/createDataset diz: Constraint server deve ser informada!");
+		return null;
+	}
 	var customer = DsEasyCliente.getCustomer(map.get("codigo"), map.get("entidade"));
 	var row = [
 				customer.codigo,
@@ -81,7 +80,7 @@ var DsEasyCliente = {
 	},
 	/** Retorna o cliente. **/
 	getCustomer: function(customerId, entity){
-		var urlWithParams = SERVER+"/rest/WSRGT12CLI/"+customerId+"/"+entity;
+		var urlWithParams = Tools.getParams().crm +"/rest/WSRGT12CLI/"+customerId+"/"+entity;
 		var customer = this.callDatasetRest(urlWithParams);
 		//var customer = {"codigo": "TEXHMP","loja": "00","cgc": "38342172635 ","nome": "TDI TESTE SUSTENTACAO INOVACAO","nreduz": "TDI TESTE SUSTENTACAO / INOVACAO","pessoa": "F","tipo": "F","codseg": "000003","endereco": "AV BRAS LEME","bairro": "SANTANA","cidade": "SAO PAULO","uf": "SP","cep": "02511000","complemento": "","ddd": "011","telefone": "20997099","email": "teste@teste","contato": ""};
 		
@@ -131,3 +130,17 @@ var ConstraintUtils = {
 		    return map;
 		}		
 	}
+
+
+	var Tools = {
+		getParams :function(){
+	
+			var dataset = DatasetFactory.getDataset("dsEasySalesParametrizacao", null, null, null);
+			var object = {};
+	
+			object.crm = dataset.getValue(0, "SERVER_CRM");
+			object.easysales = dataset.getValue(0, "SERVER_EASY");
+			return object;
+		}
+	}
+	

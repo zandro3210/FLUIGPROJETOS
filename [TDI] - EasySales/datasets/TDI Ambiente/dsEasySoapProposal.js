@@ -1,44 +1,64 @@
-var PRD = "https://187.94.57.182";
-var HML = "http://172.24.52.14:8091";
 var SERVER = HML;
 var objeto;
 function createDataset(fields, constraints, sortFields) {
 
-	log.info("@dsEasySoapProposal diz: inicio");
-	objeto = JSON.parse(constraints[0].getInitialValue());
-
-	log.info("@dsEasySoapProposal constraints[0].getInitialValue()" + constraints[0].getInitialValue());
-
-	var groupSels = JSON.parse(objeto.jsonGruposPerguntasSel);
-	log.info("@dsEasySoapProposal diz: 1");
-	var sendProposal;
-	for (var key in groupSels) {
-		log.info("@dsEasySoapProposal diz: 2");
-		sendProposal = CustomServiceTaskProposal.sendProposal(groupSels[key]);
-	}
-
-	log.info("@dsEasySoapProposal diz idproposta" + objeto.proposta);
-	var url = SERVER + "/rest/WSGETREPORT?Proposta=" + objeto.proposta;
-	var c1 = DatasetFactory.createConstraint("url", url, url, ConstraintType.MUST);
-	var constraints = [c1];
-	var dataset = DatasetFactory.getDataset("dsGenericGetRestNoAuth", null, constraints, null);
-	data = dataset.getValue(0, "response");
-	log.info("@dsEasySoapProposal diz: data" + data);
+	SERVER = Tools.getParams().easysales;
+    objeto = JSON.parse(constraints[0].getInitialValue());
+	var sendProposal =	CustomServiceTaskProposal.init(objeto);
+	var graph  = CustomServiceGraph.getReport(objeto)
 
 
 	var dataset = DatasetBuilder.newDataset();
 	dataset.addColumn("sendProposal");
 	dataset.addColumn("graph");
-	dataset.addRow([sendProposal, data]);
+	dataset.addRow([sendProposal, graph]);
 
 	return dataset;
 
 }
 
+var CustomServiceGraph = {
+	getReport: function(){
+		
+		log.info("@dsEasySoapProposal diz idproposta" + objeto.proposta);
+		var url = SERVER + "/rest/WSGETREPORT?Proposta=" + objeto.proposta;
+		var c1 = DatasetFactory.createConstraint("url", url, url, ConstraintType.MUST);
+		var constraints = [c1];
+		var dataset = DatasetFactory.getDataset("dsGenericGetRestNoAuth", null, constraints, null);
+		data = dataset.getValue(0, "response");
+		log.info("@dsEasySoapProposal diz: data" + data);
+	},
+	
+}
+var Tools = {
+	getParams :function(){
 
+		var dataset = DatasetFactory.getDataset("dsEasySalesParametrizacao", null, null, null);
+		var object = {};
+
+		object.crm = dataset.getValue(0, "SERVER_CRM");
+		object.easysales = dataset.getValue(0, "SERVER_EASY");
+		return object;
+	}
+}
 
 
 var CustomServiceTaskProposal = {
+	init : function(data){
+		log.info("@dsEasySoapProposal diz: inicio");
+	
+		log.info("@dsEasySoapProposal constraints[0].getInitialValue()" + data);
+	
+		var groupSels = JSON.parse(data.jsonGruposPerguntasSel);
+		log.info("@dsEasySoapProposal diz: 1");
+		var sendProposal;
+	
+		//for (i = 0; i < groupSels.length; i++) { 
+			log.info("@dsEasySoapProposal diz: 2");
+			sendProposal = this.sendProposal(groupSels[0].value);
+		//}
+			return sendProposal;
+		},
 	/** Envia os dados da proposta para o Easy Sales **/
 	sendProposal: function (groupName) {
 		log.info("@dsEasySoapProposal diz: 3");

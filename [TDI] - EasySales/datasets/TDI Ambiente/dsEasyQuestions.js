@@ -25,16 +25,37 @@ function createDataset(fields, constraints, sortFields) {
 	
 	for (var i = 0; i < asks.size(); i++) {
 		var x = asks.get(i);
-		var index = x.getINDEX();
-		var code = x.getCODE();
-		var owner = x.getOWNER();
-		var obs = x.getOBS()
-		var value = x.getDEFAULT();
-		var name = x.getDESC()
-		var type = x.getTYPE();
-		var modulo = x.getMODULO();
-		var options = x.getOPTIONS();
-		var nomemodulo = x.getNOMEMODULO();
+		var index = "";	
+		try {index = x.getINDEX();	}catch(err) {	}
+
+		var code = "";
+		try {code = x.getCODE();	}	catch(err) {	}
+
+		var owner = ""
+		try {owner = x.getOWNER();}catch(err) {		}
+
+		var obs = "";
+		try {obs =  x.getOBS();	}	catch(err) {	}
+
+		var value = "";
+		try {	value =  x.getDEFAULT();}	catch(err) {		}
+
+		var name = "";
+		try {name =  x.getDESC();}	catch(err) {		}
+
+		var type = "";
+		try {type =  x.getTYPE();}catch(err) {		}
+
+		var modulo ="";
+		try {	modulo =   x.getMODULO();	}catch(err) {		}
+	
+		var options = "";
+		try {	options =   x.getOPTIONS();	}	catch(err) {		}
+
+	
+		var nomemodulo = "";
+		try {nomemodulo =   x.getNOMEMODULO();	}catch(err) {		}
+		
 		dataset.addRow([index, code, owner, obs, name, type, options, value, modulo, nomemodulo]);
 	}
 

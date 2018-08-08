@@ -1,67 +1,88 @@
 var FormView = {
 	modelsField: [],
 	scopesField: {},
+	Mask: function () {
+		$('.input-number').mask('0000000000');
+	},
 	binding: function () {
-		if ($('#dsNmExecutivo').val() == '') FormZoom.setFilterZoomEar();
+		FormZoom.setFilterZoomEar();
+		FormDaoFavorite.getFavorite();
 		//$(document).on('click', '.bootstrap-switch', FormDaoOffer.setAksGroupsValue);	
 
+		$(document).on('click', "#starFavorite.off", function () {
+			FormDaoFavorite.setFavorite($('#dsNmExecutivo').val());
+		});
+		$(document).on('click', "#starFavorite.on", function () {
+			FormDaoFavorite.delFavorite($('#dsNmExecutivo').val());
+		});
+
 		$(document).on('click', '#finishAsk:not([disabled])', function () {
-			var errors = CustomValidate.validate(Activity.PREENCHER_QUESTIONARIO);
+			var errors = CustomValidate.validate(Activity.ENVIAR_DADOS_DO_QUESTIONARIO);
 			$('#errosQuestionario').val(errors);
 
 			if ($('#errosQuestionario').val().length > 0) {
-
 				window.FLUIGC.toast({
 					title: 'Falha ao tentar finalizar questionário',
 					message: $('#errosQuestionario').val(),
 					type: 'danger'
 				});
-
 			} else {
-				$("#conteudo :input").attr("disabled", true);
-				$("#lblfinishAsk").attr("disabled", true).addClass("active");
-				$("#finishAsk").attr("disabled", true);
-				$("#flagAskFinish").val(true);
-				$("#esOfertas .asksGroups").attr("disabled", true);
-				$("div[data-toggle='buttons']").removeAttr("data-toggle");
-				window["proposta"].disable(true);
-				window["dsNmExecutivo"].disable(true);
-				window.FLUIGC.toast({
-					title: 'Questionário Finalizado!',
-					message: "",
-					type: 'success'
-				});
 
-			var result = FormAPI.postPropostal();
-				if (result[0].sendProposal.indexOf("A proposta já está integrada") != -1){
-					window.FLUIGC.toast({
-						title: 'Falha ao tentar otimizar proposta',
-						message: "A proposta já está integrada",
-						type: 'danger'
-					});
-				}else{
-
+				var result = FormAPI.postPropostal();
+				if (FormAPI.validatePropostal(result)){
 					$("#liRelatorio").show();
 					$('a[href="#esRelatorio"]').trigger('click');
 					$("#jsonGrafico").val(result[0].graph);
+					FormViewReport.loadTable();
 					setTimeout(function () {
 						FormViewReport.loadGraph();
 					}, 1000);
+					$("#conteudo :input").attr("disabled", true);
+					$("#lblfinishAsk").attr("disabled", true).addClass("active");
+					$("#finishAsk").attr("disabled", true);
+					$("#flagAskFinish").val(true);
+					$("#esOfertas .asksGroups").attr("disabled", true);
+					$("div[data-toggle='buttons']").removeAttr("data-toggle");
+					window["proposta"].disable(true);
+					window["dsNmExecutivo"].disable(true);
+					window.FLUIGC.toast({
+						title: 'Questionário Finalizado!',
+						message: "",
+						type: 'success'
+					});
 				}
-	
+				
+
+
+
+
+
+
 			}
 
 		});
 
-		$(document).on('click', 'div.panel .btn-primary:not([disabled])', function () {
+		$(document).on('click', '.asksGroups:not([disabled])', function () {
+			
 
+			var loading = FLUIGC.loading(window);
+
+			loading.show();
+
+
+			setTimeout(function(){ 	FormDaoOffer.setAksGroupsValue();
+				loading.hide();
+			}, 2000);
+		
+
+		});
+		$(document).on('click', '#step2:not([disabled])', function () {
+			
+			$("#flagAskFinish").val(false);
 			$("#liAlcance").show();
-			FormDaoOffer.setAksGroupsValue(this.control);
 			var models = FormDaoOffer.getModelsOfField();
-			FormViewAsks.setAsksTab([this.firstElementChild.id], models);
+			FormViewAsks.setAsksTab(JSON.parse($('#jsonGruposPerguntasSel').val()), models);
 			$('a[href="#esAlcance"]').trigger('click');
-			//	$("#esOfertas .asksGroups").attr("disabled", true);
-			//	$("div[data-toggle='buttons']").removeAttr("data-toggle");
 		});
 		$(document).on('click', '.panel-heading', function () {
 			$(this).parent().find('.panel-body').toggle();
@@ -76,13 +97,38 @@ var FormView = {
 				}
 			});
 		});
+
+		$(document).on("click", ".checkDad", function () {
+			checkDad(this);
+			loadJsonResposta();
+		});
+		
+		$(document).on("click", "[href='#rlGrafico'][aria-expanded='true']", function () {
+		
+			setTimeout(function () {
+				FormViewReport.loadGraph();
+			}, 1000);
+		});
+		
+		
+		$(document).on('change',".checkDad", function(e) {
+			loadJsonResposta();
+		});
+		
+		$(document).on("click", "[data-resetprocess='']", function () {
+			FormView.clearForm();
+			$("#fluig-modal button").click();
+			window["proposta"].clear();
+			$('a[href="#esProspecto"]').trigger('click');
+			$("#jsonRespostas").val("");
+		});
 	},
 	enableTabs: function () {
 		$('#liAlcance').hide();
 		$('#liOfertas').hide();
 		$('#liRelatorio').hide();
 
-		if ($("#dsNmExecutivo").val() != "" && $("#proposta").val() != "") {
+		if ($("#dsNmExecutivo").val() != null && $("#proposta").val() != null) {
 			$('#liOfertas').show();
 			$('a[href="#liOfertas"]').trigger('click');
 			FormViewOffer.loadModelsTab();
@@ -94,20 +140,23 @@ var FormView = {
 			$('a[href="#liAlcance"]').trigger('click');
 		}
 
-		if ($("#flagAskFinish").val() == "true") {
+
+
+		if ($("#jsonGrafico").val() != "") {
 			$("#conteudo :input").attr("disabled", true);
 			$("#lblfinishAsk").attr("disabled", true).addClass("active");
 			$("#finishAsk").attr("disabled", true);
 			$("#esOfertas .asksGroups").attr("disabled", true);
 			$("div[data-toggle='buttons']").removeAttr("data-toggle");
-			window["proposta"].disable(true);
-			window["dsNmExecutivo"].disable(true);
-			
-		}
-
-		if ($("#jsonGrafico").val() != "" ){
+			FormViewReport.loadTable();
 			$('#liRelatorio').show();
 			$('a[href="#liRelatorio"]').trigger('click');
+			try {
+				window["proposta"].disable(true);
+				window["dsNmExecutivo"].disable(true);
+			}
+			catch (err) {
+			}
 		}
 		/* if (CURRENT_STATE == Activity.ZERO || CURRENT_STATE == Activity.INICIO) {
 		
@@ -118,6 +167,13 @@ var FormView = {
 			$('#liRelatorio').show();
 		}
 		*/
+	},
+	clearForm: function () {
+
+		$("#flagAsksGroups").val("");
+		$("#flagAskFinish").val("");
+		$("#liOfertas").hide();
+		$("#liAlcance").hide();
 	},
 	setMandatoryFields: function () {
 		RequiredField.enableStyle();
@@ -208,6 +264,7 @@ var FormViewOffer = {
 		var html = Mustache.to_html(template, asksGroups);
 		$('#model_' + asksGroups.model.codigo).addClass("col-md-offset-5 col-sm-offset-5 ");
 		$('#model_' + asksGroups.model.codigo).html(html);
+		
 	},
 	loadModelsTab: function () {
 		var models = FormDaoOffer.getModelsOfField();
@@ -218,35 +275,24 @@ var FormViewOffer = {
 	},
 	loadAsksGroupsTab: function (models) {
 		var asksGroups = FormDaoOffer.getAsksGroupsOfField();
-		var switchs = [];
-		var values = FormDaoOffer.getAksGroupsValue();
-		var groupsCode = [];
 
 		for (var i = 0; i < models.length; i++) {
-			var code = models[i].codigo;
 			var modori = models[i].modori;
 			var obj = asksGroups[modori];
-			var value = values['switch_' + code];
-
-			FormViewOffer.setAsksGroups(obj);
-			switchs.push({ name: 'switch_' + code, value: value });
-		}
-		//FLUIGC.switcher.init('.form-switch');
-
-
-		for (var i = 0; i < switchs.length; i++) {
-			var switc = switchs[i];
-			var $input = $('input[name="' + switc.name + '"][value="' + switc.value + '"]');
-			$input.trigger('click');
-			groupsCode.push($input.attr('id'));
+			FormViewOffer.setAsksGroups(obj);	
 		}
 
-		if (CURRENT_STATE == Activity.PREENCHER_QUESTIONARIO || Activity.RELATORIO || CURRENT_STATE == Activity.MODIFICAR || CURRENT_STATE == Activity.FIM) {
-			FormViewAsks.setAsksTab(groupsCode, models);
-			//$("#esOfertas .asksGroups").attr("disabled", true);
-			//$("div[data-toggle='buttons']").removeAttr("data-toggle");
+		var jsonGruposPerguntasSel = JSON.parse($('#jsonGruposPerguntasSel').val());
+		$(jsonGruposPerguntasSel).each(function( index,value ) {	
+			$("#" + value.id).trigger('click');
+		});
+		
+		var models = FormDaoOffer.getModelsOfField();
+		FormViewAsks.setAsksTab(jsonGruposPerguntasSel, models);
 
-
+		if (CURRENT_STATE == Activity.FIM) {
+			$("#esOfertas .asksGroups").attr("disabled", true);
+			$("div[data-toggle='buttons']").removeAttr("data-toggle");
 		}
 	}
 };
@@ -553,6 +599,9 @@ var FormViewReport = {
 	}
 }
 var FormViewAsks = {
+	validateDuplicity: function(){
+
+	},
 	setAsks: function (asks, $panel) {
 		for (var j = 0; j < asks.length; j++) {
 			var ask = asks[j];
@@ -598,7 +647,7 @@ var FormViewAsks = {
 			this.loadAskResposta();
 		}
 		//SE ATIVIDADE FIM DISABILITA TODOSO S INPUTS
-		if (CURRENT_STATE == Activity.FIM || CURRENT_STATE == Activity.RELATORIO) {
+		if (CURRENT_STATE == Activity.FIM) {
 
 			$("#conteudo :input").attr("disabled", true);
 
@@ -636,11 +685,12 @@ var FormViewAsks = {
 
 	},
 	setAsksTab: function (switchs, models) {
+		$('#conteudo').empty();
 		var defs = [];
 		var defaultmodulo = "Diversos";
 		for (var i = 0; i < switchs.length; i++) {
 			var switc = switchs[i];
-			var code = switc.split('askGroup_')[1];
+			var code = switc.id.split('askGroup_')[1];
 			var asks = FormDaoAsk.getAsksOfDataset(code);
 			var asksArray = [];
 
@@ -688,7 +738,7 @@ var FormViewAsks = {
 				}
 				else if (ask.tipo == "3") {
 					// ask.tipo = '<input name="ask_'+askCodigo+'" class="checkDad form-control input-number '+requiredClass+'" id="ask_'+askCodigo+'" type="text" mask="000000000000000"/>';
-					ask.tipo = "<input data-id='" + ask.codigo + "' data-dad='" + ask.pai + "' name='ask_" + askCodigo + "' class='checkDad form-control input-number " + requiredClass + "' id='ask_" + askCodigo + "' type='text' mask='000000000000000'/>";
+					ask.tipo = "<input data-id='" + ask.codigo + "' data-dad='" + ask.pai + "'  name='ask_" + askCodigo + "' class='checkDad form-control input-number " + requiredClass + "' id='ask_" + askCodigo + "' type='text' mask='000000000000000'/>";
 				}
 				else if (ask.tipo == "4") {
 					// ask.tipo = '<textarea name="ask_'+ask.codigo+'" class="checkDad form-control '+requiredClass+'" id="ask_'+askCodigo+'"></textarea>';
@@ -718,35 +768,35 @@ var FormViewAsks = {
 			$('#jsonPerguntas').val(JSON.stringify(defs).replace(/\\n/g, ""));
 
 
-			var panel = '<div class="panel-group"><div class="panel panel-info"><div class="panel-heading"><h4 class="panel-title">' + models[i].descmod + '</h4></div><div class="panel panel-default"><div class="panel-body" id="panel_' + models[i].codigo + '"></div></div></div>';
-			$('#conteudo').html(panel);
-			var $panel = $('#panel_' + models[i].codigo);
-
-			this.formatGroup(asksArray, $panel);
+			//var panel = '<div class="panel-group"><div class="panel panel-info"><div class="panel-heading"><h4 class="panel-title">' + models[0].descmod + '</h4></div><div class="panel panel-default"><div class="panel-body" id="panel_' + models[0].codigo + '"></div></div></div>';
+		//	$('#conteudo').append(panel);
+			var $panel = $('#panel_' + models[0].codigo);
+			this.formatGroup(asksArray,switchs[i]);
 			this.setAsks(asksArray, $panel);
 			this.loadAskResposta();
 		}
 
+		FlagQuestionSave = true;	
 		//if($('#jsonPerguntas').val() == ""){
 		//	$('#jsonPerguntas').val(JSON.stringify(defs));
 		//}
 	},
-	formatGroup: function (defs, panelFather) {
+	formatGroup: function (defs, switchs) {
 		var groupedData = _.groupBy(defs, function (x) { return x.modulo });
 		var template = $('#tplCollapse').html();
 		var html = "";
 		var i = 0;
 		for (var name in groupedData) {
 			var panel = template;
-			panel = panel.replace("{{templateindex}}", panelFather[0].id + '_' + i);
-			panel = panel.replace("{{templateindex}}", panelFather[0].id + '_' + i);
+			panel = panel.replace("{{templateindex}}", '_' + i);
+			panel = panel.replace("{{templateindex}}",  '_' + i);
 			panel = panel.replace("{{name}}", name);
-			panel = panel.replace("{{modulonome}}", groupedData[name][0].nomemodulo);
+			panel = panel.replace("{{modulonome}}", "["  + switchs.value + "] - " + groupedData[name][0].nomemodulo);
 			i++;
 			html += panel;
 
 		}
-		$('#conteudo').html(html);
+		$('#conteudo').append(html);
 
 
 	},

@@ -4,9 +4,19 @@ var Activity = {
 	PREENCHER_QUESTIONARIO: 83,
 	MODIFICAR: 82,
 	RELATORIO: 104,
+	ENVIAR_DADOS_DO_QUESTIONARIO: 106,
 	FIM: 72
 }
 
-var PRD = "https://187.94.57.182";
-var HML = "http://172.24.52.14:8091";
-var SERVER = HML;
+
+var FormActivity = {
+    getEasySales: function () {
+		var dataset = DatasetFactory.getDataset("dsEasySalesParametrizacao", null, null, null);
+		return dataset.values[0].SERVER_EASY;
+	},
+	getCRM: function(){
+		var dataset = DatasetFactory.getDataset("dsEasySalesParametrizacao", null, null, null);
+		return dataset.values[0].SERVER_CRM;		
+	}
+
+}

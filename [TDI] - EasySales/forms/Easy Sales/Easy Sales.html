@@ -6,9 +6,10 @@
 	<link type="text/css" rel="stylesheet" href="/portal/resources/style-guide/css/fluig-style-guide.min.css" />
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
 	<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide-chart.min.js"></script>
+	
 	<script type="text/javascript" src='/resources/js/mustache/mustache-min.js'></script>
+	<script type="text/javascript" src="jquery.mask.min.js"></script>
 	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
 	<script type="text/javascript" src="underscore.js"></script>
 	<script type="text/javascript" src="formAPI.js"></script>
@@ -29,6 +30,7 @@
 	<script type="text/javascript" src="vfs_fonts.js"></script>
 	<script type="text/javascript" src="buttons.html5.min.js"></script>
 	<script type="text/javascript" src="echarts.min.js"></script>
+	
 	<link href="buttons.dataTables.min.css" rel="stylesheet" />
 	<link href="jquery.dataTables.min.css" rel="stylesheet" />
 	<link href="responsive.dataTables.min.css" rel="stylesheet" />
@@ -36,12 +38,34 @@
 	<script type="text/javascript" src="temp.js"></script>
 
 	<style>
+		.fluig-style-guide .btn-info {
+    color: #fff!important;
+    background-color: #3186ab!important;
+    border-color: #1b1a1a!important;
+}
+.fluig-style-guide .btn-info:hover {
+    color: #0c0c0c!important;
+    background-color: #ffffff!important;
+    border-color: #040404!important;
+}
+		.fluig-style-guide.fluig-toast:empty  {
+			width: 50%;
+			position: fixed;
+			padding: 10px;
+			top: 70px;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			transform: translateX(-50%);
+			z-index: -30!important;
+		}
 		.fluig-style-guide .tooltip-inner {
 			max-width: 400px !important;
 
 		}
 
-		h2[data-toggle="tooltip"]::before {
+		span.help[data-toggle="tooltip"]::before {
 			font-family: fontAwesome;
 			content: "\f059";
 		}
@@ -91,12 +115,12 @@
 
 		}
 
-		.panel-body .btn.active::before {
+		.btn.active.aweCircle::before {
 			font-family: fontAwesome;
 			content: "\f00c\00a0";
 		}
 
-		.panel-body .btn::before {
+		 .btn.aweCircle::before {
 			font-family: fontAwesome;
 			content: "\f111";
 		}
@@ -175,20 +199,22 @@
 			<input type="hidden" id="jsonGrafico" name="jsonGrafico">
 			<input type="hidden" id="flagAsksGroups" name="flagAsksGroups">
 			<input type="hidden" id="flagAskFinish" name="flagAskFinish">
-
+			<input type="hidden" id="SERVER_CRM" name="SERVER_CRM">
+			<input type="hidden" id="SERVER_EASY" name="SERVER_EASY">	
+			<input type="hidden" id="SERVER_MOBILECRM" name="SERVER_MOBILECRM">
 			<div id="tabs">
 				<ul class="nav nav-tabs clearfix" role="tablist">
 					<li class="active">
-						<a data-toggle="tab" href="#esProspecto">Informações da Proposta</a>
+						<a data-toggle="tab" href="#esProspecto">1 - Informações da Proposta</a>
 					</li>
-					<li id="liOfertas">
-						<a data-toggle="tab" href="#esOfertas">Seleção de Questionário</a>
+					<li id="liOfertas" style="display: none;">
+						<a data-toggle="tab" href="#esOfertas">2 - Seleção de Questionário</a>
 					</li>
-					<li id="liAlcance">
-						<a data-toggle="tab" href="#esAlcance">Questionário</a>
+					<li id="liAlcance" style="display: none;">
+						<a data-toggle="tab" href="#esAlcance">3 - Questionário</a>
 					</li>
-					<li id="liRelatorio">
-						<a data-toggle="tab" href="#esRelatorio">Relatório</a>
+					<li id="liRelatorio" style="display: none;">
+						<a data-toggle="tab" href="#esRelatorio">4- Relatório</a>
 					</li>
 				</ul>
 
@@ -202,8 +228,8 @@
 							<div class="panel-body">
 								<div class="form-group row">
 									<div class="col-md-4 col-sm-4 col-xs-12">
-										<label for="dsNmExecutivo" class="control-label">Executivo</label>
-										<input type="zoom" id="dsNmExecutivo" name="dsNmExecutivo" data-zoom="{'displayKey':'nome','datasetId':'dsEasyExecutivo','fields':[{'field':'codigo','label':'Código'},{'field':'nome','label':'Nome'}]}"
+										<label for="dsNmExecutivo" class="control-label">Executivo</label>     <a id="starFavorite" class="off" href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+										<input type="zoom" id="dsNmExecutivo" name="dsNmExecutivo" data-zoom="{'displayKey':'codigo','datasetId':'dsEasyExecutivo','fields':[{'field':'codigo','label':'Código'},{'field':'nome','label':'Nome'}]}"
 										/>
 									</div>
 									<div class="col-md-4 col-sm-4 col-xs-12">
@@ -371,7 +397,7 @@
 									<div class="col-md-3  col-xs-offset-7  col-md-offset-8">
 										<div class="btn-group finishAsk">
 
-											<label id="lblfinishAsk" class="btn btn-primary asksGroups">
+											<label id="lblfinishAsk" class="btn btn-primary asksGroups aweCircle">
 												<input name="finishAsk" id="finishAsk" style="position: absolute;clip: rect(0,0,0,0);pointer-events: none;" type="radio" class="finishAskButton" value="true">Finalizar Questionário</label>
 
 										</div>
@@ -508,7 +534,7 @@
 					  {{modulonome}}</a>
 					</h4>
 				  </div>
-				  <div id="{{templateindex}}" class="panel-collapse collapse in {{name}}  col-md-offset-1">
+				  <div id="{{templateindex}}" class="panel-collapse collapse panel-Asks in {{name}}  col-md-offset-1">
 					
 					
 					</div>
@@ -534,12 +560,25 @@
 			<div class="btn-group" data-toggle="buttons">
 			{{#asksGroups}}
 		
-				<label class="btn btn-primary asksGroups">
-					<input name="switch_{{model.codigo}}" id="askGroup_{{codigo}}" type="radio" class="form-radio-offer" value="{{nome}}"/>	{{nome}}						
+				<label class="btn btn-primary asksGroups aweCircle">
+					<input name="switch_{{model.codigo}}" id="askGroup_{{codigo}}" type="checkbox" class="form-checkbox-offer " value="{{nome}}"/>	{{nome}}						
 				</label>
 				<div style="padding:6px" class="row"></div>
 		
 			{{/asksGroups}}
+		</div>
+			<div class="form-group row">
+				<div class="col-md-3  col-xs-offset-7  col-md-offset-8">
+					
+
+							
+							<a id="step2" disabled="disabled" class="btn btn-info "> 
+								Próximo	<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+							</a>
+							
+				
+				</div>
+			</div>
 			</div>
 		</script>
 	<script id="tplAsks" type="text/mustache">
@@ -547,7 +586,7 @@
 			<div id="row_{{askCodigo}}" class="row_{{askCodigo}} {{classHidden}} row row_ask">
 			<div class="panel panel-default col-sm-10">
 				<div class="panel-heading ">
-					<h2 {{help}} class="panel-title text-center">
+				<h2 class="panel-title text-center"> <span class="help" {{help}}> </span>
 						<b>{{nome}}</b>
 					</h2>
 				</div>

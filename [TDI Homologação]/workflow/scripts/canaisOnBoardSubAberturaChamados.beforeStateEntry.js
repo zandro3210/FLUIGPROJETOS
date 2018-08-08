@@ -147,9 +147,35 @@ var ZendeskTools = {
 
 		var mensagem = "Razão Social: " + hAPI.getCardValue("razaoSocial") + "\r ";
 		mensagem += " CNPJ: " + hAPI.getCardValue("nrCnpj") + "\r ";
-		mensagem += " Endereço Completo: " + hAPI.getCardValue("endereco") + "\r ";
-		mensagem += " Cidade: " + hAPI.getCardValue("nmMunicipio") + "\\r ";
-		mensagem += " Estado: " + hAPI.getCardValue("uf") + "\r ";
+		mensagem += " Endereço Completo: " + hAPI.getCardValue("endereco") + " " + hAPI.getCardValue("cep") +  " " + hAPI.getCardValue("nmMunicipio") + " " + hAPI.getCardValue("uf")  + "\\r";
+		mensagem += " Tipo: " +   hAPI.getCardValue("tpContrato") + "\r ";
+		mensagem += " AGN: ";
+		if (hAPI.getCardValue("tipoSolic") == "master" &&   hAPI.getCardValue("tpContrato") == "PVF")
+			mensagem += "PVF ";
+		
+		if (hAPI.getCardValue("tipoSolic") == "master" &&   hAPI.getCardValue("tpContrato") == "MASTER PVF")
+			mensagem += "MVF";
+	
+		if (hAPI.getCardValue("tipoSolic") == "franquia" &&   hAPI.getCardValue("tpContrato") == "CAT")
+			mensagem += "CAT";
+		
+		if (hAPI.getCardValue("tipoSolic") == "franquia" &&   hAPI.getCardValue("tpContrato") == "AVT")
+			mensagem += "AVT";
+
+		if (hAPI.getCardValue("tipoSolic") == "franquia" &&   hAPI.getCardValue("tpContrato") == "CNT")
+			mensagem += "CNT";
+
+		mensagem += " Mod. Licença: ";
+
+		if (hAPI.getCardValue("tpContrato") == "CNT")
+			mensagem += "000003 - Modelo De Licencas CNT";
+
+		if (hAPI.getCardValue("tpContrato") == "AVT")
+			mensagem += "000005 - Modelo De Licencas AVT";
+
+		if (hAPI.getCardValue("tpContrato") == "CAT")
+			mensagem += "000008 - Modelo De Licenças CAT";
+
 		mensagem += " Nome Responsável: " + hAPI.getCardValue("nome") + "\r ";
 		mensagem += " Telefone: " + hAPI.getCardValue("telefone") + "\r ";
 		mensagem += " E-mail: " + (hAPI.getCardValue("tipoSolic") == "master" ? hAPI.getCardValue("sugestaoEmail") : hAPI.getCardValue("email")) + "\r ";
@@ -198,7 +224,7 @@ var ZendeskTools = {
 			ticket["" + CustomFields.getValue(i, configuracaoFilho.colunas[1])].push({ id: "" + CustomFields.getValue(i, configuracaoFilho.colunas[2]), value: "" + CustomFields.getValue(i, configuracaoFilho.colunas[3]) });
 		}
 
-		var result = this.criarTicket({ticket:ticket});
+		var result = this.criarTicket({ ticket: ticket });
 		log.info("@SubAbeturadeChamados RestPost result.ticket.id:" + result.ticket.id);
 		hAPI.setCardValue("criacaoCoridticket", result.ticket.id)
 		hAPI.setCardValue("_dtcricaoCRM", retornaDataAtual());
@@ -280,9 +306,9 @@ var ZendeskTools = {
 		return Rest(url, JSON.stringify(data), null, method, headers);
 
 	},
-	cadastroVendedorEstruturaVendas : function() {
+	cadastroVendedorEstruturaVendas: function () {
 
-	
+
 		var mensagem = "";
 		if (hAPI.getCardValue("tipoSolicMaster") == "master" && hAPI.getCardValue("slVinculoMaster") == "nao") {
 			mensagem += " Código da Unidade Responsável: " + hAPI.getCardValue("cdUnidadeResponsavel") + "\\r";
@@ -291,30 +317,21 @@ var ZendeskTools = {
 		if (hAPI.getCardValue("tipoSolicMaster") == "franquia" || (hAPI.getCardValue("tipoSolicMaster") == "master" && hAPI.getCardValue("slVinculoMaster") == "sim")) {
 			mensagem += " Unidade de Venda: " + hAPI.getCardValue("criacaoCoridUnidadeVenda") + "\\r";
 		}
-	
-		mensagem += " Código do Gerente: " + hAPI.getCardValue("cdGerente") + "\\r";
-		mensagem += " Nome do Gerente: " + hAPI.getCardValue("nmGerente") + "\\r";
-		mensagem += " Razão Social: " + hAPI.getCardValue("razaoSocial") + "\\r";
-		mensagem += " CNPJ: " + hAPI.getCardValue("nrCnpj") + "\\r";
-		mensagem += " Endereço Completo: " + hAPI.getCardValue("endereco") + "\\r";
-		mensagem += " Cidade: " + hAPI.getCardValue("nmMunicipio") + "\\r";
+
+		mensagem += "E-mail do Gestor do Solicitante: " + hAPI.getCardValue("emailGestorSolicitante") + "\\r";
+		mensagem += " Nome Completo: " + hAPI.getCardValue("nome") + "\\r";
+		mensagem += " Segmento Que Atuará: " + this.retornaSegmentos();
+		mensagem += " Perfil: ESN";
+		mensagem += " CPF/CNPJ: " +  hAPI.getCardValue("cpf") + "/" + hAPI.getCardValue("nrCnpj") +  "\\r";
+		mensagem += " E-mail: " + hAPI.getCardValue("_emailcorporativo") + "\\r";
+		mensagem += " Endereço Completo: " + hAPI.getCardValue("endereco") + " " + hAPI.getCardValue("cep") +  " " + hAPI.getCardValue("nmMunicipio") + " " + hAPI.getCardValue("uf")  + "\\r";
 		mensagem += " Estado: " + hAPI.getCardValue("uf") + "\\r";
 		mensagem += " Nome Responsável: " + hAPI.getCardValue("nome") + "\\r";
 		mensagem += " Telefone: " + hAPI.getCardValue("telefone") + "\\r";
-		mensagem += " E-mail Partner: " + hAPI.getCardValue("_emailcorporativo") + "\\r";
-		mensagem += " Tipo AGN: " + "\\r";
-	
-		if (hAPI.getCardValue("tipoSolicMaster") == "master" && hAPI.getCardValue("slVinculoMaster") == "sim") {
-			mensagem += " Master PVF" + "\\r";
-		}
-		if (hAPI.getCardValue("tipoSolicMaster") == "master" && hAPI.getCardValue("slVinculoMaster") == "nao") {
-			mensagem += " PVF" + "\\r";
-		}
-		if (hAPI.getCardValue("tipoSolicMaster") == "franquia") {
-			mensagem += hAPI.getCardValue("tpContrato") + "\\r";
-		}
+		mensagem += " Tipo Atendimento: BASE E NOVOS";
+
 		mensagem += " Por favor após terminar atividade clique aqui: " + retornaParametrizacao("nmUrl") + "/" + hAPI.getCardValue("token") + "/" + Activity.JOIN_CHAMADOS + "/6/" + Activity.USUARIO_CRM_VENDAS;
-	
+
 
 		var ticket = {};
 		ticket.subject = "" + retornaParametrizacao("criacaoEstruturatitulo");
@@ -361,7 +378,28 @@ var ZendeskTools = {
 		log.info("@SubAbeturadeChamados RestPost result.ticket.id:" + result.ticket.id);
 		hAPI.setCardValue("criacaoEstruturaidticket", result.ticket.id)
 		hAPI.setCardValue("_dtusuariocrm", retornaDataAtual());
-	
+
+	},
+	retornaSegmentos: function () {
+		var resultado = "";
+
+		resultado += hAPI.getCardValue("cbSegAgroindustria") + "\\r";
+		resultado += hAPI.getCardValue("cbSegConstrucao") + "\\r";
+		resultado += hAPI.getCardValue("cbSegDistribuicao") + "\\r";
+		resultado += hAPI.getCardValue("cbSegEducacional") + "\\r";
+		resultado += hAPI.getCardValue("cbSegJuridico") + "\\r";
+		resultado += hAPI.getCardValue("cbSegLogistica") + "\\r";
+		resultado += hAPI.getCardValue("cbSegManufatura") + "\\r";
+		resultado += hAPI.getCardValue("cbSegSaude") + "\\r";
+		resultado += hAPI.getCardValue("cbSegServicos") + "\\r";
+		resultado += hAPI.getCardValue("cbSegVarejo") + "\\r";
+		resultado += hAPI.getCardValue("cbSegVestuario") + "\\r"; 
+		resultado += hAPI.getCardValue("cbSegBeleza") + "\\r"; 
+		resultado += hAPI.getCardValue("cbSegAppGestao") + "\\r";
+		resultado += hAPI.getCardValue("cbSegBarRestaurante") + "\\r";
+		resultado += hAPI.getCardValue("cbSegOdonto") + "\\r";
+
+		return resultado;
 	},
 	retornaTokenAccesstoken: function () {
 		var url = SERVER_ZENDESK + "/api/token";
